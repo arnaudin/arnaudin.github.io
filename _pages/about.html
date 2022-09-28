@@ -1,0 +1,209 @@
+---
+layout: page
+title: About
+permalink: /about/
+priority: 0.9
+
+intro: |
+
+  As a practicing designer with a background in engineering and over 9 yrs of professional experience in software product development, I am able to balance creative and analytical approaches to define, explore, and solve complex problems. I have designed commercial software for desktop, web, and mobile. I have personally developed free and experimental apps, so have empathy for the challenges software developers face.
+
+  I consider myself a technologist with a humanist approach. I care deeply about people, believe in the value of the human experience, and am a technology enthusiast. My purpose is to leverage design, engineering, and technology to empower and serve people in productive, meaningful ways.
+
+  I have hands-on experience in all phases of the modern product development process. I can lead product design, support myself & team with research and testing, facilitate the innovation process, and act as a strategic partner. I am experienced with a variety of development methods from waterfall to agile, and always find a way to bring collaboration, human-centered design, and iterative learning into the process.
+
+  I believe design should be used as an accelerator, differentiator, validator, and risk mitigator in the pursuit of the larger goals of the organization, so I am not afraid to resist design for design’s sake.
+
+profile_picture: /images/black-thumbnail.png
+
+experience:
+  - company: Brightidea
+    position: Product Lead / Senior Product Manager / Sr Product and Design Lead
+    period: October 2017 - March 2022
+
+  - company: Autodesk
+    position: Senior Experience Designer
+    period: March 2011 - October 2017
+
+  - company: Blue Ridge Numerics
+    position: Product Designer / Quality Assurance Engineer / Technical Support Engineer
+    period: January 2008 - March 2011
+
+  # - company: Honeywell
+  #   position: Co-op
+  #   period: 2004 - 2005
+
+  - company: uTest
+    position: Independent Software Test Engineer
+    period: 2010 - 2012
+
+education:
+  - course: BS, Aerospace Engineering
+    place: Virginia Tech
+    period: 2007
+
+  - course: Certificate in User Experience (#1000265)
+    place: Nielsen Norman Group
+    period: 2014
+
+  - course: LUMA Certified Practitioner 
+    place: LUMA Institute
+    period: 2011 - 2014
+
+  - course: Programming Mobile Applications for Android Handheld Systems
+    place: Coursera 
+    period: 2014
+
+competitions:
+  - event: Brightidea for Microsoft Teams
+    period: 2021
+    result: Devpost Project & Demo Page
+    link: https://devpost.com/software/brightidea
+
+  - event: 4D VR
+    period: 2017
+    result: Concept Demo Video
+    link: https://drive.google.com/file/d/0B2l6aLOefFgEbW53TlB0QUdiTlU/view?usp=sharing&resourcekey=0-XFDM3CvDIzy7xHWfdWAQ6g
+
+skills:
+  - User Experience design (UX)
+  - User Interface design (UI)
+  - Graphic design
+  - Cross platform design (Desktop, Native Mobile, responsive, smartwatch, kiosk etc.)
+  - Design libraries and Styleguides
+  - User journey mapping
+  - User interviews and Usability testing
+  - Information Architecture
+  - Wireframing
+  - Interactive prototypes
+  - Contextual inquiry
+
+tools:
+  - Sketch app, Figma
+  - Flinto, Balsamiq, Invision, Zeplin, Marvel app
+  - Adobe Creative Cloud Suite (Photoshop, XD, Illustrator, After Effects...)
+  - HTML
+  - CSS and SASS (SCSS)
+  - jQuery (for prototyping only)
+  - Jekyll
+  - Frontend templating languages (ERB, Handlebars, Blade, Liquid)
+  - Glyphs app, Fontlab, Fontographer
+
+about_site: |
+  - This is a static site built with [Jekyll](https://github.com/jekyll/jekyll).
+
+  - The theme is inspired by [himatt.com](https://github.com/MattGreyDesign/himatt.com).
+
+  - The typefaces used are
+  [Playfair Display](https://fonts.google.com/specimen/Playfair+Display) and
+  [Lato](https://fonts.google.com/specimen/Lato)
+
+  - Other tools and libraries used include, [SASS](http://sass-lang.com/),
+  [jQuery](https://jquery.com/),
+  [Headspace](https://github.com/gdub22/headspace) and
+  [Normalize.css](http://github.com/necolas/normalize.css).
+
+  - All the code for this site is open source and available on
+  [Github](https://github.com/arnaudin/arnaudin.github.io).
+
+  - Although the code is opensource under the GNU General Public License v3, all
+  content is Copyrighted. [Read more](https://github.com/arnaudin/arnaudin.github.io/blob/main/LICENSE)
+  {:.list--dashed .list--small}
+---
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org/",
+    "@type": "Person",
+    "name": "Ryan Arnaudin",
+    "jobTitle": "Product Designer",
+    "nationality": "American",
+    "url": "http://www.ryanarnaudin.com/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Texas",
+      "addressCountry": "United States"
+    }
+  }
+</script>
+
+<div class="about-wrapper">
+  <div class="about">
+    <div class="about-intro-image">
+      <img src="{{ page.profile_picture }}" alt="">
+    </div>
+
+    <div class="about-intro-description paragraph-normal">
+      {{ page.intro | markdownify }}
+    </div>
+
+    <div class="about-attributes">
+      <div class="about-experience">
+        <div class="about-section">
+          <h3 class="about-section-title type-level-2">Experience</h3>
+          <dl class="relational-list">
+            {% for experience-item in page.experience %}
+              <dt class="relational-list__title">{{ experience-item.company | markdownify}}</dt>
+              <dd class="relational-list__description relational-list__description--period">{{ experience-item.period | markdownify}}</dd>
+              <dd class="relational-list__description">{{ experience-item.position | markdownify}}</dd>
+            {% endfor %}
+          </dl>
+        </div>
+      </div>
+
+      <div class="about-education">
+        <div class="about-section">
+          <h3 class="about-section-title type-level-2">Education</h3>
+          <dl class="relational-list">
+            {% for education-item in page.education %}
+              <dt class="relational-list__title">{{ education-item.course | markdownify}}</dt>
+              <dd class="relational-list__description">{{ education-item.place | markdownify}}</dd>
+            {% endfor %}
+          </dl>
+        </div>
+
+        <div class="about-section about-section--nested">
+          <h3 class="about-section-title type-level-2">Hackathons</h3>
+          <dl class="relational-list">
+            {% for competition-item in page.competitions %}
+              <dt class="relational-list__title">{{ competition-item.event | markdownify}}</dt>
+              <dd class="relational-list__description relational-list__description--period">{{ competition-item.period | markdownify}}</dd>
+              <dd class="relational-list__description"><a href="{{ competition-item.link }}">{{ competition-item.result | markdownify}}</a></dd>
+            {% endfor %}
+          </dl>
+        </div>
+      </div>
+      <!--
+      <div class="about-tools">
+        <div class="about-section">
+          <h3 class="about-section-title type-level-2">Tools &amp; technologies</h3>
+          <ul class="list--dashed list--small">
+            {% for tool in page.tools %}
+              <li>{{ tool | markdownify }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <div class="about-skills">
+        <div class="about-section">
+          <h3 class="about-section-title type-level-2">Skills</h3>
+          <ul class="list--dashed">
+            {% for skill in page.skills %}
+              <li>{{ skill }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    -->
+
+    <div class="about-site">
+      <div class="about-section about-site-description">
+        <h3 class="about-section-title type-level-2">About This Site</h3>
+        <div class="paragraph-small">{{ page.about_site | markdownify }}</div>
+      </div>
+    </div>
+
+  </div>
+</div>
