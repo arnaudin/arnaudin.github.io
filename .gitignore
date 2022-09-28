@@ -6,3 +6,5 @@ _site/
 # content exclusions
 _posts/
 _projects/
+# mac
+.DS_Store
