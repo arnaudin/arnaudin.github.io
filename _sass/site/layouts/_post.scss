@@ -1,0 +1,133 @@
+.post-wrapper {
+
+  //Layout
+  .post-info {
+    @extend .grid-container;
+
+    //.post-subtitle {
+    //  @include grid-column-from-to(1,6);
+    //  }
+
+    .post-details {
+      @include grid-column(6);
+      }
+  }
+
+  .post-intro {
+    @include grid-column-from-to(1,12);
+
+    p {
+      @include grid-column(12);
+    }
+  }
+
+  .post-details {
+    .post-detail-wrapper {
+
+      .post-detail-6 {
+        @include grid-column(6);
+
+        @include grid-media(phablet) {
+          @include grid-column(3);
+        }
+
+        @include grid-media(tablet) {
+          @include grid-column(2);
+        }
+
+        @include grid-media(desktop) {
+          @include grid-column(6);
+        }
+      }
+
+      .post-detail-12 {
+        @include grid-column(6);
+
+        @include grid-media(tablet) {
+          @include grid-column(3);
+        }
+
+        @include grid-media(desktop) {
+          @include grid-column(6);
+        }
+      }
+    }
+  }
+
+  .post-text {
+    @extend .grid-container;
+
+    .post-text-wrapper {
+      @include grid-column(12);
+
+      @include grid-media(tablet) {
+        @include grid-column(12);
+      }
+
+      @include grid-media(desktop) {
+        @include grid-column-from-to(2,8);
+      }
+    }
+  }
+
+// Styles
+  .image-wrapper {
+    .image-wrapper img { width: 100%; }
+
+    figcaption {
+      margin-top: rem(12px);
+      margin-bottom: rem(16px);
+    }
+
+    &.nudge-down-5 {
+      @include grid-media(desktop) {
+        margin-top: 5%;
+      }
+    }
+  }
+
+  /* TODO centered images */
+
+  .post-info {
+    margin-bottom: rem(40px);
+  }
+
+  .post-text {
+    @include grid-media(desktop) {
+      margin-top: var(--gutter-row);
+    }
+  }
+}
+
+/* TODO width of blog posts
+.post-wrapper {
+  max-width: 600px;
+  margin: auto;
+}
+*/
+
+.behind {
+  height: 200px;
+  margin-bottom: -200px;
+  width: 100%;
+}
+
+.post-header {
+  .post-header-content {
+    @extend .grid-container;
+
+    > section {
+      @include grid-column(9);
+    }
+
+    > aside {
+      @include grid-column(3);
+    }
+  }
+}
+
+.additional-content {
+  p {
+    margin-bottom: 1rem;
+  }
+}

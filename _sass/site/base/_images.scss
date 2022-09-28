@@ -1,0 +1,50 @@
+img {
+  //Fix blink opacity bug
+  -webkit-transform: translateZ(0);
+  width: calc(100% + .49px);
+
+  max-width: 100%;
+  height: auto;
+
+  //image border
+  &.light {
+    border: 1px solid rgba(white, .08);
+  }
+}
+
+.img-25vh {
+  height: 25vh;
+  width: auto;
+}
+
+.img-33vh {
+  height: 33vh;
+  width: auto;
+}
+
+.img-50vh {
+  height: 50vh;
+  width: auto;
+}
+
+.img-75vh {
+  height: 75vh;
+  width: auto;
+}
+
+.img-66vh {
+  height: 66vh;
+  width: auto;
+}
+
+.img-100vh {
+  height: 100vh;
+  width: auto;
+}
+
+.img-full-width {
+  margin-left: calc(-1*(var(--page-margin)));
+  margin-right: calc(-1*(var(--page-margin)));
+  width: 100vw;
+  max-width: 100vw;
+}
