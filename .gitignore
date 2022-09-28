@@ -1,4 +1,8 @@
+# jekyll
 _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+# content exclusions
+_posts/
+_projects/
