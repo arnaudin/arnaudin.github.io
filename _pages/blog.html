@@ -7,12 +7,12 @@ priority: 0.9
 sitemap: true
 ---
 <div class="post-intro">
-  <div class="post-intro-title type-level-4">
-    <p class="paragraph-large">
-      Pick an article below:
-    </p>
-  </div>
-<!---
+    <div class="post-intro-title type-level-4">
+        <p class="paragraph-large">
+            Pick an article below:
+        </p>
+    </div>
+    <!---
   <div class="post-intro-info">
     <p class="paragraph-small">
       
@@ -29,21 +29,25 @@ sitemap: true
 
 <div class="post">
 
-{% assign postslist = site.posts | sort: 'date' | reverse %}
-{% for post in postslist %}
+    {% assign postslist = site.posts | sort: 'date' | reverse %}
+    {% for post in postslist %}
 
-{% assign postSlug = post.title | slugify %}
+        {% assign postSlug = post.title | slugify %}
 
-{% capture previewImagePath %}{{ site.image_serve_path | append: '/posts/'}}{{ postSlug }}{% endcapture %}
+        {% capture previewImagePath %}
+            {{ site.image_serve_path | append: '/posts/'}}{{ postSlug }}
+        {% endcapture %}
 
-<article class="post-listing">
-  <div class="post-listing-details">
-    <h2 class="post-listing-title type-level-3"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    <p class="post-listing-styles title-label">{{ post.date | date: "%B %Y" }}</p>
-    <!--<p>{{ post.blurb }}</p>-->
-  </div>
+        <article class="post-listing">
+            <div class="post-listing-details">
+                <h2 class="post-listing-title type-level-3">
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </h2>
+                <p class="post-listing-styles title-label">{{ post.date | date: "%B %Y" }}</p>
+                <!--<p>{{ post.blurb }}</p>-->
+            </div>
 
-</article>
+        </article>
 
-{% endfor %}
+    {% endfor %}
 </div>

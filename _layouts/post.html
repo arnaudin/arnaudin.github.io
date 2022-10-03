@@ -28,56 +28,56 @@ title-class: post
 
 <div class="post-wrapper">
 
-  <div class="post-info">
-    <!---
+    <div class="post-info">
+        <!---
     {% if page.subtitle %}
         <section class="post-subtitle paragraph-normal">{{ page.subtitle | markdownify }}</section>
     {% endif %}
     -->
-    <section class="post-details">
-      <div class="post-detail-wrapper">
+        <section class="post-details">
+            <div class="post-detail-wrapper">
 
-        {% if page.date %}
-        <div class="post-detail">
-          {% if page.originaldate %}
-            <h3 class="title-label">Originally Published</h3>
-            <span>{{ page.originaldate | date: "%B %-d, %Y"}}</span>
-          {% else %}
-            <h3 class="title-label">Published</h3>
-            <span>{{ page.date | date: "%B %-d, %Y"}}</span>
-          {% endif %}
-        </div>
-        {% endif %}
+                {% if page.date %}
+                    <div class="post-detail">
+                        {% if page.originaldate %}
+                            <h3 class="title-label">Originally Published</h3>
+                            <span>{{ page.originaldate | date: "%B %-d, %Y"}}</span>
+                        {% else %}
+                            <h3 class="title-label">Published</h3>
+                            <span>{{ page.date | date: "%B %-d, %Y"}}</span>
+                        {% endif %}
+                    </div>
+                {% endif %}
 
-          {% if page.time_period %}
-          <div class="post-detail post-detail-6">
-            <h3 class="title-label">Year</h3>
-            <p>{{ page.time_period }}</p>
-          </div>
-          {% endif %}
+                {% if page.time_period %}
+                    <div class="post-detail post-detail-6">
+                        <h3 class="title-label">Year</h3>
+                        <p>{{ page.time_period }}</p>
+                    </div>
+                {% endif %}
 
-        {% if page.website.url %}
-        <div class="post-detail post-detail-12">
-          <a href="{{ page.website.url }}" class="button-secondary">{{ page.website.button_text }}</a>
-        </div>
-        {% endif %}
-      </div>
-    </section>
-  </div>
-
-  <section class="post-intro paragraph-normal">{{ page.intro | markdownify }}</section>
-
-  <section>
-  {% for entry in page.content_layout %}
-    {% include layout.html %}
-  {% endfor %}
-  </section>
-
-  {% if page.content %}
-  <section class="additional-content-wrapper">
-    <div class="additional-content">
-      {{ content }}
+                {% if page.website.url %}
+                    <div class="post-detail post-detail-12">
+                        <a href="{{ page.website.url }}" class="button-secondary">{{ page.website.button_text }}</a>
+                    </div>
+                {% endif %}
+            </div>
+        </section>
     </div>
-  </section>
-  {% endif %}
+
+    <section class="post-intro paragraph-normal">{{ page.intro | markdownify }}</section>
+
+    <section>
+        {% for entry in page.content_layout %}
+            {% include layout.html %}
+        {% endfor %}
+    </section>
+
+    {% if page.content %}
+        <section class="additional-content-wrapper">
+            <div class="additional-content">
+                {{ content }}
+            </div>
+        </section>
+    {% endif %}
 </div>

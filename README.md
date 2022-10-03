@@ -26,4 +26,5 @@ Under the [GNU General Public License v3.0](LICENSE), you can adapt and use the 
 ### Content
 
 © Ryan Arnaudin
+
 Unauthorised use and/or duplication and adaptation of this material (all images, text, and media files) without express and written permission from this site’s author and/or owner is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to Ryan Arnaudin and linked to ryanarnaudin.com with appropriate and specific direction to the original content.
