@@ -1,0 +1,58 @@
+---
+layout: page
+title: Contact
+permalink: /contact/
+priority: 0.9
+---
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "name": "Ryan Arnaudin",
+    "url": "https://ryanarnaudin.com/",
+    "sameAs": ["https://twitter.com/ {{ site.social-username.twitter }}", "https://linkedin.com/in/ {{ site.social-username.linkedin }}", "https://github.com/ {{ site.social-username.github }}"]
+  }
+</script>
+
+<div class="contact-wrapper">
+  <div class="contact">
+
+    <aside class="contact-intro">
+      <p class="paragraph-huge">
+        Find me around the internet:
+      </p>
+      <ul>
+        <li style="margin-left: 2em" class="paragraph-huge">
+          <a href="//linkedin.com/in/{{ site.social-username.linkedin }}">LinkedIn</a>
+        </li>
+        <li style="margin-left: 2em" class="paragraph-huge">
+          <a href="//twitter.com/{{ site.social-username.twitter }}">Twitter</a>
+        </li>
+        <li style="margin-left: 2em" class="paragraph-huge">
+          <a href="//github.com/{{ site.social-username.github }}">Github</a>
+        </li>
+      </ul>
+    </aside>
+
+    <div class="contact-form">
+      <form action="https://getform.io/f/e1370628-c6c4-4ab1-b500-781c3905c1b6" method="POST">
+        <label for="name">Name:
+          <input type="text" name="name" placeholder="Enter your name" required="required">
+        </label>
+        <label for="email">Email:
+          <input type="email" name="email" placeholder="Enter your email" required="required">
+        </label>
+        <label for="message">Message:
+          <textarea name="message" rows="5" placeholder="Enter your message" required="required"></textarea>
+        </label>
+        <label>Subscribe to future updates:
+          <input type="checkbox" name="subscribe" value="yes" unchecked>
+        </label>
+        <br>
+        <button class="button-secondary" type="submit">Send message</button>
+      </form>
+    </div>
+
+  </div>
+</div>
