@@ -2,8 +2,8 @@
 date: 2015-01-04
 published: true
 title: "Autodesk Simulation Monitor"
-description: "Monitor cloud simulations from anywhere."
-categories: concept, ux, autodesk
+description: "Monitor cloud simulations from anywhere"
+categories: concept, ux, autodesk, mobile
 disciplines: UX, User Research, Interaction Design, Visual Design, Information Architecture
 media: Mobile App
 ownership: Professional
@@ -12,9 +12,13 @@ time_period: 2015
 thumbnail: "/projects/autodesk-job-monitor/job-monitor-thumbnail.jpg"
 
 intro: |
-  Users have been able to run large simulations in the cloud using Autodesk Simulation 360 since 2012. There has been an inherent limitation that these simulation jobs can only be monitored and managed from the source machine--often a desktop engineering computer. 
+  Users have been able to run large simulations in the cloud using Autodesk Simulation 360 since 2012. There has been an inherent limitation that these simulation jobs can only be monitored and managed from the source machine—often a desktop engineering computer. 
   
-  Mobile Job Monitor provides a simple way to check progress and status of cloud simulations, which may take hours or sometimes even days to complete. A typical workflow is that an engineer will submit several jobs to solve in the afternoon before leaving the office, and will want monitor them that evening as they run. 
+  Mobile Job Monitor provides a simple way to check progress and status of cloud simulations, which may take hours or sometimes even days to complete. 
+  
+  A typical workflow is that an engineer will submit several simulation jobs to solve in the afternoon before leaving the office, and will want monitor them that evening as they run. If something unexpected occurs they could often make a quick fix and still have results in the morning.
+
+  **Role:** This was a design-led visioning project stemming directly from user feedback and journey mapping observations. I designed the workflow, created mockups, and built a simple prototyope in conjunction with an Android development course I was taking at the time. The app read static data rather than via a live API. 
 
 content_layout:
   - section_layout: 2col
@@ -51,12 +55,12 @@ content_layout:
         url: '/projects/autodesk-job-monitor/job-monitor-card-2.png'
         width:
         height:
-      - caption: 'Push notifications'
+      - caption: 'Push notifications alert of success or failure'
         description: 'Push notifications'
         url: '/projects/autodesk-job-monitor/job-monitor-push.png'
         width:
         height:
-      - caption: 'Digital paper'
+      - caption: 'Illustrating the ''Digital Paper'' of a Material app'
         description: 'Digital paper'
         url: '/projects/autodesk-job-monitor/job-monitor-layers.png'
         width:

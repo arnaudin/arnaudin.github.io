@@ -3,8 +3,8 @@ date: 2017-01-1
 published: true
 sitemap: false
 title: "Autodesk Flow Design"
-description: The "easiest-to-use CFD program ever." 
-categories: app, ux, autodesk
+description: The "easiest-to-use CFD program ever" 
+categories: app, ux, autodesk, desktop, realtime, simulation
 disciplines: UX, User Research, Interaction Design, Visual Design, Information Architecture
 media: Desktop App
 ownership:
@@ -17,9 +17,11 @@ website:
   url: https://youtu.be/2RBOtd-Z8O8
 
 intro: |
-  [Flow Design](https://www.autodesk.com/products/flow-design/overview) is a virtual wind tunnel that makes airflow simulation accessible to architects, product designers, and students (not just analysts and engineers). 
+  [Flow Design](https://www.autodesk.com/products/flow-design/overview) is a virtual wind tunnel that makes airflow simulation accessible to architects, product designers, and students (not just PhD analysts and engineers). 
   
-  The goal of this project was to drastically simplify flow simulation so that more people can understand how their designs will perform in the real world. Most people can understand the concept of a wind tunnel, but don't know the first thing about computational fluid dynamics (CFD) or finite element analysis (FEA). All of the complexity lives behind the scenes with Flow Design. 
+  The goal of this project was to drastically simplify flow simulation so that more people can understand how their designs will perform in the real world. Most people can understand the concept of a wind tunnel, but don't know the first thing about computational fluid dynamics (CFD) or finite element analysis (FEA). All of this complexity lives behind the scenes with Flow Design. 
+
+  Flow Design started off in Autodesk Labs under the name "Project Falcon." After initial success we committed to commercializing the technology as a paid product offerring and educational tool. 
 
 content_layout:
   - section_layout: 1col-narrow
@@ -32,15 +34,9 @@ content_layout:
 
   - section_layout: text
     content: |
-      I served as Lead Designer for Flow Design....
+      ### Role
       
-      Flow Design not only simplifies the mental model, but also introduces near-real-time simulation to 
-      
-      Flow Design embraces the mental model of a wind tunnel familiar. Prior to Flow Design, flow simulation required users to approach the software with an understanding of the system model of computation fluid dynamics and finite element analysis. We aimed to disrupt the "old school" by putting the user first.
-      
-      The design strategy was for Flow Design to feel light weight and playful to encourage hands-on design exploration.
-
-      ## Role
+      This started for me as an innovation interest and more of a "10 percent time" consulting project with the Emerging Products & Technologies team. I then served as the lead designer for commercial releases.
       
       Responsibilities included:
 
@@ -52,10 +48,19 @@ content_layout:
       - Refining HTML/CSS layout
       - Visual design (icons, UI components)
 
-      Before Flow Design was released as a full commercial product, it existed as an experimental tech preview to find product-market fit called Project Falcon.
+  - section_layout: text
+    content: |
+      ## Product Demo
 
-      I provided high-level design guidance, basic research, and usability evaluation for Project Falcon which was intended to be a flexible bare bones experiment to gage demand. For example, the radial menu pictured here wasn't perfect on any one platform, but was part of a multi-build approach that allowed us to simultaneous release and test for both mobile & desktop, touch & mouse.
-        
+      Check out the demo video to see Flow Design in action:
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/2RBOtd-Z8O8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+  
+  - section_layout: text
+    content: |
+      ## CAD-Embedded Versions
+      
+      In addition to standalone versions, we also designed and built CAD-embedded technology that could be used directly in the design environment in order to reduce friction and provide near-immediate feedback. 
+
   - section_layout: 2col
     images:
       - caption: Flow Design embedded directly in the design environment of Inventor for product designers & engineers
@@ -75,7 +80,7 @@ content_layout:
       
       The product has seen commercial success, and Roopinder Tara, Director of Content at ENGINEERING.com [called](http://www.worldcadaccess.com/blog/2014/08/autodesk-flow-design-the-easiest-to-use-cfd-program-ever.html) Flow Design the "*easiest-to-use CFD program ever.*" 
       
-      The thing I love about designing products to empower people is that they will inherently be used in unpredictable ways. For example, Flow Design and Autodesk Simulation provided the technology behind the Fox Weather Trax wind simulation at Superbowl XLVIII.
+      The thing I love about designing products that empower designers and engineers is that they will inherently be used in unpredictable ways. For example, Flow Design and Autodesk Simulation provided the technology behind the Fox Weather Trax wind simulation at Superbowl XLVIII.
 
   - section_layout: 2col
     images:
@@ -93,9 +98,9 @@ content_layout:
   - section_layout: text
     content: |
       ## In the Wild
-      As a testament to the ease of use, elementary school students around the country were introduced to Flow Design on [National Youth Science Day](http://academy.autodesk.com/4h), as part of a rocket building activity. I volunteered at one of these events in California, and was unbelievably excited to find that the learners required no explanation to simulate their rockets!
+      As a testament to the ease of use, elementary school students around the country were introduced to Flow Design on [National Youth Science Day](http://academy.autodesk.com/4h), as part of a rocket building activity. I volunteered at one of these events in California, and was unbelievably excited to find that the learners required no adult guidance to simulate their rockets!
 
-      I also recently happened upon Flow Design [in the wild](https://limar.com/air-revolution/) while in the market for a new bike helmet. 
+      I was also pleasantly surprised recently when I happened upon Flow Design [in the wild](https://limar.com/air-revolution/) while in the market for a new bike helmet. 
 
   - section_layout: 2col
     images:
@@ -112,10 +117,11 @@ content_layout:
 
   - section_layout: text
     content: |
-      ## Design Process & Exploration
-      As a testament to the ease of use, elementary school students around the country were introduced to Flow Design on [National Youth Science Day](http://academy.autodesk.com/4h), as part of a rocket building activity. I volunteered at one of these events in California, and was unbelievably excited to find that the learners required no explanation to simulate their rockets!
-
-      I also recently happened upon Flow Design [in the wild](https://limar.com/air-revolution/) while in the market for a new bike helmet. 
+      ## Design Evolution
+      Reach out to learn more about the design process behind Flow Design. You can see it went through different manifestations and evolved immensely over its lifespan based on usage & feedback. Ultimately the "light weight" strategy to encourage hands-on design exploration was successful and exposed many people to the advantages simulation who wouldn't have been otherwise. A few quotes from users:
+      - *"SO, easy to use! exactly what I was looking for, just put the model in and point it at the wind"*
+      - *"The most user friendly wind tunnel software by miles"*
+      - *"Flow Design modeling package was the easiest to set up and allows you to quickly get the initial estimated results sufficient to quickly test hypotheses at an early stage, followed by modeling in professional packages"*
 
   - section_layout: 2col
     images:
@@ -128,12 +134,5 @@ content_layout:
         description: 'The commercial release was redesigned for Windows only as there was no measurable demand on touch devices'
         url: '/projects/flow-design/flow-design-windows-release.png'
         width:
-        height:
-
-  - section_layout: text
-    content: |
-      ## Product Demo
-
-      Check out the demo video to see Flow Design in action:
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/2RBOtd-Z8O8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>     
+        height:   
 ---

@@ -4,7 +4,7 @@ published: true
 title: "Making Things"
 description: "3D printing, CNC, CAD, CAM and physical things"
 categories: making, side project, 3d printing
-disciplines: 3D modelling, CAD, CAM, CNC
+disciplines: 3D modelling, CAD, CAM, CNC, Design, Engineering
 media: Physical Goods
 ownership: Personal 
 client:
@@ -34,7 +34,7 @@ content_layout:
 
       ### Bike Light Mount
 
-      When carrying loads on a front rack, a handlebar light mount is virtually useless. After several prototypes, I settled on a design that could be easily mounted at the front of my rack with an M5 bolt. 
+      When carrying loads on a front rack, a handlebar light mount is virtually useless. After several prototypes, I settled on a design that could be easily mounted at the front of my rack with an M5 bolt. Eventually it would be cool to CNC this from metal.
 
   - section_layout: 2col
     images:
@@ -54,7 +54,7 @@ content_layout:
     content: |
       ### Bike Bell Mount
 
-      A desired bell could not be mounted on a particular handlebar setup, so I designed and printed this extender. 
+      A desired bell could not be mounted on a particular handlebar setup, so I designed and printed this extender to work with an existing mount. 
 
   - section_layout: 2col
     images:
@@ -76,7 +76,7 @@ content_layout:
 
       The Hario Skerton is a good hand grinder for the price, but develops a wobble over time due to the wear of the metal shaft against a plastic part at a single point of contact. Ultimately this leads to uneven coffee grind sizes. 
 
-      I designed this simple pair of parts to hug the shaft at a second, lower point of contact. This prevents the shaft from wobbling, thus preventing wear and keeping the grind size consistent. 
+      I designed this simple pair of parts to hug the shaft at a second, lower point of contact. This prevents the assembly from wobbling, thus reducing wear and keeping the grind size consistent. 
 
       Download at [Thingiverse](https://www.thingiverse.com/thing:984399) or [Github](https://github.com/arnaudin/Printable-STL/tree/master/Hario%20Skerton%20Grinder%20Spacer%20Bearing). Also check out suneboe's remix [Thingiverse](https://www.thingiverse.com/thing:1640345)
 
@@ -185,7 +185,7 @@ content_layout:
 
   - section_layout: 1col
     images:
-      - caption: 'Further design exploration'
+      - caption: 'Further design exploration that would make use of the inset strap mounts above'
         description: 'Further design exploration'
         url: '/projects/making-things/cnc-battail-handplane-render.jpg'
         positioning: 

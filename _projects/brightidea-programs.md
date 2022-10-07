@@ -14,6 +14,8 @@ thumbnail: "/black-thumbnail.png"
 intro: |
   Brightidea info and intro
 
+  Check out our CEO's article on productled.org on [how our innovation lab paved the path to PLG](https://www.productled.org/blog/how-brightideas-innovation-lab-paved-the-path-to-plg).
+
 content_layout:
   - section_layout: 5col-7col
     images:

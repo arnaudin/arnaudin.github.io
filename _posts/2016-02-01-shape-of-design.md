@@ -8,7 +8,7 @@ blurb: The Shape of Design by Frank Chimero
 image: images/black-thumbnail.png
 
 intro: | 
-    Nearly five years after it launched on Kickstarter, I finally read [Frank Chimero's](https://twitter.com/frank_chimero) excellent design handbook, *[The Shape of Design](http://www.shapeofdesignbook.com/)*. The Kickstarter hardcover edition looks to be beautifully crafted, so if you can [get your hands on that](http://amzn.to/1nLN6WW) it would be the recommended way to go. If not, do as I did and grab the **free** ebook from Frank's site. 
+    Nearly five years after it first launched on Kickstarter, I read [Frank Chimero's](https://twitter.com/frank_chimero) excellent design handbook, *[The Shape of Design](http://www.shapeofdesignbook.com/)*. The Kickstarter hardcover edition looks to be beautifully crafted, so if you can [get your hands on that](http://amzn.to/1nLN6WW) it would be the recommended way to go. If not, do as I did and grab the **free** ebook from Frank's site. 
 
 content_layout:
   - section_layout: 3col
@@ -22,7 +22,7 @@ content_layout:
 ---
 I'd recommend _The Shape of Design_ to all designers, as well as anyone interested in design. This is not a practical guide to becoming a better designer; instead be prepared to explore the philosophy of design through witty and metaphorical meditation. While some sections may come off as self-indulgent, it's a quick read that is guaranteed to make you think deeper about design, which is never a bad thing. 
 <br><br>
-Here are my favorite Kindle highlights:
+Here are my Kindle highlights:
 > To be human is to tinker, to envision a better condition, and decide to work toward it by shaping the world around us.
 
 > The Shakers have a proverb that says, “Do not make something unless it is both necessary and useful; but if it is both, do not hesitate to make it beautiful.”

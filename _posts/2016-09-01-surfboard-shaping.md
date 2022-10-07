@@ -17,11 +17,11 @@ Working with such an experienced craftsman was a blast, and Gordon was super pat
 
 After carefully considering everything from my experience level to the waves I would be riding to my style & preferences, we picked a foam blank and began to define the outline of the board.
 
-![Starting off with a foam blank](/images/posts/surfboard-shaping/shaping-blank-vertical-combo.jpg)
+![Starting off with a foam blank](/images/posts/surfboard-shaping/shaping-blank-vertical-combo.jpg){:.img-75vh .img-center}
 
 ![Planing the blank](/images/posts/surfboard-shaping/shaping-planing.jpg)
 
-![Tracing the profile](/images/posts/surfboard-shaping/shaping-profile-combo.jpg)
+![Tracing the profile](/images/posts/surfboard-shaping/shaping-profile-combo.jpg){:.img-75vh .img-center}
 
 Refinements are made to the form from different angles with a variety of tools
 
@@ -35,6 +35,6 @@ Refinements are made to the form from different angles with a variety of tools
 
 I liked the idea of the board being highly visible in the dark Northern California waters and frequent fog, so went with a bright orange color. Here is finished board after being glassed at Sunset Shapers:
 
-![Bottom](/images/posts/surfboard-shaping/finished-bottom-combo.jpg)
+![Bottom](/images/posts/surfboard-shaping/finished-bottom-combo.jpg){:.img-75vh .img-center}
 
 ![Finished composite](/images/posts/surfboard-shaping/finished-side-combo.jpg)

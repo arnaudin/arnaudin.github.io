@@ -19,4 +19,4 @@ The trade ended up involving a skit, culminating in me rising through a trap doo
 
 Follow my Tumblr to stay up to date: [@Ciclopata](http://ciclopata.tumblr.com/).
 
-Update: I made it carless until 2022 when I left San Francisco! 
+*Update: I made it carless until 2022 when I left San Francisco!*
