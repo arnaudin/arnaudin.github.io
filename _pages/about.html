@@ -68,28 +68,30 @@ competitions:
     link: https://drive.google.com/file/d/0B2l6aLOefFgEbW53TlB0QUdiTlU/view?usp=sharing&resourcekey=0-XFDM3CvDIzy7xHWfdWAQ6g
 
 skills:
-  - User Experience design (UX)
-  - User Interface design (UI)
-  - Graphic design
-  - Cross platform design (Desktop, Native Mobile, responsive, smartwatch, kiosk etc.)
-  - Design libraries and Styleguides
-  - User journey mapping
-  - User interviews and Usability testing
-  - Information Architecture
-  - Wireframing
-  - Interactive prototypes
-  - Contextual inquiry
+  - Product Management & Product Leadership
+  - Product Design
+  - User Experience Design (UX)
+  - User Interface Design (UI)
+  - Interaction Design (IxD)
+  - Information Architecture (IA)
+  - User Research
+  - Usability Testing
+  - Innovation Management 
+  - Facilitation
 
 tools:
-  - Sketch app, Figma
-  - Flinto, Balsamiq, Invision, Zeplin, Marvel app
-  - Adobe Creative Cloud Suite (Photoshop, XD, Illustrator, After Effects...)
-  - HTML
-  - CSS and SASS (SCSS)
-  - jQuery (for prototyping only)
+  - Figma
+  - Balsamiq
+  - Sketch
+  - Adobe Creative Suite
+  - Microsoft Office and Google Suite
+  - Jira, Confluence, Trello
+  - Digital Whiteboard (FigJam, Miro, Mural, etc.)
+  - InVision
+  - HTML, CSS and SASS (SCSS)
+  - JavaScript & jQuery (for prototyping only)
+  - Python
   - Jekyll
-  - Frontend templating languages (ERB, Handlebars, Blade, Liquid)
-  - Glyphs app, Fontlab, Fontographer
 
 about_site: |
   - This is a static site built with [Jekyll](https://github.com/jekyll/jekyll).
@@ -160,7 +162,7 @@ about_site: |
           </dl>
         </div>
 
-        <div class="about-section about-section--nested">
+        <!--<div class="about-section about-section--nested">
           <h3 class="about-section-title type-level-2">Hackathons</h3>
           <dl class="relational-list">
             {% for competition-item in page.competitions %}
@@ -169,9 +171,30 @@ about_site: |
               <dd class="relational-list__description"><a href="{{ competition-item.link }}">{{ competition-item.result | markdownify}}</a></dd>
             {% endfor %}
           </dl>
+        </div>-->
+      </div>
+      <div class="about-skills">
+        <div class="about-section">
+          <h3 class="about-section-title type-level-2">Top Skills</h3>
+          <ul class="list--dashed">
+            {% for skill in page.skills %}
+              <li>{{ skill }}</li>
+            {% endfor %}
+          </ul>
         </div>
       </div>
-      <!--
+      <div class="about-links">
+        <div class="about-section">
+          <h3 class="about-section-title type-level-2">Links</h3>
+          <ul class="list--dashed list--small">
+              <li><a href="//linkedin.com/in/{{ site.social-username.linkedin }}">LinkedIn</a></li>
+              <li><a href="//twitter.com/{{ site.social-username.twitter }}">Twitter</a></li>
+              <li><a href="//github.com/{{ site.social-username.github }}">Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--
       <div class="about-tools">
         <div class="about-section">
           <h3 class="about-section-title type-level-2">Tools &amp; technologies</h3>
@@ -182,20 +205,7 @@ about_site: |
           </ul>
         </div>
       </div>
-
-      <div class="about-skills">
-        <div class="about-section">
-          <h3 class="about-section-title type-level-2">Skills</h3>
-          <ul class="list--dashed">
-            {% for skill in page.skills %}
-              <li>{{ skill }}</li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-    </div>
     -->
-
     <div class="about-site">
       <div class="about-section about-site-description">
         <h3 class="about-section-title type-level-2">About This Site</h3>
