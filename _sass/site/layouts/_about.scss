@@ -3,26 +3,9 @@
   .about {
     @extend .grid-container;
 
-    .about-intro-image {
-      grid-row: 1;
-      @include grid-column-from-to(1,3);
-
-      @include grid-media(phablet) {
-        @include grid-column-from-to(1,4);
-      }
-
-      @include grid-media(tablet) {
-        @include grid-column-from-to(9,12);
-      }
-
-      @include grid-media(desktop) {
-        @include grid-column-from-to(9,12);
-      }
-    }
-
     .about-intro-description {
       grid-row: 2;
-      @include grid-column-from-to(1,6);
+      @include grid-column-from-to(1,12);
 
       @include grid-media(phablet) {
         @include grid-column-from-to(1,6);
@@ -30,11 +13,11 @@
 
       @include grid-media(tablet) {
         grid-row: 1;
-        @include grid-column-from-to(1,7);
+        @include grid-column-from-to(1,12);
       }
 
       @include grid-media(desktop) {
-        @include grid-column-from-to(1,7);
+        @include grid-column-from-to(1,12);
       }
     }
 
