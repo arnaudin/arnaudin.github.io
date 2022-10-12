@@ -65,7 +65,7 @@
       }
 
       @include grid-media(desktop) {
-        @include grid-column-from-to(2,8);
+        @include grid-column-from-to(1,12);
       }
     }
   }

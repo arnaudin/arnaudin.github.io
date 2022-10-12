@@ -21,7 +21,7 @@ intro: |
   **Role:** This was a design-led visioning project stemming directly from user feedback and journey mapping observations. I designed the workflow, created mockups, and built a simple prototyope in conjunction with an Android development course I was taking at the time. The app read static data rather than via a live API. 
 
 content_layout:
-  - section_layout: 2col
+  - section_layout: 3col
     images:
       - caption: 'Simulation job list view.'
         description: 'Proposed logo'

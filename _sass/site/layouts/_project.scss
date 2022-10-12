@@ -2,26 +2,19 @@
 
   //Layout
   .project-info {
-    @extend .grid-container;
-
-    .project-intro {
-      @include grid-column(12);
-
-      @include grid-media(tablet) {
-        @include grid-column(12);
-      }
-
-      @include grid-media(desktop) {
-        @include grid-column-from-to(1,8);
-      }
-    }
+    @extend .grid-container;    
 
     .project-details {
       @include grid-column(12);
+    }
+  }
 
-      @include grid-media(desktop) {
-        @include grid-column-from-to(9,12);
-      }
+  .project-intro {
+    @extend .grid-container;
+    @include grid-column-from-to(1,12);
+
+    p {
+      @include grid-column(12);
     }
   }
 
@@ -70,7 +63,7 @@
       }
 
       @include grid-media(desktop) {
-        @include grid-column-from-to(2,8);
+        @include grid-column-from-to(1,12);
       }
     }
   }
@@ -99,5 +92,11 @@
     @include grid-media(desktop) {
       margin-top: var(--gutter-row);
     }
+  }
+}
+
+.additional-content {
+  p {
+    margin-bottom: 1rem;
   }
 }
