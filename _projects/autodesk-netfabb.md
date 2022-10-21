@@ -48,7 +48,7 @@ content_layout:
         height:
       - caption: 
         description:
-        url: '/projects/netfabb/netfabb-gm-wired-s.png'
+        url: '/projects/netfabb/netfabb-gm-parts.png'
         positioning: 
         width:
         height:
