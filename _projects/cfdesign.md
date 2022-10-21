@@ -3,7 +3,7 @@ date: 2011-03-01
 published: true
 title: "CFdesign"
 description: "Acquired by Autodesk, the fastest growing CFD company in the world"
-categories: app, desktop, autodesk, simulation
+categories: app, desktop, autodesk, simulation, cae
 disciplines: UX, Interation Design, Visual Design, User Research, Testing, Support
 media: Windows App
 ownership: Professional

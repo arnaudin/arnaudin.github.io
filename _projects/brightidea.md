@@ -12,23 +12,23 @@ time_period: 2018-2019, 2020-2021
 thumbnail: "/projects/brightidea/brightidea-thumbnail.jpg"
 
 intro: |
-  Brightidea is a cloud-based idea and innovation management platform that helps companies ensure the best ideas win. We provide an engaging experience for employees and professional-grade management tools that make Brightidea the [#1 customer-rated idea management platform](https://www.g2.com/products/brightidea/reviews) for 3 years running. Brightidea has served over 2.5 million users worldwide, and more than $15 billion in customer-reported business impact has been logged on the platform.
+  Brightidea provides a cloud-based idea and innovation management platform that helps companies ensure the best ideas win. Our engaging employee experience and professional-grade management tools make Brightidea the [#1 customer-rated idea management platform](https://www.g2.com/products/brightidea/reviews) for 3 years running. Brightidea has served over 2.5 million users worldwide, and more than $15 billion in customer-reported business impact has been logged on the platform. (All stats as of the time I left the company.)
 
-  **Role:** I started at Brightidea as a Product Designer and transitioned to a Product Management role soon after. As a startup PM I most often also supported my team with Product, UX, and UI design.
+  **Role:** I started at Brightidea as a Product Designer and transitioned to a Product Management role soon after. As a startup PM with design experience, I most often also supported my team with UX, UI, and interaction design as well as supporting research.
 
 content_layout:
   - section_layout: text
     content: |
       ## Idea Management Fundamentals
 
-      [Gartner describes idea management as](https://www.gartner.com/en/information-technology/glossary/idea-management): "a structured process of generating, capturing, discussing and improving, organizing, evaluating and prioritizing valuable insight or alternative thinking that would otherwise not have emerged through normal processes."
-
-      As a new Product Manager a theme I focused on was idea management fundamentals for our managers, moderators, and admins. A driving insight was that over the past few years customers had grown from running *an* idea management program or a handful of isolated processes to running an interconnected system of programs & processes. For example, the winners of a problem solving challenge might move into an incubator or perhaps be fast-tracked to executive review in an upcoming pitch competition. 
+      A theme I first focused on was idea management fundamentals for managers, sponsors, moderators, and admins. 
       
-      In this new environment, what actions will be taken, and what tools support that? We dug into our users' goals, broke the process down to first principles, evaluated our current offerings, revamped some areas, and built out new capabilities where needed. For example:
+      [Gartner describes idea management as](https://www.gartner.com/en/information-technology/glossary/idea-management): "a structured process of generating, capturing, discussing and improving, organizing, evaluating and prioritizing valuable insight or alternative thinking that would otherwise not have emerged through normal processes." While we had many of these workflows covered, a driving insight was that over the recent years, customers had grown from running *an* idea management program or two to running an interconnected system of programs & processes. 
+            
+      We started to see that in this new environment, operations needed to occur more frequently and at larger scales. New tools were needed to support innovation across organizations. We dug into our users' goals, broke the process down to first principles, evaluated our current offerings, revamped some areas, and built out new capabilities where needed--for example:
 
-        - Move idea(s)
-        - Copy idea(s)
+        - Move idea(s) between pipelines
+        - Copy idea(s) between pipelines
         - Link ideas
         - Merge ideas
         - Tagging and categorization
@@ -36,8 +36,8 @@ content_layout:
   
   - section_layout: 2col
     images:
-      - caption: 'Copy ideas from one innovation pipeline to another'
-        description: 'Copy ideas from one innovation pipeline to another'
+      - caption: 'Move and copy ideas from one innovation pipeline to another'
+        description: 'Move and copy ideas from one innovation pipeline to another'
         url: '/projects/brightidea/brightidea-move-copy.gif'
         width:
         height:
@@ -49,23 +49,23 @@ content_layout:
 
   - section_layout: text
     content: |
-      ## Integrations
+      ## Platform Integrations
 
-      Another area of focus was leading development teams to build general purpose and native integrations for a variety of user goals including: capturing ideas, enhancing ideas, and project execution.
+      Another area of focus was leading development teams to build general purpose and native integrations for a variety of user goals including: capturing ideas, augmenting & extending ideas, and project execution. Customers work with extensive software stacks now, and we need to be a node in those ecosystems. 
 
-      ### Capturing Ideas
+      **Capturing Ideas**
 
-      With more and more work occuring on digital platforms like [Slack](https://slack.com/apps/A02JKS7S2RL-brightidea?tab=more_info) and [Microsoft Teams](https://appsource.microsoft.com/en-us/product/office/WA200002795?tab=Overview), it is inevitable that employees are going to think of and discuss ideas while interacting on those channels. Unfortunately most of these ideas are ultimately lost in the never-ending chat stream never to be revisted, or are forgotten when a virtual meeting ends. 
+      With more and more work occuring on digital platforms like [Slack](https://slack.com/apps/A02JKS7S2RL-brightidea?tab=more_info) and [Microsoft Teams](https://appsource.microsoft.com/en-us/product/office/WA200002795?tab=Overview), it is inevitable that employees are going to think of and discuss ideas while interacting on those channels. Unfortunately most of these ideas are ultimately lost in the never-ending chat stream, or are forgotten when the virtual meeting ends. We have built tools to make capturing ideas as frictionless as possible. 
 
   - section_layout: 2col
     images:
-      - caption: 'Capture ideas directly from Slack messages, including images'
+      - caption: 'Capture ideas directly from Slack messages, including images and files'
         description: 'Capture ideas directly from Slack messages, including images and attachments'
         url: '/projects/brightidea/brightidea-slack-capture.png'
         positioning:
         width:
         height:
-      - caption: 'Refine idea details and link user accounts between Slack & Brightidea'
+      - caption: 'Ideas are automatically populated and user accounts are linked for immediate submission; users can also refine or enhance details without leaving the app'
         description: 'Refine idea details and users between Slack & Brightidea'
         url: '/projects/brightidea/brightidea-slack-behalf.png'
         width:
@@ -73,13 +73,13 @@ content_layout:
 
   - section_layout: 2col
     images:
-      - caption: 'Capture ideas directly from Teams messages, including images'
+      - caption: 'Capture ideas directly from Teams messages, including images and'
         description: 'Capture ideas directly from Slack messages, including images and attachments'
         url: '/projects/brightidea/brightidea-teams-capture.jpeg'
         positioning:
         width:
         height:
-      - caption: 'Refine idea details before submitting'
+      - caption: 'Ideas are automatically populated for immediate submission; users can also refine or enhance details without leaving the app'
         description: 'Refine idea details before submitting'
         url: '/projects/brightidea/brightidea-teams-details.jpeg'
         width:
@@ -88,9 +88,9 @@ content_layout:
 
   - section_layout: text
     content: |
-      It's also no secret that we wont always get our best ideas during the confines of the 8 hour workday. We built a [Brightidea skill for Alexa](https://www.amazon.com/Brightidea-Inc-Home/dp/B07HRKJ62J) and [Google Assistant](https://assistant.google.com/services/a/uid/0000009d03d1b1cd?hl=en-US) in order to make capturing ideas on-the-go or off-hours possible in mere seconds via voice integration. In this way Brightidea serves as your external brain--ideas are safely saved to your inbox to expand or organize when your schedule permits.
+      It's also no secret that people don't always get our best ideas during the confines of the 8 hour workday. We built Brightidea skills for [Alexa](https://www.amazon.com/Brightidea-Inc-Home/dp/B07HRKJ62J) and [Google Assistant](https://assistant.google.com/services/a/uid/0000009d03d1b1cd?hl=en-US) in order to make capturing ideas on-the-go or off-hours possible in seconds via voice integrations. Entirely hands-free, Brightidea serves as your external brain securely saving ideas to your inbox to manage when your schedule permits.
 
-      Prefer to capture your idea by email? We also built email submission flows, known as Magic Inbox, to collect ideas at a single, easy-to-remember inbox: my@brightidea.com. This amazingly simple UX supports extensive company detection, IP & data protection, idea routing, and even new user registration flows. While there is major complexity hidden behind the scenes, all a user needs to remember is "My Brightidea."
+      Prefer to capture your idea by email? We also built email submission flows, known as Magic Inbox, to collect ideas at a single, easy-to-remember inbox: *my@brightidea.com*. This amazingly simple UX supports extensive company detection, IP & data protection, idea routing, and even new user registration flows. While there is major complexity hidden behind the scenes, all a user needs to remember is "My Brightidea."
 
   - section_layout: 2col
     images:
@@ -107,9 +107,9 @@ content_layout:
 
   - section_layout: text
     content: |
-      ### Project Management Integrations
+      **Project Management Integrations**
 
-      While Brightidea does provide project management tools in the Labs product, they are primarily geared towards zero-to-one innovation projects with small teams. One of the top user requests was integration with apps like Jira, Asana, Monday.com, etc. We built a native Jira integration, a bridge to Zapier, and general purpose rules-triggered outgoing webhooks to make all of this possible. 
+      While Brightidea does provide project management tools in the Labs product, they are primarily geared towards zero-to-one innovation projects with small teams. One of the top user requests was integration with apps like Jira, Asana, Monday.com, etc. We built a native Jira integration, a bridge to Zapier, and general purpose rules-triggered outgoing webhooks to make these types of connections possible. 
 
   - section_layout: 2col
     images:
