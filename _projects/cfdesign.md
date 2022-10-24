@@ -11,13 +11,14 @@ client: Blue Ridge Numerics
 time_period: 2008-2011
 thumbnail: "/projects/cfdesign/cfdesign-thumbnail.jpg"
 
-intro: |
-  CFdesign was the sole product offering of Blue Ridge Numerics Inc which was acquired by Autodesk (March 2011). This software package enabled engineers to simulate fluid flow, heat transfer, and electronics cooling. At the time, Blue Ridge Numerics was one of the 500 fastest growing companies in North America and the fastest growing CFD software company in the world.
-
 content_layout:
+  - section_layout: text
+    content: |
+      CFdesign was the sole product offering of Blue Ridge Numerics Inc which was acquired by Autodesk (March 2011). This software package enabled engineers to simulate fluid flow, heat transfer, and electronics cooling. At the time, Blue Ridge Numerics was one of the 500 fastest growing companies in North America and the fastest growing CFD software company in the world.
+  
   - section_layout: 1col-narrow
     images:
-      - caption: 'Simulation visualization of fluid flow through a valve using CFdesign'
+      - caption: 'Simulation visualization of fluid flow through a valve generated with CFdesign'
         description: 'Simulation visualization of fluid flow through a valve using CFdesign'
         url: '/projects/cfdesign/cfdesign-valve-simulation.png'
         width:

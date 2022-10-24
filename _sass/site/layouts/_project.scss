@@ -70,6 +70,8 @@
 
 //   //Styles
   .image-wrapper {
+    margin-bottom: var(--paragraph-spacing);
+    
     .image-wrapper img { width: 100%; }
 
     figcaption {
@@ -84,16 +86,16 @@
     }
   }
 
-  .project-info {
+/*   .project-info {
     margin-bottom: rem(40px);
   }
-
+ 
   .project-text {
     @include grid-media(desktop) {
       margin-top: var(--gutter-row);
     }
-  }
-}
+  }*/
+} 
 
 .additional-content {
   p {

@@ -11,12 +11,11 @@ client: Autodesk
 time_period: 2016-2018
 thumbnail: "/projects/netfabb/netfabb-thumbnail.jpg"
 
-intro: |
-  [Autodesk Netfabb](https://www.autodesk.com/products/netfabb/overview) is a suite of tools for streamlining and optimizing additive manufacturing processes. 
-
 content_layout:
   - section_layout: text
     content: |
+      [Autodesk Netfabb](https://www.autodesk.com/products/netfabb/overview) is a suite of tools for streamlining and optimizing additive manufacturing processes. 
+      
       As Lead Designer I supported new features and redesigns within Netfabb Simulation Utility for the 2017 and 2018 releases. For a full list of _What's New_ by version:
         
       - [What's New in Autodesk® Netfabb 2017](http://help.autodesk.com/view/NETF/2017/ENU/?guid=GUID-6EAF21B6-F2E0-4F1A-AB42-ABFC119133AB)

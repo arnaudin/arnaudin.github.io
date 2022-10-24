@@ -11,24 +11,19 @@ client: Autodesk
 time_period: 2015
 thumbnail: "/projects/autodesk-job-monitor/job-monitor-thumbnail.jpg"
 
-intro: |
-  **Role:** This was a design-led visioning project stemming directly from user feedback and journey mapping observations. I designed the workflow, created mockups, and built a simple prototyope in conjunction with an Android development course I was taking at the time. (The app read static data rather than via a live API.)
-
 content_layout:
+  - section_layout: text
+    content: |
+      **Role:** This was a design-led visioning project stemming directly from user feedback and journey mapping observations. I designed the workflow, created mockups, and built a simple prototyope in conjunction with an Android development course I was taking at the time. (The app read static data rather than via a live API.)
+
   - section_layout: 3col
     images:
       - caption: 'Simulation job list view.'
         description: 'Proposed logo'
         url: '/projects/autodesk-job-monitor/job-monitor-list-action.png'
-        border: light
-        width:
-        height:
       - caption: 'Simulation detail view.'
         description: 'Proposed logo'
         url: '/projects/autodesk-job-monitor/job-monitor-details.png'
-        border: light
-        width:
-        height:
 
   - section_layout: text
     content: |
@@ -43,8 +38,6 @@ content_layout:
       - caption: 'Information architecture and basic flows between screens.'
         description: 'Information Architecture and Basic Flows'
         url: '/projects/autodesk-job-monitor/job-monitor-flow-darken.png'
-        width:
-        height:
 
   - section_layout: text
     content: |
@@ -55,16 +48,10 @@ content_layout:
       - caption: 'A general purpose Material card view that would open the simulation in Autodesk 360'
         description: 'Material card view'
         url: '/projects/autodesk-job-monitor/job-monitor-card-2.png'
-        width:
-        height:
       - caption: 'Optional push notifications alert of success or failure'
         description: 'Push notifications'
         url: '/projects/autodesk-job-monitor/job-monitor-push.png'
-        width:
-        height:
       - caption: 'Illustrating the ''Digital Paper'' layering of a Material app'
         description: 'Digital paper'
         url: '/projects/autodesk-job-monitor/job-monitor-layers.png'
-        width:
-        height: 
 ---

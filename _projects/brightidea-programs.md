@@ -11,17 +11,19 @@ client: Brightidea
 time_period: 2019-2020
 thumbnail: "/projects/brightidea-programs/brightidea-programs-thumbnail.jpg"
 
-intro: |
-  I was the **Product & Design Lead** on a five person team within Brightidea's own innovation lab. We were challenged to unlock new growth potential by expanding down-market. This involved developing new innovation methodologies, products, services, and PLG approaches. 
-
 content_layout:
-  - section_layout: 2col
+  - section_layout: text
+    content: |
+      I was the **Product & Design Lead** on a five person team within Brightidea's own innovation lab. We were challenged to unlock new growth potential by expanding down-market. This involved developing new innovation methodologies, products, services, and PLG approaches. 
+
+  - section_layout: 1col
     images:
-      - caption: 'Overview of the Brightidea Programs solution'
+      - caption:
         description: 'Overview of the Brightidea Programs solution'
         url: '/projects/brightidea-programs/brightidea-programs-overview.png'
+        class: img-center
         positioning: 
-        width:
+        width: 
         height:
 
   - section_layout: text
@@ -35,14 +37,12 @@ content_layout:
       - "[Do things that dont scale](http://paulgraham.com/ds.html)"
       - [Talk to customers!](https://twitter.com/paulg/status/898476047263518720)
       
-      <br>
       Over the course of a year our team:
 
       - Developed a new methology to jumpstart employee innovation, *Innovation Program Management (IPM)*
       - Launched & iterated a product founded in this methodology, *Programs Pro*--that eventually rolled into [Brightidea Programs](https://www.brightidea.com/product/programs/)
       - Prototyped a *product-led growth (PLG)* motion that informed our approach with subsequent Idea Box and Whiteboard products
 
-      <br>
       Check out our CEO's article on [productled.org](https://www.productled.org/blog/how-brightideas-innovation-lab-paved-the-path-to-plg) for more behind the scenes on [how our innovation lab paved the path to PLG](https://www.productled.org/blog/how-brightideas-innovation-lab-paved-the-path-to-plg).
 
       ## Product Highlights

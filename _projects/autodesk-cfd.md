@@ -11,10 +11,11 @@ client: Autodesk
 time_period: 2011-2017
 thumbnail: "/projects/autodesk-cfd/cfd-thumbnail.jpg"
 
-intro: |
-  Autodesk CFD is a professional yet easy-to-use computational fluid dynamics (CFD) tool for engineers; in other words, an approachable way to simulate fluid flow and heat transfer to understand how designs will perform in the real world. It is used to simulate everything from pumps & valves, to electronics cooling, to aero & hydrodynamics, to HVAC systems in buildings. Our product is designed with the belief that simulating design performance virtually, early, and often in the product lifecycle results in cheaper and better performing real-world designs, with faster time to market.
-
 content_layout:
+  - section_layout: text
+    content: |
+      Autodesk CFD is a professional yet easy-to-use computational fluid dynamics (CFD) tool for engineers; in other words, an approachable way to simulate fluid flow and heat transfer to understand how designs will perform in the real world. It is used to simulate everything from pumps & valves, to electronics cooling, to aero & hydrodynamics, to HVAC systems in buildings. Our product is designed with the belief that simulating design performance virtually, early, and often in the product lifecycle results in cheaper and better performing real-world designs, with faster time to market.
+
   - section_layout: 1col
     images:
       - caption: 'Autodesk Simulation CFD 2013 shown in simulation setup mode'
@@ -46,7 +47,6 @@ content_layout:
       - Usability testing
       - Design evangelism and cultural evolution
       
-      <br>
       An example of a large scale, post-acquisition UI overhaul follows.
 
   - section_layout: text
@@ -178,6 +178,5 @@ content_layout:
         - [What's New in Autodesk® Simulation CFD 2013](https://knowledge.autodesk.com/support/cfd/learn-explore/caas/CloudHelp/cloudhelp/2015/ENU/SimCFD-WhatsNew/files/GUID-8739DAC9-3B71-4092-A5C7-EC06B95DE2B0-htm.html)
         - [Autodesk® Simulation CFD 2012 has been Released](https://designandmotion.net/design-2/manufacturing-design/simulation-cfd-released/)
 
-      <br>
       For earlier work, check out my post about [CFdesign](/projects/cfdesign/).
 ---

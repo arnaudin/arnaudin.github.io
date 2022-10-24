@@ -11,16 +11,11 @@ client: Autodesk
 time_period: 2014-2015
 thumbnail: "/projects/autodesk-web-mobile-viewer/a360-web.png"
 
-website:
-  button_text: Visit the site
-  url: https://a360.autodesk.com/
-
-intro: |
-  **Role:** As the UX Designer for simulation, I interfaced with the platform A360 Viewer team and designed UI, interactions, and visual components for the simulation layer of the common viewer.
-
 content_layout:
   - section_layout: text
     content: |
+      **Role:** As the UX Designer for simulation, I interfaced with the platform A360 Viewer team and designed UI, interactions, and visual components for the simulation layer of the common viewer.
+
       Simulation provides additional design feedback loops as part of an iterative, collaborative process. The Simulation Viewer is a step towards making results immediately sharable and available anywhere, while enabling basic collaboration like annotation and commenting. We like to think of it as Google Docs for simulation results.
 
       Ultimately my work on this project was integrated into the [A360 web viewer](https://a360.autodesk.com/), A360 mobile app, and Autodesk Labs Sim 360 project which all now support simulation results viewing. This was the first time users could share results without sending an actual file—which often was impossible or prohibitive due to large sizes (e.g. via email). 
@@ -35,7 +30,6 @@ content_layout:
 
   - section_layout: text
     content: |
-      <br>
       ### Mockups & Vision
 
   - section_layout: 1col
@@ -61,7 +55,6 @@ content_layout:
 
   - section_layout: text
     content: |
-      <br>
       ### Visual Design for Simulation Results Legend
 
   - section_layout: 2col

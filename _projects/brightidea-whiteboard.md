@@ -11,16 +11,15 @@ client: Brightidea
 time_period: 2021-2022
 thumbnail: "/projects/brightidea-whiteboard/brightidea-whiteboard-thumbnail.jpg"
 
-intro: |
-  [Brightidea Whiteboard](https://www.brightidea.com/product/whiteboard/) rounds out the Brightidea idea management platform with native whiteboards for real-time team brainstorming & ideation. We have built an all-in-one solution for end-to-end idea management that cannot be found anywhere else. 
-
 content_layout:
   - section_layout: text
     content: |
+      [Brightidea Whiteboard](https://www.brightidea.com/product/whiteboard/) rounds out the Brightidea idea management platform with native whiteboards for real-time team brainstorming & ideation. We have built an all-in-one solution for end-to-end idea management that cannot be found anywhere else. 
+      
       **Role:** I served as Product Lead for v1 of Whiteboard, leading a team of backend Rust developers, frontend developers, and designers to deliver this brand new product on a cutting edge WebAssembly technology stack. 
-      <br><br>
+      
       Read about the initial launch on the Brightidea blog, "[A Better Way To Brainstorm](https://www.brightidea.com/blog/fall-release-2021/)," and check out the launch/demo video:
-      <br><br>
+      
       <iframe width="560" height="315" src="https://www.youtube.com/embed/McAnJXgmJbw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
   - section_layout: text

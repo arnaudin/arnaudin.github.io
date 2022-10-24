@@ -11,12 +11,11 @@ client:
 time_period: 2013-2018
 thumbnail: "/projects/making-things/making-things-thumbnail.jpg"
 
-intro: |
-  I enjoy making things, and making things better. These are a handful of small 3D printing and CNC projects from my time at Autodesk (where I had access to amazing workshops at [Pier 9](https://www.instructables.com/Overview-Access-to-Autodesk-Pier-9-Workshop/)). Almost everything digital was done with Fusion 360. 
-
 content_layout:
   - section_layout: text
     content: |
+      I enjoy making things, and making things better. These are a handful of small 3D printing and CNC projects from my time at Autodesk (where I had access to amazing workshops at [Pier 9](https://www.instructables.com/Overview-Access-to-Autodesk-Pier-9-Workshop/)). Almost everything digital was done with Fusion 360. 
+      
       ## Hardware Experience
       - MakerBot
       - Ultimaker

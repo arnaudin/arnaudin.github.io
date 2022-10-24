@@ -12,18 +12,16 @@ client: Autodesk
 time_period: 2012-2014
 thumbnail: "/projects/flow-design/flow-design-thumbnail.jpg"
 
-website:
-  button_text: Watch a Demo
-  url: https://youtu.be/2RBOtd-Z8O8
-
-intro: |
-  [Flow Design](https://www.autodesk.com/products/flow-design/overview) is a virtual wind tunnel that makes airflow simulation accessible to architects, product designers, and students (not just PhD analysts and engineers). 
-  
-  The goal of this project was to drastically simplify flow simulation so that more people can understand how their designs will perform in the real world. Most people can understand the concept of a wind tunnel, but don't know the first thing about computational fluid dynamics (CFD) or finite element analysis (FEA). All of this complexity lives behind the scenes with Flow Design. 
-
-  Flow Design started off in Autodesk Labs under the name "Project Falcon." After initial success we committed to commercializing the technology as a paid product offerring and educational tool. 
-
 content_layout:
+  - section_layout: text
+    content: |
+
+      [Flow Design](https://www.autodesk.com/products/flow-design/overview) is a virtual wind tunnel that makes airflow simulation accessible to architects, product designers, and students (not just PhD analysts and engineers). 
+  
+      The goal of this project was to drastically simplify flow simulation so that more people can understand how their designs will perform in the real world. Most people can understand the concept of a wind tunnel, but don't know the first thing about computational fluid dynamics (CFD) or finite element analysis (FEA). All of this complexity lives behind the scenes with Flow Design. 
+
+      Flow Design started off in Autodesk Labs under the name "Project Falcon." After initial success we committed to commercializing the technology as a paid product offerring and educational tool. 
+
   - section_layout: 1col-narrow
     images:
       - caption: Flow Design virtual wind tunnel application
@@ -36,7 +34,7 @@ content_layout:
     content: |
       ### Role
       
-      This started for me as an innovation interest and more of a "10 percent time" consulting project with the Emerging Products & Technologies team. I then served as the lead designer for commercial releases.
+      This started for me as a "10 percent time" innovation consulting project with the Emerging Products & Technologies team. I then served as the lead designer for commercial releases.
       
       Responsibilities included:
 

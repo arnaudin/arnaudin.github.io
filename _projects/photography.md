@@ -11,12 +11,11 @@ client:
 time_period: 2000-2022
 thumbnail: "/projects/photography/photography-thumbnail.jpg"
 
-intro: |
-  I'm in the process of reorganizing my photos and finding them a new home. In the meantime, enjoy a small sampling below.
-
 content_layout:
   - section_layout: text
     content: |
+      I'm in the process of reorganizing my photos and finding them a new home. In the meantime, enjoy a small sampling below.
+      
       ### Landscapes and Nature
 
   - section_layout: 1col-10-centered
