@@ -11,18 +11,6 @@ $thumb-animation-ease-out: ease-in-out;
 
   .projects-intro {
     @include grid-column(12);
-
-    @include grid-media(phablet) {
-      @include grid-column-from-to(1,12);
-    }
-
-    @include grid-media(tablet) {
-      @include grid-column-from-to(1,12);
-    }
-
-    @include grid-media(desktop) {
-      @include grid-column-from-to(1,12);
-    }
   }
 }
 
@@ -56,7 +44,6 @@ $thumb-animation-ease-out: ease-in-out;
   }
 
   @include grid-media(desktop) {
-    margin-top: 5vh;
     margin-bottom: 1.5rem;
   }
 }
