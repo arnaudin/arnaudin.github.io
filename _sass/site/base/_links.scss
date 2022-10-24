@@ -17,3 +17,9 @@ main li a,
     border-bottom-color: var(--color-cta);
   }
 }
+
+.project-listing:hover .project-name {
+  text-decoration: none;
+  color: var(--color-cta);
+  transition: 200ms ease;
+}
