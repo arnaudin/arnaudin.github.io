@@ -125,7 +125,7 @@ content_layout:
 
   - section_layout: 2col
     images:
-      - caption: The early Tech Preview was cross platform, and worked on tablets
+      - caption: The early Tech Preview was cross platform, and worked on tablets. In fact, there was an even earlier version that simulated 2D flow called ForceEffect Flow.
         description: 'The early Tech Preview was cross platform, and worked on tablets'
         url: '/projects/flow-design/flow-design-mobile-nav.png'
         width:
