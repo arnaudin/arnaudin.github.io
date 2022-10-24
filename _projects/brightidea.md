@@ -11,14 +11,13 @@ client: Brightidea
 time_period: 2018-2019, 2020-2021
 thumbnail: "/projects/brightidea/brightidea-thumbnail.jpg"
 
-intro: |
-  Brightidea provides a cloud-based idea and innovation management platform that helps companies ensure the best ideas win. Our engaging employee experience and professional-grade management tools make Brightidea the [#1 customer-rated idea management platform](https://www.g2.com/products/brightidea/reviews) for 3 years running. Brightidea has served over 2.5 million users worldwide, and more than $15 billion in customer-reported business impact has been logged on the platform. (All stats as of the time I left the company.)
-
-  **Role:** I started at Brightidea as a Product Designer and transitioned to a Product Management role soon after. As a startup PM with design experience, I most often also supported my team with UX, UI, and interaction design as well as supporting research.
-
 content_layout:
   - section_layout: text
     content: |
+      Brightidea provides a cloud-based idea and innovation management platform that helps companies ensure the best ideas win. Our engaging employee experience and professional-grade management tools make Brightidea the [#1 customer-rated idea management platform](https://www.g2.com/products/brightidea/reviews) for 3 years running. Brightidea has served over 2.5 million users worldwide, and more than $15 billion in customer-reported business impact has been logged on the platform. (All stats as of the time I left the company.)
+
+      **Role:** I started at Brightidea as a Product Designer and transitioned to a Product Management role soon after. As a startup PM with design experience, I most often also supported my team with UX, UI, and interaction design as well as supporting research.
+      
       ## Idea Management Fundamentals
 
       A theme I first focused on was idea management fundamentals for managers, sponsors, moderators, and admins. 
