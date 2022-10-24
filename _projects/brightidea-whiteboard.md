@@ -79,7 +79,7 @@ content_layout:
         border: light
         width:
         height:
-        
+
   # - section_layout: 2col
   #   images:
   #     - caption:
@@ -93,9 +93,9 @@ content_layout:
   #       width:
   #       height:
 
-  # - section_layout: text
-  #   content: |
-  #     Another text block
+  - section_layout: text
+    content: |
+      For more of my work at Brightidea, read about how we built [Brightidea Programs](/projects/brightidea-programs/) or how I contributed to the [core products and platform](/projects/brightidea/).
 
   # - section_layout: 1col
   #   images:
