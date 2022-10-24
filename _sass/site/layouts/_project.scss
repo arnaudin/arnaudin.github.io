@@ -78,12 +78,6 @@
       margin-top: rem(12px);
       margin-bottom: rem(16px);
     }
-
-    &.nudge-down-5 {
-      @include grid-media(desktop) {
-        margin-top: 5%;
-      }
-    }
   }
 
 /*   .project-info {

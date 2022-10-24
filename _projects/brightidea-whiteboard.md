@@ -85,7 +85,6 @@ content_layout:
   #     - caption:
   #       description: 'Magazine article'
   #       url: '/black-thumbnail.png'
-  #       positioning: nudge-down-5
   #       width:
   #       height:
   #     - caption:
