@@ -14,6 +14,7 @@
   }
 
   .post-intro {
+    @extend .grid-container;
     @include grid-column-from-to(1,12);
 
     p {
@@ -72,23 +73,17 @@
 
 // Styles
   .image-wrapper {
+    margin-bottom: var(--paragraph-spacing);
+    
     .image-wrapper img { width: 100%; }
 
     figcaption {
       margin-top: rem(12px);
       margin-bottom: rem(16px);
     }
-
-    &.nudge-down-5 {
-      @include grid-media(desktop) {
-        margin-top: 5%;
-      }
-    }
   }
 
-  /* TODO centered images */
-
-  .post-info {
+/*   .post-info {
     margin-bottom: rem(40px);
   }
 
@@ -96,7 +91,7 @@
     @include grid-media(desktop) {
       margin-top: var(--gutter-row);
     }
-  }
+  } */
 }
 
 /* TODO width of blog posts
