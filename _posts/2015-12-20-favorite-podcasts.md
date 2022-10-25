@@ -6,6 +6,7 @@ categories: blog
 author: Ryan Arnaudin
 blurb: 2015 has been the year of the podcast. These are some of my favorites.
 image: images/black-thumbnail.png    
+priority: 0.6
 ---
 ### 2015 has been the year of the podcast. These are some of my favorites from the year.
 

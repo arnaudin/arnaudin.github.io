@@ -6,7 +6,7 @@ categories: blog
 author: Ryan Arnaudin
 blurb: Shaping a surfboard at Sunset Shapers in San Francisco. 
 image: images/black-thumbnail.jpg
-intro: 
+priority: 0.6
 ---
 I had the distinct pleasure of shaping a surfboard with local San Francisco shaping master [Gordon Guptill](http://www.sunsetshapers.com/gordon-guptill/). We settled on a design direction that would suit my experience and style, then got to work over two shaping sessions. 
 

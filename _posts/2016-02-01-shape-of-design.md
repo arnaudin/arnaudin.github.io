@@ -6,6 +6,7 @@ categories: blog
 author: Ryan Arnaudin
 blurb: The Shape of Design by Frank Chimero
 image: images/black-thumbnail.png
+priority: 0.6
 
 intro: | 
     <br>Nearly five years after it first launched on Kickstarter, I read [Frank Chimero's](https://twitter.com/frank_chimero) excellent design handbook, *[The Shape of Design](http://www.shapeofdesignbook.com/)*. The Kickstarter hardcover edition looks to be beautifully crafted, so if you can [get your hands on that](http://amzn.to/1nLN6WW) it would be the recommended way to go. If not, do as I did and grab the *free* ebook from Frank's site. 
