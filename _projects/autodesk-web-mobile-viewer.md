@@ -9,7 +9,7 @@ media: Mobile App
 ownership: Professional 
 client: Autodesk
 time_period: 2014-2015
-thumbnail: "/projects/autodesk-web-mobile-viewer/a360-web.png"
+thumbnail: "/projects/autodesk-web-mobile-viewer/a360-web-and-mobile-thumbnail.jpg"
 
 content_layout:
   - section_layout: text
