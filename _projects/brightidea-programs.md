@@ -34,12 +34,12 @@ content_layout:
 
       - [Launch fast and let ideas evolve](http://www.paulgraham.com/13sentences.html), aka "action produces information"
       - Aim for [5-7% week-over-week growth (WOW)](http://www.paulgraham.com/growth.html)
-      - "[Do things that dont scale](http://paulgraham.com/ds.html)"
+      - "[Do things that don't scale](http://paulgraham.com/ds.html)"
       - [Talk to customers!](https://twitter.com/paulg/status/898476047263518720)
       
-      Over the course of a year our team:
+      Over about a year our team:
 
-      - Developed a new methology to jumpstart employee innovation, *Innovation Program Management (IPM)*
+      - Developed a new methodology to jumpstart employee innovation, *Innovation Program Management (IPM)*
       - Launched & iterated a product founded in this methodology, *Programs Pro*--that eventually rolled into [Brightidea Programs](https://www.brightidea.com/product/programs/)
       - Prototyped a *product-led growth (PLG)* motion that informed our approach with subsequent Idea Box and Whiteboard products
 
@@ -49,7 +49,7 @@ content_layout:
 
       **A New Homepage Experience**
       
-      Being small, fast, and close-to-the-customer our rate of learning was rapid. First insight: deployment of our legacy products took too long and was error prone. We developed an "app-like" experience out of the box, as opposed to the heavy site-builder and content management system that was typical. This offered admins a much simpler way to configure, brand, theme, and onboard users while those end-users recieved a personalized, easy-to-use experience.
+      Being small, fast, and close to the customer our rate of learning was rapid. First insight: deployment of our legacy products took too long and was error-prone. We developed an "app-like" experience out of the box, as opposed to the heavy site-builder and content management system that was typical. This offered admins a much simpler way to configure, brand, theme, and onboard users while those end-users received a personalized, easy-to-use experience.
 
   - section_layout: 1col-narrow
     images:
@@ -64,7 +64,7 @@ content_layout:
     content: |
       **A New Innovation App**
       
-      We also observed that customers were bending our templated problem solving and optimization crowd-sourcing challenges to do more open-ended exploration of market opportunities. We developed a new innovation app around this use case called [Explore](https://www.brightidea.com/product/explore/), and packaged it in the product alongside the existing Solve & Optimize apps.
+      We also observed that customers were bending our templated problem-solving and optimization crowd-sourcing challenges to do more open-ended exploration of market opportunities. We developed an innovation app around this use case called [Explore](https://www.brightidea.com/product/explore/), and packaged it in the product alongside the existing Solve & Optimize apps.
 
   - section_layout: 2col
     images:
@@ -74,7 +74,7 @@ content_layout:
         width:
         height:
       - caption: 'In software, the Explore app enables sponsors to quickly create a microsite, build a process pipeline, and automatically configure dozens of setup options to start collecting ideas fast'
-        description: 'The Explore app allows sponsors to quickly create a microsite, process pipeline, and all associated setup to start collecting ideas'
+        description: 'The Explore app allows sponsors to quickly create a microsite, process pipeline, and all associated setup options to start collecting ideas'
         url: '/projects/brightidea-programs/brightidea-explore.png'
         width:
         height:
@@ -85,7 +85,7 @@ content_layout:
 
       The types of innovation programs recommended in IPM are timebound by design, with start & end dates as opposed to being always-on. This keeps them focused, manageable, and impactful with clear milestones defined upfront. We had previously watched new, small customers fail under always-on suggestion boxes so our methodology intentionally avoided these pitfalls. However, this was a common point of friction in sales.
 
-      We ended up developing a new concept called "My Ideas" that allows employees to capture & manage ideas in a personal repository, and later submit them to programs when the opportunity arises (e.g. a biannual hackathon). This solves the problem of "anytime anywhere" ideas, while avoiding unecessary burden on program managers. With objections now neutralized, sales efficiency & success improved drastically, and we filled a longtime product gap.
+      We ended up developing a new concept called "My Ideas" that allows employees to capture & manage ideas in a personal repository, and later submit them to programs when the opportunity arises (e.g. a biannual hackathon). This solves the problem of "anytime anywhere" ideas while avoiding unnecessary burdens on program managers. With objections now neutralized, sales efficiency & success improved drastically, and we filled a longtime product gap.
 
   - section_layout: 2col
     images:
@@ -94,7 +94,7 @@ content_layout:
         url: '/projects/brightidea-programs/brightidea-capture-an-idea.png'
         width:
         height:
-      - caption: 'My Ideas provies simple management and editing, so ideas can be refined before submitting them to shared innovation challenges or pipelines; the v1 modal editor is shown above'
+      - caption: 'My Ideas provides simple management and editing, so ideas can be refined before submitting them to shared innovation challenges or pipelines; the v1 modal editor is shown above'
         description: 'My Ideas - Always-on ideation'
         url: '/projects/brightidea-programs/brightidea-my-ideas.png'
         width:
