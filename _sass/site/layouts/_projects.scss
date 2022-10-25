@@ -134,6 +134,7 @@ $thumb-animation-ease-out: ease-in-out;
             font-size: 1.3rem;
 
             //offset for drop-in
+            transform-style: preserve-3d;
             -webkit-transform-style: preserve-3d;
             transform: translate3d(0, 10px, 0);
 
