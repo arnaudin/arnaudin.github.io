@@ -7,7 +7,7 @@ description: The "easiest-to-use CFD program ever"
 categories: app, ux, autodesk, desktop, realtime, simulation, cae
 disciplines: UX, User Research, Interaction Design, Visual Design, Information Architecture
 media: Desktop App
-ownership:
+ownership: Professional
 client: Autodesk
 time_period: 2012-2014
 thumbnail: "/projects/flow-design/flow-design-thumbnail.jpg"

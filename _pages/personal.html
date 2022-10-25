@@ -2,26 +2,23 @@
 layout: page
 title_override: Ryan Arnaudin - Product Leader and Designer
 redirect_from: 
-  - /portfolio/
-  - /work/
-permalink: /
-priority: 1.0
+  - /side-projects/
+permalink: /personal
+priority: 0.9
 ---
 
 <div class="projects-intro-wrapper">
-    <p class="projects-intro type-level-1">Ryan Arnaudin Design</p>
+    <p class="projects-intro type-level-1">Side Projects</p>
 </div>
 
 <div class="projects-intro-wrapper">
-    <p class="projects-intro type-level-3">Product leader with over 12 years of experience building professional-grade B2B software across Product Design, Product Management, and User Research roles.</p>
-    <p class="projects-intro type-level-3">I have a passion for creating products that are useful, usable, and help make the world a better place. This has included working on tools to augment human imagination, creativity, and design abilities through computation & networking. I have designed software for engineers, architects, designers, corporate innovators, and individuals with ideas.</p>
-    <p class="projects-intro type-level-3">Check out the work examples below and <a href="/contact">reach out</a> if you'd like to work together on something along these lines.</p>
+    <p class="projects-intro type-level-3">A mix of things that aren't quite professional, but involve product or design</p>
     <br>
 </div>
 
 <div class="projects">
     {% for project in site.projects reversed limit:include.limit %}
-    {% if project.ownership == "Professional" %}
+    {% if project.ownership == "Personal" %}
         <article class="project-listing">
             <div class="thumbnail-wrapper">
                 <a href="{{ project.url | prepend: site.baseurl }}">
