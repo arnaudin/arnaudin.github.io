@@ -28,41 +28,42 @@ title-class: project
 
 <div class="project-wrapper">
 
-    <div class="project-info">
-        <section class="project-details">
-            <div class="project-detail-wrapper">
+    <div class="project-info project-details">
 
-                {% if page.disciplines %}
-                    <div class="project-detail project-detail-6 project-detail-first">
-                        <h3 class="title-label">Disciplines</h3>
-                        {% assign discipline_list = page.disciplines | split: ','  %}
-
-                        {% for discipline in discipline_list %}
-                            <span class="keep-line-wrap">{{ discipline }}
-                                {% if forloop.last == false %},
-                                {% endif %}
-                            </span>
-                        {% endfor %}
-                    </div>
-                {% endif %}
-
-                {% if page.time_period %}
-                    <div class="project-detail project-detail-6">
-                        <h3 class="title-label">Year</h3>
-                        <p>{{ page.time_period }}</p>
-                    </div>
-                {% endif %}
-
-                {% if page.website.url %}
-                    <div class="project-detail project-detail-12">
-                        <a href="{{ page.website.url }}" class="button-secondary">{{ page.website.button_text }}</a>
-                    </div>
-                {% endif %}
+        {% if page.time_period %}
+            <div class="project-detail project-detail-2">
+                <h3 class="title-label">Time Period</h3>
+                <p>{{ page.time_period }}</p>
             </div>
-        </section>
-    </div>
+        {% endif %}
+        
+        {% if page.disciplines %}
+            <div class="project-detail project-detail-3">
+                <h3 class="title-label">Disciplines</h3>
+                {% assign discipline_list = page.disciplines | split: ','  %}
 
+                {% for discipline in discipline_list %}
+                    <span class="keep-line-wrap">{{ discipline }}
+                        {% if forloop.last == false %},
+                        {% endif %}
+                    </span>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        
+
+        {% if page.website.url %}
+            <div class="project-detail project-detail-12">
+                <a href="{{ page.website.url }}" class="button-secondary">{{ page.website.button_text }}</a>
+            </div>
+        {% endif %}
+            
+    </div>
+    
+    {% if page.intro %}
     <section class="project-intro paragraph-normal">{{ page.intro | markdownify }}</section>
+    {% endif %}
 
     {% for entry in page.content_layout %}
         {% include layout.html %}
