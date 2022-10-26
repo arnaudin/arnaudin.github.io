@@ -10,9 +10,9 @@ priority: 0.6
 ---
 I had the distinct pleasure of shaping a surfboard with local San Francisco shaping master [Gordon Guptill](http://www.sunsetshapers.com/gordon-guptill/). We settled on a design direction that would suit my experience and style, then got to work over two shaping sessions. 
 
-Being my first time in a shaping room, and with the goal of having a kick-ass board at the end, Gordon took on the the more critical operations while coaching me through some of the rough initial shaping and low-risk refinement work. 
+Being my first time in a shaping room, and with the goal of having a kick-ass board at the end, Gordon took on the more critical operations while coaching me through some of the rough initial shaping and low-risk refinement work. 
 
-Working with such an experienced craftsman was a privelege, and Gordon was super patient to answer all my questions and explain everything in detail as we went along.
+Working with such an experienced craftsman was a privilege, and Gordon was super patient to answer all my questions and explain everything in detail as we went along.
 
 ![Hand shaped by Gordon Guptill and Ryan Arnaudin](/images/posts/surfboard-shaping/surfboard-names.jpg)
 
@@ -34,7 +34,7 @@ Refinements are made to the form from different angles with a variety of tools
 
 ![Using the sureform](/images/posts/surfboard-shaping/shaping-sureform-deck.jpg)
 
-I liked the idea of the board being highly visible in the dark Northern California waters and frequent fog, so went with a bright orange color. Here is finished board after being glassed at Sunset Shapers:
+I liked the idea of the board being highly visible in the dark Northern California waters and frequent fog, so went with a bright orange color. Here is the finished board after being glassed at Sunset Shapers:
 
 ![Bottom](/images/posts/surfboard-shaping/finished-bottom-combo.jpg){:.img-75vh .img-center}
 

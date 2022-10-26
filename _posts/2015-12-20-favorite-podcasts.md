@@ -27,13 +27,13 @@ My recommendation would be to start with a few names you recognize and branch ou
 - [Rick Rubin](http://fourhourworkweek.com/2015/05/15/rick-rubin/)
 - [Arnold Schwarzenegger](http://fourhourworkweek.com/2015/02/02/arnold-schwarzenegger/)
 
-Seriously, that was just the short list...
+Seriously, that was just the shortlist...
 
 ## [Limetown](http://www.limetownstories.com/)
 
 ![Limetown](/images/posts/podcasts/limetown.jpg "Limetown"){:.img-33vh}
 
-I get the same feeling I did during the first season of Lost, delivered through a modern radio-drama. I sent this to a number of friends, a couple who took it to be a true story. It's that good. Chilling and suspenseful. 
+I get the same feeling I did during the first season of Lost, delivered through a modern radio drama. I sent this to a number of friends, a couple who took it to be a true story. It's that good. Chilling and suspenseful. 
 
 Season 1 has ended, so it's a great time to catch up. Really hope we see more like this in 2016. 
 
@@ -55,7 +55,7 @@ Radiolab: [Jad](https://twitter.com/JadAbumrad) and [Robert](https://twitter.com
 
 ![Product Hunt Podcast](/images/posts/podcasts/product-hunt.jpg "Product Hunt Podcast"){:.img-33vh}
 
-Started off more for product geeks, looking at the people behind the products. More recently has been [Erik Torenberg](https://twitter.com/eriktorenberg) interviewing a broad-range of makers and leaders in a Tim-Ferriss-esque format. He is turning into a great interviewer, so I will continue to follow him. 
+Started off more for product geeks, looking at the people behind the products. More recently has been [Erik Torenberg](https://twitter.com/eriktorenberg) interviewing a broad range of makers and leaders in a Tim-Ferriss-esque format. He is turning into a great interviewer, so I will continue to follow him. 
 
 ## [Hidden Brain](http://www.npr.org/podcasts/510308/hidden-brain)
 

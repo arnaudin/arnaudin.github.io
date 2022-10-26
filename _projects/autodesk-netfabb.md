@@ -4,7 +4,7 @@ published: true
 title: "Netfabb"
 description: "Professional-grade simulation of metal 3D printing and additive manufacturing processes"
 categories: app, desktop, autodesk, simulation, manufacturing, cae
-disciplines: UX, Interation Design, Visual Design, User Research, Market Research
+disciplines: UX, Interaction Design, Visual Design, User Research, Market Research
 media: Windows App
 ownership: Professional
 client: Autodesk
@@ -16,7 +16,7 @@ content_layout:
     content: |
       [Autodesk Netfabb](https://www.autodesk.com/products/netfabb/overview) is a suite of tools for streamlining and optimizing additive manufacturing processes. 
       
-      As Lead Designer I supported new features and redesigns within Netfabb Simulation Utility for the 2017 and 2018 releases. For a full list of _What's New_ by version:
+      As Lead Designer, I supported new features and redesigns within Netfabb Simulation Utility for the 2017 and 2018 releases. For a full list of _What's New_ by version:
         
       - [What's New in Autodesk® Netfabb 2017](http://help.autodesk.com/view/NETF/2017/ENU/?guid=GUID-6EAF21B6-F2E0-4F1A-AB42-ABFC119133AB)
       - [What's New in Autodesk® Netfabb 2018](http://help.autodesk.com/view/NETF/2018/ENU/?guid=GUID-66C2312A-BE6C-4513-9865-BC2ADDF78B9E)
@@ -33,14 +33,14 @@ content_layout:
     content: |
       **Role:** I served as *Lead Designer* for Netfabb Simulation Utility versions 2017 and 2018. This is a new desktop application within the Netfabb suite that enables engineers to simulate professional-grade metal printing processes in order to [predict distortion](https://blogs.autodesk.com/netfabb/2018/10/30/netfabb-simulation-research-validation-distortion-compensation/), [alleviate support structure failure](https://blogs.autodesk.com/netfabb/2018/06/12/netfabb-simulation-research-validation-support-failure-prediction/), and [avoid potential damage](https://blogs.autodesk.com/netfabb/2018/06/12/netfabb-simulation-research-validation-moving-source/) to machines & hardware. Metal printing is inherently expensive and time-consuming, so using simulation to avoid errors is a major cost saver for our customers. 
   
-      Being a new product built on acquired technology, I was deeply involved in market, industry, and user research. This also enabled me to get closer exposure to product management, as I was more involved in strategic planning and formulating the product roadmap than in previous roles. Our small team had freedom to work closely with early adopters in the space, moving fast to test our hypotheses in working code as part of a tight feedback loop with real users who were running weekly test builds.
+      Being a new product built on acquired technology, I was deeply involved in market, industry, and user research. This also enabled me to get closer exposure to product management, as I was more involved in strategic planning and formulating the product roadmap than in previous roles. Our small team had the freedom to work closely with early adopters in the space, moving fast to test our hypotheses in working code as part of a tight feedback loop with real users who were running weekly test builds.
 
       The types of complex and expensive 3D printed parts that might be simulated in Netfabb:
 
   - section_layout: 2col
     images:
-      - caption: 
-        description: 
+      - caption: 'Parts printed in metal are often incredibly complex in nature, thus expensive and time-consuming to produce. Eliminating manufacturing failures by simulating these processes can save companies enormously.'
+        description: 'Parts printed in metal are often incredibly complex by their very nature, thus expensive and time-consuming to produce. Eliminating manufacturing failures can save companies enormously.'
         url: '/projects/netfabb/netfabb-part1.jpeg'
         positioning: 
         width:
@@ -54,9 +54,11 @@ content_layout:
 
   - section_layout: text
     content: |
-      ## Mini Case Study - Improving Results Animations
+      ## Mini Case Study - Improving Results Animations ("4D Printing")
 
-      We are simulating a manufacturing process that occurs over time as the part heats and cools, displacements and stresses change over time. Thus animating and scrubbing through the manufacturing timeline become critical to understanding part quality. As you can see below, the v1 animation controls were quite barebones and stretched the usability of the UI elements:
+      We are simulating a manufacturing process that occurs over time as parts heat and cool, and so engineers are interested in understanding how displacements and stresses behave over the duration. Thus animating and scrubbing through the manufacturing timeline is critical to understanding the resulting part quality. 
+      
+      As you can see below, the original animation controls were barebones and stretched the usability of the ribbon UI:
 
   - section_layout: 2col
     images:
@@ -69,11 +71,11 @@ content_layout:
 
   - section_layout: text
     content: |
-      I looked for inspiration from time-based interfaces in audiovisual apps like YouTube, Vimeo, and Spotify that all of our users would be familiar with. There are also precidents in simulation & manufacturing software, though typically these involve removing material to create a part (CNC & CAM), versus the additive manufacturing we are modeling:
+      I looked for inspiration from time-based interfaces in audiovisual apps like YouTube, Vimeo, and Spotify that all of our users would be familiar with. There are also precedents in simulation & manufacturing software, though typically these involve removing material to create a part (CNC & CAM), versus the additive manufacturing we are modeling:
 
   - section_layout: 1col-narrow
     images:
-      - caption: 'Sources of inspiration for timelines & time-based interfaces; common patterns and familiaries emerged'
+      - caption: 'Sources of inspiration for timelines & time-based interfaces; common patterns and familiarities emerged, for example locating the controls at the bottom of the screen.'
         description: 'Sources of inspiration for timelines & time-based interfaces'
         url: '/projects/netfabb/netfabb-inspiration.png'
         width:
@@ -81,7 +83,7 @@ content_layout:
 
   - section_layout: 1col-narrow
     images:
-      - caption: 'Sketching out design concepts to integrate new timeline controls in the Netfabb UI'
+      - caption: 'Sketching out design concepts to integrate new timeline controls at different locations in the existing Netfabb UI'
         description: 'Sketching out design concepts to integrate new timeline controls in the Netfabb UI'
         url: '/projects/netfabb/netfabb-timeline-sketches.png'
         width:
@@ -89,13 +91,13 @@ content_layout:
 
   - section_layout: 2col
     images:
-      - caption: 'Feedback and insights related to timeline and animation using a LUMA "Bullseye Diagram" for prioritization synthesis'
+      - caption: 'Synthesizing user feedback and team insights related to animation using a LUMA "Bullseye Diagram." From the center-out we have must-haves, should-haves, and nice-to-haves split into quadrants by category.'
         description: 'Feedback and insights related to the timeline & animation'
         url: '/projects/netfabb/netfabb-user-research-synthesized.png'
         positioning: 
         width:
         height:
-      - caption: 'Mockup of a new additive manufacturing timeline with key events highlighted; this version integrates the best of our findings and feedback'
+      - caption: 'Mockup of a new additive manufacturing timeline with key events in the process highlighted; this version integrates the best of our findings and feedback'
         description: 'Mockup of a new additive manufacturing timeline with key events highlighted; this version integrates key findings and feedback'
         url: '/projects/netfabb/netfabb-timeline.gif'
         positioning: 
@@ -118,7 +120,7 @@ content_layout:
         url: '/projects/netfabb/netfabb-updates-phase2.png'
         width:
         height:
-      - caption: 'Phase 3: In-canvas controls and interactions replace the ribbon panel; nice-to-have improvements included as feasible'
+      - caption: 'Phase 3: In-canvas controls and interactions replace the ribbon panel; nice-to-have improvements will be included as feasible'
         description: 'Phase 3 improvements'
         url: '/projects/netfabb/netfabb-updates-phase3.png'
         width:
@@ -126,13 +128,13 @@ content_layout:
 
   - section_layout: 2col
     images:
-      - caption: 'Since the manufacturing process occurs bottom-up vertically, I also explored a vertical timeline to mirror this model; power-users responded incredibly well to this concept, but it was not as immediately intuitive as the standard horizontal layout'
+      - caption: 'Since the manufacturing process occurs bottom-up vertically, I also explored a vertical timeline to mirror this mental model; power users responded incredibly well to this concept, but it was not as immediately intuitive as the standard horizontal layout. This was deemed a nice-to-have option for horizontal or vertical docking.'
         description: 'Vertical timeline'
         url: '/projects/netfabb/netfabb-vertical-bar.png'
         positioning: 
         width:
         height:
-      - caption: 'I ended up leaving Autodesk as this was being handed off to development, so did not see the fully implemented version'
+      - caption: 'I ended up leaving Autodesk as phase 1 was being handed off to development, so did not see the fully implemented version'
         description: 'Netfabb Simulation Utility displaying part displacement results'
         url: '/projects/netfabb/netfabb-animation-results.png'
         width:
@@ -150,6 +152,6 @@ content_layout:
     content: |
       ### Impact
 
-      Simulating the manufacturing process has already saved our customers millions of dollars in lost time, expended materials, and damaged machinery. As available compute resources continue to increase and additive manufacturing reaches maturity in more industries, we expect this impact to continue to grow superlinearly. 
+      Simulating the manufacturing process has already saved our customers millions of dollars in lost time, expended materials, and damaged machinery. As available compute resources continue to increase and additive manufacturing reaches maturity in more industries, we expect this impact to continue to grow superlinearly. Animation of the process is fundamentally critical to understanding behavior in all 4 dimensions. 
 
 ---

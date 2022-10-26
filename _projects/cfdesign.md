@@ -4,7 +4,7 @@ published: true
 title: "CFdesign"
 description: "Acquired by Autodesk, the fastest growing CFD company in the world"
 categories: app, desktop, autodesk, simulation, cae
-disciplines: UX, Interation Design, Visual Design, User Research, Testing, Support
+disciplines: UX, Interaction Design, Visual Design, User Research, Testing, Support
 media: Windows App
 ownership: Professional
 client: Blue Ridge Numerics
@@ -45,6 +45,6 @@ content_layout:
 
   - section_layout: text
     content: |
-      CFdesign was further developed as [Autodesk CFD](/projects/autodesk-cfd/) after being acquired.
+      CFdesign was further developed as [Autodesk CFD](/projects/autodesk-cfd/) after being acquired and I transitioned over as a UX Designer.
 
 ---

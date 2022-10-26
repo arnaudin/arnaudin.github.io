@@ -4,7 +4,7 @@ published: true
 title: "Brightidea Whiteboard"
 description: "Launched a new collaboration product for team brainstorming"
 categories: web, innovation, idea-management, innovation
-disciplines: Product Management, Strategy, UX, User Research, Market Research, Interaction Design
+disciplines: Product Management, Produt Strategy, UX, User Research, Market Research, Interaction Design
 media: Web
 ownership: Professional
 client: Brightidea
@@ -14,9 +14,9 @@ thumbnail: "/projects/brightidea-whiteboard/brightidea-whiteboard-thumbnail.jpg"
 content_layout:
   - section_layout: text
     content: |
-      [Brightidea Whiteboard](https://www.brightidea.com/product/whiteboard/) rounds out the Brightidea idea management platform with native whiteboards for real-time team brainstorming & ideation. We have built an all-in-one solution for end-to-end idea management that doesn't exist anywhere else.
+      [Brightidea Whiteboard](https://www.brightidea.com/product/whiteboard/) fills a gap in the Brightidea idea management platform with native whiteboards for real-time team brainstorming & ideation. This missing puzzle piece makes Brightidea a unique all-in-one solution for end-to-end idea management.
       
-      **Role:** I served as Product Lead for v1 of Whiteboard, leading a team of backend Rust developers, frontend developers, and designers to deliver this brand-new product on a cutting-edge WebAssembly technology stack. 
+      **Role:** I served as Product Lead for v1 of Whiteboard, leading a team of backend Rust developers, frontend developers, and designers to deliver this brand-new product on a cutting-edge WebAssembly technology stack. I managed the roadmap, development cadence, and product releases. 
       
       Read about the initial launch on the Brightidea blog, [A Better Way To Brainstorm](https://www.brightidea.com/blog/fall-release-2021/), and check out the launch/demo video:
       
@@ -24,21 +24,21 @@ content_layout:
 
   - section_layout: text
     content: |
-      ## Product Demos
+      ## Product
 
-      A handful of demos from our announcements are included below. Contact me for additional case studies. Our product includes:
+      The demo vidoes below offer an overview of the product capabilities. From the initial release through two quarterly updates we build a v1 whiteboarding product with:
         - Infinite canvas - no constraints on ideation and collaboration
-        - Multiplayer - share, follow, huddle--collaboration is native and at the core
-        - Lines, shapes, text, images, and pen - all the building blocks you need
-        - Sticky notes - capture and convey ideas like you would in person
-        - Emojis & stickers - bring fun and humanity to your whiteboard
-        - Templates - start faciliting workshops right away
-        - Platform integration - transfer ideas bi-directionally between innovation pipelines and whiteboards 
+        - Multiplayer - share, follow, huddle--collaboration at the core
+        - Lines, shapes, text, images, and pen - all the building blocks you need for visualizing ideas
+        - Sticky notes - capture thoughts and ideas like you would in person
+        - Emojis & stickers - bringing fun and humanity to whiteboards
+        - Templates - jump in right away, from workshops to retros
+        - Brightidea integration - transfer ideas bi-directionally with our innovation platform 
 
   - section_layout: 1col
     images:
-      - caption: 'The multiplayer experience is fundamental to collaborating in Whiteboard'
-        description: 'The multiplayer experience is fundamental to collaborating in Whiteboard'
+      - caption: 'The multiplayer experience is fundamental to Whiteboard collaboration, supporting distributed knowledge work'
+        description: 'The multiplayer experience is fundamental to Whiteboard collaboration, supporting distributed knowledge work'
         url: '/projects/brightidea-whiteboard/whiteboard-multiplayer.gif'
         border: light
         width:
@@ -46,8 +46,8 @@ content_layout:
 
   - section_layout: 1col
     images:
-      - caption: 'Whiteboard enables collaborative ideation with built-in sticky notes, shapes, text, stickers, and drawing tools'
-        description: 'Whiteboard enables collaborative ideation with built-in sticky notes, shapes, text, stickers, and drawing tools'
+      - caption: 'Whiteboard enables visual collaboration with built-in primitives including sticky notes, shapes, text, stickers, and drawing tools'
+        description: 'Whiteboard enables visual collaboration with built-in primitives including sticky notes, shapes, text, stickers, and drawing tools'
         url: '/projects/brightidea-whiteboard/whiteboard-objects.gif'
         border: light
         width:
@@ -55,8 +55,8 @@ content_layout:
 
   - section_layout: 1col
     images:
-      - caption: 'Start or extend a Whiteboard session from a built-in template'
-        description: 'Start or extend a Whiteboard session from a built-in template'
+      - caption: 'Start or extend your Whiteboard from a built-in template for common workshops & team activities'
+        description: 'Start or extend your Whiteboard from a built-in template for common workshops & team activities'
         url: '/projects/brightidea-whiteboard/whiteboard-templates.gif'
         border: light
         width:
@@ -73,8 +73,8 @@ content_layout:
 
   - section_layout: 1col
     images:
-      - caption: 'Evaluate and rank ideas using a customizable Smart Matrix'
-        description: 'Evaluate and rank ideas using a customizable Smart Matrix'
+      - caption: 'Evaluate and rank ideas on the fly using a customizable "Smart Matrix," with direct integration to the Brightidea idea management platfom'
+        description: 'Evaluate and rank ideas on the fly  using a customizable "Smart Matrix," with direct integration to the Brightidea idea management platfom'
         url: '/projects/brightidea-whiteboard/whiteboard-smart-matrix.gif'
         border: light
         width:
@@ -95,7 +95,7 @@ content_layout:
 
   - section_layout: text
     content: |
-      For more of my work at Brightidea, read about how we built [Brightidea Programs](/projects/brightidea-programs/) or how I contributed to the [core products and platform](/projects/brightidea/).
+      For more of my work at Brightidea, read about how we built [Brightidea Programs](/projects/brightidea-programs/) or how I contributed to the design of [core products and platform](/projects/brightidea/).
 
   # - section_layout: 1col
   #   images:

@@ -21,7 +21,7 @@ content_layout:
         height: 
 
 ---
-I'd recommend _The Shape of Design_ to all designers, as well as anyone interested in design. This is not a practical guide to becoming a better designer; instead be prepared to explore the philosophy of design through witty and metaphorical meditation. While some sections may come off as self-indulgent, it's a quick read that is guaranteed to make you think deeper about design, which is never a bad thing. 
+I'd recommend _The Shape of Design_ to all designers, as well as anyone interested in design. This is not a practical guide to becoming a better designer; instead, be prepared to explore the philosophy of design through witty and metaphorical meditation. While some sections may come off as self-indulgent, it's a quick read that is guaranteed to make you think deeper about design, which is never a bad thing. 
 <br><br>
 Here are my Kindle highlights:
 > To be human is to tinker, to envision a better condition, and decide to work toward it by shaping the world around us.

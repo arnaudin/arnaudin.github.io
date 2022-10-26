@@ -4,7 +4,7 @@ published: true
 title: "Autodesk CFD"
 description: "Professional yet easy-to-use computational fluid dynamics (CFD) tools for engineers"
 categories: app, desktop, autodesk, simulation, cae
-disciplines: UX, Interation Design, Visual Design, User Research
+disciplines: UX, Interaction Design, Visual Design, User Research
 media: Windows App
 ownership: Professional
 client: Autodesk
@@ -14,7 +14,7 @@ thumbnail: "/projects/autodesk-cfd/cfd-thumbnail.jpg"
 content_layout:
   - section_layout: text
     content: |
-      Autodesk CFD is a professional yet easy-to-use computational fluid dynamics (CFD) tool for engineers; in other words, an approachable way to simulate fluid flow and heat transfer to understand how designs will perform in the real world. It is used to simulate everything from pumps & valves, to electronics cooling, to aero & hydrodynamics, to HVAC systems in buildings. Our product is designed with the belief that simulating design performance virtually, early, and often in the product lifecycle results in cheaper and better performing real-world designs, with faster time to market.
+      Autodesk CFD is a professional yet easy-to-use computational fluid dynamics (CFD) tool for engineers; in other words, an approachable way to simulate fluid flow and heat transfer to understand how designs will perform in the real world. It is used to simulate everything from pumps & valves, to electronics cooling, to aero & hydrodynamics, to HVAC systems in buildings. Our product is designed with the belief that simulating design performance virtually, early, and often in the product lifecycle results in cheaper and better-performing real-world designs, with faster time to market.
 
   - section_layout: 1col
     images:
@@ -47,7 +47,7 @@ content_layout:
       - Usability testing
       - Design evangelism and cultural evolution
       
-      An example of a large scale, post-acquisition UI overhaul follows.
+      An example of a large-scale, post-acquisition UI overhaul follows.
 
   - section_layout: text
     content: | 
@@ -55,7 +55,7 @@ content_layout:
 
   - section_layout: 1col-narrow
     images:
-      - caption: 'Before: Autodesk CFD had inhereted a pretty standard Windows UI (for the time) consisting of application-level menus and 24px docking toolbars. As the software had grown, the toolbars had become a mix of file operations, view controls, selection methods, commands, and mode toggles. There were two primary modes that were not strongly differentiated, and a few secondary. The left-docked "Design Study Bar" worked quite well with a top-down approach but felt discontinuous from the other UI. The "in canvas" controls felt like they had been layered in as an afterthought.'
+      - caption: 'Before: Autodesk CFD had inherited a pretty standard Windows UI (for the time) consisting of application-level menus and 24px docking toolbars. As the software had grown, the toolbars had become a mix of file operations, view controls, selection methods, commands, and mode toggles. There were two primary modes that were not strongly differentiated and a few secondary. The left-docked "Design Study Bar" worked quite well with a top-down approach but felt discontinuous from the other UI. The "in canvas" controls felt like they had been layered in as an afterthought.'
         description: 'Classic CFdesign layout before redesign'
         url: '/projects/autodesk-cfd/cfd-classic-menu-ui.png'
         width:
@@ -67,8 +67,8 @@ content_layout:
 
   - section_layout: 2col
     images:
-      - caption: In the field performing interviews and enthographic research to learn about user workflows
-        description: 'In the field performing interviews and enthographic research'
+      - caption: In the field performing interviews and ethnographic research to learn about user workflows
+        description: 'In the field performing interviews and ethnographic research to learn about user workflows'
         url: '/projects/autodesk-cfd/cfd-ethnographic-research.jpg'
         width:
         height:
@@ -85,7 +85,7 @@ content_layout:
         url: '/projects/autodesk-cfd/cfd-persona-clark.png'
         width:
         height:
-      - caption: 'I conducted a deep-dive card sort with several users to better understand how they related various modes, commands, and operations'
+      - caption: 'I conducted a deep-dive card sort with several power users to better understand how they related various modes, commands, and operations'
         description: 'A card sort to better understand how users related various commands and operations'
         url: '/projects/autodesk-cfd/cfd-card-sort.png'
         width:
@@ -95,7 +95,7 @@ content_layout:
     content: |
       ### Interface and Interaction Design
 
-      The following images show the general process: starting from low-fi sketches exploring broad design concepts, to digital wireframes, to mockups, to actual UI prototyping, and finally to polishing the icons and visual design.
+      The following images show the general process, with a focus on the ribbon toolbar since it is the primary interface: starting from low-fi sketches exploring broad design concepts, to digital wireframes, to mockups, to actual UI prototyping, and finally to polishing the icons and visual design.
 
   - section_layout: 1col-narrow
     images:
@@ -107,7 +107,7 @@ content_layout:
 
   - section_layout: 1col-narrow
     images:
-      - caption: Office 2010 had popularized a new ribbon toolbar paradigm and Autodesk had embraced it in the flagship products. Microsoft and Autodesk research showed major usability improvements across the board, so this is the direction we embarked on. Here, I started with low fidelity sketches to explore broad concepts and constraints including left-to-right vs. free-form flows, mode selection at different levels, context tabs vs. context panels, and high-level layouts. 
+      - caption: Office 2010 had popularized a new ribbon toolbar paradigm and Autodesk had embraced it in its flagship products. Microsoft and Autodesk research showed major usability improvements across the board, so this is the direction we embarked on. Here, I started with low-fidelity sketches to explore broad concepts and constraints including left-to-right vs. free-form flows, mode selection at different levels, context tabs vs. context panels, and high-level layouts. 
         description: 'Starting low fidelity to explore broad concepts and constraints'
         url: '/projects/autodesk-cfd/cfd-ribbon-sketch.jpg'
         width:
@@ -115,7 +115,7 @@ content_layout:
 
   - section_layout: 1col-narrow
     images:
-      - caption: 'Through dozens and dozens of cycles, I was refining the more promising designs and validating iterations with internal subject matter experts from services & support. The primary modes were split by ribbon tab, e.g. Setup, Results, Manage. Each tab generally followed a left-to-right flow, with sub-modes centered in the ribbon toolbar. Each sub-mode activated a context panel (green) with commands and controls exclusive to that mode.'
+      - caption: 'Through dozens and dozens of cycles, I was refining the more promising designs and validating iterations with internal subject matter experts from services & support. The primary modes were split by ribbon tab, e.g. Setup, Results, and Manage. Each tab generally followed a left-to-right flow, with sub-modes centered in the ribbon toolbar. Each sub-mode activated a context panel (green) with commands and controls exclusive to that mode.'
         description: 'Refining the more promising designs and validating iterations with internal experts'
         url: '/projects/autodesk-cfd/cfd-ribbon-wireframe.png'
         width:
@@ -123,7 +123,7 @@ content_layout:
 
   - section_layout: 1col-narrow
     images:
-      - caption: 'Once we started building the ribbon in software, prototyping and rapid iteration were made easy with Microsoft Expression Blend. The WPF framework enabled me to design the ribbon layout, microinterations, and behaviors while engineering worked on connecting functionality within the application. I could simply export updated XAML files to a folder in the installation directory to see my updates immediately working in code.'
+      - caption: 'Once we started building the ribbon in software, prototyping and rapid iteration were made easy with Microsoft Expression Blend. The WPF framework enabled me to design the ribbon layout, microinteractions, and behaviors while engineering worked on connecting functionality within the application. I could simply export updated XAML files to a folder in the installation directory to see my updates immediately working in code.'
         description: 'Prototyping and rapidly iterating ribbon UI layouts'
         url: '/projects/autodesk-cfd/cfd-ribbon-prototype.png'
         width:
@@ -131,12 +131,12 @@ content_layout:
 
   - section_layout: 2col
     images:
-      - caption: Prototyping interactions and evaluating visual design
-        description: 'Prototyping interactions and evaluating visual design'
+      - caption: Prototyping interactions and evaluating the visual design styling of the live component
+        description: 'Prototyping interactions and evaluating the visual design'
         url: '/projects/autodesk-cfd/cfd-ribbon-button-prototype.png'
         width:
         height:
-      - caption: 'Prototyping responsiveness, element prioritization, and resize interactions'
+      - caption: 'Prototyping responsiveness, element prioritization, and window-resizing interactions'
         description: 'Prototyping responsiveness, element prioritization, and resize interactions'
         url: '/projects/autodesk-cfd/cfd-ribbon-responsiveness.png'
         width:
@@ -163,7 +163,7 @@ content_layout:
 
         > I've used a lot of software since entering the product research field. Some were not too difficult to figure out, while others did require a bit of study to get running. Autodesk Simulation CFD 2013 is one of the easiest I've encountered.
         > <br><br>
-        > Anyone fresh into a new piece of software can feel a bit out of sorts, but CFD is laid out in my favorite manner: a progressive ribbon. By this I mean a ribbon layout that works from left to right in the general order that parallels the standard workflows expected.
+        > Anyone fresh into a new piece of software can feel a bit out of sorts, but CFD is laid out in my favorite manner: a progressive ribbon. By this, I mean a ribbon layout that works from left to right in the general order that parallels the standard workflows expected.
         > <br><br>
         > The interesting thing to note here is that I never studied how to manipulate planes in CFD. I just followed my instincts, and the tools were there. Nice job usability.
         > <br><br>
