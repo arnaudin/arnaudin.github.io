@@ -10,24 +10,42 @@ layout: sitemap
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-  {% for page in site.posts %}<url>
-    <loc>{{ site.url }}{{ page.url }}</loc>
-    <priority>{{ page.priority }}</priority>
-  </url>
-  {% endfor %}{% for page in site.html_pages %}{% unless page.sitemap == false %}{% assign page_url = site.url | append: page.url %}{% assign site_base_url = site.url | append: '/' %}{% unless page_url == site_base_url %}
+  {% for page in site.html_pages %}{% unless page.sitemap == false %}{% assign page_url = site.url | append: page.url %}{% assign site_base_url = site.url | append: '/' %}{% unless page_url == site_base_url %}
   <url>
-    <loc>{{ site.url }}{{ page.url }}</loc>{% if page.priority %}
+    <loc>{{ site.url }}{{ page.url }}</loc>
+    {% if page.date %}
+      <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+    {% else %}
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    {% endif %}{% if page.priority %}
+    <changefreq>monthly</changefreq>
     <priority>{{ page.priority }}</priority>{% endif %}
   </url>
-  {% endunless %}{% endunless %}{% endfor %}{% for collection in site.collections %}{% unless collection.last.output == false or collection.output == false or collection.label == 'posts' %}{% for doc in collection.last.docs %}{% unless doc.sitemap == false %}
-  <url>
-    <loc>{{ doc.url | replace:'/index.html','/' | prepend: site_url | normalize_url }}</loc>
-    <priority>0.7</priority>
+  {% endunless %}{% endunless %}{% endfor %}
+  {% for page in site.projects %}<url>
+    <loc>{{ site.url }}{{ page.url }}</loc>
+    {% if page.date %}
+      <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+    {% else %}
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    {% endif %}
+    {% if page.priority %}
+      <priority>{{ page.priority }}</priority>
+    {% else %}
+      <priority>0.69</priority>
+    {% endif %}
+    <changefreq>monthly</changefreq>
   </url>
-  {% endunless %}{% endfor %}{% for doc in collection.docs %}{% unless doc.sitemap == false %}
-  <url>
-    <loc>{{ doc.url | replace:'/index.html','/' | prepend: site_url | normalize_url }}</loc>
-    <priority>0.7</priority>
+  {% endfor %}
+  {% for page in site.posts %}<url>
+    <loc>{{ site.url }}{{ page.url }}</loc>
+    {% if page.date %}
+      <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+    {% else %}
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    {% endif %}
+    <priority>{{ page.priority }}</priority>
+    <changefreq>monthly</changefreq>
   </url>
-  {% endunless %}{% endfor %}{% endunless %}{% endfor %}
+  {% endfor %}
 </urlset>{% endif %}
