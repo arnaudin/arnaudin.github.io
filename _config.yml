@@ -13,6 +13,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
+  - README.md
   - /_pages/backup
 
 include:
