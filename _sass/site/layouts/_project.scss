@@ -38,7 +38,7 @@
       }
 
       .project-detail-3 {
-        @include grid-column(2);
+        @include grid-column(3);
 
         @include grid-media(phablet) {
           @include grid-column(3);
