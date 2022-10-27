@@ -5,17 +5,18 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
-# plugins:
+gems:
+  - jekyll-redirect-from
 
 exclude:
   - readme.md
   - Gemfile
   - Gemfile.lock
   - LICENSE
+  - /_pages/backup
 
 include:
   - _pages
-  - _redirects
 
 # Site settings
 title: Ryan Arnaudin
