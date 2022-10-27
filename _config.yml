@@ -23,7 +23,7 @@ myname: Ryan Arnaudin
 email: arnaudin@ryanarnaudin.com
 long-title: Ryan Arnaudin - Designer, Product Manager, Engineer
 description: > # this means to ignore newlines until "baseurl:"
-  "Ryan Arnaudin is a software builder in Austin, Texas."
+  "Ryan Arnaudin is a product leader and designer in Austin, Texas."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ryanarnaudin.com" # the base hostname & protocol for your site
 timezone: America/Chicago
@@ -61,11 +61,11 @@ sass:
 compress_html: # http://jch.penibelst.de/
   enabled: true # compress html
   clippings: all # clip safe tags
-  comments: []
-  endings: []
+  comments: ["<!-- ", " -->"]
+  endings: [all]
   #ignore:
     #envs: [local]
-  blanklines: false # boolean - strip blank lines and breaks
+  blanklines: true # boolean - strip blank lines and breaks
   profile: false
   startings: []
 
@@ -81,7 +81,7 @@ navigation:
   - title: Contact
     url: /contact
 
-permalink: pretty
+permalink: /:categories/:title/
 
 # Configure site collections
 collections:
