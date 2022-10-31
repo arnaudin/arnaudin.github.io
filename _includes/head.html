@@ -3,17 +3,7 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
 
-    <title>
-        {% if page.title_override %}
-            {{ page.title_override | escape }}
-        {% elsif page.title %}
-            {{ page.title | escape }}
-            |
-            {{site.title | escape}}
-        {% else %}
-            {{ site.title | escape }}
-        {% endif %}
-    </title>
+    <title>{% if page.title_override %}{{ page.title_override | escape }}{% elsif page.title %}{{ page.title | escape }} | {{site.title | escape}}{% else %}{{ site.title | escape }}{% endif %}</title>
     <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
     <link rel="stylesheet" href="{{ '/css/styles.css' | prepend: site.baseurl }}">
@@ -22,7 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    {% if page.sitemap == false %}<meta content="nofollow, noindex" name="robots"/>
+    {% if page.sitemap == false %}
+        <meta content="nofollow, noindex" name="robots"/>
     {% endif %}
 
     <link rel="icon" href="/favicon.ico" sizes="any"><!-- 32×32 -->
