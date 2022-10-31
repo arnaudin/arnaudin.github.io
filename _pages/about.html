@@ -10,13 +10,13 @@ intro: |
 
   I am a full-stack product leader with over 14 years of experience shipping professional-grade software. Most recently, I held product leadership roles at Brightidea, where I led teams to build & launch B2B SaaS tools for corporate innovation management (e.g., [Brightidea Whiteboard](/projects/brightidea-whiteboard/)). 
 
-  At my core, I am a problem solver. I studied engineering but have focused my career on human-centered design; thus, I can balance analytical and creative approaches to define, explore, and solve complex problems. 
+  I am a problem solver. I studied engineering and have focused my career on user-centered design. This enables me to balance analytical and creative approaches to define, explore, and solve complex problems.
 
-  I love figuring out new, innovative products and helping take them from zero to one. However, I have extensive experience maintaining and evolving legacy products & platforms. I am a long-term, strategic thinker who doesn't settle for the quick fix—unless the quick fix is what gets us to our goals most effectively. I get satisfaction from knowing my products are useful in the world.
+  I love figuring out new, innovative products and helping take them from zero to one. However, I have extensive experience maintaining and evolving legacy products & platforms. I am a long-term, strategic thinker and get satisfaction from knowing my products are useful in the world.
 
-  Throughout my career, I have worked across most roles on a modern software development team ranging from QA to Design to Product Management. I have designed applications & experiences spanning mobile, web, and desktop. As a PM, I led teams to launch cutting-edge web apps. I have conducted a wide range of user research and facilitated workshops. I have personally developed free & experimental programs and tackled large-scale engineering problems, so so I empathize with developers and the challenges they face..
+  Throughout my career, I have worked across most roles on a modern software development team, ranging from QA to Design to Product Management. I have designed applications & experiences spanning mobile, web, and desktop. As a PM, I led teams to launch cutting-edge web apps. I have conducted a wide range of user research and facilitated workshops. I have developed free & experimental apps myself, so can empathize with developers and their challenges.
 
-  I believe design should be an accelerator, differentiator, validator, and risk mitigator in pursuing the organization's goals and *ultimately to serve customers*. Together we can leverage breakthroughs in design, engineering, and product development to forge a future where technology empowers people in productive, meaningful ways. As humans, we have the power and ability to shape the world around us into a better place.
+  I prefer to work with mission-focused companies and on creative tools that use computers to augment human imagination, creativity, and design abilities. If you have opportunities along these lines (or generally creative applications of technology to empower people), reach out to see how we might be able to work together or collaborate.
 
 profile_picture: /images/black-thumbnail.png
 
@@ -43,10 +43,12 @@ experience:
 
 education:
   - course: BS, Aerospace Engineering
+    sub: Cum Laude, Honors Commonwealth Scholar
     place: Virginia Tech
     period: 2007
 
-  - course: Certificate in User Experience (#1000265)
+  - course: Certificate in User Experience
+    sub: "#1000265"
     place: Nielsen Norman Group
     period: 2014
 
@@ -162,6 +164,7 @@ about_site: |
           <dl class="relational-list">
             {% for education-item in page.education %}
               <dt class="relational-list__title">{{ education-item.course | markdownify}}</dt>
+              {% if education-item.sub %}<dd class="relational-list__description relational-list__description--period">{{ education-item.sub | markdownify}}</dd> {% endif %}
               <dd class="relational-list__description">{{ education-item.place | markdownify}}</dd>
             {% endfor %}
           </dl>
@@ -193,8 +196,12 @@ about_site: |
           <h3 class="about-section-title type-level-2">Links</h3>
           <ul>
               <li><a href="//linkedin.com/in/{{ site.social-username.linkedin }}">LinkedIn</a></li>
+              <li><a href="//angel.co/u/{{ site.social-username.angellist }}">AngelList</a></li>
               <li><a href="//twitter.com/{{ site.social-username.twitter }}">Twitter</a></li>
               <li><a href="//github.com/{{ site.social-username.github }}">Github</a></li>
+              <li><a href="//codepen.com/{{ site.social-username.codepen }}">Codepen</a></li>
+              <li><a href="//flickr.com/{{ site.social-username.flickr }}">Flickr</a></li>
+              <li><a href="//strava.com/athletes/{{ site.social-username.strava }}">Strava</a></li>
           </ul>
         </div>
       </div>
