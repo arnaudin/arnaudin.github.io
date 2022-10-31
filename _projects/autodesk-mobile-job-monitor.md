@@ -10,6 +10,8 @@ ownership: Professional
 client: Autodesk
 time_period: 2015
 thumbnail: "/projects/autodesk-job-monitor/job-monitor-thumbnail.jpg"
+redirect_from: 
+  - /projects/jobmonitor/
 
 content_layout:
   - section_layout: text

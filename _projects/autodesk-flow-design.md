@@ -1,7 +1,6 @@
 ---
 date: 2017-01-1
 published: true
-sitemap: false
 title: "Autodesk Flow Design"
 description: The "easiest-to-use CFD program ever" 
 categories: app, ux, autodesk, desktop, realtime, simulation, cae
@@ -11,6 +10,8 @@ ownership: Professional
 client: Autodesk
 time_period: 2012-2014
 thumbnail: "/projects/flow-design/flow-design-thumbnail.jpg"
+redirect_from: 
+  - /projects/flowdesign
 
 content_layout:
   - section_layout: text

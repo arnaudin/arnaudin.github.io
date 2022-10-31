@@ -10,6 +10,8 @@ ownership: Professional
 client: Autodesk
 time_period: 2011-2017
 thumbnail: "/projects/autodesk-cfd/cfd-thumbnail.jpg"
+redirect_from: 
+  - /projects/cfd/
 
 content_layout:
   - section_layout: text
