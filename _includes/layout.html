@@ -21,7 +21,16 @@
             {% endcapture %}
 
             <figure class="image-wrapper {{ image.positioning }}">
-                <a class="fancybox" data-fancybox-group="gallery1" href="{{ image.url | prepend: site.image_serve_path }}"><img class="{{ image.class }}" src="{{ image.url | prepend: site.image_serve_path }}" alt="{{ stored_description | normalize_whitespace }}"></a>
+                {% if image.gallery %}
+                    {% if image.gallery == 'none' %}
+                        <img class="{{ image.class }}" src="{{ image.url | prepend: site.image_serve_path }}" alt="{{ stored_description | normalize_whitespace }}">
+                    {% else %}
+                        <a class="fancybox customgallery" data-fancybox-group="{{image.gallery}}" href="{{ image.url | prepend: site.image_serve_path }}"><img class="{{ image.class }}" src="{{ image.url | prepend: site.image_serve_path }}" alt="{{ stored_description | normalize_whitespace }}"></a>
+                    {% endif %}
+                {% else %}
+                    <a class="fancybox defaultgallery" data-fancybox-group="gallery1" href="{{ image.url | prepend: site.image_serve_path }}"><img class="{{ image.class }}" src="{{ image.url | prepend: site.image_serve_path }}" alt="{{ stored_description | normalize_whitespace }}"></a>
+                {% endif %}
+
                 {% if image.caption %}
                     <figcaption>{{ image.caption }}</figcaption>
                 {% endif %}
