@@ -74,11 +74,13 @@ content_layout:
         url: '/projects/autodesk-cfd/cfd-ethnographic-research.jpg'
         width:
         height:
+        gallery: none
       - caption: 'We generalized & mapped our learnings to diagrams that would inform the updated software workflows; these broke down by simulation setup, results processing, reporting, and design comparison (intentionally blurred)'
         description: 'Workflow analysis for results and reporting, to inform redesign'
         url: '/projects/autodesk-cfd/cfd-redesign-workflow-for-results.png'
         width:
         height:
+        gallery: none
 
   - section_layout: 2col
     images:
@@ -87,11 +89,13 @@ content_layout:
         url: '/projects/autodesk-cfd/cfd-persona-clark.png'
         width:
         height:
+        gallery: none
       - caption: 'I conducted a deep-dive card sort with several power users to better understand how they related various modes, commands, and operations'
         description: 'A card sort to better understand how users related various commands and operations'
         url: '/projects/autodesk-cfd/cfd-card-sort.png'
         width:
         height:
+        gallery: none
 
   - section_layout: text
     content: |

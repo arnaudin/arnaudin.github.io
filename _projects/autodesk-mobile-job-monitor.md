@@ -50,10 +50,13 @@ content_layout:
       - caption: 'A general purpose Material card view that would open the simulation in Autodesk 360'
         description: 'Material card view'
         url: '/projects/autodesk-job-monitor/job-monitor-card-2.png'
+        gallery: none
       - caption: 'Push notifications alert of success or failure and deep link into the app'
         description: 'Push notifications'
         url: '/projects/autodesk-job-monitor/job-monitor-push.png'
+        gallery: none
       - caption: 'Illustrating the ''Digital Paper'' layering of a Material app'
         description: 'Digital paper'
         url: '/projects/autodesk-job-monitor/job-monitor-layers.png'
+        gallery: none
 ---

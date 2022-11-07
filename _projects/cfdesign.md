@@ -23,6 +23,7 @@ content_layout:
         url: '/projects/cfdesign/cfdesign-valve-simulation.png'
         width:
         height:
+        gallery: none
         
   - section_layout: text
     content: |

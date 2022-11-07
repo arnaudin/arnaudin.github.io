@@ -25,6 +25,7 @@ content_layout:
         positioning: 
         width: 
         height:
+        gallery: none
 
   - section_layout: text
     content: |
@@ -113,11 +114,13 @@ content_layout:
         url: '/projects/brightidea-programs/pitch-program-ebook.png'
         width:
         height:
+        gallery: none
       - caption: 'Presenting Pitch Programs to a room of customers and prospects at Synthesize 2018'
         description: 'Presenting Pitch Programs to a room of customers and prospects at Synthesize 2018'
         url: '/projects/brightidea-programs/pitch-synthesize-2018.png'
         width:
         height:
+        gallery: none
     
 ---
 <!--       
