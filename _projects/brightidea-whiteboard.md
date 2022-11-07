@@ -35,7 +35,7 @@ content_layout:
         - Templates - jump in right away, from workshops to retros
         - Brightidea integration - transfer ideas bi-directionally with our innovation platform 
 
-  - section_layout: 1col
+  - section_layout: 1col-narrow
     images:
       - caption: 'The multiplayer experience is fundamental to Whiteboard collaboration, supporting distributed knowledge work'
         description: 'The multiplayer experience is fundamental to Whiteboard collaboration, supporting distributed knowledge work'
@@ -44,7 +44,7 @@ content_layout:
         width:
         height:
 
-  - section_layout: 1col
+  - section_layout: 1col-narrow
     images:
       - caption: 'Whiteboard enables visual collaboration with built-in primitives including sticky notes, shapes, text, stickers, and drawing tools'
         description: 'Whiteboard enables visual collaboration with built-in primitives including sticky notes, shapes, text, stickers, and drawing tools'
@@ -53,7 +53,7 @@ content_layout:
         width:
         height:
 
-  - section_layout: 1col
+  - section_layout: 1col-narrow
     images:
       - caption: 'Start or extend your Whiteboard from a built-in template for common workshops & team activities'
         description: 'Start or extend your Whiteboard from a built-in template for common workshops & team activities'
@@ -71,7 +71,7 @@ content_layout:
   #       width:
   #       height:
 
-  - section_layout: 1col
+  - section_layout: 1col-narrow
     images:
       - caption: 'Evaluate and rank ideas on the fly using a customizable "Smart Matrix," with direct integration to the Brightidea idea management platfom'
         description: 'Evaluate and rank ideas on the fly  using a customizable "Smart Matrix," with direct integration to the Brightidea idea management platfom'
