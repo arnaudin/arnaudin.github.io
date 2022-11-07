@@ -5,6 +5,8 @@ layout: compress
 <html lang="en" class="{% if page.html_class %}{{ page.html_class }}{% endif %}">
     {% include head.html %}
     <body class="{% if page.accent %}{% include accent.html %}{% endif %}">
+        <script src="/javascript/photoswipe.js"></script>
+        <script src="/javascript/photoswipe-ui-default.js"></script>
         <div class="global-wrapper">
             {% include header.html %}
             <main class="main-content {% if page.class %}{{ page.class }}{% endif %}" id="maincontent">
