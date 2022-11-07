@@ -21,13 +21,14 @@
             {% endcapture %}
 
             <figure class="image-wrapper {{ image.positioning }}">
-                <img class="{{ image.class }}" src="{{ image.url | prepend: site.image_serve_path }}" alt="{{ stored_description | normalize_whitespace }}">
+                <a class="fancybox" href="{{ image.url | prepend: site.image_serve_path }}"><img class="{{ image.class }}" src="{{ image.url | prepend: site.image_serve_path }}" alt="{{ stored_description | normalize_whitespace }}"></a>
                 {% if image.caption %}
                     <figcaption>{{ image.caption }}</figcaption>
                 {% endif %}
             </figure>
 
         {% endfor %}
+
     {% endif %}
 
 </div>
