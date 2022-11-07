@@ -40,6 +40,7 @@ content_layout:
         url: '/projects/brightidea/brightidea-move-copy.gif'
         width:
         height:
+        
   - section_layout: 1col-narrow
     images:
       - caption: 'Duplicate and similar submissions are incredibly common in practice, so being able to link and merge ideas is critical. Here is a solution for parent-child merging of ideas—essentially all ideas are preserved as individuals, given a hierarchical relationship, and exhibit corresponding behavior & messaging throughout the platform.'
@@ -130,11 +131,10 @@ content_layout:
       This is a small sampling of things I worked on at Brightidea related to core products and platform. Read more about [Programs](/projects/brightidea-programs/) and [Whiteboard](/projects/brightidea-whiteboard/)--two new product launches for which I served as Product Lead. Don't hesitate to [reach out](/contact/) to learn more or to discuss idea & innovation management! 
 
 ---
-
 <!-- 
 #1 Customer Rated Idea and Innovation Management Software for 3 years in a row.
 
 #1 Platform in Customer Reported Business Outcomes from Innovation - that means our customers not only generate better ideas with Brightidea, but they achieve the highest dollar amount of innovation outcomes.
 
 With over 2 million users world wide and $15+ billion in recorded business impact, Brightidea is ranked as the #1 Idea Management Platform globally
--->
+// -->

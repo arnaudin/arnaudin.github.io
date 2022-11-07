@@ -120,9 +120,6 @@ content_layout:
         height:
     
 ---
-
-
-
 <!--       
 Strategy to scale beyond $10M ARR. Expand TAM by moving down market. 
 
@@ -138,4 +135,4 @@ Running repeatable processes that build momentum for the innovation process
 
 Creating measurable business impact from implementing great ideas
 Within our Programs product suite are eight apps; each runs a different type of innovation activity. With this new release, we’ve added the Explore app for companies that want to explore ideas that address a market opportunity, with the goal of delivering greater value to their customers with an existing business model. You might, for example, seek to target younger customers in addition to your current customer base. With Explore, you can spearhead a company-wide discussion on how to provide value to this new market segment where they spend the most time: on mobile devices and social media.
--->
+// -->
