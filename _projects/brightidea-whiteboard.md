@@ -19,8 +19,9 @@ content_layout:
       **Role:** I served as Product Lead for v1 of Whiteboard, leading a team of backend Rust developers, frontend developers, and designers to deliver this brand-new product on a cutting-edge WebAssembly technology stack. I managed the roadmap, development cadence, and product releases. 
       
       Read about the initial launch on the Brightidea blog, [A Better Way To Brainstorm](https://www.brightidea.com/blog/fall-release-2021/), and check out the launch/demo video:
-      
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/McAnJXgmJbw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  - section_layout: video
+    videoid: McAnJXgmJbw
 
   - section_layout: text
     content: |

@@ -52,7 +52,9 @@ content_layout:
       ## Product Demo
 
       Check out the demo video to see Flow Design in action:
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/2RBOtd-Z8O8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+
+  - section_layout: video
+    videoid: 2RBOtd-Z8O8
   
   - section_layout: text
     content: |
