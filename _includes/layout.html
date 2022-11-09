@@ -6,6 +6,10 @@
                 {{ entry.content | markdownify }}
             </div>
         </section>
+    {% elsif entry.section_layout == 'video' %}
+        <div class="youtube-wrapper">
+            <iframe src="https://www.youtube.com/embed/{{ entry.videoid }}" allowfullscreen></iframe>
+        </div>
     {% else %}
 
         {% for image in entry.images %}

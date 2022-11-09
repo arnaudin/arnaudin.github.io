@@ -50,6 +50,22 @@
   }
 }
 
+.layout-video {
+  @extend .grid-container;
+
+  .youtube-wrapper {
+    @include grid-column(6);
+
+    @include grid-media(tablet) {
+      @include grid-column(10);
+    }
+
+    @include grid-media(desktop) {
+      @include grid-column(8);
+    }
+  }
+}
+
 .layout-1col-10-centered {
   @extend .grid-container;
 
