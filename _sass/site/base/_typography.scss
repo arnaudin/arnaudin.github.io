@@ -109,3 +109,10 @@ figcaption {
 .text-center {
   text-align: center;
 }
+
+// Used for image captions on blog pages
+img + em {
+  font-style: normal;
+  font-size: var(--font-size-body-tiny);
+  line-height: var(--line-height-tiny);
+}
