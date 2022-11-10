@@ -15,7 +15,7 @@ This article was originally posted at [It Is Alive in the Lab](https://labs.blog
 # Design Night: Peddle Away with Project Falcon - It is Alive in the Lab
 
 <br>
-![Simulation of Scott Sheppard riding a PiCycle in the virtual wind](/images/posts/falcon/project-falcon-1.jpeg)
+![Simulation of Scott Sheppard riding a PiCycle in the virtual wind](/images/posts/falcon/project-falcon-1.jpeg){:.img-full-width}
 <figcaption>Simulation of Scott Sheppard riding a PiCycle in the wind</figcaption>
 <br>
 
@@ -30,12 +30,12 @@ For this Design Night exhibit, I sat on the PiCycle:
 
 The geometry of my body was scanned:
 <br>
-![Simulation of Scott Sheppard riding a PiCycle in the virtual wind](/images/posts/falcon/project-falcon-4.jpeg){:.img-66vh}
+![Simulation of Scott Sheppard riding a PiCycle in the virtual wind](/images/posts/falcon/project-falcon-4.jpeg){:.img-66vh .img-center}
 <br>
 
 Project Falcon showed me the effects of wind on my geometry:
 <br>
-![Simulation of Scott Sheppard riding a PiCycle in the virtual wind](/images/posts/falcon/project-falcon-5.jpeg)
+![Simulation of Scott Sheppard riding a PiCycle in the virtual wind](/images/posts/falcon/project-falcon-5.jpeg){:.img-full-width}
 <br>
 
 *Cutting through the virtual wind is alive in the lab.*
