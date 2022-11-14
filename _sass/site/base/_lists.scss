@@ -4,26 +4,18 @@ main ul {
   margin-bottom: .6rem;
 }
 
-.list--dashed {
-  list-style-type: none;
-  margin-left: rem(20px);
-
-  > li {
-    list-style-type: none;
-    position: relative;
-  }
-
-  > li:before {
-    content: "-";
-    display: block;
-    position: absolute;
-    left: -#{rem(16px)};
-    color: var(--color-line);
-  }
+main ol {
+  margin-left: rem(32px);
+  margin-bottom: .6rem;
 }
 
 main ul li {
   margin-bottom: .6rem;
+}
+
+main ol li {
+  margin-bottom: .6rem;
+  padding-left: .6rem;
 }
 
 .list--dashed {
