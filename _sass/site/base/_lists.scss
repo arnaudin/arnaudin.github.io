@@ -18,6 +18,10 @@ main ol li {
   padding-left: .6rem;
 }
 
+main ol li ul {
+  margin-top: .6rem;
+}
+
 .list--dashed {
   list-style-type: none;
   margin-left: rem(20px);
