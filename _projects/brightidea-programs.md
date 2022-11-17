@@ -48,6 +48,8 @@ content_layout:
 
       ## Product Highlights
 
+      Working closely with our GM and the Sales & Marketing Lead, I was responsible for integrating our insights into a product strategy & roadmap, and then executing on that with our Engineering Lead. I did the design work, including wireframes and mockups for new features and functionality. Together we ended up developing and packing a new product called Brightidea Programs Pro.
+
       **New Homepage Experience**
       
       Being small, fast, and close to the customer our rate of learning was rapid. First insight: deployment of our legacy products took too long, required training, and was error-prone. We developed an "app-like" experience out of the box, as opposed to the heavy site-builder and content management system that was typical. This offered admins a much simpler way to configure, brand, theme, and onboard users while those end-users received a personalized, easy-to-use experience.

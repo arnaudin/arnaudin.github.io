@@ -14,11 +14,11 @@ thumbnail: "/projects/brightidea-whiteboard/brightidea-whiteboard-thumbnail.jpg"
 content_layout:
   - section_layout: text
     content: |
-      [Brightidea Whiteboard](https://www.brightidea.com/product/whiteboard/) fills a gap in the Brightidea idea management platform with native whiteboards for real-time team brainstorming & ideation. This missing puzzle piece makes Brightidea a unique all-in-one solution for end-to-end idea management.
+      [Brightidea Whiteboard](https://www.brightidea.com/product/whiteboard/) fills a gap in our enterprise idea management platform with native whiteboards for real-time team brainstorming & ideation. This missing puzzle piece makes Brightidea a unique all-in-one solution for end-to-end idea management.
       
-      **Role:** I served as Product Lead for v1 of Whiteboard, leading a team of backend Rust developers, frontend developers, and designers to deliver this brand-new product on a cutting-edge WebAssembly technology stack. I managed the roadmap, development cadence, and product releases. 
+      **Role:** I served as Product Lead for v1 of Whiteboard, leading a team of backend Rust engineers, frontend developers, and designers to deliver this brand-new product on a cutting-edge WebAssembly technology stack. Primary responsibilities included managing the roadmap & backlog, running the development cadence, and interfacing with the marketing team for product releases. 
       
-      Read about the initial launch on the Brightidea blog, [A Better Way To Brainstorm](https://www.brightidea.com/blog/fall-release-2021/), and check out the launch/demo video:
+      Read about the initial launch on the Brightidea blog, [A Better Way To Brainstorm](https://www.brightidea.com/blog/fall-release-2021/), and check out the official launch video:
 
   - section_layout: video
     videoid: McAnJXgmJbw
@@ -27,14 +27,17 @@ content_layout:
     content: |
       ## Product
 
-      The demo vidoes below offer an overview of the product capabilities. From the initial release through two quarterly updates we build a v1 whiteboarding product with:
+      **Problem:** our idea & innovation management platform was enterprise-ready and excelled at longer duration, asynchronous idea collection, but we were losing out on realtime brainstorming and ideation to whiteboarding tools like Mural & Miro. This was accelerated by the global pandemic driving knowledge workers online. Anything that previously happened face-to-face in a conference room was now digital. Our idea management admins were frequently requesting connectors to these 3rd party tools, so their employees could actually do something to manage whiteboard ideas after a session. We saw this as an opportunity to become the end-to-end solution ourselves. 
+
+      **Solution:** Our initial aim was to build a tool with the basic building blocks for realtime ideation. Second to that, was to establish a deep and native integration with our existing idea management platform. The demo vidoes below offer an overview of the product capabilities. From the initial release through two quarterly updates we built a v1 whiteboarding product with:
         - Infinite canvas - no constraints on ideation and collaboration
-        - Multiplayer - share, follow, huddle--collaboration at the core
+        - Multiplayer - collaboration at the core: share, follow, huddle
         - Lines, shapes, text, images, and pen - all the building blocks you need for visualizing ideas
-        - Sticky notes - capture thoughts and ideas like you would in person
-        - Emojis & stickers - bringing fun and humanity to whiteboards
-        - Templates - jump in right away, from workshops to retros
+        - Sticky notes - capture thoughts and represent ideas like you would in person
+        - Emojis & stickers - bringing personality, fun, and humanity to whiteboards
+        - Templates - jump in right away without spending hours on prep--from workshops to retros
         - Brightidea integration - transfer ideas bi-directionally with our innovation platform 
+        - Product-led growth - simple sharing, intuitive user access controls, free trials
 
   - section_layout: 1col-narrow
     images:
