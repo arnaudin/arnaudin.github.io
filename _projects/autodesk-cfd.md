@@ -175,6 +175,16 @@ content_layout:
         > <br><br>
         > John Evans, [designandmotion.com](https://designandmotion.net/autodesk/simulation-cfd-getting-up-to-speed-fast/)
 
+  - section_layout: 1col
+    images:
+      - caption: 'Comparatively evaluating design scenarios in Autodesk Simulation CFD'
+        description: 'Comparatively evaluating design scenarios in Autodesk Simulation CFD'
+        url: '/projects/autodesk-cfd/cfd-ribbon-in-action.png'
+        width:
+        height:
+
+  - section_layout: text
+    content: |
       This particular project serves as a broad example of my approach and my varied, technical skillset as a designer. I have designed a majority of the new and redesigned features in the products listed above, so am happy to answer additional questions and requests. For a list of what's new in each release, see the Autodesk Knowledge Network articles:
 
         - [What's New in Autodesk® CFD 2017](https://knowledge.autodesk.com/support/cfd/learn-explore/caas/CloudHelp/cloudhelp/2017/ENU/SimCFD-WhatsNew/files/GUID-E68DA961-6B90-41D7-AFA0-FD771EDB60F9-htm.html)
