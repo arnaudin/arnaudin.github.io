@@ -22,6 +22,10 @@ main ol li ul {
   margin-top: .6rem;
 }
 
+main ol li ol {
+  list-style: lower-alpha;
+}
+
 .list--dashed {
   list-style-type: none;
   margin-left: rem(20px);
