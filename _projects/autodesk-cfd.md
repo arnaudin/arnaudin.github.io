@@ -1,7 +1,7 @@
 ---
 date: 2015-01-10
 published: true
-title: "Autodesk CFD"
+title: "Autodesk · CFD"
 description: "Professional yet easy-to-use computational fluid dynamics (CFD) tools for engineers"
 categories: app, desktop, autodesk, simulation, cae
 disciplines: UX, Interaction Design, Visual Design, User Research

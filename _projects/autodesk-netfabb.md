@@ -1,7 +1,7 @@
 ---
 date: 2018-4-11
 published: true
-title: "Netfabb"
+title: "Autodesk · Netfabb"
 description: "Designed professional-grade simulation for metal 3D printing & additive manufacturing processes"
 categories: app, desktop, autodesk, simulation, manufacturing, cae
 disciplines: UX, Interaction Design, Visual Design, User Research, Market Research

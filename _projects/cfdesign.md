@@ -1,7 +1,7 @@
 ---
 date: 2011-03-01
 published: true
-title: "CFdesign"
+title: "Blue Ridge Numerics · CFdesign"
 description: "Acquired by Autodesk, the fastest growing CFD company in the world"
 categories: app, desktop, autodesk, simulation, cae
 disciplines: UX, Interaction Design, Visual Design, User Research, Testing, Support

@@ -1,7 +1,7 @@
 ---
 date: 2019-03-30
 published: true
-title: "Brightidea Programs"
+title: "Brightidea · Programs"
 description: "Launched a new down-market product to jumpstart employee innovation"
 categories: app, web, mobile, innovation, idea-management
 disciplines: Product Management, Product Design, Product Strategy, UX, User Research, Market Research, Writing, Speaking

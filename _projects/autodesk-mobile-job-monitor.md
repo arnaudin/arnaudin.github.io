@@ -1,7 +1,7 @@
 ---
 date: 2015-01-04
 published: true
-title: "Autodesk Simulation Monitor"
+title: "Autodesk · Simulation Monitor"
 description: "Monitor cloud simulations from anywhere"
 categories: concept, ux, autodesk, mobile
 disciplines: UX, User Research, Interaction Design, Visual Design, Information Architecture, Software Development

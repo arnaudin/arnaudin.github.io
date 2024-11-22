@@ -1,7 +1,7 @@
 ---
 date: 2017-01-1
 published: true
-title: "Autodesk Flow Design"
+title: "Autodesk · Flow Design"
 description: Designed the "easiest-to-use CFD program ever" 
 categories: app, ux, autodesk, desktop, realtime, simulation, cae
 disciplines: UX, User Research, Interaction Design, Visual Design, Information Architecture

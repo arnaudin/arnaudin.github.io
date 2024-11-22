@@ -1,10 +1,10 @@
 ---
 date: 2021-09-15
 published: true
-title: "Brightidea Whiteboard"
+title: "Brightidea · Whiteboard"
 description: "Launched a new collaboration product for team brainstorming"
 categories: web, innovation, idea-management, innovation
-disciplines: Product Management, Produt Strategy, UX, User Research, Market Research, Interaction Design
+disciplines: Product Management, Product Strategy, UX, User Research, Market Research, Interaction Design
 media: Web
 ownership: Professional
 client: Brightidea

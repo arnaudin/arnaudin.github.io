@@ -1,7 +1,7 @@
 ---
 date: 2018-10-30
 published: true
-title: "Brightidea Cloud"
+title: "Brightidea · Innovation Cloud"
 description: "Design and PM for core products and platform"
 categories: app, web, mobile, innovation, idea-management
 disciplines: Product Management, Product Design, Strategy, UX, User Research
