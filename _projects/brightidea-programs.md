@@ -4,7 +4,7 @@ published: true
 title: "Brightidea · Programs"
 description: "Launched a new down-market product to jumpstart employee innovation"
 categories: app, web, mobile, innovation, idea-management
-disciplines: Product Management, Product Design, Product Strategy, UX, User Research, Market Research, Writing, Speaking
+disciplines: Product Design, Product Strategy, Product Management, UX, User Research, Market Research, Writing, Speaking
 media: Web
 ownership: Professional
 client: Brightidea
@@ -13,8 +13,13 @@ thumbnail: "/projects/brightidea-programs/brightidea-programs-thumbnail.jpg"
 
 content_layout:
   - section_layout: text
-    content: |
-      I was the **Product & Design Lead** on a five-person team within Brightidea's own innovation lab. We were challenged to unlock new growth potential for the company by expanding down-market. This involved developing new innovation methodologies, products, services, and PLG approaches. 
+    content: | 
+      As Product & Design Lead in Brightidea's innovation lab, I was responsible for the development and launch of "Programs Pro," a new product designed to expand our reach into the mid-market. Over the course of a year, I led a series of product experiments to refine methodologies that empower small teams within large organizations to generate and implement impactful ideas within their departments. This eventually culminated in [Brightidea Program](https://www.brightidea.com/product/program/) becoming the company's leading product in terms of sales.
+
+      ## Responsibilities
+      - Collaborated with the General Manager and Sales/Marketing Lead to conduct market research, analyze customer needs, and develop a comprehensive product strategy and roadmap that guided the development work
+      - Directly configured, templatized, and packaged new workflows on the Brightidea platform, enabling new small-team use cases
+      - Designed and collaborated with the Engineering Lead to develop new features and a streamlined set up experience, resulting in 10x reduction in onboarding time
 
   - section_layout: 1col
     images:
@@ -29,34 +34,36 @@ content_layout:
 
   - section_layout: text
     content: |
-      ## Approach
-      
-      Distanced from the core business and reporting to the CEO, our lab team truly was a startup-within-a-startup. We borrowed heavily from Y Combinator and Paul Graham for our approach:
+      ## Mission and Goal
+      To further our company mission of "creating a world where the best ideas win," our team focused on democratizing innovation by empowering _every_ team to contribute their best ideas. We aimed to expand Brightidea's reach into the mid-market by offering tailored, cost-effective solutions. This strategic shift would make our powerful innovation platform accessible to a wider audience, ultimately driving greater innovation impact.
 
-      - [Launch fast and let ideas evolve](http://www.paulgraham.com/13sentences.html), aka "action produces information"
-      - Aim for [5-7% week-over-week growth (WOW)](http://www.paulgraham.com/growth.html)
-      - "[Do things that don't scale](http://paulgraham.com/ds.html)"
+      ## Guiding Principles
+      As a startup-within-a-startup reporting directly to the CEO, our guiding principles were borrowed heavily from Y Combinator and Paul Graham:
+
       - [Talk to customers!](https://twitter.com/paulg/status/898476047263518720)
-      
-      Moving down-market implied lower cost, faster onboarding, simplified setup, and self-guided learning. Over about a year our team:
+      - [Launch fast and let ideas evolve](http://www.paulgraham.com/13sentences.html), aka "action produces information"
+      - Target [5-7% week-over-week growth (WOW)](http://www.paulgraham.com/growth.html)
+      - [Do things that don't scale](http://paulgraham.com/ds.html)
 
-      - Developed a new methodology to jumpstart employee innovation, *Innovation Program Management (IPM)*
-      - Launched & iterated a product founded in this methodology, *Programs Pro*, that eventually evolved into what [Brightidea Programs](https://www.brightidea.com/product/programs/) is today
-      - Prototyped a *product-led growth (PLG)* motion that directly informed our approach with subsequent Idea Box and Whiteboard products
+      ## Outcomes
 
-      Check out our CEO's article on [productled.org](https://www.productled.org/blog/how-brightideas-innovation-lab-paved-the-path-to-plg) for more behind the scenes on [how our innovation lab paved the path to PLG](https://www.productled.org/blog/how-brightideas-innovation-lab-paved-the-path-to-plg).
+      To successfully expand into the mid-market, we focused on delivering affordable solutions with streamlined onboarding and self-guided learning resources. Over the course of a year, we achieved the following:
+
+      - Developed Innovation Program Management (IPM), a new methodology designed to accelerate employee-driven innovation within smaller teams. This framework provided the tools to get started with innovation management, and templates for running the highest-impact innovation activities. 
+      - Launched Programs Pro, a product based on the IPM methodology, and iteratively improved it based on user feedback. This evolved into Brightidea Programs, which became the company's top-selling product, demonstrating the strong market demand for accessible innovation solutions.
+      - Created a blueprint and playbook for product-led growth (PLG) at Brightidea, enabling self-service adoption and organic growth. This approach was later implemented for Idea Box and Whiteboard, demonstrating its effectiveness across multiple product lines.
+
+      For more behind-the-scenes on how our innovation lab paved the path to PLG, see our CEO's article on [productled.org](https://www.productled.org/blog/how-brightideas-innovation-lab-paved-the-path-to-plg).
 
       ## Product Highlights
 
-      Working closely with our GM and the Sales & Marketing Lead, I was responsible for integrating our insights into a product strategy & roadmap, and then executing on that with our Engineering Lead. I did the design work, including wireframes and mockups for new features and functionality. Together we ended up developing and packing a new product called Brightidea Programs Pro.
-
       **New Homepage Experience**
-      
-      Being small, fast, and close to the customer our rate of learning was rapid. First insight: deployment of our legacy products took too long, required training, and was error-prone. We developed an "app-like" experience out of the box, as opposed to the heavy site-builder and content management system that was typical. This offered admins a much simpler way to configure, brand, theme, and onboard users while those end-users received a personalized, easy-to-use experience.
+
+      Our legacy product used a CMS and site builder that was slow, hard to use, and error prone. We developed the seeds of a new Home page consisting of a personalized feed and built-in onboarding.
 
   - section_layout: 1col-narrow
     images:
-      - caption: 'The app-like User Home makes it easy to get started and offers a curated, personalized experience to each employee'
+      - caption: 'The new app-like User Home makes it easier to get started and offers a curated, personalized experience to each employee'
         description: 'User Home makes it easy to get started and offers a curated, personalized experience to each employee'
         url: '/projects/brightidea-programs/brightidea-user-home-updates.png'
         positioning: 
@@ -65,9 +72,9 @@ content_layout:
 
   - section_layout: text
     content: |
-      **A New Innovation App**
+      **A New Innovation App: Explore**
       
-      We also observed that customers were bending our templated problem-solving and optimization crowd-sourcing challenges to facilitate open-ended exploration of market opportunities. We developed an innovation app around this use case called [Explore](https://www.brightidea.com/product/explore/), and packaged it in the product alongside the existing Solve & Optimize apps.
+      We observed users bending our templated optimization crowd-sourcing challenge to facilitate open-ended exploration of new market opportunities, so developed a tailored app around this use case called [Explore](https://www.brightidea.com/product/explore/).
 
   - section_layout: 2col
     images:
@@ -86,9 +93,13 @@ content_layout:
     content: |
       **Always-on, Personal Idea Management**
 
-      The innovation programs recommended in IPM are timebound by design, with start & end dates as opposed to being always-on. This keeps them focused, manageable, and impactful with clear milestones defined upfront. We had previously watched new, small customers fail under always-on suggestion boxes so our methodology intentionally avoided these pitfalls. However, this was a common point of friction in sales.
+      Employees often have brilliant ideas outside of formal innovation activities. "My Ideas" provides a dedicated space to capture and nurture those sparks of inspiration whenever they strike.
 
-      We developed a new concept called "My Ideas" to allow employees to capture & manage ideas in a personal repository, and later submit them to programs when an opportunity arises (e.g. for a biannual hackathon). This solves the problem of "anytime anywhere" ideas while avoiding unnecessary burdens on program managers. With objections neutralized, sales efficiency & success improved drastically, and we filled a longtime product gap.
+      This personal idea repository empowers employees to:
+
+      - Capture ideas instantly: Jot down thoughts, add photos, save links, ensuring that no brilliant idea gets lost
+      - Organize and develop concepts: Categorize ideas, add notes and attachments, and refine concepts over time
+      - Submit to innovation programs: Easily share ideas with colleagues or submit them to relevant programs when the time is right, such as hackathons, problem-solving challenges, or optimization programs
 
   - section_layout: 2col
     images:
@@ -107,7 +118,15 @@ content_layout:
     content: |
       **The Pitch Program**
       
-      Finally, we conceived a general-purpose recurring program to ensure ongoing customer success that we named The Pitch Program. This is a scalable competition in the style of Shark Tank, great for engaging employees in order to find the most impactful ideas. I presented "How To Run a Successful Pitch Program" at [Synthesize 2018](https://synthesize.brightidea.com/), and we also developed the content into an ebook for customers and prospects. The existing Pitch app was refined to support a programmatic approach, and a roadmap was developed for future updates.
+      Finally, we conceived a central, recurring program to ensure ongoing customer success that we named The Pitch Program. This is a scalable competition in the style of Shark Tank, great for engaging employees in order to find the most impactful ideas. I presented "How To Run a Successful Pitch Program" at [Synthesize 2018](https://synthesize.brightidea.com/), and we also developed the content into an ebook for customers and prospects. The existing Pitch app was refined to support a programmatic approach, and a roadmap was developed for future updates.
+
+      Inspired by the popular "Shark Tank" format, The Pitch Program is a scalable competition designed to engage employees and uncover the most impactful ideas within your organization. It provides a structured framework for soliciting big ideas and funding winning projects.
+
+      To support our customers in running successful Pitch Programs, we developed a comprehensive set of resources, including:
+
+      - A presentation on best practices: "How To Run a Successful Pitch Program" presented at Synthesize 2018.
+      - An informative ebook: A downloadable guide for customers and prospects.
+      - Enhanced app functionality: The Pitch app was updated to support a recurring approach and improved executive reporting
 
   - section_layout: 2col
     images:
