@@ -4,7 +4,7 @@ published: true
 title: "Brightidea · Whiteboard"
 description: "Launched a new collaboration product for team brainstorming"
 categories: web, innovation, idea-management, innovation
-disciplines: Product Management, Product Strategy, UX, User Research, Market Research, Interaction Design
+disciplines: Product Design, Product Vision, Product Strategy, Product Management, UX, User Research, Market Research, Interaction Design
 media: Web
 ownership: Professional
 client: Brightidea
@@ -14,9 +14,16 @@ thumbnail: "/projects/brightidea-whiteboard/brightidea-whiteboard-thumbnail.jpg"
 content_layout:
   - section_layout: text
     content: |
-      [Brightidea Whiteboard](https://www.brightidea.com/product/whiteboard/) fills a gap in our enterprise idea management platform with native whiteboards for real-time team brainstorming & ideation. This missing puzzle piece makes Brightidea a unique all-in-one solution for end-to-end idea management.
+      Unlock real-time team brainstorming and ideation with [Brightidea Whiteboard](https://www.brightidea.com/product/whiteboard/), the newest addition to our enterprise idea management platform. 
       
-      **Role:** I served as Product Lead for v1 of Whiteboard, leading a team of backend Rust engineers, frontend developers, and designers to deliver this brand-new product on a cutting-edge WebAssembly technology stack. Primary responsibilities included managing the roadmap & backlog, running the development cadence, and interfacing with the marketing team for product releases. 
+      **Role:** As Product Lead, I worked directly with the CEO to define product vision and strategy, then oversaw the design and development of the initial zero-to-one version of Whiteboard.
+
+      My key contributions and responsibilities included:
+      - Define clear product vision and strategy, to establish team alignment and product direction
+      - Conduct and analyze user, market, competitor, and trend research
+      - Create, prioritize, and manage the product roadmap and backlog to ensure user and business impact
+      - Establish and drive an efficient development cadence to deliver high-quality releases on schedule
+      - Collaborate closely with the marketing team to plan and execute successful product launch
       
       Read about the initial launch on the Brightidea blog, [A Better Way To Brainstorm](https://www.brightidea.com/blog/fall-release-2021/), and check out the official launch video:
 
@@ -25,19 +32,21 @@ content_layout:
 
   - section_layout: text
     content: |
-      ## Product
+      <br>
+      **Problem:** While our enterprise-ready platform excelled at asynchronous idea collection, we recognized a critical gap in our offering: real-time brainstorming and ideation. Competitors like Mural and Miro were capturing this essential market segment. The shift to remote work during the global pandemic further emphasized this need, as in-person brainstorming sessions migrated to digital platforms.
 
-      **Problem:** our idea & innovation management platform was enterprise-ready and excelled at longer duration, asynchronous idea collection, but we were losing out on realtime brainstorming and ideation to whiteboarding tools like Mural & Miro. This was accelerated by the global pandemic driving knowledge workers online. Anything that previously happened face-to-face in a conference room was now digital. Our idea management admins were frequently requesting connectors to these 3rd party tools, so their employees could actually do something to manage whiteboard ideas after a session. We saw this as an opportunity to become the end-to-end solution ourselves. 
+      **Solution:** We set out to create a powerful yet intuitive real-time ideation tool to seamlessly integrate with our existing innovation management platform. This ensured that users could not only brainstorm effectively but continue to manage their ideas within a unified ecosystem.
 
-      **Solution:** Our initial aim was to build a tool with the basic building blocks for realtime ideation. Second to that, was to establish a deep and native integration with our existing idea management platform. The demo vidoes below offer an overview of the product capabilities. From the initial release through two quarterly updates we built a v1 whiteboarding product with:
-        - Infinite canvas - no constraints on ideation and collaboration
-        - Multiplayer - collaboration at the core: share, follow, huddle
-        - Lines, shapes, text, images, and pen - all the building blocks you need for visualizing ideas
-        - Sticky notes - capture thoughts and represent ideas like you would in person
-        - Emojis & stickers - bringing personality, fun, and humanity to whiteboards
-        - Templates - jump in right away without spending hours on prep--from workshops to retros
-        - Brightidea integration - transfer ideas bi-directionally with our innovation platform 
-        - Product-led growth - simple sharing, intuitive user access controls, free trials
+      The demo videos below showcase the key features we developed and delivered over two quarterly releases, empowering users to:
+
+      - **Collaborate seamlessly**: Work together in real-time on an infinite canvas, with features like shared cursors, follower mode, and huddles for focused discussions
+      - **Visualize ideas effortlessly**: Utilize a rich set of tools, including lines, shapes, text, images, sticky notes, and a freehand pen, to bring concepts to life
+      - **Boost engagement**: Add personality and fun to brainstorming sessions with emojis and stickers
+      - **Save time with templates**: Leverage pre-designed templates for workshops and activities, from brainstorming sessions to retrospectives
+      - **Manage the entire innovation lifecycle**: Seamlessly transfer ideas between whiteboards and our enterprise innovation platform
+      - **Enjoy a user-friendly experience**: Benefit from simple sharing options, intuitive access controls, and free trials to explore the platform's full potential
+
+      This powerful integration completes Brightidea as the only platform you need to manage the entire innovation lifecycle, from initial spark of an idea to measuring implementation impact.
 
   - section_layout: 1col-narrow
     images:
