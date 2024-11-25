@@ -31,29 +31,25 @@ priority: 0.9
         <li style="margin-left: 2em" class="paragraph-large">
           <a href="//twitter.com/{{ site.social-username.twitter }}">Twitter</a>
         </li>
-        <li style="margin-left: 2em" class="paragraph-large">
-          <a href="//github.com/{{ site.social-username.github }}">Github</a>
-        </li>
       </ul>
     </aside>
 
     <div class="contact-form">
       <p class="paragraph-large">
-        Send a message:
+        Send Ryan a message:
       </p>
-      <form action="https://getform.io/f/e1370628-c6c4-4ab1-b500-781c3905c1b6" method="POST">
-        <label for="name">Name:
-          <input type="text" name="name" placeholder="What's your name?" required="required">
+      <form action="https://api.staticforms.xyz/submit" method="post">
+        <input type="text" name="name" placeholder="Your name" required="required">
+        <input type="email" name="email" placeholder="Your email" required="required">
+        <textarea name="message" rows="5" placeholder="Enter a message here" required="required"></textarea>
+        <label>Subscribe to updates from Ryan:
+          <input type="checkbox" name="$subscribe" value="yes" unchecked>
         </label>
-        <label for="email">Email:
-          <input type="email" name="email" placeholder="What's your email address?" required="required">
-        </label>
-        <label for="message">Message:
-          <textarea name="message" rows="5" placeholder="Enter your message here..." required="required"></textarea>
-        </label>
-        <label>Subscribe to future updates from Ryan:
-          <input type="checkbox" name="subscribe" value="yes" unchecked>
-        </label>
+        <input type="text" name="honeypot" style="display:none">
+        <input type="hidden" name="accessKey" value="0a6a6242-45f0-47b6-b295-a244e58e7765">
+        <input type="hidden" name="subject" value="Contact us from - ryanarnaudin.com" />
+        <input type="hidden" name="replyTo" value="@">
+        <input type="hidden" name="redirectTo" value="https://ryanarnaudin.com/">
         <br>
         <button class="button-secondary" type="submit">Send message</button>
       </form>
