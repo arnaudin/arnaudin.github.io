@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "The Shape of Design by Frank Chimero"
+title:  "Book Notes: The Shape of Design by Frank Chimero"
 date:   2016-02-01 09:00:00
 categories: blog
 author: Ryan Arnaudin
-blurb: The Shape of Design by Frank Chimero
+blurb: Notes on The Shape of Design by Frank Chimero
 image: images/black-thumbnail.png
 priority: 0.6
 
