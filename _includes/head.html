@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="/css/default-skin.css">
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    
     {% if page.sitemap == false %}
-        <meta content="nofollow, noindex" name="robots"/>
+    <meta content="nofollow, noindex" name="robots"/>
     {% endif %}
 
     <link rel="icon" href="/favicon.ico" sizes="any"><!-- 32×32 -->
@@ -34,13 +35,16 @@
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"/>
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
     <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 140 }}{% else %}{{ site.description }}{% endif %}"/>
+    
     {% if page.thumbnail %}
-        <meta property="og:image" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}{{ page.thumbnail.path }}"/>
-        <meta content="1200" property="og:image:width"/>
-        <meta content="900" property="og:image:height"/>
+    <meta property="og:image" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}{{ page.thumbnail.path }}"/>
+    <meta content="1200" property="og:image:width"/>
+    <meta content="900" property="og:image:height"/>
+    <meta name="twitter:image" content="{{ prepend: site.baseurl | prepend: '/images' | prepend: site.url }}{{ page.thumbnail }}"/>
     {% endif %}
+    
     {% if page.is_post %}
-        <meta property="og:site_name" content="{{ site.title }}"/>
+    <meta property="og:site_name" content="{{ site.title }}"/>
     {% endif %}
 
     <meta content="summary" name="twitter:card"/>
@@ -48,8 +52,19 @@
     <meta name="twitter:creator" content="{{ site.social-username.twitter }}"/>
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
     <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 140 }}{% else %}{{ site.description }}{% endif %}"/>
-    {% if page.thumbnail %}
-        <meta name="twitter:image" content="{{ prepend: site.baseurl | prepend: '/images' | prepend: site.url }}{{ page.thumbnail }}"/>
+
+    {% if page.captcha == true %}
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdLDpcqAAAAABgi_IBp1fqlOaT0TTwU29g_WwBB"></script>
+    <script>
+        grecaptcha.ready(function() {
+            // the action: value doesn't matter, it's just a string (see the docs)
+            grecaptcha.execute('6LdLDpcqAAAAABgi_IBp1fqlOaT0TTwU29g_WwBB', {action: 'contact_form'})
+            .then(function(token) {
+                // this is the important part, store the token so it gets sent back to us
+                document.getElementById('g-recaptcha-response').value = token;
+            });
+        });
+    </script>
     {% endif %}
 
 </head>

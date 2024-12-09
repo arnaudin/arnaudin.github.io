@@ -3,6 +3,7 @@ layout: page
 title: Contact
 permalink: /contact/
 priority: 0.9
+captcha: true
 ---
 
 <script type="application/ld+json">
@@ -12,6 +13,11 @@ priority: 0.9
     "name": "Ryan Arnaudin",
     "url": "https://ryanarnaudin.com/",
     "sameAs": ["https://twitter.com/ {{ site.social-username.twitter }}", "https://linkedin.com/in/ {{ site.social-username.linkedin }}", "https://github.com/ {{ site.social-username.github }}"]
+  }
+</script>
+<script>
+  function onSubmit(token) {
+    document.getElementById("demo-form").submit();
   }
 </script>
 <div class="projects-intro-wrapper">
@@ -37,19 +43,18 @@ priority: 0.9
       <p class="paragraph-large">
         Send Ryan a message:
       </p>
-      <form action="https://api.staticforms.xyz/submit" method="post">
+      <form action="https://formkeep.com/f/5410c0bbb8e4"
+      accept-charset="UTF-8"
+      enctype="multipart/form-data"
+      method="POST">
+        <input type="hidden" name="utf8" value="✓">
         <input type="text" name="name" placeholder="Your name" required="required">
         <input type="email" name="email" placeholder="Your email" required="required">
         <textarea name="message" rows="5" placeholder="Enter a message here" required="required"></textarea>
         <label>Select to subscribe to updates:
           <input type="checkbox" name="$subscribe" value="yes" unchecked>
         </label>
-        <input type="text" name="honeypot" style="display:none">
-        <input type="hidden" name="accessKey" value="0a6a6242-45f0-47b6-b295-a244e58e7765">
-        <input type="hidden" name="subject" value="Contact us from - ryanarnaudin.com" />
-        <input type="hidden" name="replyTo" value="@">
-        <input type="hidden" name="redirectTo" value="/confirmation">
-        <br>
+        <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
         <button class="button-secondary" type="submit">Submit</button>
       </form>
     </div>
