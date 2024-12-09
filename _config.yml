@@ -23,12 +23,12 @@ include:
 title: Ryan Arnaudin
 myname: Ryan Arnaudin
 email: arnaudin@ryanarnaudin.com
-long-title: Ryan Arnaudin - Designer, Product Manager, Engineer
-description: Ryan Arnaudin is a product leader and designer in Austin, Texas
+long-title: Ryan Arnaudin - Product Designer and Engineer
+description: Ryan Arnaudin is a product designer in Austin, Texas
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ryanarnaudin.com" # the base hostname & protocol for your site
 timezone: America/Chicago
-year: 2022
+year: 2024
 start-year: 2008
 sitemap: true
 
@@ -77,8 +77,8 @@ compress_html: # http://jch.penibelst.de/
 navigation:
   - title: Work
     url: /
-  - title: Blog
-    url: /blog
+  # - title: Blog
+  #  url: /blog
   - title: About
     url: /about
   - title: Contact
