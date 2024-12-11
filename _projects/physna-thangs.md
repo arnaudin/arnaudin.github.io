@@ -20,11 +20,13 @@ content_layout:
 
   - section_layout: text
     content: |
-      ## Project examples coming soon...
+      ## More examples coming soon...
 
       In the meantime, check out <a href="http://thangs.com/" target="_blank">Thangs.com</a> 
       
       Or learn more about <a href="http://physna.com/" target="_blank">Physna</a>.
+
+      If you already have a password, [check out my private page of examples](/protected/physna-thangs.html). Or use my [contact form](/contact) to get in touch.
 
   # - section_layout: 1col-narrow
   #   images:
