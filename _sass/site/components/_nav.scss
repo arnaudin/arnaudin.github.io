@@ -63,7 +63,8 @@
     text-decoration: none;
     position: static;
     text-overflow: ellipsis;
-    min-width: 148px;
+    min-width: 100px;
+    text-align: center;
 
     &:hover,
     &:focus {
@@ -126,7 +127,7 @@
           }
 
           &:after {
-            content: 'Current section';
+            content: 'You are here';
             text-transform: uppercase;
             float: right;
             font-size: var(--font-size-xsmall);
