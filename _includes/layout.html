@@ -36,7 +36,11 @@
                 {% endif %}
 
                 {% if image.caption %}
-                    <figcaption>{{ image.caption }}</figcaption>
+                    {% if image.class contains 'img-center' %}
+                        <figcaption style="width:{{ image.width }};margin-left:auto;margin-right:auto;">{{ image.caption }}</figcaption>
+                    {% else %}
+                        <figcaption>{{ image.caption }}</figcaption>
+                    {% endif %}
                 {% endif %}
             </figure>
 
