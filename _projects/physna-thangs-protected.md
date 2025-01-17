@@ -1,6 +1,6 @@
 ---
 date: 2023-01-03
-published: true
+published: false
 title: "Physna · Thangs (Private)"
 description: "Fastest growing 3D search and UGC platform to date (requires assword)"
 categories: web, mobile, desktop, 3D, innovation
