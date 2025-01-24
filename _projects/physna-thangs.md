@@ -14,19 +14,19 @@ thumbnail: "/projects/physna-thangs/physna-thangs-thumbnail.jpg"
 content_layout:
   - section_layout: text
     content: |
-      Physna, short for "physical DNA," is the parent company of Thangs, the world's first geometric search engine and [largest online community](https://venturebeat.com/games/physnas-thangs-hits-20m-monthly-users-for-its-3d-art-community/) for 3D model creators. With more than 24 million indexed 3D models, Thangs enables 3D enthusiasts to find, share, and sell 3D models for the physical and metaverse worlds. 
+      At Physna, short for "physical DNA," we built the the world's first geometric search engine and [largest online community](https://venturebeat.com/games/physnas-thangs-hits-20m-monthly-users-for-its-3d-art-community/) for 3D model creators, called **Thangs**. With more than 24 million indexed 3D models, Thangs enabled 3D enthusiasts to find, share, and sell 3D models for the physical and metaverse worlds. 
       
-      I served as Lead Product Designer for Physna’s consumer 3D offerings under the Thangs brand, including web app, iOS & Android apps, Windows & Mac app, membership platform, and model store.
+      I served as Lead Product Designer for Physna’s consumer 3D offerings under the Thangs brand, including web app, iOS & Android apps, Windows & Mac app, membership platform, and model store from January 2023 until Thangs was been [acquired by Shapeways](https://www.shapeways.com/blog/welcome-thangs-to-the-shapeways-family) in late 2024.
 
   - section_layout: text
     content: |
       ## More examples coming soon...
 
-      In the meantime, check out <a href="http://thangs.com/" target="_blank">Thangs.com</a> 
+      In the meantime, check out <a href="http://thangs.com/" target="_blank">Thangs.com</a>.
+
+      Read the [announcement of the acquisition by Shapeways](https://www.shapeways.com/blog/welcome-thangs-to-the-shapeways-family).
       
       Or learn more about <a href="http://physna.com/" target="_blank">Physna</a>.
-
-      If you already have a password, [check out my private page of examples](/protected/physna-thangs.html). Or use my [contact form](/contact) to get in touch.
 
   # - section_layout: 1col-narrow
   #   images:
