@@ -10,7 +10,7 @@ priority: 0.6
 ---
 This is a quick exploration to provide a wide array of articulate language to describe a user experience. Too often we default back to the same handful of adjectives that might include favorites like <code>intuitive</code>, <code>user-friendly</code>, <code>confusing</code>, or <code>ugly</code>. 
 
-I am somewhat inspired by Orwell's [Politics and the English Language](https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/) while writing this, but don't take a cynical stance. While he goes on to suggest that language may be used to manipulate or deceive in certain contexts, I am creating this as a way to illuminate and increase clarity of communication when building things with a team.
+I am somewhat inspired by Orwell's [Politics and the English Language](https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/) while writing this, but don't take a cynical stance. While he goes on to suggest that language may be used to manipulate or deceive in certain contexts, I am creating this as a way to illuminate, promote clear thinking, and increase clarity of communication when building things with a team.
 
 ## Positive UX:
 
