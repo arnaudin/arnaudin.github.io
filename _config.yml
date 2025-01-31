@@ -81,6 +81,8 @@ navigation:
   #  url: /blog
   - title: About
     url: /about
+  - title: Process
+    url: /process
   - title: Contact
     url: /contact
 
