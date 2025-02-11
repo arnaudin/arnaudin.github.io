@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Describing UX"
+title: "Describing User Experiences (UX)"
 date: 2025-01-15 10:00:00
 categories: blog
 author: Ryan Arnaudin

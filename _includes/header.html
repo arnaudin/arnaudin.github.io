@@ -38,6 +38,8 @@
                                 {{ page.url | downcase | replace_first: '/', '' | remove: '/' }}
                                 {% if page.url == '/' %}work
                                 {% endif %}
+                                {% if page.url contains 'blog' %}writing
+                                {% endif %}
                             {% endcapture %}
                             {% capture current_page_nav %}
                                 {{ link.title | downcase }}

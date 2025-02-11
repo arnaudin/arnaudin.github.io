@@ -77,12 +77,12 @@ compress_html: # http://jch.penibelst.de/
 navigation:
   - title: Work
     url: /
-  # - title: Blog
-  #  url: /blog
   - title: About
     url: /about
   - title: Process
     url: /process
+  - title: Writing
+    url: /blog
   - title: Contact
     url: /contact
 
