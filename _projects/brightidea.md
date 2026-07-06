@@ -133,11 +133,10 @@ content_layout:
         url: '/projects/brightidea/brightidea-webhooks.png'
         width:
         height:
+    videos:
       - caption: 'Direct integration with Jira allows users to connect a Brightidea pipeline to a Jira project and then link or transfer ideas between the platforms'
         description: 'Connect a Brightidea pipeline to your Jira project to transfer ideas'
-        url: '/projects/brightidea/brightidea-jira.gif'
-        width:
-        height:
+        url: '/projects/brightidea/brightidea-jira.mp4'
 
   - section_layout: text
     content: |

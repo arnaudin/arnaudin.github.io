@@ -8,3 +8,6 @@ _site/
 # _projects/
 # mac
 .DS_Store
+# bundler
+vendor/
+.bundle/

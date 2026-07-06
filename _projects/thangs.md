@@ -2,12 +2,12 @@
 date: 2022-12-8
 published: true
 title: "Thangs Redesign Case Study"
-description: "A fun, simple site that generates excuses for not cycling"
+description: "A visual redesign exercise for the Thangs landing and model pages"
 categories: web, side project
 media: Web
 ownership: Personal 
 client:
-thumbnail: "/projects/coyote-bomb-squad/cbs-thumbnail.jpg"
+thumbnail: "/projects/thangs/thangs-final-logged-out.png"
 
 content_layout:
   - section_layout: text
@@ -201,13 +201,10 @@ content_layout:
       Next step would be to continue evolving the designs (I only showed one variant here) and start prototyping more interactions.
 
   - section_layout: 1col
-    images:
+    videos:
       - caption: "Since everything is componentized in Figma, setting up a clickable prototype is just one step away"
         description: 'Since everything is componentized in Figma, setting up a clickable prototype is just one step away'
-        url: '/projects/thangs/thangs-desktop-vid.gif'
-        width:
-        height:
-        class: 
+        url: '/projects/thangs/thangs-desktop-vid.mp4'
   
   - section_layout: 2col
     images:

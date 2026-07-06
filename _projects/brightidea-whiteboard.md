@@ -285,14 +285,12 @@ content_layout:
       Please forgive the lag in the recording below, illustrating a few of these considerations:
 
   - section_layout: 1col
-    images:
+    videos:
       - caption: 'A demo of in-canvas object interactions and hotkeys (note: mouse clicks are annotated with a cyan circle).'
         description: 'A demo of in-canvas object interactions and hotkeys.'
-        url: '/projects/brightidea-whiteboard/whiteboard-interactions_demo.gif'
-        border: light
-        class: img-wb-demo img-center
+        url: '/projects/brightidea-whiteboard/whiteboard-interactions_demo.mp4'
+        class: img-wb-demo
         width: 640px
-        height:
 
   - section_layout: text
     content: |
