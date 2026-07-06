@@ -6,6 +6,7 @@
 @use "normalize";
 
 //Base
+@use "site/base/fonts";
 @use "site/base/mixins-functions";
 @use "site/base/media-queries";
 @use "site/base/variables";
@@ -37,3 +38,4 @@
 @use "site/layouts/about";
 @use "site/layouts/contact";
 @use "site/layouts/message";
+@use "site/layouts/styleguide";

@@ -1,4 +1,4 @@
-@use "mixins-functions";
+@use "variables";
 
 a {
   color: var(--color-text);
@@ -9,19 +9,35 @@ main h1 a,
 main h2 a,
 main h3 a,
 main li a,
+main dd a,
 .formatted-link {
-  text-decoration: none;
-  color: var(--color-cta);
-  border-bottom: mixins-functions.rem(1.2px) dashed;
-  border-bottom-color: transparent;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(var(--palette-cobalt-rgb), .35);
+  text-decoration-thickness: 1px;
+  text-underline-offset: .18em;
+  transition: text-decoration-color variables.$timing-interaction ease-out, color variables.$timing-interaction ease-out;
+  border-bottom: 0;
 
   &:hover {
-    border-bottom-color: var(--color-cta);
+    color: var(--color-accent-strong);
+    text-decoration-color: currentColor;
   }
+}
+
+// Visible keyboard focus everywhere
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 .project-listing:hover .project-name {
   text-decoration: none;
-  color: var(--color-cta);
+  color: var(--color-accent);
   transition: 200ms ease;
 }

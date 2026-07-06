@@ -1,0 +1,114 @@
+---
+layout: page
+title: Style Guide
+permalink: /styleguide/
+sitemap: false
+---
+
+<div class="styleguide">
+
+  <header class="sg-header">
+    <p class="meta-label">Internal · Not indexed</p>
+    <h1>Style guide</h1>
+    <p class="paragraph-large">Foundations for the redesign: technical editorial typography, blueprint cobalt on warm paper, 4px spacing rhythm. Every text/background pair below meets WCAG AA; most meet AAA.</p>
+  </header>
+
+  <section class="sg-section">
+    <h2 class="sg-title">01 · Typefaces</h2>
+    <div class="sg-typefaces">
+      <div class="sg-typeface">
+        <p class="meta-label">Display — Space Grotesk (variable 300–700)</p>
+        <p class="sg-specimen sg-specimen-display">Design for technical software</p>
+      </div>
+      <div class="sg-typeface">
+        <p class="meta-label">Body — Inter (variable 100–900)</p>
+        <p class="sg-specimen sg-specimen-body">Fifteen years designing CAD, simulation, 3D-printing, and collaboration tools — from aerospace engineering roots to enterprise product leadership. <em>Italic for emphasis</em>, <strong>semibold for weight</strong>.</p>
+      </div>
+      <div class="sg-typeface">
+        <p class="meta-label">Metadata — IBM Plex Mono (400 / 500)</p>
+        <p class="sg-specimen meta-value">2021–2022 · Product &amp; Design Lead · Fig. 01</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="sg-title">02 · Type ramp</h2>
+    <div class="sg-ramp">
+      <div class="sg-ramp-row"><span class="meta-label">Hero</span><p class="type-level-jumbo">Engineer × Designer</p></div>
+      <div class="sg-ramp-row"><span class="meta-label">H1 / Level 1</span><p class="type-level-1">Bridging the brainstorm gap</p></div>
+      <div class="sg-ramp-row"><span class="meta-label">H2 / Level 2</span><p class="type-level-2">Discovery &amp; research</p></div>
+      <div class="sg-ramp-row"><span class="meta-label">H3 / Level 3</span><p class="type-level-3">Defining the MVP</p></div>
+      <div class="sg-ramp-row"><span class="meta-label">Body large</span><p class="paragraph-large">Intro paragraphs set larger to open a case study with confidence and set context fast.</p></div>
+      <div class="sg-ramp-row"><span class="meta-label">Body</span><p class="paragraph-normal">Standard reading text. Inter at a fluid 17–18px, line-height 1.6, capped at a 68-character measure so long case studies stay comfortable on any screen. This is where the actual story lives, so it gets the most legible setting on the site.</p></div>
+      <div class="sg-ramp-row"><span class="meta-label">Meta / caption</span><p class="meta-value">FIG. 04 — Early sketches exploring canvas layouts</p></div>
+    </div>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="sg-title">03 · Color</h2>
+    <ul class="sg-swatches">
+      <li class="sg-swatch" style="background:#1C1B1A;color:#FAF9F7"><span class="meta-value">Ink #1C1B1A</span><span class="meta-value">on paper 16.3:1 AAA</span></li>
+      <li class="sg-swatch" style="background:#5B564E;color:#FAF9F7"><span class="meta-value">Gray #5B564E</span><span class="meta-value">on paper 6.9:1 AA+</span></li>
+      <li class="sg-swatch" style="background:#1E40AF;color:#FAF9F7"><span class="meta-value">Cobalt #1E40AF</span><span class="meta-value">on paper 8.3:1 AAA</span></li>
+      <li class="sg-swatch" style="background:#172F8F;color:#FAF9F7"><span class="meta-value">Cobalt deep #172F8F</span><span class="meta-value">hover · 10.9:1</span></li>
+      <li class="sg-swatch sg-swatch-outline" style="background:#EDF1FA;color:#1C1B1A"><span class="meta-value">Cobalt wash #EDF1FA</span><span class="meta-value">ink on wash 15.2:1</span></li>
+      <li class="sg-swatch sg-swatch-outline" style="background:#FAF9F7;color:#1C1B1A"><span class="meta-value">Paper #FAF9F7</span><span class="meta-value">surface</span></li>
+    </ul>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="sg-title">04 · Spacing (4px scale)</h2>
+    <div class="sg-spacing">
+      <div class="sg-space" style="--w:var(--space-2)"><span class="meta-value">2 · 8px</span></div>
+      <div class="sg-space" style="--w:var(--space-4)"><span class="meta-value">4 · 16px</span></div>
+      <div class="sg-space" style="--w:var(--space-6)"><span class="meta-value">6 · 24px</span></div>
+      <div class="sg-space" style="--w:var(--space-8)"><span class="meta-value">8 · 32px</span></div>
+      <div class="sg-space" style="--w:var(--space-12)"><span class="meta-value">12 · 48px</span></div>
+      <div class="sg-space" style="--w:var(--space-16)"><span class="meta-value">16 · 64px</span></div>
+      <div class="sg-space" style="--w:var(--space-24)"><span class="meta-value">24 · 96px</span></div>
+    </div>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="sg-title">05 · Links, buttons &amp; form</h2>
+    <div class="sg-controls">
+      <p class="paragraph-normal">Body text with an <a href="#">inline link that underlines in cobalt</a> and darkens on hover. Keyboard focus gets a visible cobalt ring.</p>
+      <p><a class="button-secondary" href="#">Get in touch</a></p>
+      <form class="sg-form" onsubmit="return false">
+        <input type="text" placeholder="Your name">
+        <textarea rows="2" placeholder="A short message"></textarea>
+      </form>
+    </div>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="sg-title">06 · Case-study components</h2>
+
+    <p class="meta-label">Meta block</p>
+    <div class="sg-metablock">
+      <div><span class="meta-label">Role</span><span class="meta-value">Product &amp; Design Lead</span></div>
+      <div><span class="meta-label">Timeframe</span><span class="meta-value">2021–2022</span></div>
+      <div><span class="meta-label">Client</span><span class="meta-value">Brightidea</span></div>
+      <div><span class="meta-label">Domain</span><span class="meta-value">Real-time collaboration</span></div>
+    </div>
+
+    <p class="meta-label" style="margin-top:var(--space-10)">Figure treatment</p>
+    <figure class="sg-figure">
+      <img src="/images/projects/brightidea-whiteboard/whiteboard-layout_sketches.webp" alt="Early sketches of whiteboard layout options" loading="lazy" decoding="async">
+      <figcaption><span class="sg-fig-number">FIG. 01</span> Early sketches show potential layouts and UI, to aid shared understanding during trade-off discussions.</figcaption>
+    </figure>
+
+    <p class="meta-label" style="margin-top:var(--space-10)">Pull quote</p>
+    <div class="pullquote">
+      <p>A fully connected solution within Brightidea would provide far greater value than a simple integration.</p>
+      <span class="pullquote-source">Insight from user interviews</span>
+    </div>
+
+    <p class="meta-label" style="margin-top:var(--space-10)">Blockquote</p>
+    <blockquote>
+      <p>We practice what we preach when it comes to collaborative innovation — the best ideas win.</p>
+      <footer>Brightidea design review principle</footer>
+    </blockquote>
+  </section>
+
+</div>

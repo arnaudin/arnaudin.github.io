@@ -2,99 +2,147 @@
 @use "mixins-functions";
 
 :root {
+  /* ------------------------------------------------------------------
+   * RAW PALETTE
+   * Dark mode later = swap this layer only; semantic roles below stay.
+   * Contrast on paper (#FAF9F7): ink 16.3:1 · gray-strong 6.9:1 ·
+   * cobalt 8.3:1 · cobalt-deep 10.9:1 — all WCAG AA (text ≥ 4.5:1).
+   * ---------------------------------------------------------------- */
+  --palette-paper: #FAF9F7;
+  --palette-paper-rgb: 250, 249, 247;
+  --palette-ink: #1C1B1A;
+  --palette-ink-rgb: 28, 27, 26;
+  --palette-gray-strong: #5B564E;   /* secondary text, AA at any size */
+  --palette-gray-mid: #8A857D;      /* borders/decorative only (3.5:1) */
+  --palette-cobalt: #1E40AF;        /* blueprint accent */
+  --palette-cobalt-rgb: 30, 64, 175;
+  --palette-cobalt-deep: #172F8F;   /* hover/active accent */
+  --palette-cobalt-wash: #EDF1FA;   /* tint surfaces: pull quotes, highlights */
+
+  /* ------------------------------------------------------------------
+   * SEMANTIC ROLES
+   * ---------------------------------------------------------------- */
+  --color-surface: var(--palette-paper);
+  --color-surface-raised: #FFFFFF;
+  --color-surface-tint: var(--palette-cobalt-wash);
+  --color-text: var(--palette-ink);
+  --color-text-secondary: var(--palette-gray-strong);
+  --color-accent: var(--palette-cobalt);
+  --color-accent-strong: var(--palette-cobalt-deep);
+  --color-accent-wash: var(--palette-cobalt-wash);
+  --color-line: var(--palette-gray-mid);
+  --color-line-subtle: rgba(var(--palette-ink-rgb), .12);
+  --color-focus-ring: var(--palette-cobalt);
+
+  /* ------------------------------------------------------------------
+   * LEGACY ALIASES (consumed across components; retire per-chunk)
+   * ---------------------------------------------------------------- */
+  --color-primary: var(--palette-ink-rgb);
+  --color-secondary: var(--palette-paper-rgb);
+  --color-tertiary: var(--palette-cobalt-rgb);
+  --color-action: var(--color-accent);
+  --color-highlight-rgb: var(--palette-cobalt-rgb);
+  --color-highlight: rgb(var(--color-highlight-rgb));
+  --color-text-highlight: rgb(var(--color-secondary));
+  --color-background: var(--color-surface);
+  --color-background-rgb: var(--palette-paper-rgb);
+  --color-form-background: rgba(var(--palette-ink-rgb), .06);
+  --color-text-inverted: rgba(var(--palette-paper-rgb), .95);
+  --color-cta: var(--color-accent);
+  --color-rgb-opacity-tint-light: .1;
+  --color-rgb-opacity-tint-mid: .6;
+  --color-rgb-opacity-tint-dark: .85;
+
+  /* ------------------------------------------------------------------
+   * TYPE FAMILIES
+   * ---------------------------------------------------------------- */
+  --font-display: "Space Grotesk", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* ------------------------------------------------------------------
+   * TYPE SCALE — fluid via clamp(); root stays 16px at all widths
+   * ---------------------------------------------------------------- */
   --font-size-root: 16px;
 
-  --line-height-regular: 1.5;
-  --line-height-tight: 1.3;
-  --line-height-tiny: 1.2;
-
-  --font-size-xsmall: #{mixins-functions.rem(12px)};
+  /* static steps (legacy consumers) */
+  --font-size-xsmall: #{mixins-functions.rem(13px)};
   --font-size-small: #{mixins-functions.rem(14px)};
   --font-size-normal: #{mixins-functions.rem(16px)};
   --font-size-large: #{mixins-functions.rem(18px)};
   --font-size-xlarge: #{mixins-functions.rem(20px)};
   --font-size-xxlarge: #{mixins-functions.rem(24px)};
   --font-size-xxlarge-2: #{mixins-functions.rem(28px)};
-  --font-size-xxxlarge:#{mixins-functions.rem(32px)};
+  --font-size-xxxlarge: #{mixins-functions.rem(32px)};
   --font-size-xxxxlarge: #{mixins-functions.rem(40px)};
   --font-size-xxxxxlarge: #{mixins-functions.rem(56px)};
   --font-size-xxxxxxlarge: #{mixins-functions.rem(72px)};
 
-  --font-size-level-jumbo: var(--font-size-xxxxlarge);
-  --font-size-level-1: var(--font-size-xxxxlarge);
-  --font-size-level-2: var(--font-size-xxxlarge);
-  --font-size-level-3: var(--font-size-xxlarge);
-  --font-size-level-4: var(--font-size-large);
-  --font-size-body: var(--font-size-large);
-  --font-size-body-tiny: var(--font-size-xsmall);
-  --font-size-body-small: var(--font-size-normal);
-  --font-size-body-large: var(--font-size-large);
-  --font-size-body-huge: var(--font-size-xxlarge);
+  /* semantic, fluid */
+  --font-size-hero: clamp(2.75rem, 1.55rem + 5vw, 4.5rem);
+  --font-size-level-jumbo: var(--font-size-hero);
+  --font-size-level-1: clamp(2.125rem, 1.53rem + 2.5vw, 3rem);
+  --font-size-level-2: clamp(1.5rem, 1.24rem + 1.1vw, 1.875rem);
+  --font-size-level-3: clamp(1.1875rem, 1.06rem + .55vw, 1.375rem);
+  --font-size-level-4: 1.125rem;
+  --font-size-body: clamp(1.0625rem, 1.02rem + .18vw, 1.125rem);
+  --font-size-body-tiny: .8125rem;   /* mono captions/meta */
+  --font-size-body-small: .9375rem;
+  --font-size-body-large: clamp(1.1875rem, 1.1rem + .35vw, 1.3125rem);
+  --font-size-body-huge: clamp(1.375rem, 1.2rem + .75vw, 1.625rem);
 
-  --font-size-button: var(--font-size-large);
-  --font-size-form-label: var(--font-size-xlarge);
-  --font-size-nav: var(--font-size-xlarge);
+  --font-size-button: 1rem;
+  --font-size-form-label: 1rem;
+  --font-size-nav: .9375rem;
+  --font-size-meta: var(--font-size-body-tiny);
 
-  --font-letter-spacing-subtle: .06rem;
+  /* ------------------------------------------------------------------
+   * RHYTHM
+   * ---------------------------------------------------------------- */
+  --line-height-regular: 1.6;      /* long-form body */
+  --line-height-slight: 1.45;      /* large intro text */
+  --line-height-tight: 1.25;       /* subheads */
+  --line-height-tiny: 1.1;         /* display/hero */
 
-  --paragraph-spacing: 1.3rem;
+  --font-letter-spacing-subtle: .06em;
+  --letter-spacing-mono-label: .08em;
+  --letter-spacing-display: -.02em;
 
+  --paragraph-spacing: 1.25rem;
+  --measure-prose: 68ch;           /* max line length for reading text */
+
+  /* ------------------------------------------------------------------
+   * SPACING SCALE (4px base)
+   * ---------------------------------------------------------------- */
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* legacy layout tokens */
   --gutter: #{mixins-functions.rem(24px)};
   --gutter-row: #{mixins-functions.rem(24px)};
-  --page-margin: #{mixins-functions.rem(32px)};
+  --page-margin: #{mixins-functions.rem(24px)};
   --inner-padding: #{mixins-functions.rem(16px)};
   --inner-padding-horizontal: #{mixins-functions.rem(10px)};
-
-  --color-primary: 30, 30 ,30;
-  --color-secondary: 255, 255, 255;
-  --color-tertiary: 36, 96, 109;
-
-  // Links
-  --color-action: #24606D;
-
-  --color-highlight-rgb: var(--color-tertiary);
-  --color-highlight: rgb(var(--color-highlight-rgb));
-  --color-text-highlight: rgb(var(--color-secondary));
-
-  --color-background: rgba(var(--color-secondary), 1);
-  --color-background-rgb: var(--color-secondary);
-  --color-line: rgba(var(--color-primary), var(--color-rgb-opacity-tint-mid));
-  --color-line-subtle: rgba(var(--color-primary), var(--color-rgb-opacity-tint-light));
-  --color-text: rgba(var(--color-primary),.95);
-  --color-form-background: rgba(var(--color-primary),.10);
-  --color-text-inverted: rgba(var(--color-secondary),.95);
-
-  --color-cta: var(--color-action);
-
-  --color-rgb-opacity-tint-light: .1;
-  --color-rgb-opacity-tint-mid: .6;
-  --color-rgb-opacity-tint-dark: .85;
 }
 
 @include media-queries.grid-media(tablet) {
   :root {
-    --line-height-tight: 1.24;
-    --line-height-slight: 1.45;
-
-    --font-size-level-jumbo: var(--font-size-xxxxxlarge);
-    --font-size-level-1: var(--font-size-xxxxxlarge);
-    --font-size-level-2: var(--font-size-xxxxlarge);
-    --font-size-body: var(--font-size-xlarge);
-    --font-size-body-large: var(--font-size-xxlarge);
-    --font-size-body-huge: var(--font-size-xxxlarge);
-
     --page-margin: #{mixins-functions.rem(64px)};
   }
 }
 
 @include media-queries.grid-media(desktop) {
   :root {
-    --font-size-root: 17px;
-    --font-size-level-jumbo: var(--font-size-xxxxxxlarge);
-    --font-size-body: var(--font-size-xlarge);
-    --font-size-body-large: var(--font-size-xxlarge-2);
-    --font-size-body-huge: var(--font-size-xxxxlarge);
-
     --gutter: #{mixins-functions.rem(32px)};
     --gutter-row: #{mixins-functions.rem(32px)};
   }
@@ -102,8 +150,7 @@
 
 @include media-queries.grid-media(largedesktop) {
   :root {
-    --font-size-root: 20px;
-    --page-margin: #{mixins-functions.rem(128px)};
+    --page-margin: #{mixins-functions.rem(112px)};
   }
 }
 
@@ -119,9 +166,5 @@ $measure-small: mixins-functions.rem(20px);
 $measure-normal: mixins-functions.rem(28px);
 $measure-medium: mixins-functions.rem(32px);
 $measure-large: mixins-functions.rem(64px);
-
-/*
- * GEOMETRY
- */
 
 $timing-interaction: .2s;
