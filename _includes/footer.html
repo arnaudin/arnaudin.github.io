@@ -1,14 +1,18 @@
 <footer class="main-footer">
-    <div class="footer-license-wrapper">
-        <a class="license" href="https://github.com/arnaudin/arnaudin.github.io/blob/main/LICENSE" title="View the license for this site and it's content">
-            <small>All content is copyright &copy;
-                {{ site.start-year }}
-                -
-                {{ site.time | date: '%Y' }}
-                Ryan Arnaudin, any trademarks are property of their respective owners</small>
-        </a>
+    <div class="footer-cta">
+        <p class="meta-label">Next step</p>
+        <p class="footer-cta-title">Have a project or role in&nbsp;mind?</p>
+        <p class="footer-cta-action"><a href="/contact/">Get in touch<span aria-hidden="true"> →</span></a></p>
     </div>
-    <div class="made-by-wrapper">
-        <a class="made-by" href="/contact/">Reach Out 👋</a>
+
+    <div class="footer-meta">
+        <ul class="footer-social">
+            <li><a href="https://linkedin.com/in/{{ site.social-username.linkedin }}">LinkedIn</a></li>
+            <li><a href="https://github.com/{{ site.social-username.github }}">GitHub</a></li>
+        </ul>
+        <p class="footer-colophon">Set in Space Grotesk, Inter &amp; IBM Plex Mono · Built with Jekyll</p>
+        <p class="footer-license">
+            <a href="https://github.com/arnaudin/arnaudin.github.io/blob/main/LICENSE" title="View the license for this site and its content">© {{ site.start-year }}–{{ site.time | date: '%Y' }} Ryan Arnaudin</a>
+        </p>
     </div>
 </footer>
