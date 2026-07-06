@@ -1,37 +1,30 @@
 ---
 layout: page
 title_override: Ryan Arnaudin - Personal Projects
-redirect_from: 
+redirect_from:
   - /side-projects/
 permalink: /personal/
 priority: 0.8
 ---
 
-<div class="projects-intro-wrapper">
-    <p class="projects-intro type-level-1">Side Projects</p>
-</div>
+<section class="home-hero home-hero-compact">
+    <div class="home-hero-inner">
+        <p class="home-hero-kicker meta-label">Off the clock</p>
+        <h1 class="home-hero-title">Side projects</h1>
+        <p class="home-hero-lede">A mix of things that aren't quite professional, but involve product or design.</p>
+    </div>
+</section>
 
-<div class="projects-intro-wrapper">
-    <p class="projects-intro type-level-3">A mix of things that aren't quite professional, but involve product or design</p>
-    <br>
-</div>
+<section class="projects-section" aria-labelledby="personal-work">
+    <div class="section-label-row">
+        <h2 class="section-label" id="personal-work">Personal projects</h2>
+    </div>
 
-<div class="projects">
-    {% for project in site.projects reversed limit:include.limit %}
-    {% if project.ownership == "Personal" %}
-        <article class="project-listing">
-            <div class="thumbnail-wrapper">
-                <a href="{{ project.url | prepend: site.baseurl }}">
-                    <div class="thumbnail-description-wrapper">
-                        <img src="{{ project.thumbnail | prepend: site.image_serve_path }}" alt="{{ project.title }}" width="600" height="450">
-                        <p class="thumbnail-description">
-                            <span>{{ project.description }}</span>
-                        </p>
-                    </div>
-                    <h3 class="project-name" aria-hidden="true">{{ project.title }}</h3>
-                </a>
-            </div>
-        </article>
-    {% endif %}
-    {% endfor %}
-</div>
+    <div class="projects">
+        {% for project in site.projects reversed %}
+            {% if project.ownership == "Personal" %}
+                {% include project-card.html project=project eager=forloop.first %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

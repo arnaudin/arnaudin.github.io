@@ -1,45 +1,32 @@
 ---
 layout: page
 title_override: Ryan Arnaudin | Product Designer | UX, User Experience, Interaction Design, Product Design, Software Design
-redirect_from: 
+redirect_from:
   - /portfolio/
   - /work/
 permalink: /
 priority: 1.0
 ---
 
-<div class="projects-intro-wrapper">
-    <p class="projects-intro type-level-1">Ryan Arnaudin</p>
-</div>
+<section class="home-hero">
+    <div class="home-hero-inner">
+        <p class="home-hero-kicker meta-label">Ryan Arnaudin · Product Designer · Austin,&nbsp;TX</p>
+        <h1 class="home-hero-title">Design with an engineer's&nbsp;edge.</h1>
+        <p class="home-hero-lede">Aerospace engineer turned product designer. For 15+ years I've shaped CAD, simulation, 3D&#8209;printing, and collaboration tools — from enterprise platforms to consumer apps used by millions.</p>
+        <p class="home-hero-domains">CAD · CAM · Simulation · 3D Printing · GIS + Earth Observation · Realtime Collaboration</p>
+    </div>
+</section>
 
-<div class="projects-intro-wrapper">
-    <p class="projects-intro type-level-3">As a UX Designer with an aerospace engineering background, I bring a unique problem-solving approach and technical edge to creating human-centered software products.</p>
-    <p class="projects-intro type-level-3">Based in Austin, I have over 15 years of experience in UX, Product Design, and Product Management across enterprise and consumer applications on all major platforms.</p>
-    <br>
-</div>
+<section class="projects-section" aria-labelledby="selected-work">
+    <div class="section-label-row">
+        <h2 class="section-label" id="selected-work">Selected work</h2>
+    </div>
 
-<div class="projects">
-    {% for project in site.projects reversed limit:include.limit %}
-    {% if project.ownership == "Professional" %}
-        <article class="project-listing">
-            <div class="thumbnail-wrapper">
-                <a href="{{ project.url | prepend: site.baseurl }}">
-                    <div class="thumbnail-description-wrapper">
-                        {% assign thumb_dims = site.data.image_dims[project.thumbnail] %}
-                        <picture>
-                            {% if thumb_dims.webp %}
-                                <source type="image/webp" srcset="{{ project.thumbnail | replace: '.png', '.webp' | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | prepend: site.image_serve_path }}">
-                            {% endif %}
-                            <img src="{{ project.thumbnail | prepend: site.image_serve_path }}" alt="{{ project.title }}" width="600" height="450"{% if forloop.index > 4 %} loading="lazy"{% endif %} decoding="async">
-                        </picture>
-                        <p class="thumbnail-description">
-                            <span>{{ project.description }}</span>
-                        </p>
-                    </div>
-                    <h3 class="project-name" aria-hidden="true">{{ project.title }}</h3>
-                </a>
-            </div>
-        </article>
-    {% endif %}
-    {% endfor %}
-</div>
+    <div class="projects">
+        {% for project in site.projects reversed %}
+            {% if project.ownership == "Professional" %}
+                {% include project-card.html project=project eager=forloop.first %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

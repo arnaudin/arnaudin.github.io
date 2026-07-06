@@ -1,0 +1,23 @@
+{% assign card = include.project %}
+<article class="project-card">
+    <a class="project-card-link" href="{{ card.url | prepend: site.baseurl }}">
+        <div class="project-card-media">
+            {% assign thumb_dims = site.data.image_dims[card.thumbnail] %}
+            <picture>
+                {% if thumb_dims.webp %}
+                    <source type="image/webp" srcset="{{ card.thumbnail | replace: '.png', '.webp' | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | prepend: site.image_serve_path }}">
+                {% endif %}
+                <img src="{{ card.thumbnail | prepend: site.image_serve_path }}" alt="" width="600" height="450"{% unless include.eager %} loading="lazy"{% endunless %} decoding="async">
+            </picture>
+        </div>
+        <h3 class="project-card-title">{{ card.title }}</h3>
+        {% if card.description %}
+            <p class="project-card-desc">{{ card.description }}</p>
+        {% endif %}
+        {% if card.time_period or card.media %}
+            <p class="project-card-meta">
+                {%- if card.time_period %}<span>{{ card.time_period }}</span>{% endif -%}
+            </p>
+        {% endif %}
+    </a>
+</article>
