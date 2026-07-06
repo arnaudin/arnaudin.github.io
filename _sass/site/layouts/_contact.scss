@@ -10,6 +10,10 @@
     .contact-intro {
       @include grid-column(12);
 
+      .contact-links li {
+        margin-left: 2em;
+      }
+
       @include grid-media(tablet) {
         @include grid-column(5);
       }

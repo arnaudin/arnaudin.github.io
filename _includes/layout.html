@@ -27,12 +27,12 @@
             <figure class="image-wrapper {{ image.positioning }}">
                 {% if image.gallery %}
                     {% if image.gallery == 'none' %}
-                        <img class="{{ image.class }}" src="{{ image.url | prepend: site.image_serve_path }}" alt="{{ stored_description | normalize_whitespace }}">
+                        <img class="{{ image.class }}" src="{{ image.url | prepend: site.image_serve_path }}" alt="{{ stored_description | normalize_whitespace }}" loading="lazy" decoding="async">
                     {% else %}
-                        <a class="fancybox customgallery" data-fancybox-group="{{image.gallery}}" href="{{ image.url | prepend: site.image_serve_path }}"><img class="{{ image.class }}" src="{{ image.url | prepend: site.image_serve_path }}" alt="{{ stored_description | normalize_whitespace }}"></a>
+                        <a class="fancybox customgallery" data-fancybox-group="{{image.gallery}}" href="{{ image.url | prepend: site.image_serve_path }}"><img class="{{ image.class }}" src="{{ image.url | prepend: site.image_serve_path }}" alt="{{ stored_description | normalize_whitespace }}" loading="lazy" decoding="async"></a>
                     {% endif %}
                 {% else %}
-                    <a class="fancybox defaultgallery" data-fancybox-group="gallery1" href="{{ image.url | prepend: site.image_serve_path }}"><img class="{{ image.class }}" src="{{ image.url | prepend: site.image_serve_path }}" alt="{{ stored_description | normalize_whitespace }}"></a>
+                    <a class="fancybox defaultgallery" data-fancybox-group="gallery1" href="{{ image.url | prepend: site.image_serve_path }}"><img class="{{ image.class }}" src="{{ image.url | prepend: site.image_serve_path }}" alt="{{ stored_description | normalize_whitespace }}" loading="lazy" decoding="async"></a>
                 {% endif %}
 
                 {% if image.caption %}
@@ -40,6 +40,35 @@
                         <figcaption style="width:{{ image.width }};margin-left:auto;margin-right:auto;">{{ image.caption }}</figcaption>
                     {% else %}
                         <figcaption>{{ image.caption }}</figcaption>
+                    {% endif %}
+                {% endif %}
+            </figure>
+
+        {% endfor %}
+
+        {% for video in entry.videos %}
+
+            {% capture stored_description %}
+                {% if video.description %}
+                    {{ video.description }}
+                {% elsif video.caption %}
+                    {{ video.caption }}
+                {% else %}
+                    {{ page.title }}
+                {% endif %}
+            {% endcapture %}
+
+            <figure class="image-wrapper {{ video.positioning }}">
+                <video class="{{ video.class }}" src="{{ video.url | prepend: site.image_serve_path }}"
+                    autoplay loop muted playsinline preload="metadata"
+                    {% if video.width %}style="max-width:{{ video.width }};margin-left:auto;margin-right:auto;"{% endif %}
+                    aria-label="{{ stored_description | normalize_whitespace }}"></video>
+
+                {% if video.caption %}
+                    {% if video.width %}
+                        <figcaption style="width:{{ video.width }};margin-left:auto;margin-right:auto;">{{ video.caption }}</figcaption>
+                    {% else %}
+                        <figcaption>{{ video.caption }}</figcaption>
                     {% endif %}
                 {% endif %}
             </figure>

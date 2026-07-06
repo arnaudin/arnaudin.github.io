@@ -12,12 +12,7 @@ captcha: true
     "@type": "Person",
     "name": "Ryan Arnaudin",
     "url": "https://ryanarnaudin.com/",
-    "sameAs": ["https://twitter.com/ {{ site.social-username.twitter }}", "https://linkedin.com/in/ {{ site.social-username.linkedin }}", "https://github.com/ {{ site.social-username.github }}"]
-  }
-</script>
-<script>
-  function onSubmit(token) {
-    document.getElementById("demo-form").submit();
+    "sameAs": ["https://twitter.com/{{ site.social-username.twitter | remove: '@' }}", "https://linkedin.com/in/{{ site.social-username.linkedin }}", "https://github.com/{{ site.social-username.github }}"]
   }
 </script>
 <div class="projects-intro-wrapper">
@@ -29,12 +24,12 @@ captcha: true
       <p class="paragraph-large">
         On the Internet:
       </p>
-      <ul>
-        <li style="margin-left: 2em" class="paragraph-large">
-          <a href="//linkedin.com/in/{{ site.social-username.linkedin }}">LinkedIn</a>
+      <ul class="contact-links">
+        <li class="paragraph-large">
+          <a href="https://linkedin.com/in/{{ site.social-username.linkedin }}">LinkedIn</a>
         </li>
-        <li style="margin-left: 2em" class="paragraph-large">
-          <a href="//twitter.com/{{ site.social-username.twitter }}">Twitter</a>
+        <li class="paragraph-large">
+          <a href="https://twitter.com/{{ site.social-username.twitter | remove: '@' }}">Twitter</a>
         </li>
       </ul>
     </aside>
@@ -52,7 +47,7 @@ captcha: true
         <input type="email" name="email" placeholder="Your email" required="required">
         <textarea name="message" rows="5" placeholder="Enter a message here" required="required"></textarea>
         <label>Subscribe to infrequent updates:
-          <input type="checkbox" name="$subscribe" value="yes" unchecked>
+          <input type="checkbox" name="$subscribe" value="yes">
         </label>
         <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
         <button class="button-secondary" type="submit">Submit</button>

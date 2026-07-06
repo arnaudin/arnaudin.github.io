@@ -1,6 +1,5 @@
 <head>
     <meta charset="utf-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
 
     <title>{% if page.title_override %}{{ page.title_override | escape }}{% elsif page.title %}{{ page.title | escape }} | {{site.title | escape}}{% else %}{{ site.title | escape }}{% endif %}</title>
@@ -37,17 +36,16 @@
     <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 140 }}{% else %}{{ site.description }}{% endif %}"/>
     
     {% if page.thumbnail %}
-    <meta property="og:image" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}{{ page.thumbnail.path }}"/>
-    <meta content="1200" property="og:image:width"/>
-    <meta content="900" property="og:image:height"/>
-    <meta name="twitter:image" content="{{ prepend: site.baseurl | prepend: '/images' | prepend: site.url }}{{ page.thumbnail }}"/>
+    {% capture share_image %}{{ page.thumbnail | prepend: site.image_serve_path | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
+    <meta property="og:image" content="{{ share_image }}"/>
+    <meta name="twitter:image" content="{{ share_image }}"/>
     {% endif %}
     
     {% if page.is_post %}
     <meta property="og:site_name" content="{{ site.title }}"/>
     {% endif %}
 
-    <meta content="summary" name="twitter:card"/>
+    <meta content="{% if page.thumbnail %}summary_large_image{% else %}summary{% endif %}" name="twitter:card"/>
     <meta name="twitter:site" content="{{ site.social-username.twitter }}"/>
     <meta name="twitter:creator" content="{{ site.social-username.twitter }}"/>
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>

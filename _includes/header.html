@@ -1,16 +1,21 @@
 <script type="application/ld+json">
   {
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "name": "{{ site.title }}",
-    "alternateName": "{{ site.long-title }}",
-    "url": "http://www.ryanarnaudin.com"
-  }
-  {
-    "@context": "http://schema.org",
-    "@type": "Organization",
-    "url": "http://www.ryanarnaudin.com",
-    "logo": "http://www.ryanarnaudin.com/images/ra-logo.png"
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "{{ site.title }}",
+        "alternateName": "{{ site.long-title }}",
+        "url": "{{ site.url }}"
+      },
+      {
+        "@type": "Person",
+        "name": "{{ site.myname }}",
+        "url": "{{ site.url }}",
+        "image": "{{ site.url }}/images/ra-logo.png",
+        "jobTitle": "Product Designer"
+      }
+    ]
   }
 </script>
 

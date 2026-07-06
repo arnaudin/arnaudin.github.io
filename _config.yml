@@ -5,16 +5,14 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
-gems:
+plugins:
   - jekyll-redirect-from
 
 exclude:
-  - readme.md
   - Gemfile
   - Gemfile.lock
   - LICENSE
   - README.md
-  - /_pages/backup
 
 include:
   - _pages
@@ -28,7 +26,6 @@ description: Ryan Arnaudin is a product designer in Austin, Texas
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ryanarnaudin.com" # the base hostname & protocol for your site
 timezone: America/Chicago
-year: 2024
 start-year: 2008
 sitemap: true
 
@@ -93,9 +90,6 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
-  blog:
-    output: true
-    permalink: /blog/:path/
 
 defaults:
   - scope:
@@ -103,8 +97,3 @@ defaults:
       type: "projects"
     values:
       layout: "project"
-  - scope:
-      path: ""
-      type: "blog"
-    values:
-      layout: "blog"

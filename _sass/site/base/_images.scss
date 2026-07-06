@@ -12,6 +12,14 @@ img {
   }
 }
 
+// Inline demo videos (GIF replacements) behave like images
+video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
 .img-25vh {
   max-height: 25vh;
   width: auto;
