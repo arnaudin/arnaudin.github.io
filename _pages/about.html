@@ -113,41 +113,37 @@ tools:
   - Jekyll
 
 about_site: |
-  - This static site is built with [Jekyll](https://github.com/jekyll/jekyll).
-  - The theme is forked from [himatt.com](https://github.com/MattGreyDesign/himatt.com).
-  - Form submission uses [staticforms.xyz](https://www.staticforms.xyz/)
-  - The typefaces used are
-  [Playfair Display](https://fonts.google.com/specimen/Playfair+Display) and
-  [Lato](https://fonts.google.com/specimen/Lato).
-  - The code for generating this site is open source on
-  [Github](https://github.com/arnaudin/arnaudin.github.io).
-  - Other sources and libraries used include [SASS](http://sass-lang.com/),
-  [jQuery](https://jquery.com/),
-  [Headspace](https://github.com/gdub22/headspace),
-  [Normalize.css](http://github.com/necolas/normalize.css), and
-  [PhotoSwipe](https://photoswipe.com/) + [jQuery wrapper](https://github.com/ergec/jQuery-for-PhotoSwipe).
-  - Although the code is opensource under the GNU General Public License v3, all content (text & images, for example) is Copyrighted by [Ryan Arnaudin](https://ryanarnaudin.com/) unless otherwise specified. [Read more in the license file](https://github.com/arnaudin/arnaudin.github.io/blob/main/LICENSE).
+  - This static site is built with [Jekyll](https://github.com/jekyll/jekyll); the original theme was forked from [himatt.com](https://github.com/MattGreyDesign/himatt.com) and has since been redesigned.
+  - The typefaces are [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk), [Inter](https://rsms.me/inter/), and [IBM Plex Mono](https://www.ibm.com/plex/) — self-hosted.
+  - Form submission uses [FormKeep](https://formkeep.com/).
+  - Other libraries include [Sass](https://sass-lang.com/), [PhotoSwipe](https://photoswipe.com/), [Headspace](https://github.com/gdub22/headspace), and [Normalize.css](http://github.com/necolas/normalize.css).
+  - The code for generating this site is open source on [GitHub](https://github.com/arnaudin/arnaudin.github.io).
+  - Although the code is open source under the GNU General Public License v3, all content (text & images, for example) is copyrighted by [Ryan Arnaudin](https://ryanarnaudin.com/) unless otherwise specified. [Read more in the license file](https://github.com/arnaudin/arnaudin.github.io/blob/main/LICENSE).
 ---
 
 <script type="application/ld+json">
   {
-    "@context": "http://schema.org/",
+    "@context": "https://schema.org/",
     "@type": "Person",
     "name": "Ryan Arnaudin",
     "jobTitle": "Product Designer",
-    "nationality": "American",
-    "url": "http://www.ryanarnaudin.com/",
+    "url": "{{ site.url }}/",
+    "sameAs": ["https://linkedin.com/in/{{ site.social-username.linkedin }}", "https://github.com/{{ site.social-username.github }}"],
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Texas",
+      "addressLocality": "Austin",
+      "addressRegion": "Texas",
       "addressCountry": "United States"
     }
   }
 </script>
 
-<div class="projects-intro-wrapper">
-  <p class="projects-intro type-level-1">Ryan Arnaudin</p>
-</div>
+<section class="home-hero home-hero-compact">
+  <div class="home-hero-inner">
+    <p class="home-hero-kicker meta-label">About</p>
+    <h1 class="home-hero-title">Ryan Arnaudin</h1>
+  </div>
+</section>
 <div class="about-wrapper">
   <div class="about">
     <div class="about-intro-description paragraph-normal">
@@ -157,7 +153,7 @@ about_site: |
     <div class="about-attributes" id="details_section">
       <div class="about-experience">
         <div class="about-section">
-          <h3 class="about-section-title type-level-2">Experience</h3>
+          <h2 class="about-section-title">Experience</h2>
           <dl class="relational-list">
             {% for experience-item in page.experience %}
               <dt class="relational-list__title">{{ experience-item.company | markdownify}}</dt>
@@ -170,7 +166,7 @@ about_site: |
 
       <div class="about-education">
         <div class="about-section">
-          <h3 class="about-section-title type-level-2">Education</h3>
+          <h2 class="about-section-title">Education</h2>
           <dl class="relational-list">
             {% for education-item in page.education %}
               <dt class="relational-list__title">{{ education-item.course | markdownify}}</dt>
@@ -181,7 +177,7 @@ about_site: |
         </div>
 
         <!--<div class="about-section about-section--nested">
-          <h3 class="about-section-title type-level-2">Hackathons</h3>
+          <h2 class="about-section-title">Hackathons</h2>
           <dl class="relational-list">
             {% for competition-item in page.competitions %}
               <dt class="relational-list__title">{{ competition-item.event | markdownify}}</dt>
@@ -193,7 +189,7 @@ about_site: |
       </div>
       <div class="about-skills">
         <div class="about-section">
-          <h3 class="about-section-title type-level-2">Expertise</h3>
+          <h2 class="about-section-title">Expertise</h2>
           <ul>
             {% for skill in page.skills %}
               <li>{{ skill }}</li>
@@ -203,7 +199,7 @@ about_site: |
       </div>
       <div class="about-links">
         <div class="about-section">
-          <h3 class="about-section-title type-level-2">Links</h3>
+          <h2 class="about-section-title">Links</h2>
           <ul>
               <li><a href="//linkedin.com/in/{{ site.social-username.linkedin }}">LinkedIn</a></li>
               <li><a href="//github.com/{{ site.social-username.github }}">Github</a></li>
@@ -221,7 +217,7 @@ about_site: |
     <!--
       <div class="about-tools">
         <div class="about-section">
-          <h3 class="about-section-title type-level-2">Tools &amp; technologies</h3>
+          <h2 class="about-section-title">Tools &amp; technologies</h2>
           <ul class="list--dashed list--small">
             {% for tool in page.tools %}
               <li>{{ tool | markdownify }}</li>
@@ -232,7 +228,7 @@ about_site: |
     -->
     <div class="about-site">
       <div class="about-section about-site-description">
-        <h3 class="about-section-title type-level-2">About This Site</h3>
+        <h2 class="about-section-title">About This Site</h2>
         <div class="paragraph-small">{{ page.about_site | markdownify }}</div>
       </div>
     </div>

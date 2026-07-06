@@ -4,6 +4,9 @@ layout: default
 
 <div class="message-wrapper">
     <div class="message">
+        {% if page.kicker %}
+            <p class="meta-label message-kicker">{{ page.kicker }}</p>
+        {% endif %}
         <h1 class="type-level-jumbo">{{ page.title }}</h1>
         {{ content | markdownify }}
     </div>

@@ -21,6 +21,7 @@
 }
 
 .message {
+  .message-kicker { margin-bottom: var(--space-4); }
   h1 { margin-bottom: 1rem; }
   p { @extend .paragraph-large; }
 }

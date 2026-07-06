@@ -47,16 +47,23 @@ main ol li ol {
 }
 
 dl.relational-list {
-  dt.relational-list__title {}
+  dt.relational-list__title {
+    font-weight: 600;
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--space-1);
+  }
+
   dd.relational-list__description {
     font-size: var(--font-size-body-small);
-    opacity: var(--color-rgb-opacity-tint-mid);
-    margin-bottom: 1rem;
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-slight);
+    margin-bottom: var(--space-5);
 
     &.relational-list__description--period {
-      margin-bottom: .2em;
+      margin-bottom: var(--space-1);
+      font-family: var(--font-mono);
       text-transform: uppercase;
-      letter-spacing: var(--font-letter-spacing-subtle);
+      letter-spacing: var(--letter-spacing-mono-label);
       font-size: var(--font-size-body-tiny);
     }
   }

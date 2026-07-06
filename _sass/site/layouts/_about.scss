@@ -74,10 +74,15 @@
 
 .about-wrapper {
   .about {
+    .about-intro-description {
+      max-width: var(--measure-prose);
+      margin-bottom: var(--space-8);
+    }
+
     .about-section {
-      border-top: 1px solid var(--color-line);
+      border-top: 1px solid var(--color-text);
       margin-bottom: var(--gutter-row);
-      padding-top: mixins-functions.rem(8px);
+      padding-top: var(--space-3);
     }
 
     .about-section--nested {
@@ -85,8 +90,36 @@
     }
 
     .about-section-title {
-      padding-bottom: mixins-functions.rem(8px);
-      margin-bottom: .5rem;
+      font-family: var(--font-mono);
+      font-size: var(--font-size-meta);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: var(--letter-spacing-mono-label);
+      color: var(--color-accent);
+      margin: 0 0 var(--space-5);
+    }
+
+    .about-skills ul,
+    .about-links ul {
+      list-style: none;
+      margin-left: 0;
+
+      li {
+        margin-bottom: var(--space-2);
+        font-size: var(--font-size-body-small);
+      }
+    }
+
+    .about-site-description {
+      ul {
+        list-style: none;
+        margin-left: 0;
+      }
+
+      li {
+        font-size: var(--font-size-body-small);
+        color: var(--color-text-secondary);
+      }
     }
   }
 }

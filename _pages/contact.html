@@ -15,29 +15,32 @@ captcha: true
     "sameAs": ["https://twitter.com/{{ site.social-username.twitter | remove: '@' }}", "https://linkedin.com/in/{{ site.social-username.linkedin }}", "https://github.com/{{ site.social-username.github }}"]
   }
 </script>
-<div class="projects-intro-wrapper">
-  <p class="projects-intro type-level-1">Contact Ryan</p>
-</div>
+<section class="home-hero home-hero-compact">
+  <div class="home-hero-inner">
+    <p class="home-hero-kicker meta-label">Get in touch</p>
+    <h1 class="home-hero-title">Contact Ryan</h1>
+    <p class="home-hero-lede">Have a project, a role, or just want to talk shop? Send a message — I read everything.</p>
+  </div>
+</section>
 <div class="contact-wrapper">
   <div class="contact">
     <aside class="contact-intro">
-      <p class="paragraph-large">
-        On the Internet:
-      </p>
+      <h2 class="contact-label">Elsewhere</h2>
       <ul class="contact-links">
-        <li class="paragraph-large">
+        <li>
           <a href="https://linkedin.com/in/{{ site.social-username.linkedin }}">LinkedIn</a>
         </li>
-        <li class="paragraph-large">
+        <li>
+          <a href="https://github.com/{{ site.social-username.github }}">GitHub</a>
+        </li>
+        <li>
           <a href="https://twitter.com/{{ site.social-username.twitter | remove: '@' }}">Twitter</a>
         </li>
       </ul>
     </aside>
 
     <div class="contact-form">
-      <p class="paragraph-large">
-        Send a message:
-      </p>
+      <h2 class="contact-label">Send a message</h2>
       <form action="https://formkeep.com/f/5410c0bbb8e4"
       accept-charset="UTF-8"
       enctype="multipart/form-data"

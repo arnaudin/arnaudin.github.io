@@ -1,54 +1,38 @@
 ---
 layout: page
-title: "Blog"
+title: "Writing"
 permalink: /blog/
 redirect_from: /projects/writing/
 priority: 0.9
 sitemap: true
 ---
-<div class="post-intro">
-    <div class="post-intro-title type-level-4">
-        <p class="type-level-1">
-            Writings
-        </p>
-        <!-- <p class="type-level-4">Thoughts on design, creativity, entrepreneurship, teamwork, productivity, and more.</p> -->
+<section class="home-hero home-hero-compact">
+    <div class="home-hero-inner">
+        <p class="home-hero-kicker meta-label">Notes &amp; essays</p>
+        <h1 class="home-hero-title">Writing</h1>
+        <p class="home-hero-lede">Thoughts on design, creativity, technology, teamwork, and productivity.</p>
     </div>
-    <!---
-  <div class="post-intro-info">
-    <p class="paragraph-small">
-      
-      
-      Maybe a list of tags or categories....
+</section>
 
-      <br/><br/>
+<section class="writing-list-section" aria-labelledby="all-posts">
+    <div class="section-label-row">
+        <h2 class="section-label" id="all-posts">All posts</h2>
+    </div>
 
-      Maybe more context, who knows...
-    </p>
-  </div>
--->
-</div>
-
-<div class="post">
-
-    {% assign postslist = site.posts | sort: 'date' | reverse %}
-    {% for post in postslist %}
-
-        {% assign postSlug = post.title | slugify %}
-
-        {% capture previewImagePath %}
-            {{ site.image_serve_path | append: '/posts/'}}{{ postSlug }}
-        {% endcapture %}
-
-        <article class="post-listing">
-            <div class="post-listing-details">
-                <h2 class="post-listing-title type-level-3">
-                    <a href="{{ post.url }}">{{ post.title }}</a>
-                </h2>
-                <p class="post-listing-styles title-label">{{ post.date | date: "%B %Y" }}</p>
-                <!--<p>{{ post.blurb }}</p>-->
-            </div>
-
-        </article>
-
-    {% endfor %}
-</div>
+    <div class="writing-list">
+        {% assign postslist = site.posts | sort: 'date' | reverse %}
+        {% for post in postslist %}
+            <article class="writing-item">
+                <a class="writing-item-link" href="{{ post.url }}">
+                    <time class="writing-item-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
+                    <div class="writing-item-body">
+                        <h3 class="writing-item-title">{{ post.title }}</h3>
+                        {% if post.blurb %}
+                            <p class="writing-item-blurb">{{ post.blurb }}</p>
+                        {% endif %}
+                    </div>
+                </a>
+            </article>
+        {% endfor %}
+    </div>
+</section>

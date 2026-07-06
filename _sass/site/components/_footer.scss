@@ -85,9 +85,11 @@ footer.main-footer {
   }
 
   .footer-colophon {
-    flex: 1;
+    display: none;
 
     @include media-queries.grid-media(tablet) {
+      display: block;
+      flex: 1;
       text-align: center;
     }
   }
