@@ -1,3 +1,5 @@
+@use "base/media-queries";
+
 ::-moz-selection {
     color: var(--color-text-highlight);
     background: var(--color-highlight);
@@ -30,7 +32,7 @@ body {
   &.prevent-scroll-mobile {
     overflow: hidden;
 
-    @include grid-media(tablet) {
+    @include media-queries.grid-media(tablet) {
       overflow: auto;
     }
   }
@@ -44,11 +46,11 @@ body {
   min-height: calc(100vh - 268px);
   padding-top: 1rem;
 
-  @include grid-media(tablet) {
+  @include media-queries.grid-media(tablet) {
     min-height: calc(100vh - 248px);
     padding-top: 2rem;
   }
-  @include grid-media(desktop) {
+  @include media-queries.grid-media(desktop) {
     min-height: calc(100vh - 254px);
   }
 }

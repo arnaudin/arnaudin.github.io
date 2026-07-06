@@ -1,9 +1,15 @@
-//Variables
-$thumb-animation-time-in: $timing-interaction;
-$thumb-animation-ease-in: ease-in-out;
+@use "../base/grid";
+@use "../base/media-queries";
+@use "../base/mixins-functions";
+@use "../base/variables";
+@use "projects";
 
-$thumb-animation-time-out: $timing-interaction;
-$thumb-animation-ease-out: ease-in-out;
+//Variables
+projects.$thumb-animation-time-in: variables.$timing-interaction;
+projects.$thumb-animation-ease-in: ease-in-out;
+
+projects.$thumb-animation-time-out: variables.$timing-interaction;
+projects.$thumb-animation-ease-out: ease-in-out;
 
 //Layout
 
@@ -11,18 +17,18 @@ $thumb-animation-ease-out: ease-in-out;
   @extend .grid-container;
 
   .post-listing {
-    @include grid-column(6);
+    @include grid.grid-column(6);
 
-    @include grid-media(phablet) {
-      @include grid-column(6);
+    @include media-queries.grid-media(phablet) {
+      @include grid.grid-column(6);
     }
 
-    @include grid-media(tablet) {
-      @include grid-column(6);
+    @include media-queries.grid-media(tablet) {
+      @include grid.grid-column(6);
     }
 
-    @include grid-media(desktop) {
-      @include grid-column(6);
+    @include media-queries.grid-media(desktop) {
+      @include grid.grid-column(6);
     }
   }
 }
@@ -32,15 +38,15 @@ $thumb-animation-ease-out: ease-in-out;
   @extend .grid-container;
 
   .post-title-info {
-    @include grid-column-from-to(1,6);
+    @include grid.grid-column-from-to(1,6);
 
-    @include grid-media(tablet) {
+    @include media-queries.grid-media(tablet) {
       grid-row: 1;
-      @include grid-column-from-to(9,12);
+      @include grid.grid-column-from-to(9,12);
     }
 
-    @include grid-media(desktop) {
-      @include grid-column-from-to(1,3);
+    @include media-queries.grid-media(desktop) {
+      @include grid.grid-column-from-to(1,3);
 
       display: flex;
       align-items: flex-end;
@@ -49,15 +55,15 @@ $thumb-animation-ease-out: ease-in-out;
   }
 
   .post-intro-title {
-    @include grid-column-from-to(1,12);
+    @include grid.grid-column-from-to(1,12);
 
-    @include grid-media(tablet) {
+    @include media-queries.grid-media(tablet) {
       grid-row: 1;
-      @include grid-column-from-to(1,12);
+      @include grid.grid-column-from-to(1,12);
     }
 
-    @include grid-media(desktop) {
-      @include grid-column-from-to(1,12);
+    @include media-queries.grid-media(desktop) {
+      @include grid.grid-column-from-to(1,12);
     }
   }
 }
@@ -66,14 +72,14 @@ $thumb-animation-ease-out: ease-in-out;
   @extend .grid-container;
 
   .post-listing-details {
-    @include grid-column-from-to(1,12);
+    @include grid.grid-column-from-to(1,12);
 
-    @include grid-media(tablet) {
-      @include grid-column-from-to(1,12);
+    @include media-queries.grid-media(tablet) {
+      @include grid.grid-column-from-to(1,12);
     }
 
-    @include grid-media(desktop) {
-      @include grid-column-from-to(1,12);
+    @include media-queries.grid-media(desktop) {
+      @include grid.grid-column-from-to(1,12);
     }
   }
 
@@ -84,7 +90,7 @@ $thumb-animation-ease-out: ease-in-out;
   
   .post-listing-title {
     margin-top: 1.25rem;
-    margin-bottom: rem(4px);
+    margin-bottom: mixins-functions.rem(4px);
 
     a { text-decoration: none; }
   }

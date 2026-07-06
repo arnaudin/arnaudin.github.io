@@ -12,6 +12,13 @@
         </div>
     {% else %}
 
+        {% comment %} Approximate rendered width per layout, for srcset selection {% endcomment %}
+        {% if entry.section_layout == '2col' or entry.section_layout == '5col-7col' %}
+            {% assign img_sizes = "(min-width: 700px) 50vw, 100vw" %}
+        {% else %}
+            {% assign img_sizes = "(min-width: 1300px) 1200px, 100vw" %}
+        {% endif %}
+
         {% for image in entry.images %}
 
             {% capture stored_description %}
@@ -24,15 +31,32 @@
                 {% endif %}
             {% endcapture %}
 
-            <figure class="image-wrapper {{ image.positioning }}">
-                {% if image.gallery %}
-                    {% if image.gallery == 'none' %}
-                        <img class="{{ image.class }}" src="{{ image.url | prepend: site.image_serve_path }}" alt="{{ stored_description | normalize_whitespace }}" loading="lazy" decoding="async">
-                    {% else %}
-                        <a class="fancybox customgallery" data-fancybox-group="{{image.gallery}}" href="{{ image.url | prepend: site.image_serve_path }}"><img class="{{ image.class }}" src="{{ image.url | prepend: site.image_serve_path }}" alt="{{ stored_description | normalize_whitespace }}" loading="lazy" decoding="async"></a>
-                    {% endif %}
+            {% assign dims = site.data.image_dims[image.url] %}
+            {% capture full_src %}{{ image.url | prepend: site.image_serve_path }}{% endcapture %}
+            {% assign webp_url = image.url | replace: '.png', '.webp' | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' %}
+
+            {% capture image_tag %}
+                {% if dims.webp %}
+                    <picture>
+                        {% if dims.w900 %}
+                            <source type="image/webp" srcset="{{ webp_url | replace: '.webp', '.900w.webp' | prepend: site.image_serve_path }} 900w, {{ webp_url | prepend: site.image_serve_path }} {{ dims.w }}w" sizes="{{ img_sizes }}">
+                        {% else %}
+                            <source type="image/webp" srcset="{{ webp_url | prepend: site.image_serve_path }}">
+                        {% endif %}
+                        <img class="{{ image.class }}" src="{{ full_src }}" alt="{{ stored_description | normalize_whitespace }}" width="{{ dims.w }}" height="{{ dims.h }}" loading="lazy" decoding="async">
+                    </picture>
                 {% else %}
-                    <a class="fancybox defaultgallery" data-fancybox-group="gallery1" href="{{ image.url | prepend: site.image_serve_path }}"><img class="{{ image.class }}" src="{{ image.url | prepend: site.image_serve_path }}" alt="{{ stored_description | normalize_whitespace }}" loading="lazy" decoding="async"></a>
+                    <img class="{{ image.class }}" src="{{ full_src }}" alt="{{ stored_description | normalize_whitespace }}" loading="lazy" decoding="async">
+                {% endif %}
+            {% endcapture %}
+
+            <figure class="image-wrapper {{ image.positioning }}">
+                {% if image.gallery == 'none' %}
+                    {{ image_tag }}
+                {% else %}
+                    <a class="gallery-link" href="{% if dims.webp %}{{ webp_url | prepend: site.image_serve_path }}{% else %}{{ full_src }}{% endif %}"
+                        {% if dims %}data-pswp-width="{{ dims.w }}" data-pswp-height="{{ dims.h }}"{% endif %}
+                        target="_blank" rel="noopener">{{ image_tag }}</a>
                 {% endif %}
 
                 {% if image.caption %}

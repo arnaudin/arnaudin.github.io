@@ -9,7 +9,9 @@ The theme is inspired by [himatt.com](https://github.com/MattGreyDesign/himatt.c
 
 The typefaces used are [Playfair Display](https://fonts.google.com/specimen/Playfair+Display) and [Lato](https://fonts.google.com/specimen/Lato)
 
-Other tools and libraries used include [SASS](http://sass-lang.com/), [jQuery](https://jquery.com/), [Headspace](https://github.com/gdub22/headspace) and [Normalize.css](http://github.com/necolas/normalize.css).
+Other tools and libraries used include [Sass](https://sass-lang.com/), [PhotoSwipe](https://photoswipe.com/), [Headspace](https://github.com/gdub22/headspace) and [Normalize.css](http://github.com/necolas/normalize.css).
+
+After adding or changing images, run `./tools/optimize-images.sh` to regenerate WebP versions and the image-dimension index (`_data/image_dims.yml`) used by the templates.
 
 All the code for this site is open source and available on [Github](https://github.com/arnaudin/arnaudin.github.io).
 

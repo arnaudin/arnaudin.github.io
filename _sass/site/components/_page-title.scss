@@ -1,14 +1,17 @@
+@use "../base/grid";
+@use "../base/media-queries";
+
 .page-title-wrapper {
   @extend .grid-container;
 
   .page-title {
-    @include grid-column(12);
+    @include grid.grid-column(12);
   }
 
   .page-title {
     padding-bottom: 1rem;
 
-    @include grid-media(desktop) {
+    @include media-queries.grid-media(desktop) {
       padding-bottom: 2rem;
     }
   }

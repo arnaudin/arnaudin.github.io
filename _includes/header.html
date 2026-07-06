@@ -34,9 +34,9 @@
             </div>
 
             <nav aria-label="main navigation" class="navigation">
-                <a class="mobile-nav" href="javascript:void(0)">Menu</a>
+                <button class="mobile-nav" type="button" aria-expanded="false" aria-controls="main-nav-list">Menu</button>
                 <div class="mobile-nav-wrapper">
-                    <ul class="mobile-dropdown" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                    <ul id="main-nav-list" class="mobile-dropdown" itemscope itemtype="http://schema.org/SiteNavigationElement">
                         {% for link in site.navigation %}
                             {% assign current = nil %}
                             {% capture current_page %}

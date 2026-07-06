@@ -1,3 +1,8 @@
+@use "../base/extends";
+@use "../base/grid";
+@use "../base/media-queries";
+@use "../base/mixins-functions";
+
 .project-wrapper {
 
   //Layout
@@ -5,16 +10,16 @@
     @extend .grid-container;    
 
     .project-details {
-      @include grid-column(12);
+      @include grid.grid-column(12);
     }
   }
 
   .project-intro {
     @extend .grid-container;
-    @include grid-column-from-to(1,12);
+    @include grid.grid-column-from-to(1,12);
 
     p {
-      @include grid-column(12);
+      @include grid.grid-column(12);
     }
   }
 
@@ -22,78 +27,78 @@
       @extend .grid-container-nested-small;
 
       .project-detail-2 {
-        @include grid-column(2);
+        @include grid.grid-column(2);
 
-        @include grid-media(phablet) {
-          @include grid-column(2);
+        @include media-queries.grid-media(phablet) {
+          @include grid.grid-column(2);
         }
 
-        @include grid-media(tablet) {
-          @include grid-column(2);
+        @include media-queries.grid-media(tablet) {
+          @include grid.grid-column(2);
         }
 
-        @include grid-media(desktop) {
-          @include grid-column(2);
+        @include media-queries.grid-media(desktop) {
+          @include grid.grid-column(2);
         }
       }
 
       .project-detail-3 {
-        @include grid-column(3);
+        @include grid.grid-column(3);
 
-        @include grid-media(phablet) {
-          @include grid-column(3);
+        @include media-queries.grid-media(phablet) {
+          @include grid.grid-column(3);
         }
 
-        @include grid-media(tablet) {
-          @include grid-column(3);
+        @include media-queries.grid-media(tablet) {
+          @include grid.grid-column(3);
         }
 
-        @include grid-media(desktop) {
-          @include grid-column(3);
+        @include media-queries.grid-media(desktop) {
+          @include grid.grid-column(3);
         }
       }
 
       .project-detail-4 {
-        @include grid-column(4);
+        @include grid.grid-column(4);
 
-        @include grid-media(phablet) {
-          @include grid-column(4);
+        @include media-queries.grid-media(phablet) {
+          @include grid.grid-column(4);
         }
 
-        @include grid-media(tablet) {
-          @include grid-column(4);
+        @include media-queries.grid-media(tablet) {
+          @include grid.grid-column(4);
         }
 
-        @include grid-media(desktop) {
-          @include grid-column(4);
+        @include media-queries.grid-media(desktop) {
+          @include grid.grid-column(4);
         }
       }
 
       .project-detail-6 {
-        @include grid-column(6);
+        @include grid.grid-column(6);
 
-        @include grid-media(phablet) {
-          @include grid-column(3);
+        @include media-queries.grid-media(phablet) {
+          @include grid.grid-column(3);
         }
 
-        @include grid-media(tablet) {
-          @include grid-column(2);
+        @include media-queries.grid-media(tablet) {
+          @include grid.grid-column(2);
         }
 
-        @include grid-media(desktop) {
-          @include grid-column(6);
+        @include media-queries.grid-media(desktop) {
+          @include grid.grid-column(6);
         }
       }
 
       .project-detail-12 {
-        @include grid-column(6);
+        @include grid.grid-column(6);
 
-        @include grid-media(tablet) {
-          @include grid-column(3);
+        @include media-queries.grid-media(tablet) {
+          @include grid.grid-column(3);
         }
 
-        @include grid-media(desktop) {
-          @include grid-column(6);
+        @include media-queries.grid-media(desktop) {
+          @include grid.grid-column(6);
         }
       }
   }
@@ -102,14 +107,14 @@
     @extend .grid-container;
 
     .project-text-wrapper {
-      @include grid-column(12);
+      @include grid.grid-column(12);
 
-      @include grid-media(tablet) {
-        @include grid-column(12);
+      @include media-queries.grid-media(tablet) {
+        @include grid.grid-column(12);
       }
 
-      @include grid-media(desktop) {
-        @include grid-column-from-to(1,12);
+      @include media-queries.grid-media(desktop) {
+        @include grid.grid-column-from-to(1,12);
       }
     }
   }
@@ -121,13 +126,13 @@
     .image-wrapper img { width: 100%; }
 
     figcaption {
-      margin-top: rem(12px);
-      margin-bottom: rem(16px);
+      margin-top: mixins-functions.rem(12px);
+      margin-bottom: mixins-functions.rem(16px);
     }
   }
 
 .project-info {
-    margin-bottom: rem(40px);
+    margin-bottom: mixins-functions.rem(40px);
   }
 
   /*    

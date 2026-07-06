@@ -1,28 +1,32 @@
+@use "../base/grid";
+@use "../base/media-queries";
+@use "../base/mixins-functions";
+
 footer.main-footer {
   @extend .grid-container;
   color: var(--color-text);
-  padding-bottom: rem(32px);
-  padding-top: rem(32px);
+  padding-bottom: mixins-functions.rem(32px);
+  padding-top: mixins-functions.rem(32px);
 
-  @include grid-media(tablet) {
-    padding-top: rem(64px);
+  @include media-queries.grid-media(tablet) {
+    padding-top: mixins-functions.rem(64px);
   }
 
   .footer-license-wrapper {
-    @include grid-column(6);
+    @include grid.grid-column(6);
 
-    @include grid-media(tablet) {
-      @include grid-column(10);
+    @include media-queries.grid-media(tablet) {
+      @include grid.grid-column(10);
     }
   }
 
   .made-by-wrapper {
     position: relative;
 
-    @include grid-column(6);
+    @include grid.grid-column(6);
 
-    @include grid-media(tablet) {
-      @include grid-column(2);
+    @include media-queries.grid-media(tablet) {
+      @include grid.grid-column(2);
     }
   }
 
@@ -45,7 +49,7 @@ footer.main-footer {
     color: var(--color-text);
     font-size: .6rem;
 
-    @include grid-media(tablet) {
+    @include media-queries.grid-media(tablet) {
       position: absolute;
       width: 64px;
       transform: rotate(-90deg);

@@ -1,17 +1,21 @@
+@use "../base/typography";
+@use "../base/grid";
+@use "../base/media-queries";
+
 .message-wrapper {
   @extend .grid-container;
 
   .message {
-    @include grid-column(12);
+    @include grid.grid-column(12);
 
-    @include grid-media(tablet) {
-      @include grid-column-from-to(3,10);
+    @include media-queries.grid-media(tablet) {
+      @include grid.grid-column-from-to(3,10);
       margin-top: 5vh;
       margin-bottom: 8vh;
     }
 
-    @include grid-media(desktop) {
-      @include grid-column-from-to(4,9);
+    @include media-queries.grid-media(desktop) {
+      @include grid.grid-column-from-to(4,9);
     }
   }
 }

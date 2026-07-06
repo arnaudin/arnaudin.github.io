@@ -1,3 +1,6 @@
+@use "../base/media-queries";
+@use "../base/mixins-functions";
+
 .global-wrapper > header nav {
   position: relative;
   z-index: 100;
@@ -21,7 +24,7 @@
       bottom: 0;
       opacity: 1;
 
-      @include grid-media(tablet) {
+      @include media-queries.grid-media(tablet) {
         display: none;
       }
     }
@@ -51,12 +54,15 @@
     }
   }
 
-  a.mobile-nav {
+  button.mobile-nav {
     display: inline-block;
     float: right;
     right: var(--page-margin);
-    padding: rem(10px) rem(10px);
+    padding: mixins-functions.rem(10px) mixins-functions.rem(10px);
     border: 1px solid #1e1e1e;
+    background: none;
+    font: inherit;
+    cursor: pointer;
     text-transform: uppercase;
     letter-spacing: var(--font-letter-spacing-subtle);
     color: var(--color-text);
@@ -76,7 +82,7 @@
       background: rgba(var(--color-text), 0.3);
     }
 
-    @include grid-media(tablet) {
+    @include media-queries.grid-media(tablet) {
       display: none;
     }
   }
@@ -132,13 +138,13 @@
             float: right;
             font-size: var(--font-size-xsmall);
             color: rgba(30,30,30,0.6);
-            margin-top: rem(4px);
+            margin-top: mixins-functions.rem(4px);
           }
         }
       }
     }
 
-    @include grid-media(tablet) {
+    @include media-queries.grid-media(tablet) {
       display: block;
       max-height: none;
       position: static;
@@ -146,13 +152,13 @@
       background: inherit;
       opacity: 1;
       border: 0;
-      margin-top: rem(8px);
+      margin-top: mixins-functions.rem(8px);
 
       li {
         display: inline-block;
         position: relative;
         padding-left: 1em;
-        padding-bottom: rem(9px);
+        padding-bottom: mixins-functions.rem(9px);
         border: 0;
 
         a {
@@ -184,7 +190,7 @@
             background: inherit;
 
             &:after {
-              @include visually-hidden;
+              @include mixins-functions.visually-hidden;
             }
           }
         }

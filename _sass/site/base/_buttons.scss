@@ -1,5 +1,8 @@
+@use "mixins-functions";
+@use "variables";
+
 %button {
-  @include element-padding;
+  @include mixins-functions.element-padding;
   display: inline-block;
   text-align: center;
   cursor: pointer;
@@ -9,8 +12,8 @@
   appearance: none;
   border-radius: 0;
   transition:
-    color $timing-interaction,
-    background $timing-interaction;
+    color variables.$timing-interaction,
+    background variables.$timing-interaction;
 
   &:focus {
     outline:0;

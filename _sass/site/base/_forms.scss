@@ -1,3 +1,8 @@
+@use "sass:list";
+@use "sass:string";
+@use "mixins-functions";
+@use "variables";
+
 // / Append pseudo-classes to a selector(s).
 // /
 // / @argument {list | string} $inputs
@@ -14,9 +19,11 @@
   $list: ();
 
   @each $input in $inputs {
-    $input: unquote($input);
-    $input: if($pseudo, $input + ":" + $pseudo, $input);
-    $list: append($list, $input, comma);
+    $input: string.unquote($input);
+    @if $pseudo {
+      $input: $input + ":" + $pseudo;
+    }
+    $list: list.append($list, $input, comma);
   }
 
   @return $list;
@@ -44,12 +51,12 @@ form {
   }
 
   section {
-    margin-bottom: rem(20px);
+    margin-bottom: mixins-functions.rem(20px);
   }
 
   input,
   textarea {
-    @include element-padding;
+    @include mixins-functions.element-padding;
 
     width: 100%;
     margin-top: 0.3rem;
@@ -103,26 +110,26 @@ form {
 
   #{$all-text-inputs} {
     border: 0;
-    border-bottom: rem(4px) solid white;
+    border-bottom: mixins-functions.rem(4px) solid white;
     outline: 0;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    transition: border-bottom-color $timing-interaction;
+    transition: border-bottom-color variables.$timing-interaction;
     background-color: var(--color-form-background);
   }
 
   #{$all-text-inputs-hover} {
     border: 0;
-    border-bottom: rem(4px) solid rgba(black, 0.2);
-    transition: border-bottom-color $timing-interaction;
+    border-bottom: mixins-functions.rem(4px) solid rgba(black, 0.2);
+    transition: border-bottom-color variables.$timing-interaction;
   }
 
   #{$all-text-inputs-focus},
   #{$all-text-inputs-active} {
     border: 0;
-    border-bottom: rem(4px) solid var(--color-cta);
-    transition: border-bottom-color $timing-interaction;
+    border-bottom: mixins-functions.rem(4px) solid var(--color-cta);
+    transition: border-bottom-color variables.$timing-interaction;
   }
 
   textarea {

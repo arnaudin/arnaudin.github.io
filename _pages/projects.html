@@ -25,7 +25,13 @@ priority: 1.0
             <div class="thumbnail-wrapper">
                 <a href="{{ project.url | prepend: site.baseurl }}">
                     <div class="thumbnail-description-wrapper">
-                        <img src="{{ project.thumbnail | prepend: site.image_serve_path }}" alt="{{ project.title }}" width="600" height="450"{% if forloop.index > 4 %} loading="lazy"{% endif %} decoding="async">
+                        {% assign thumb_dims = site.data.image_dims[project.thumbnail] %}
+                        <picture>
+                            {% if thumb_dims.webp %}
+                                <source type="image/webp" srcset="{{ project.thumbnail | replace: '.png', '.webp' | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | prepend: site.image_serve_path }}">
+                            {% endif %}
+                            <img src="{{ project.thumbnail | prepend: site.image_serve_path }}" alt="{{ project.title }}" width="600" height="450"{% if forloop.index > 4 %} loading="lazy"{% endif %} decoding="async">
+                        </picture>
                         <p class="thumbnail-description">
                             <span>{{ project.description }}</span>
                         </p>

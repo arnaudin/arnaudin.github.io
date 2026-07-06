@@ -1,3 +1,8 @@
+@use "../base/grid";
+@use "../base/media-queries";
+@use "../base/mixins-functions";
+@use "../base/variables";
+
 .main-header {
   //Prevent header from hiding
   &.header-prevent-hide {
@@ -10,19 +15,19 @@
        @extend .grid-container;
 
       .logo-title-wrapper {
-        @include grid-column(4);
+        @include grid.grid-column(4);
         display: flex;
 
-        @include grid-media(tablet) {
-          @include grid-column(4);
+        @include media-queries.grid-media(tablet) {
+          @include grid.grid-column(4);
         }
       }
 
       nav.navigation {
-        @include grid-column(2);
+        @include grid.grid-column(2);
 
-        @include grid-media(tablet) {
-          @include grid-column(8);
+        @include media-queries.grid-media(tablet) {
+          @include grid.grid-column(8);
         }
       }
     }
@@ -30,7 +35,7 @@
 
   .logo-nav-wrapper {
     a.accessibility-skip {
-      @include visually-hidden;
+      @include mixins-functions.visually-hidden;
 
       &:focus {
         top: 0;
@@ -60,8 +65,8 @@
       vertical-align: top;
       display: inline-block;
       margin-right: .6em;
-      width: rem(48px);
-      height: rem(48px);
+      width: mixins-functions.rem(48px);
+      height: mixins-functions.rem(48px);
 
       a {
         &:focus,
@@ -89,7 +94,7 @@
 
   .site-title {
     display: inline-block;
-    transition: opacity $timing-interaction ease-in-out;
+    transition: opacity variables.$timing-interaction ease-in-out;
     height: 0;
     width: 0;
     overflow: hidden;
@@ -97,7 +102,7 @@
     display: flex;
 
     span {
-      font-size: rem(16px);
+      font-size: mixins-functions.rem(16px);
       letter-spacing: .08rem;
       text-transform: uppercase;
       align-self: center;
@@ -105,7 +110,7 @@
   }
 
   a.accessibility-skip {
-    @include visually-hidden;
+    @include mixins-functions.visually-hidden;
 
     &:focus {
       top: 0;
@@ -145,8 +150,8 @@
               padding-bottom 200ms ease;
               box-shadow: 300ms ease; 
 
-  padding-top: rem(16px);
-  padding-bottom: rem(16px);
+  padding-top: mixins-functions.rem(16px);
+  padding-bottom: mixins-functions.rem(16px);
   box-shadow: 0px 0px 0px 0px rgba(var(--color-primary),0.40);
 
   &.sticky-header {
@@ -170,20 +175,20 @@
 
   &.sticky-header--fixed {
     background-color: var(--color-background);
-    padding-top: rem(8px);
-    padding-bottom: rem(8px);
+    padding-top: mixins-functions.rem(8px);
+    padding-bottom: mixins-functions.rem(8px);
     position: fixed;
     border-bottom: 1px solid var(--color-line-subtle);
     box-shadow: 0px 0px 12px 0px rgba(var(--color-primary),0.10);
 
     .logo {
-      width: rem(44px);
-      height: rem(44px);
+      width: mixins-functions.rem(44px);
+      height: mixins-functions.rem(44px);
     }
 
     .site-title {
       opacity: 1;
-      height: rem(44px);
+      height: mixins-functions.rem(44px);
       width: auto;
     }
   }

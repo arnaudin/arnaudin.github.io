@@ -1,3 +1,5 @@
+@use "media-queries";
+
 @mixin grid-base {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -11,7 +13,7 @@
   margin-left: var(--page-margin);
   margin-right: var(--page-margin);
 
-  @include grid-media(tablet) {
+  @include media-queries.grid-media(tablet) {
     grid-template-columns: repeat(12, 1fr);
   }
 }
@@ -27,7 +29,7 @@
 @mixin grid-container-nested-big {
   @include grid-base;
 
-  @include grid-media(tablet) {
+  @include media-queries.grid-media(tablet) {
     grid-template-columns: repeat(12, 1fr);
   }
 }

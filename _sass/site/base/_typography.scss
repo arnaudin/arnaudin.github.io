@@ -1,3 +1,5 @@
+@use "mixins-functions";
+
 $font-family-primary: 'Lato', sans-serif;
 $font-family-secondary: 'Playfair Display', serif;
 
@@ -67,7 +69,7 @@ blockquote p {
   font-size: var(--font-size-body-small);
   text-transform: uppercase;
   letter-spacing: var(--font-letter-spacing-subtle);
-  margin-bottom: rem(4px);
+  margin-bottom: mixins-functions.rem(4px);
 }
 
 .paragraph-normal,

@@ -1,10 +1,12 @@
-$(document).ready(function() {
-  $('.mobile-nav').on('click', function(){
-    $('.navigation').toggleClass('show');
-    $('.mobile-nav').html(function(i, label){
-      return label === 'Menu' ? '&times; Close' : 'Menu'
-    });
-    $("body").toggleClass("prevent-scroll-mobile");
-    $("header.main-header").toggleClass("header-prevent-hide");
+(function () {
+  var toggle = document.querySelector('.mobile-nav');
+  if (!toggle) return;
+  toggle.addEventListener('click', function () {
+    var nav = document.querySelector('.navigation');
+    var open = nav.classList.toggle('show');
+    toggle.textContent = open ? '× Close' : 'Menu';
+    toggle.setAttribute('aria-expanded', open);
+    document.body.classList.toggle('prevent-scroll-mobile', open);
+    document.querySelector('header.main-header').classList.toggle('header-prevent-hide', open);
   });
-});
+})();

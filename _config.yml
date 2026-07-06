@@ -13,6 +13,7 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
+  - tools
 
 include:
   - _pages

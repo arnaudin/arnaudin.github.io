@@ -1,3 +1,5 @@
+@use "mixins-functions";
+
 a {
   color: var(--color-text);
 }
@@ -10,7 +12,7 @@ main li a,
 .formatted-link {
   text-decoration: none;
   color: var(--color-cta);
-  border-bottom: rem(1.2px) dashed;
+  border-bottom: mixins-functions.rem(1.2px) dashed;
   border-bottom-color: transparent;
 
   &:hover {
