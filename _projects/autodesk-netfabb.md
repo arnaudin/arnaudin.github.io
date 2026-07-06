@@ -11,6 +11,14 @@ client: Autodesk
 time_period: 2016-2018
 thumbnail: "/projects/netfabb/netfabb-thumbnail.jpg"
 
+summary: "Lead designer for Netfabb Simulation Utility — professional metal-3D-printing simulation that lets engineers predict distortion and failures before burning expensive time, material, and machines."
+role: Lead Designer
+outcomes:
+  - value: "Millions"
+    label: "of dollars saved in avoided print failures"
+  - value: "2"
+    label: "releases shipped (2017, 2018)"
+
 content_layout:
   - section_layout: text
     content: |

@@ -10,6 +10,16 @@ ownership: Professional
 client: Autodesk
 time_period: 2012-2014
 thumbnail: "/projects/flow-design/flow-design-thumbnail.jpg"
+
+summary: "Design lead for Flow Design, a virtual wind tunnel that put airflow simulation in the hands of architects, product designers, and students — not just PhD analysts."
+role: Lead Designer
+outcomes:
+  - value: "“Easiest”"
+    label: "to-use CFD program ever — ENGINEERING.com"
+  - value: "Super Bowl"
+    label: "XLVIII wind simulation powered by Flow Design"
+  - value: "Labs → Paid"
+    label: "commercialized from an Autodesk Labs project"
 redirect_from: 
   - /projects/flowdesign
 

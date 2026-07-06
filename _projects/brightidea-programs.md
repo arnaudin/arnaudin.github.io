@@ -11,6 +11,16 @@ client: Brightidea
 time_period: 2019-2020
 thumbnail: "/projects/brightidea-programs/brightidea-programs-thumbnail.jpg"
 
+summary: "Led product and design for Programs Pro, a down-market product incubated in Brightidea's innovation lab — it grew into the company's top-selling product and the blueprint for product-led growth."
+role: Product & Design Lead
+outcomes:
+  - value: "#1"
+    label: "became the company's top-selling product"
+  - value: "10×"
+    label: "reduction in customer onboarding time"
+  - value: "PLG"
+    label: "playbook later adopted by Idea Box and Whiteboard"
+
 content_layout:
   - section_layout: text
     content: | 

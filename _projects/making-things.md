@@ -11,6 +11,8 @@ client:
 time_period: 2013-2018
 thumbnail: "/projects/making-things/making-things-thumbnail.jpg"
 
+summary: "3D-printing and CNC side projects — designed in Fusion 360 and fabricated at Autodesk's Pier 9 workshop, from composite bike mounts to CNC-cut surf handplanes."
+
 content_layout:
   - section_layout: text
     content: |

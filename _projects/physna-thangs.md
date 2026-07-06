@@ -11,6 +11,16 @@ ownership: Professional
 client: Physna
 thumbnail: "/projects/physna-thangs/physna-thangs-thumbnail.jpg"
 
+summary: "Lead product designer for Thangs — the world's first geometric search engine and one of the largest 3D-model communities — across web, iOS/Android, desktop, membership, and store, through its acquisition by Shapeways."
+role: Lead Product Designer
+outcomes:
+  - value: "20M+"
+    label: "monthly users of the Thangs community"
+  - value: "24M+"
+    label: "indexed 3D models, searchable by geometry"
+  - value: "Acquired"
+    label: "by Shapeways, late 2024"
+
 content_layout:
   - section_layout: text
     content: |

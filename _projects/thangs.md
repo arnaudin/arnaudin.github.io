@@ -9,6 +9,8 @@ ownership: Personal
 client:
 thumbnail: "/projects/thangs/thangs-final-logged-out.png"
 
+summary: "A self-directed redesign exercise for the Thangs landing and model pages — visual refresh driven by growth, search, and community-engagement goals."
+
 content_layout:
   - section_layout: text
     content: |

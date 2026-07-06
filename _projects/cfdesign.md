@@ -11,6 +11,14 @@ client: Blue Ridge Numerics
 time_period: 2008-2011
 thumbnail: "/projects/cfdesign/cfdesign-thumbnail.jpg"
 
+summary: "Early-career product design for CFdesign at Blue Ridge Numerics — then the fastest-growing CFD software company in the world — through its acquisition by Autodesk."
+role: Support → QA → Product Designer
+outcomes:
+  - value: "Acquired"
+    label: "by Autodesk, March 2011"
+  - value: "Fastest"
+    label: "growing CFD software company in the world"
+
 content_layout:
   - section_layout: text
     content: |

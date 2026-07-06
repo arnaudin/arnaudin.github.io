@@ -11,6 +11,16 @@ client: Brightidea
 time_period: 2018-2019, 2020-2021
 thumbnail: "/projects/brightidea/brightidea-thumbnail.jpg"
 
+summary: "Design and product management across Brightidea's core idea-management platform — from fundamental workflows like moving and merging ideas to integrations with Slack, Teams, Jira, and voice assistants."
+role: Product Designer & PM
+outcomes:
+  - value: "#1"
+    label: "customer-rated idea platform on G2, 3 years running"
+  - value: "2.5M+"
+    label: "users served worldwide"
+  - value: "$15B+"
+    label: "customer-reported impact logged on the platform"
+
 content_layout:
   - section_layout: text
     content: |

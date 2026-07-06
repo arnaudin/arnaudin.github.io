@@ -10,6 +10,14 @@ ownership: Professional
 client: Autodesk
 time_period: 2011-2017
 thumbnail: "/projects/autodesk-cfd/cfd-thumbnail.jpg"
+
+summary: "Owned UX for Autodesk's professional computational fluid dynamics products across six releases — including a ground-up UI modernization that made professional simulation dramatically easier to learn and use."
+role: UX Design Lead
+outcomes:
+  - value: "6"
+    label: "major releases as UX lead, 2012–2017"
+  - value: "Ahead"
+    label: "of schedule on the full UI modernization"
 redirect_from: 
   - /projects/cfd/
 
@@ -53,7 +61,7 @@ content_layout:
 
   - section_layout: text
     content: | 
-      # Case Study: UI Modernization
+      ## Case Study: UI Modernization
 
   - section_layout: 1col-narrow
     images:

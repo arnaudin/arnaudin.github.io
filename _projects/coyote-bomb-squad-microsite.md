@@ -11,6 +11,8 @@ client:
 time_period: 2015
 thumbnail: "/projects/coyote-bomb-squad/cbs-thumbnail.jpg"
 
+summary: "A random excuse generator built for my cycling crew — and a fun excuse (ha) to refresh my hands-on HTML/CSS/JS skills."
+
 content_layout:
   - section_layout: text
     content: |

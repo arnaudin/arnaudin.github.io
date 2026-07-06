@@ -11,6 +11,8 @@ client:
 time_period: 2000-2022
 thumbnail: "/projects/photography/photography-thumbnail.jpg"
 
+summary: "A small sampling of landscape, nature, and travel photography while the full archive finds a new home."
+
 content_layout:
   - section_layout: text
     content: |

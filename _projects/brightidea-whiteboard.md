@@ -22,10 +22,6 @@ outcomes:
     label: "sustained whiteboard creation post-launch"
 
 content_layout:
-  - section_layout: text
-    content: |
-      # Bridging the Brainstorm Gap for Enterprise Innovation
-
   - section_layout: 1col
     images:
       - caption:
