@@ -5,7 +5,7 @@ title-class: project
 
 <script type="application/ld+json">
   {
-    "@context": "http://schema.org",
+    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [{
       "@type": "ListItem",
@@ -28,37 +28,55 @@ title-class: project
 
 <div class="project-wrapper">
 
-    <div class="project-info project-details">
-
-        {% if page.time_period %}
-            <div class="project-detail project-detail-2">
-                <h3 class="title-label">Time Period</h3>
-                <p>{{ page.time_period }}</p>
-            </div>
-        {% endif %}
-        
-        {% if page.disciplines %}
-            <div class="project-detail project-detail-3">
-                <h3 class="title-label">Disciplines</h3>
-                {% assign discipline_list = page.disciplines | split: ','  %}
-
-                {% for discipline in discipline_list %}
-                    <span class="keep-line-wrap">{{ discipline }}{% if forloop.last == false %},{% endif %}
-                    </span>
-                {% endfor %}
+    <header class="project-header">
+        {% if page.summary %}
+            <div class="project-summary-wrapper">
+                <p class="project-summary">{{ page.summary }}</p>
             </div>
         {% endif %}
 
-        
-
-        {% if page.website.url %}
-            <div class="project-detail project-detail-12">
-                <a href="{{ page.website.url }}" class="button-secondary">{{ page.website.button_text }}</a>
+        {% if page.role or page.client or page.time_period or page.team or page.disciplines or page.website.url %}
+            <div class="project-meta-wrapper">
+                <dl class="project-meta">
+                    {% if page.role %}
+                        <div class="project-meta-item"><dt>Role</dt><dd>{{ page.role }}</dd></div>
+                    {% endif %}
+                    {% if page.client %}
+                        <div class="project-meta-item"><dt>Client</dt><dd>{{ page.client }}</dd></div>
+                    {% endif %}
+                    {% if page.time_period %}
+                        <div class="project-meta-item"><dt>Timeframe</dt><dd>{{ page.time_period }}</dd></div>
+                    {% endif %}
+                    {% if page.team %}
+                        <div class="project-meta-item"><dt>Team</dt><dd>{{ page.team }}</dd></div>
+                    {% endif %}
+                    {% if page.disciplines %}
+                        <div class="project-meta-item project-meta-item-wide"><dt>Disciplines</dt><dd>{{ page.disciplines }}</dd></div>
+                    {% endif %}
+                </dl>
+                {% if page.website.url %}
+                    <p class="project-website"><a href="{{ page.website.url }}" class="button-secondary">{{ page.website.button_text }}</a></p>
+                {% endif %}
             </div>
         {% endif %}
-            
-    </div>
-    
+
+        {% if page.outcomes %}
+            <div class="project-outcomes-wrapper">
+                <section class="project-outcomes" aria-label="Key outcomes">
+                    <h2 class="project-outcomes-title">Key outcomes</h2>
+                    <ul class="project-outcomes-list">
+                        {% for outcome in page.outcomes %}
+                            <li>
+                                <span class="outcome-value">{{ outcome.value }}</span>
+                                <span class="outcome-label">{{ outcome.label }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            </div>
+        {% endif %}
+    </header>
+
     {% if page.intro %}
     <section class="project-intro paragraph-normal">{{ page.intro | markdownify }}</section>
     {% endif %}
@@ -67,11 +85,57 @@ title-class: project
         {% include layout.html %}
     {% endfor %}
 
-    {% if page.content %}
+    {% assign additional = content | strip %}
+    {% if additional != "" %}
         <section class="additional-content-wrapper">
             <div class="additional-content">
                 {{ content }}
             </div>
         </section>
     {% endif %}
+
+    {% comment %}
+    Prev/next navigation between projects — intentionally disabled for now so
+    visitors are guided to specific case studies rather than browsing older
+    work. Remove this comment wrapper to re-enable.
+
+    {% if page.ownership %}
+        {% assign siblings = site.projects | where: "ownership", page.ownership | sort: "date" | reverse %}
+        {% assign prev_project = nil %}
+        {% assign next_project = nil %}
+        {% for p in siblings %}
+            {% if p.url == page.url %}
+                {% unless forloop.first %}
+                    {% assign prev_i = forloop.index0 | minus: 1 %}
+                    {% assign prev_project = siblings[prev_i] %}
+                {% endunless %}
+                {% unless forloop.last %}
+                    {% assign next_i = forloop.index0 | plus: 1 %}
+                    {% assign next_project = siblings[next_i] %}
+                {% endunless %}
+            {% endif %}
+        {% endfor %}
+
+        {% if prev_project or next_project %}
+            <nav class="project-pagination" aria-label="More projects">
+                <div class="project-pagination-cell">
+                    {% if prev_project %}
+                        <a href="{{ prev_project.url | prepend: site.baseurl }}">
+                            <span class="meta-label"><span aria-hidden="true">←&nbsp;</span>Previous</span>
+                            <span class="project-pagination-title">{{ prev_project.title }}</span>
+                        </a>
+                    {% endif %}
+                </div>
+                <div class="project-pagination-cell project-pagination-next">
+                    {% if next_project %}
+                        <a href="{{ next_project.url | prepend: site.baseurl }}">
+                            <span class="meta-label">Next<span aria-hidden="true">&nbsp;→</span></span>
+                            <span class="project-pagination-title">{{ next_project.title }}</span>
+                        </a>
+                    {% endif %}
+                </div>
+            </nav>
+        {% endif %}
+    {% endif %}
+    {% endcomment %}
 </div>

@@ -2,7 +2,7 @@
 date: 1969-4-20
 published: false
 title: "Title"
-description: "Description"
+description: "One-line outcome shown on the Work-page card and in search/social previews"
 categories: app, ux, brand, mobile
 disciplines: UX, App design, Information Architecture, Branding
 media: Mobile App
@@ -11,6 +11,21 @@ client:
 time_period: Dates
 thumbnail: "/black-thumbnail.png"
 redirect_from: /projects/previous-name
+
+# --- Case-study header (all optional) ------------------------------------
+# summary: one-sentence outcome-first lede, rendered large under the title
+summary: "What happened and why it mattered, in one confident sentence."
+# role: your role, shown in the mono meta block alongside client/timeframe
+role: Product & Design Lead
+# team: optional team context, e.g. "2 designers · 4 engineers · PM"
+team:
+# outcomes: 2–4 headline metrics rendered as a stat row under the meta block
+outcomes:
+  - value: "1,100+"
+    label: "of the thing, in the first 4 months"
+  - value: "3×"
+    label: "improvement in the other thing"
+# --------------------------------------------------------------------------
 
 website:
   button_text: Visit the site

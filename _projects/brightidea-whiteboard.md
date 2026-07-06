@@ -3,13 +3,23 @@ date: 2025-01-01
 published: true
 title: "Brightidea · Whiteboard"
 description: "Case Study: Bridging the Brainstorm Gap for Enterprise Innovation"
-categories: web, innovation, idea-management, innovation
+categories: web, innovation, idea-management
 disciplines: Vision, Strategy, Product Design, Product Management, UX, User Research, Market Research, Interaction Design, Product Launch (0-1)
 media: Web
 ownership: Professional
 client: Brightidea
 time_period: 2021-2022
 thumbnail: "/projects/brightidea-whiteboard/brightidea-whiteboard-thumbnail.jpg"
+
+summary: "Led vision, strategy, and design for a zero-to-one realtime whiteboard that bridged brainstorming and Brightidea's innovation platform — from first sketch to launch in under a year."
+role: Product & Design Lead
+outcomes:
+  - value: "1,100+"
+    label: "whiteboards created in the first 4 months"
+  - value: "0 → 1"
+    label: "new product launched in under a year"
+  - value: "Daily"
+    label: "sustained whiteboard creation post-launch"
 
 content_layout:
   - section_layout: text

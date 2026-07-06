@@ -1,5 +1,8 @@
 {% if page.layout == "post" or page.layout == "project" %}
     <div class="page-title-wrapper">
+        {% if page.layout == "project" and page.ownership %}
+            <p class="page-title-kicker meta-label">{% if page.ownership contains "Professional" %}Case study{% else %}Personal project{% endif %}</p>
+        {% endif %}
         <h1 class="page-title type-level-1">{{ page.title }}</h1>
     </div>
 {% endif %}
