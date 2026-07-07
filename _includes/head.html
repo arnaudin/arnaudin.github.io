@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/photoswipe.css">
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    {% feed_meta %}
     
     {% if page.sitemap == false %}
     <meta content="nofollow, noindex" name="robots"/>
@@ -23,7 +24,7 @@
     <link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png"><!-- 180×180 -->
     <link rel="manifest" href="/images/favicons/manifest.json">
 
-    <meta content="#212121" name="theme-color">
+    <meta content="#FAF9F7" name="theme-color">
 
     {% if page.layout == "post" or page.layout == "project" %}
         {% assign type = "article" %}

@@ -8,6 +8,7 @@ gem "jekyll", "~> 4.4"
 
 group :jekyll_plugins do
   gem "jekyll-redirect-from"
+  gem "jekyll-feed"
 end
 
 # Needed for `jekyll serve` on Ruby 3+
