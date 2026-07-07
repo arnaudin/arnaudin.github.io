@@ -43,10 +43,10 @@
                         {% else %}
                             <source type="image/webp" srcset="{{ webp_url | prepend: site.image_serve_path }}">
                         {% endif %}
-                        <img class="{{ image.class }}" src="{{ full_src }}" alt="{{ stored_description | normalize_whitespace }}" width="{{ dims.w }}" height="{{ dims.h }}" loading="lazy" decoding="async">
+                        <img class="{{ image.class }}" src="{{ full_src }}" alt="{{ stored_description | normalize_whitespace }}" width="{{ dims.w }}" height="{{ dims.h }}" decoding="async">
                     </picture>
                 {% else %}
-                    <img class="{{ image.class }}" src="{{ full_src }}" alt="{{ stored_description | normalize_whitespace }}" loading="lazy" decoding="async">
+                    <img class="{{ image.class }}" src="{{ full_src }}" alt="{{ stored_description | normalize_whitespace }}" decoding="async">
                 {% endif %}
             {% endcapture %}
 
