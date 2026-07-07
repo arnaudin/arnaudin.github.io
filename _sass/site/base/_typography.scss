@@ -192,8 +192,10 @@ figcaption {
   text-align: center;
 }
 
-// Used for image captions on blog pages
-img + em {
+// Used for image captions on blog pages (second selector covers images the
+// lightbox script wraps in a gallery anchor)
+img + em,
+.gallery-link-wrap + em {
   font-family: $font-family-mono;
   font-style: normal;
   font-size: var(--font-size-body-tiny);

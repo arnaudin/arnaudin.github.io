@@ -20,6 +20,17 @@ video {
   height: auto;
 }
 
+// Lightbox affordance
+a.gallery-link img {
+  cursor: zoom-in;
+}
+
+// JS-added wrapper around plain post images: contribute no box of its own
+// so image layout/centering classes keep working exactly as before.
+.gallery-link-wrap {
+  display: contents;
+}
+
 .img-25vh {
   max-height: 25vh;
   width: auto;
