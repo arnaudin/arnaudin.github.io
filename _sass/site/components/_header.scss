@@ -13,13 +13,14 @@
 
     .logo-nav-wrapper {
        @extend .grid-container;
+       align-items: center;
 
       .logo-title-wrapper {
         @include grid.grid-column(4);
         display: flex;
 
         @include media-queries.grid-media(tablet) {
-          @include grid.grid-column(4);
+          @include grid.grid-column(2);
         }
       }
 
@@ -27,7 +28,7 @@
         @include grid.grid-column(2);
 
         @include media-queries.grid-media(tablet) {
-          @include grid.grid-column(8);
+          @include grid.grid-column(10);
         }
       }
     }

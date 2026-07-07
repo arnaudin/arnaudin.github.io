@@ -137,13 +137,11 @@
       background: inherit;
       opacity: 1;
       border: 0;
-      margin-top: mixins-functions.rem(12px);
 
       li {
         display: inline-block;
         position: relative;
         padding-left: var(--space-6);
-        padding-bottom: mixins-functions.rem(9px);
         border: 0;
 
         a {
