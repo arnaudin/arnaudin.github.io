@@ -5,7 +5,7 @@ Personal homepage and portfolio of Ryan Arnaudin
 
 This site is made with [Jekyll](https://github.com/jekyll/jekyll), an opensource static site generating platform.
 
-The theme is inspired by [himatt.com](https://github.com/MattGreyDesign/himatt.com).
+The design is fully custom (2026 redesign). The site was originally bootstrapped in 2022 from [himatt.com](https://github.com/MattGreyDesign/himatt.com) (GPL v3), though essentially none of it remains.
 
 The typefaces used are [Playfair Display](https://fonts.google.com/specimen/Playfair+Display) and [Lato](https://fonts.google.com/specimen/Lato)
 
