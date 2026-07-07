@@ -79,7 +79,7 @@
   --font-size-xxxxxxlarge: #{mixins-functions.rem(72px)};
 
   /* semantic, fluid */
-  --font-size-hero: clamp(2.75rem, 1.55rem + 5vw, 4.5rem);
+  --font-size-hero: clamp(2.25rem, 1.1rem + 5.5vw, 4.5rem);
   --font-size-level-jumbo: var(--font-size-hero);
   --font-size-level-1: clamp(2.125rem, 1.53rem + 2.5vw, 3rem);
   --font-size-level-2: clamp(1.5rem, 1.24rem + 1.1vw, 1.875rem);

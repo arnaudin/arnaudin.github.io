@@ -60,8 +60,8 @@
                 {% endif %}
 
                 {% if image.caption %}
-                    {% if image.class contains 'img-center' %}
-                        <figcaption style="width:{{ image.width }};margin-left:auto;margin-right:auto;">{{ image.caption }}</figcaption>
+                    {% if image.class contains 'img-center' and image.width %}
+                        <figcaption style="width:min({{ image.width }}, 100%);margin-left:auto;margin-right:auto;">{{ image.caption }}</figcaption>
                     {% else %}
                         <figcaption>{{ image.caption }}</figcaption>
                     {% endif %}
@@ -85,12 +85,12 @@
             <figure class="image-wrapper {{ video.positioning }}">
                 <video class="{{ video.class }}" src="{{ video.url | prepend: site.image_serve_path }}"
                     autoplay loop muted playsinline preload="metadata"
-                    {% if video.width %}style="max-width:{{ video.width }};margin-left:auto;margin-right:auto;"{% endif %}
+                    {% if video.width %}style="width:min({{ video.width }}, 100%);margin-left:auto;margin-right:auto;"{% endif %}
                     aria-label="{{ stored_description | normalize_whitespace }}"></video>
 
                 {% if video.caption %}
                     {% if video.width %}
-                        <figcaption style="width:{{ video.width }};margin-left:auto;margin-right:auto;">{{ video.caption }}</figcaption>
+                        <figcaption style="width:min({{ video.width }}, 100%);margin-left:auto;margin-right:auto;">{{ video.caption }}</figcaption>
                     {% else %}
                         <figcaption>{{ video.caption }}</figcaption>
                     {% endif %}

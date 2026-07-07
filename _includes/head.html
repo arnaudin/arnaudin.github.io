@@ -25,7 +25,7 @@
 
     <meta content="#212121" name="theme-color">
 
-    {% if page.is_post %}
+    {% if page.layout == "post" or page.layout == "project" %}
         {% assign type = "article" %}
     {% else %}
         {% assign type = "website" %}
@@ -41,7 +41,7 @@
     <meta name="twitter:image" content="{{ share_image }}"/>
     {% endif %}
     
-    {% if page.is_post %}
+    {% if page.layout == "post" %}
     <meta property="og:site_name" content="{{ site.title }}"/>
     {% endif %}
 
