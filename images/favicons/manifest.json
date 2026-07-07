@@ -1,6 +1,6 @@
 {
     "short_name": "Ryan Arnaudin",
-    "name": "Ryan Arnaudin Design",
+    "name": "Ryan Arnaudin",
     "icons": [
         {
             "src": "/images/favicons/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#F0F0F0",
-    "background_color": "#F0F0F0",
+    "theme_color": "#FAF9F7",
+    "background_color": "#FAF9F7",
     "display": "standalone"
 }
