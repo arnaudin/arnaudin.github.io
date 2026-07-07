@@ -127,9 +127,22 @@
   }
 
   &.sticky-header--fixed {
-    background-color: rgba(var(--palette-paper-rgb), .95);
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
+    // Opaque-ish fallback: without backdrop-filter, content scrolling
+    // underneath must not show through enough to hurt legibility
+    background-color: rgba(var(--palette-paper-rgb), .97);
+
+    @supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+      background-color: rgba(var(--palette-paper-rgb), .72);
+      -webkit-backdrop-filter: blur(12px) saturate(1.5);
+      backdrop-filter: blur(12px) saturate(1.5);
+
+      @media (prefers-reduced-transparency: reduce) {
+        background-color: rgba(var(--palette-paper-rgb), .97);
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+      }
+    }
+
     padding-top: mixins-functions.rem(8px);
     padding-bottom: mixins-functions.rem(8px);
     position: fixed;
