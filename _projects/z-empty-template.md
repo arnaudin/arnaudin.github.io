@@ -1,5 +1,5 @@
 ---
-date: 1969-4-20
+date: 1969-04-20
 published: false
 title: "Title"
 description: "One-line outcome shown on the Work-page card and in search/social previews"
