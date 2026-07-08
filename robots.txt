@@ -1,6 +1,11 @@
 ---
 ---
+# /images is blocked in general, but social-share images must stay crawlable
+# or link previews (og:image / twitter:image) break on crawlers that respect
+# robots.txt (e.g. Twitterbot).
 User-agent: *
+Allow: /images/site/
+Allow: /images/*-thumbnail
 Disallow: /images
 
 User-agent: archive.org_bot
