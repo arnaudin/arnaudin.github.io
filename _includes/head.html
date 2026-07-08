@@ -36,17 +36,18 @@
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
     <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 140 }}{% else %}{{ site.description }}{% endif %}"/>
     
-    {% if page.thumbnail %}
-    {% capture share_image %}{{ page.thumbnail | prepend: site.image_serve_path | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
+    {% comment %} Fall back to the site-wide share image (1200x630) so pages
+        without a thumbnail — most importantly the homepage — still get a
+        preview card on LinkedIn/Slack/iMessage. {% endcomment %}
+    {% capture share_image %}{{ page.thumbnail | default: '/site/og-default.png' | prepend: site.image_serve_path | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
     <meta property="og:image" content="{{ share_image }}"/>
     <meta name="twitter:image" content="{{ share_image }}"/>
-    {% endif %}
     
     {% if page.layout == "post" %}
     <meta property="og:site_name" content="{{ site.title }}"/>
     {% endif %}
 
-    <meta content="{% if page.thumbnail %}summary_large_image{% else %}summary{% endif %}" name="twitter:card"/>
+    <meta content="summary_large_image" name="twitter:card"/>
     <meta name="twitter:site" content="{{ site.social-username.twitter }}"/>
     <meta name="twitter:creator" content="{{ site.social-username.twitter }}"/>
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
@@ -55,12 +56,23 @@
     {% if page.captcha == true %}
     <script src="https://www.google.com/recaptcha/api.js?render=6LdLDpcqAAAAABgi_IBp1fqlOaT0TTwU29g_WwBB"></script>
     <script>
-        grecaptcha.ready(function() {
-            // the action: value doesn't matter, it's just a string (see the docs)
-            grecaptcha.execute('6LdLDpcqAAAAABgi_IBp1fqlOaT0TTwU29g_WwBB', {action: 'contact_form'})
-            .then(function(token) {
-                // this is the important part, store the token so it gets sent back to us
-                document.getElementById('g-recaptcha-response').value = token;
+        // Fetch the reCAPTCHA token at submit time, not page load — v3 tokens
+        // expire after ~2 minutes, so a token fetched on load goes stale for
+        // anyone who takes their time writing a message.
+        document.addEventListener('DOMContentLoaded', function () {
+            var field = document.getElementById('g-recaptcha-response');
+            var form = field && field.form;
+            if (!form) return;
+            form.addEventListener('submit', function (e) {
+                if (field.value) return; // token fetched; let the submit through
+                e.preventDefault();
+                function send() { form.submit(); }
+                grecaptcha.ready(function () {
+                    // the action: value doesn't matter, it's just a string (see the docs)
+                    grecaptcha.execute('6LdLDpcqAAAAABgi_IBp1fqlOaT0TTwU29g_WwBB', {action: 'contact_form'})
+                        .then(function (token) { field.value = token; send(); })
+                        .catch(send); // never strand the message on a captcha hiccup
+                });
             });
         });
     </script>
