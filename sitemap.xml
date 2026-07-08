@@ -4,9 +4,11 @@ layout: sitemap
 
 {% if site.sitemap %}
 {% capture site_url %}{% if site.url %}{{ site.url | append: site.baseurl }}{% else %}{{ site.github.url }}{% endif %}{% endcapture %}
+  {% comment %} lastmod is only emitted when a page has a real date — a
+      build-time fallback would claim every page changed on every deploy,
+      which teaches crawlers to ignore the signal. {% endcomment %}
   <url>
     <loc>{{ site.url }}/</loc>
-    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,8 +17,6 @@ layout: sitemap
     <loc>{{ site.url }}{{ page.url }}</loc>
     {% if page.date %}
       <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-    {% else %}
-      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     {% endif %}{% if page.priority %}
     <changefreq>monthly</changefreq>
     <priority>{{ page.priority }}</priority>{% endif %}
@@ -26,8 +26,6 @@ layout: sitemap
     <loc>{{ site.url }}{{ page.url }}</loc>
     {% if page.date %}
       <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-    {% else %}
-      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     {% endif %}
     {% if page.priority %}
       <priority>{{ page.priority }}</priority>
@@ -41,10 +39,8 @@ layout: sitemap
     <loc>{{ site.url }}{{ page.url }}</loc>
     {% if page.date %}
       <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-    {% else %}
-      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     {% endif %}
-    <priority>{{ page.priority }}</priority>
+    <priority>{{ page.priority | default: 0.5 }}</priority>
     <changefreq>monthly</changefreq>
   </url>
   {% endfor %}
