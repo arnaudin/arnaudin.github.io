@@ -82,7 +82,7 @@ title-class: project
     {% endif %}
 
     {% for entry in page.content_layout %}
-        {% include layout.html %}
+        {% include layout.html eager=forloop.first %}
     {% endfor %}
 
     {% assign additional = content | strip %}

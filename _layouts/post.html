@@ -46,7 +46,7 @@ title-class: post
     {% endif %}
 
     {% for entry in page.content_layout %}
-        {% include layout.html %}
+        {% include layout.html eager=forloop.first %}
     {% endfor %}
 
     {% assign body = content | strip %}

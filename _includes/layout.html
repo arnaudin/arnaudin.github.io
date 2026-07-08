@@ -35,6 +35,16 @@
             {% capture full_src %}{{ image.url | prepend: site.image_serve_path }}{% endcapture %}
             {% assign webp_url = image.url | replace: '.png', '.webp' | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' %}
 
+            {% comment %} First image of the page's first section loads eagerly at
+                high priority (it's the likely LCP element); everything after is
+                lazy. Images are excluded from the scroll-reveal system (see
+                reveal.js), so lazy-loading can't conflict with it. {% endcomment %}
+            {% if include.eager and forloop.first %}
+                {% assign img_loading = 'fetchpriority="high"' %}
+            {% else %}
+                {% assign img_loading = 'loading="lazy"' %}
+            {% endif %}
+
             {% capture image_tag %}
                 {% if dims.webp %}
                     <picture>
@@ -43,10 +53,12 @@
                         {% else %}
                             <source type="image/webp" srcset="{{ webp_url | prepend: site.image_serve_path }}">
                         {% endif %}
-                        <img class="{{ image.class }}" src="{{ full_src }}" alt="{{ stored_description | normalize_whitespace }}" width="{{ dims.w }}" height="{{ dims.h }}" decoding="async">
+                        <img class="{{ image.class }}" src="{{ full_src }}" alt="{{ stored_description | normalize_whitespace | escape }}" width="{{ dims.w }}" height="{{ dims.h }}" {{ img_loading }} decoding="async">
                     </picture>
+                {% elsif dims %}
+                    <img class="{{ image.class }}" src="{{ full_src }}" alt="{{ stored_description | normalize_whitespace | escape }}" width="{{ dims.w }}" height="{{ dims.h }}" {{ img_loading }} decoding="async">
                 {% else %}
-                    <img class="{{ image.class }}" src="{{ full_src }}" alt="{{ stored_description | normalize_whitespace }}" decoding="async">
+                    <img class="{{ image.class }}" src="{{ full_src }}" alt="{{ stored_description | normalize_whitespace | escape }}" {{ img_loading }} decoding="async">
                 {% endif %}
             {% endcapture %}
 
@@ -86,7 +98,7 @@
                 <video class="{{ video.class }}" src="{{ video.url | prepend: site.image_serve_path }}"
                     autoplay loop muted playsinline preload="metadata"
                     {% if video.width %}style="width:min({{ video.width }}, 100%);margin-left:auto;margin-right:auto;"{% endif %}
-                    aria-label="{{ stored_description | normalize_whitespace }}"></video>
+                    aria-label="{{ stored_description | normalize_whitespace | escape }}"></video>
 
                 {% if video.caption %}
                     {% if video.width %}
