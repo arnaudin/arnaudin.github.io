@@ -35,17 +35,11 @@ sitemap: true
 social-username:
   twitter: "@arnaudin"
   linkedin: "arnaudin"
-  angellist: "arnaudin"
   github: "arnaudin"
-  medium: "@arnaudin"
-  pinterest: "rarnaudin"
-  instagram: "arnaudin"
   flickr: "arnaudin"
-  spotify: "arnaudin"
   codepen: "arnaudin"
   strava: "2363619"
   dribbble: "arnaudin"
-amazon_associate_id: ryanarna-20
 
 # Content
 image_serve_path: "/images" # <img src="{{ site.image_serve_path }}/projects/img.jpg">
@@ -77,13 +71,13 @@ navigation:
   - title: Work
     url: /
   - title: About
-    url: /about
+    url: /about/
   - title: Process
-    url: /process
+    url: /process/
   - title: Writing
-    url: /blog
+    url: /blog/
   - title: Contact
-    url: /contact
+    url: /contact/
 
 permalink: /:categories/:title/
 

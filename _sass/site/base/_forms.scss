@@ -121,6 +121,7 @@ form {
   #{$all-text-inputs} {
     border: 0;
     border-bottom: mixins-functions.rem(2px) solid var(--color-line);
+    margin-bottom: var(--space-6); // room before the next field's label
     outline: 0;
     -webkit-appearance: none;
     -moz-appearance: none;
