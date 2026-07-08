@@ -38,13 +38,13 @@
 
   &:hover,
   &:focus {
-    color: white;
+    color: var(--color-surface);
     background: var(--color-cta);
   }
 
   &:active {
     opacity: .8;
-    color: white;
+    color: var(--color-surface);
     background: var(--color-cta);
   }
 

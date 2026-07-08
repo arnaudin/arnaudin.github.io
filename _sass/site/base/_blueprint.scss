@@ -1,0 +1,72 @@
+// ---------------------------------------------------------------------------
+// Blueprint mode — keyboard easter egg (type "blueprint" to toggle).
+//
+// Inverts the site to white linework on cobalt "paper", a nod to the CAD /
+// simulation / aerospace domain. Implemented by swapping the RAW palette layer
+// only — the same single-layer swap the variables file was built to support —
+// so every semantic role and legacy alias inherits automatically. The faint
+// home-hero grid already keys off --palette-cobalt-rgb, so it flips to white
+// blueprint lines for free.
+// ---------------------------------------------------------------------------
+
+:root.blueprint {
+  --palette-paper: #0A2463;          // blueprint ground
+  --palette-paper-rgb: 10, 36, 99;
+  --palette-ink: #F3F7FF;            // white linework / text (14.8:1)
+  --palette-ink-rgb: 243, 247, 255;
+  --palette-gray-strong: #BBCBEF;    // secondary text — AA on the ground
+  --palette-gray-mid: #5E7BC0;       // borders / decorative linework
+  --palette-cobalt: #FFFFFF;         // accent = white linework
+  --palette-cobalt-rgb: 255, 255, 255;
+  --palette-cobalt-deep: #DCE6FF;    // hover / active
+  --palette-cobalt-wash: #143A87;    // tint surfaces (pull quotes, code)
+
+  // Semantic roles that are hardcoded rather than palette-derived:
+  --color-surface-raised: #123A87;   // raised cards, not paper white
+  --color-line: rgba(255, 255, 255, .28);
+  --color-line-subtle: rgba(255, 255, 255, .16);
+}
+
+// Brief cross-fade when toggling (class added by JS for ~500ms, then removed).
+// Guarded by reduced-motion so it never animates for those visitors.
+@media (prefers-reduced-motion: no-preference) {
+  :root.theme-anim,
+  :root.theme-anim * {
+    transition: background-color .45s ease,
+                color .45s ease,
+                border-color .45s ease,
+                fill .45s ease !important;
+  }
+}
+
+// Toggle confirmation — a small mono toast, bottom-center.
+.theme-toast {
+  position: fixed;
+  left: 50%;
+  bottom: var(--space-8);
+  transform: translate(-50%, 8px);
+  z-index: 11000;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-line-subtle);
+  border-radius: 4px;
+  background: var(--color-surface-raised);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-body-tiny);
+  letter-spacing: var(--letter-spacing-mono-label);
+  text-transform: uppercase;
+  box-shadow: 0 6px 24px rgba(var(--palette-ink-rgb), .12);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease, transform .3s ease;
+
+  &.is-visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: opacity .3s ease;
+    transform: translate(-50%, 0);
+  }
+}
