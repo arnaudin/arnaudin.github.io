@@ -14,8 +14,10 @@
         {% if card.description %}
             <p class="project-card-desc">{{ card.description }}</p>
         {% endif %}
-        {% if card.time_period or card.media %}
+        {% if card.role or card.time_period %}
             <p class="project-card-meta">
+                {%- comment -%} CSS inserts the · separator between spans {%- endcomment -%}
+                {%- if card.role %}<span>{{ card.role }}</span>{% endif -%}
                 {%- if card.time_period %}<span>{{ card.time_period }}</span>{% endif -%}
             </p>
         {% endif %}
