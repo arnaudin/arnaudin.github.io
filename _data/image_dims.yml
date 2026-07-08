@@ -5,8 +5,8 @@
   webp: true
   w900: false
 "/about/placeholder-sketching_wireframes.png":
-  w: 1920
-  h: 1080
+  w: 1600
+  h: 900
   webp: true
   w900: true
 "/about/process-LUMA_workshop.png":
@@ -15,8 +15,8 @@
   webp: true
   w900: true
 "/about/process-certifications.png":
-  w: 1920
-  h: 690
+  w: 1600
+  h: 575
   webp: true
   w900: true
 "/about/process-collage.png":
@@ -30,8 +30,8 @@
   webp: true
   w900: false
 "/about/process-luma_methods.png":
-  w: 2968
-  h: 1538
+  w: 1600
+  h: 829
   webp: true
   w900: true
 "/black-thumbnail.png":
@@ -65,8 +65,8 @@
   webp: true
   w900: false
 "/posts/brightidea-for-teams/teams-devpost-submission.png":
-  w: 1920
-  h: 1080
+  w: 1600
+  h: 900
   webp: true
   w900: true
 "/posts/brightidea-for-teams/teams-link-team-members.png":
@@ -110,18 +110,18 @@
   webp: true
   w900: true
 "/posts/personal-site/new-site.png":
-  w: 1920
-  h: 1080
+  w: 1600
+  h: 900
   webp: true
   w900: true
 "/posts/personal-site/old-v2-site.png":
-  w: 1920
-  h: 1080
+  w: 1600
+  h: 900
   webp: true
   w900: true
 "/posts/personal-site/site-documentation-galleries.png":
-  w: 2048
-  h: 1010
+  w: 1600
+  h: 789
   webp: true
   w900: true
 "/posts/personal-site/site-documentation-gallery-working.png":
@@ -135,13 +135,13 @@
   webp: true
   w900: true
 "/posts/personal-site/site-documentation-image-property.png":
-  w: 1886
-  h: 968
+  w: 1600
+  h: 821
   webp: true
   w900: true
 "/posts/personal-site/site-update-wireframes.png":
-  w: 2048
-  h: 1300
+  w: 1600
+  h: 1016
   webp: true
   w900: true
 "/posts/podcasts/99-percent-invisible.jpg":
@@ -345,13 +345,13 @@
   webp: true
   w900: false
 "/projects/autodesk-cfd/cfd-ribbon-in-action.png":
-  w: 1920
-  h: 1080
+  w: 1600
+  h: 900
   webp: true
   w900: true
 "/projects/autodesk-cfd/cfd-ribbon-prototype.png":
-  w: 1840
-  h: 1200
+  w: 1600
+  h: 1043
   webp: true
   w900: true
 "/projects/autodesk-cfd/cfd-ribbon-responsiveness.png":
@@ -385,8 +385,8 @@
   webp: true
   w900: false
 "/projects/autodesk-cfd/cfd-valve-setup.png":
-  w: 1846
-  h: 1080
+  w: 1600
+  h: 936
   webp: true
   w900: true
 "/projects/autodesk-job-monitor/job-monitor-alternatives.gif":
@@ -495,8 +495,8 @@
   webp: true
   w900: false
 "/projects/autodesk-web-mobile-viewer/a360-web-and-mobile.png":
-  w: 2237
-  h: 1107
+  w: 1600
+  h: 792
   webp: true
   w900: true
 "/projects/autodesk-web-mobile-viewer/a360-web-mockup.png":
@@ -505,8 +505,8 @@
   webp: true
   w900: false
 "/projects/autodesk-web-mobile-viewer/a360-web.png":
-  w: 1666
-  h: 1107
+  w: 1600
+  h: 1063
   webp: true
   w900: true
 "/projects/autodesk-web-mobile-viewer/simulation-viewer-layout-explorations.gif":
@@ -530,23 +530,23 @@
   webp: true
   w900: false
 "/projects/brightidea-programs/brightidea-capture-an-idea.png":
-  w: 2016
-  h: 1280
+  w: 1600
+  h: 1016
   webp: true
   w900: true
 "/projects/brightidea-programs/brightidea-explore-process.png":
-  w: 1920
-  h: 992
+  w: 1600
+  h: 827
   webp: true
   w900: true
 "/projects/brightidea-programs/brightidea-explore.png":
-  w: 1920
-  h: 992
+  w: 1600
+  h: 827
   webp: true
   w900: true
 "/projects/brightidea-programs/brightidea-my-ideas.png":
-  w: 2016
-  h: 1463
+  w: 1600
+  h: 1161
   webp: true
   w900: true
 "/projects/brightidea-programs/brightidea-programs-overview.png":
@@ -560,13 +560,13 @@
   webp: true
   w900: false
 "/projects/brightidea-programs/brightidea-user-home-updates.png":
-  w: 1920
-  h: 1080
+  w: 1600
+  h: 900
   webp: true
   w900: true
 "/projects/brightidea-programs/pitch-program-ebook.png":
-  w: 1865
-  h: 1032
+  w: 1600
+  h: 885
   webp: true
   w900: true
 "/projects/brightidea-programs/pitch-synthesize-2018.png":
@@ -580,13 +580,13 @@
   webp: true
   w900: false
 "/projects/brightidea-whiteboard/whiteboard-background_hero.png":
-  w: 1920
-  h: 1080
+  w: 1600
+  h: 900
   webp: true
   w900: true
 "/projects/brightidea-whiteboard/whiteboard-before_state.png":
-  w: 1920
-  h: 1080
+  w: 1600
+  h: 900
   webp: true
   w900: true
 "/projects/brightidea-whiteboard/whiteboard-brainstorm_requirements.png":
@@ -595,8 +595,8 @@
   webp: true
   w900: false
 "/projects/brightidea-whiteboard/whiteboard-competitors.png":
-  w: 1920
-  h: 1200
+  w: 1600
+  h: 1000
   webp: true
   w900: true
 "/projects/brightidea-whiteboard/whiteboard-feedback.png":
@@ -605,8 +605,8 @@
   webp: true
   w900: true
 "/projects/brightidea-whiteboard/whiteboard-final_hero.png":
-  w: 1920
-  h: 1080
+  w: 1600
+  h: 900
   webp: true
   w900: true
 "/projects/brightidea-whiteboard/whiteboard-flow_sketches.png":
@@ -625,8 +625,8 @@
   webp: true
   w900: false
 "/projects/brightidea-whiteboard/whiteboard-market_research.png":
-  w: 1920
-  h: 1080
+  w: 1600
+  h: 900
   webp: true
   w900: true
 "/projects/brightidea-whiteboard/whiteboard-metrics.png":
@@ -635,8 +635,8 @@
   webp: true
   w900: true
 "/projects/brightidea-whiteboard/whiteboard-mocks_in_figma.png":
-  w: 1920
-  h: 1080
+  w: 1600
+  h: 900
   webp: true
   w900: true
 "/projects/brightidea-whiteboard/whiteboard-multiplayer.gif":
@@ -650,8 +650,8 @@
   webp: false
   w900: false
 "/projects/brightidea-whiteboard/whiteboard-persona_research.png":
-  w: 1920
-  h: 1200
+  w: 1600
+  h: 1000
   webp: true
   w900: true
 "/projects/brightidea-whiteboard/whiteboard-post_release_requests.png":
@@ -660,18 +660,18 @@
   webp: true
   w900: true
 "/projects/brightidea-whiteboard/whiteboard-press_release.png":
-  w: 2880
-  h: 2048
+  w: 1600
+  h: 1138
   webp: true
   w900: true
 "/projects/brightidea-whiteboard/whiteboard-product_mockup.png":
-  w: 3316
-  h: 1942
+  w: 1600
+  h: 937
   webp: true
   w900: true
 "/projects/brightidea-whiteboard/whiteboard-quotes_and_insights.png":
-  w: 1920
-  h: 1080
+  w: 1600
+  h: 900
   webp: true
   w900: true
 "/projects/brightidea-whiteboard/whiteboard-smart-matrix.gif":
@@ -680,8 +680,8 @@
   webp: false
   w900: false
 "/projects/brightidea-whiteboard/whiteboard-team_evolution.png":
-  w: 1816
-  h: 700
+  w: 1600
+  h: 617
   webp: true
   w900: true
 "/projects/brightidea-whiteboard/whiteboard-templates.gif":
@@ -690,13 +690,13 @@
   webp: false
   w900: false
 "/projects/brightidea-whiteboard/whiteboard-v1_vision.png":
-  w: 1920
-  h: 1080
+  w: 1600
+  h: 900
   webp: true
   w900: true
 "/projects/brightidea-whiteboard/whiteboard-workflow_research.png":
-  w: 1920
-  h: 1080
+  w: 1600
+  h: 900
   webp: true
   w900: true
 "/projects/brightidea/brightidea-google-assistant.png":
@@ -775,8 +775,8 @@
   webp: true
   w900: true
 "/projects/cfdesign/cfdesign-model-centric.png":
-  w: 1866
-  h: 918
+  w: 1600
+  h: 787
   webp: true
   w900: true
 "/projects/cfdesign/cfdesign-thumbnail.jpg":
@@ -805,13 +805,13 @@
   webp: true
   w900: false
 "/projects/flow-design/flow-design-app.png":
-  w: 1920
-  h: 1080
+  w: 1600
+  h: 900
   webp: true
   w900: true
 "/projects/flow-design/flow-design-embedded-inventor.png":
-  w: 1832
-  h: 1200
+  w: 1600
+  h: 1048
   webp: true
   w900: true
 "/projects/flow-design/flow-design-embedded-revit.jpg":
@@ -820,8 +820,8 @@
   webp: true
   w900: false
 "/projects/flow-design/flow-design-kids.jpg":
-  w: 2400
-  h: 1353
+  w: 1600
+  h: 902
   webp: true
   w900: true
 "/projects/flow-design/flow-design-limar-web.png":
@@ -840,8 +840,8 @@
   webp: true
   w900: false
 "/projects/flow-design/flow-design-super-bowl-pic.jpg":
-  w: 1632
-  h: 1224
+  w: 1600
+  h: 1200
   webp: true
   w900: true
 "/projects/flow-design/flow-design-thumbnail-temp.jpg":
@@ -860,8 +860,8 @@
   webp: true
   w900: false
 "/projects/flow-design/flow-design-windows-release.png":
-  w: 1839
-  h: 1200
+  w: 1600
+  h: 1044
   webp: true
   w900: true
 "/projects/flow-design/flow-design-wireframe-UI-components.png":
@@ -950,8 +950,8 @@
   webp: true
   w900: false
 "/projects/making-things/cnc-first-handplane.jpg":
-  w: 1840
-  h: 2300
+  w: 1600
+  h: 2000
   webp: true
   w900: true
 "/projects/making-things/cnc-handplane-finsihed.jpg":
@@ -1000,8 +1000,8 @@
   webp: true
   w900: false
 "/projects/netfabb/netfabb-inspiration.png":
-  w: 1920
-  h: 1080
+  w: 1600
+  h: 900
   webp: true
   w900: true
 "/projects/netfabb/netfabb-part1.jpeg":
@@ -1030,8 +1030,8 @@
   webp: true
   w900: true
 "/projects/netfabb/netfabb-sun-blade.png":
-  w: 1920
-  h: 985
+  w: 1600
+  h: 821
   webp: true
   w900: true
 "/projects/netfabb/netfabb-thumbnail.jpg":
@@ -1155,28 +1155,28 @@
   webp: true
   w900: false
 "/projects/thangs/before-after.png":
-  w: 2000
-  h: 699
+  w: 1600
+  h: 559
   webp: true
   w900: true
 "/projects/thangs/before-home-logged-in.png":
-  w: 1992
-  h: 1062
+  w: 1600
+  h: 853
   webp: true
   w900: true
 "/projects/thangs/before-home-logged-out.png":
-  w: 1992
-  h: 1062
+  w: 1600
+  h: 853
   webp: true
   w900: true
 "/projects/thangs/before-model-logged-in.png":
-  w: 1992
-  h: 1062
+  w: 1600
+  h: 853
   webp: true
   w900: true
 "/projects/thangs/before-model-logged-out.png":
-  w: 1992
-  h: 1062
+  w: 1600
+  h: 853
   webp: true
   w900: true
 "/projects/thangs/thangs-color-swap.png":
@@ -1200,23 +1200,23 @@
   webp: true
   w900: false
 "/projects/thangs/thangs-final-logged-in-model.png":
-  w: 3431
-  h: 1469
+  w: 1600
+  h: 685
   webp: true
   w900: true
 "/projects/thangs/thangs-final-logged-in.png":
-  w: 2000
-  h: 856
+  w: 1600
+  h: 685
   webp: true
   w900: true
 "/projects/thangs/thangs-final-logged-out-model.png":
-  w: 3431
-  h: 1469
+  w: 1600
+  h: 685
   webp: true
   w900: true
 "/projects/thangs/thangs-final-logged-out.png":
-  w: 2000
-  h: 856
+  w: 1600
+  h: 685
   webp: true
   w900: true
 "/projects/thangs/thangs-original-landing.png":
