@@ -38,28 +38,38 @@
                 <div class="mobile-nav-wrapper">
                     <ul id="main-nav-list" class="mobile-dropdown" itemscope itemtype="http://schema.org/SiteNavigationElement">
                         {% for link in site.navigation %}
-                            {% assign current = nil %}
-                            {% capture current_page %}
-                                {{ page.url | downcase | replace_first: '/', '' | remove: '/' }}
-                                {% if page.url == '/' %}work
+                            {% comment %} Highlight by URL prefix: "Work" owns the
+                                homepage and every case study; the other items own
+                                their section (/blog/ matches the index and each
+                                post beneath it). {% endcomment %}
+                            {% assign current = false %}
+                            {% if link.url == '/' %}
+                                {% if page.url == '/' or page.url contains '/projects/' %}
+                                    {% assign current = true %}
                                 {% endif %}
-                                {% if page.url contains 'blog' %}writing
+                            {% else %}
+                                {% assign prefix_len = link.url | size %}
+                                {% assign page_prefix = page.url | slice: 0, prefix_len %}
+                                {% if page_prefix == link.url %}
+                                    {% assign current = true %}
                                 {% endif %}
-                            {% endcapture %}
-                            {% capture current_page_nav %}
-                                {{ link.title | downcase }}
-                            {% endcapture %}
-
-                            {% if current_page contains current_page_nav %}
-                                {% assign current = ' class="current"' %}
                             {% endif %}
 
                             <li>
-                                <a{{current}} itemprop="url" href="{{ link.url }}">
+                                <a{% if current %} class="current"{% endif %} itemprop="url" href="{{ link.url }}">
                                     <span itemprop="name">{{ link.title }}</span>
                                 </a>
                             </li>
                         {% endfor %}
+
+                        {% comment %} Resume link — uncomment once the PDF exists
+                            (drop it at /resume.pdf or update the href).
+                        <li>
+                            <a itemprop="url" href="/resume.pdf">
+                                <span itemprop="name">Resume</span>
+                            </a>
+                        </li>
+                        {% endcomment %}
                     </ul>
                 </div>
             </nav>
