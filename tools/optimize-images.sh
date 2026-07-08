@@ -7,13 +7,18 @@
 # Requires: cwebp (brew install webp), sips (built into macOS)
 #
 # Outputs:
-#   - a .webp file next to every .png/.jpg/.jpeg under images/ (skips favicons)
+#   - a .webp file next to every .png/.jpg/.jpeg under images/ (skips favicons),
+#     capped at MAX_WIDTH px wide — nothing on the site renders larger, and the
+#     full-size webp is what the PhotoSwipe lightbox loads
 #   - a .900w.webp variant for images wider than 1400px (mobile srcset)
 #   - _data/image_dims.yml mapping /path (relative to images/) -> w/h/webp/w900
+#     (w/h are the dimensions of the generated webp, so srcset and the
+#     lightbox describe the file actually served; gifs record native size)
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
 QUALITY=85
+MAX_WIDTH=1600
 DIMS_FILE="_data/image_dims.yml"
 
 mkdir -p _data
@@ -30,14 +35,37 @@ find images -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -i
   webp="false"
   w900="false"
 
+  out_w=$w
+  out_h=$h
+
   case "$f" in
     *.gif|*.GIF) ;; # dimensions only; no webp for gifs
     *)
       base="${f%.*}"
+
+      # Cap the main webp at MAX_WIDTH; record the capped dimensions.
+      resize_args=""
+      if [ "$w" -gt $MAX_WIDTH ]; then
+        resize_args="-resize $MAX_WIDTH 0"
+        out_w=$MAX_WIDTH
+        out_h=$(( (h * MAX_WIDTH + w / 2) / w ))
+      fi
+
+      need=false
       if [ ! -f "$base.webp" ] || [ "$f" -nt "$base.webp" ]; then
-        cwebp -quiet -q $QUALITY -sharp_yuv -metadata none "$f" -o "$base.webp"
+        need=true
+      elif [ "$w" -gt $MAX_WIDTH ]; then
+        # One-time migration: regenerate legacy webps that exceed the cap.
+        existing_w=$(sips -g pixelWidth "$base.webp" 2>/dev/null | awk '/pixelWidth/{print $2}')
+        if [ -n "$existing_w" ] && [ "$existing_w" -gt $MAX_WIDTH ]; then
+          need=true
+        fi
+      fi
+      if [ "$need" = true ]; then
+        cwebp -quiet -q $QUALITY -sharp_yuv -metadata none $resize_args "$f" -o "$base.webp"
       fi
       webp="true"
+
       if [ "$w" -gt 1400 ]; then
         if [ ! -f "$base.900w.webp" ] || [ "$f" -nt "$base.900w.webp" ]; then
           cwebp -quiet -q $QUALITY -sharp_yuv -metadata none -resize 900 0 "$f" -o "$base.900w.webp"
@@ -49,8 +77,8 @@ find images -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -i
 
   {
     echo "\"$key\":"
-    echo "  w: $w"
-    echo "  h: $h"
+    echo "  w: $out_w"
+    echo "  h: $out_h"
     echo "  webp: $webp"
     echo "  w900: $w900"
   } >> "$DIMS_FILE"
