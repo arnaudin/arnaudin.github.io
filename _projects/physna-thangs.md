@@ -7,7 +7,7 @@ categories: web, mobile, desktop, 3D, innovation
 disciplines: Product Design, UX Design, User Experience, Visual Design
 time_period: January 2023 - October 2024
 media: Web
-ownership: Professional 
+ownership: Professional
 client: Physna
 thumbnail: "/projects/physna-thangs/physna-thangs-thumbnail.jpg"
 

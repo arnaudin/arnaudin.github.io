@@ -19,14 +19,30 @@ priority: 1.0
 
 <section class="projects-section" aria-labelledby="selected-work">
     <div class="section-label-row">
-        <h2 class="section-label" id="selected-work">Selected work</h2>
+        <h2 class="section-label" id="selected-work">Featured work</h2>
+    </div>
+
+    {% assign professional = site.projects | where: "ownership", "Professional" | sort: "date" | reverse %}
+    {% assign featured_projects = professional | where: "featured", true %}
+
+    <div class="projects">
+        {% comment %} The two flagship deep dives (featured: true in front
+            matter) get the full-width treatment. {% endcomment %}
+        {% for project in featured_projects %}
+            {% include project-card.html project=project variant='featured' eager=forloop.first %}
+        {% endfor %}
+    </div>
+</section>
+
+<section class="projects-section" aria-labelledby="more-work">
+    <div class="section-label-row">
+        <h2 class="section-label" id="more-work">More work</h2>
     </div>
 
     <div class="projects">
-        {% for project in site.projects reversed %}
-            {% if project.ownership == "Professional" %}
-                {% include project-card.html project=project eager=forloop.first %}
-            {% endif %}
+        {% assign more_projects = professional | where_exp: "p", "p.featured != true" %}
+        {% for project in more_projects %}
+            {% include project-card.html project=project variant='compact' %}
         {% endfor %}
     </div>
 </section>

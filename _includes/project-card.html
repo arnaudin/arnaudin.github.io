@@ -1,5 +1,9 @@
 {% assign card = include.project %}
-<article class="project-card">
+{% assign variant = include.variant | default: 'default' %}
+{% comment %} variant: 'featured' — full-width media+text split for the two
+    flagship deep dives; 'compact' — tighter tile for the supporting grid;
+    'default' — the original 2-up card (still used anywhere else). {% endcomment %}
+<article class="project-card{% if variant == 'featured' %} project-card-featured{% elsif variant == 'compact' %} project-card-compact{% endif %}">
     <a class="project-card-link" href="{{ card.url | prepend: site.baseurl }}">
         <div class="project-card-media">
             {% assign thumb_dims = site.data.image_dims[card.thumbnail] %}
@@ -10,16 +14,21 @@
                 <img src="{{ card.thumbnail | prepend: site.image_serve_path }}" alt="" width="600" height="450"{% unless include.eager %} loading="lazy"{% endunless %} decoding="async">
             </picture>
         </div>
-        <h3 class="project-card-title">{{ card.title }}</h3>
-        {% if card.description %}
-            <p class="project-card-desc">{{ card.description }}</p>
-        {% endif %}
-        {% if card.role or card.time_period %}
-            <p class="project-card-meta">
-                {%- comment -%} CSS inserts the · separator between spans {%- endcomment -%}
-                {%- if card.role %}<span>{{ card.role }}</span>{% endif -%}
-                {%- if card.time_period %}<span>{{ card.time_period }}</span>{% endif -%}
-            </p>
-        {% endif %}
+        <div class="project-card-body">
+            <h3 class="project-card-title">{{ card.title }}</h3>
+            {% if card.description and variant != 'compact' %}
+                <p class="project-card-desc">{{ card.description }}</p>
+            {% endif %}
+            {% if card.role or card.time_period %}
+                <p class="project-card-meta">
+                    {%- comment -%} CSS inserts the · separator between spans {%- endcomment -%}
+                    {%- if card.role and variant != 'compact' %}<span>{{ card.role }}</span>{% endif -%}
+                    {%- if card.time_period %}<span>{{ card.time_period }}</span>{% endif -%}
+                </p>
+            {% endif %}
+            {% if variant == 'featured' %}
+                <p class="project-card-cta">Read the case study<span aria-hidden="true"> →</span></p>
+            {% endif %}
+        </div>
     </a>
 </article>

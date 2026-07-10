@@ -7,6 +7,7 @@ categories: web, innovation, idea-management
 disciplines: Vision, Strategy, Product Design, Product Management, UX, User Research, Market Research, Interaction Design, Product Launch (0-1)
 media: Web
 ownership: Professional
+featured: true
 client: Brightidea
 time_period: 2021-2022
 thumbnail: "/projects/brightidea-whiteboard/brightidea-whiteboard-thumbnail.jpg"

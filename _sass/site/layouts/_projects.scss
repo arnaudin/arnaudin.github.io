@@ -201,3 +201,78 @@ $thumb-animation-ease-out: ease-in-out;
     }
   }
 }
+
+// ---------------------------------------------------------------------------
+// Featured cards — the two flagship deep dives, full-width media + text split
+// ---------------------------------------------------------------------------
+
+.project-card.project-card-featured {
+  @include grid.grid-column(6);
+  margin-bottom: var(--space-12);
+
+  @include media-queries.grid-media(tablet) {
+    @include grid.grid-column(12);
+    margin-bottom: var(--space-16);
+  }
+
+  .project-card-link {
+    @include media-queries.grid-media(tablet) {
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+      gap: var(--gutter);
+      align-items: center;
+    }
+  }
+
+  .project-card-title {
+    font-size: var(--font-size-level-2);
+
+    @include media-queries.grid-media(tablet) {
+      margin-top: 0;
+    }
+  }
+
+  .project-card-desc {
+    font-size: var(--font-size-body);
+    margin-top: var(--space-3);
+  }
+
+  .project-card-cta {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-meta);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-mono-label);
+    color: var(--color-accent);
+    margin-top: var(--space-5);
+  }
+
+  &:hover .project-card-cta,
+  &:focus-within .project-card-cta {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Compact cards — supporting / earlier work, tighter 3-up grid
+// ---------------------------------------------------------------------------
+
+.project-card.project-card-compact {
+  @include grid.grid-column(3);
+  margin-bottom: var(--space-8);
+
+  @include media-queries.grid-media(tablet) {
+    @include grid.grid-column(4);
+    margin-bottom: var(--space-12);
+  }
+
+  .project-card-title {
+    font-size: var(--font-size-level-4);
+    margin-top: var(--space-3);
+  }
+
+  .project-card-meta {
+    margin-top: var(--space-2);
+  }
+}
