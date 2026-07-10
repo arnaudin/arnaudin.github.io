@@ -25,3 +25,90 @@
   h1 { margin-bottom: 1rem; }
   p { @extend .paragraph-large; }
 }
+
+// ---------------------------------------------------------------------------
+// 404 easter egg — the page as a redlined design review.
+// Text-only annotations in review-markup red; every element is aria-hidden
+// decoration except the real message and the homepage link.
+// ---------------------------------------------------------------------------
+
+.page-404 .message {
+  position: relative;
+
+  // Reviewer's ellipse circling the offending title
+  h1 {
+    position: relative;
+    display: inline-block;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -0.18em -0.55em -0.28em;
+      border: 2px solid var(--color-redline);
+      border-radius: 50%;
+      transform: rotate(-2.5deg);
+      opacity: .85;
+      pointer-events: none;
+    }
+  }
+
+  .redline-note {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-meta) !important;
+    letter-spacing: var(--letter-spacing-mono-label);
+    text-transform: uppercase;
+    color: var(--color-redline);
+  }
+
+  // Margin comment pinned above the circled title, with a leader line
+  // dropping toward it
+  .redline-note-pinned {
+    margin-bottom: var(--space-6);
+
+    &::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: var(--space-5);
+      margin-top: var(--space-2);
+      margin-left: var(--space-8);
+      background: var(--color-redline);
+      opacity: .7;
+    }
+  }
+
+  // Review stamp, slightly off-square like a real one
+  .redline-stamp {
+    display: inline-flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    margin: var(--space-8) 0 var(--space-4);
+    padding: var(--space-3) var(--space-5);
+    border: 2px solid var(--color-redline);
+    box-shadow: inset 0 0 0 1px var(--color-redline);
+    transform: rotate(-3deg);
+    color: var(--color-redline);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+
+    .redline-stamp-main {
+      font-size: var(--font-size-body-small);
+      font-weight: 500;
+      letter-spacing: var(--letter-spacing-mono-label);
+    }
+
+    .redline-stamp-sub {
+      font-size: var(--font-size-meta);
+      letter-spacing: var(--letter-spacing-mono-label);
+      opacity: .8;
+    }
+  }
+
+  .message-cta {
+    margin-top: var(--space-6);
+
+    .redline-note {
+      margin-left: var(--space-3);
+    }
+  }
+}

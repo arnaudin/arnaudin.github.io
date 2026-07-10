@@ -25,6 +25,7 @@
   --color-surface-raised: #123A87;   // raised cards, not paper white
   --color-line: rgba(255, 255, 255, .28);
   --color-line-subtle: rgba(255, 255, 255, .16);
+  --color-redline: #FFA6A6;          // review red, lifted for the dark ground
 }
 
 // Brief cross-fade when toggling (class added by JS for ~500ms, then removed).

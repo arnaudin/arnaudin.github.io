@@ -33,6 +33,7 @@
   --color-line: var(--palette-gray-mid);
   --color-line-subtle: rgba(var(--palette-ink-rgb), .12);
   --color-focus-ring: var(--palette-cobalt);
+  --color-redline: #C13A3A;          /* review-markup red (404 easter egg) */
 
   /* ------------------------------------------------------------------
    * LEGACY ALIASES (consumed across components; retire per-chunk)
