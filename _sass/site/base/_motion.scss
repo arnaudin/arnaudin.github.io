@@ -4,6 +4,14 @@
 // no-JS visitor sees everything immediately with no hidden state. Everything
 // here is also disabled under prefers-reduced-motion.
 
+// Anchor jumps (e.g. the case-study "On this page" list) glide instead of
+// teleporting — but never for visitors who prefer reduced motion.
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   html.js {
     // Case-study/post images are intentionally NOT revealed here — they are

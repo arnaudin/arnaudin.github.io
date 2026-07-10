@@ -1,9 +1,30 @@
 <div class="layout layout-{{ entry.section_layout }}">
 
     {% if entry.section_layout == 'text' %}
+        {% comment %} Give every ## heading a stable id via a kramdown IAL
+            ({: #s-slug}), using the same slugify as the "On this page" list in
+            _includes/project-toc.html. Link and target are generated from the
+            same string on both sides, so they can't drift — no dependence on
+            kramdown's own auto-id algorithm. {% endcomment %}
+        {% capture nl %}
+{% endcapture %}
+        {% assign text_lines = entry.content | split: nl %}
+        {% assign text_md = '' %}
+        {% for tline in text_lines %}
+            {% assign tstripped = tline | strip %}
+            {% assign tlead = tstripped | slice: 0, 3 %}
+            {% if tlead == '## ' %}
+                {% assign thead = tstripped | remove_first: '## ' | strip_html | strip %}
+                {% assign tslug = thead | slugify %}
+                {% assign tial = '{: #s-' | append: tslug | append: '}' %}
+                {% assign text_md = text_md | append: tline | append: nl | append: tial | append: nl %}
+            {% else %}
+                {% assign text_md = text_md | append: tline | append: nl %}
+            {% endif %}
+        {% endfor %}
         <section class="project-text">
             <div class="project-text-wrapper paragraph-normal">
-                {{ entry.content | markdownify }}
+                {{ text_md | markdownify }}
             </div>
         </section>
     {% elsif entry.section_layout == 'video' %}

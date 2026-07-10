@@ -1,0 +1,37 @@
+{% comment %}
+"On this page" anchor list for case studies, rendered in the kicker row above
+the title (see _includes/page-title.html). Collects every `## ` heading across
+the page's text sections. _includes/layout.html stamps each of those headings
+with a matching id (`#s-<slug>`) via a kramdown IAL using the same slugify, so
+links and targets are generated from the same string and can't drift — we
+don't depend on kramdown's own auto-ID algorithm.
+Rendered only when there are 3+ headings to jump between.
+{% endcomment %}
+
+{% capture nl %}
+{% endcapture %}
+
+{% assign toc_headings = '' %}
+{% for entry in page.content_layout %}
+    {% if entry.section_layout == 'text' and entry.content %}
+        {% assign lines = entry.content | split: nl %}
+        {% for line in lines %}
+            {% assign lead = line | strip | slice: 0, 3 %}
+            {% if lead == '## ' %}
+                {% assign heading = line | strip | remove_first: '## ' | strip_html | strip %}
+                {% assign toc_headings = toc_headings | append: heading | append: '|||' %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+{% assign toc = toc_headings | split: '|||' %}
+
+{% if toc.size >= 3 %}
+<nav class="project-toc" aria-label="On this page">
+    <ul class="project-toc-list">
+        {% for heading in toc %}
+            <li><a href="#s-{{ heading | slugify }}">{{ heading }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+{% endif %}
