@@ -1,0 +1,156 @@
+// Print stylesheet — case studies (and any page) as a clean paper handout.
+// Chrome loads lazy images when printing, so no special handling is needed
+// for loading="lazy" figures.
+
+// Hidden on screen; the print layer below reveals it.
+.print-title-block {
+  display: none;
+}
+
+@media print {
+  @page {
+    margin: 16mm 14mm;
+  }
+
+  // Force the paper palette even if the visitor printed from blueprint mode.
+  :root,
+  :root.blueprint {
+    --palette-paper: #FFFFFF;
+    --palette-paper-rgb: 255, 255, 255;
+    --palette-ink: #000000;
+    --palette-ink-rgb: 0, 0, 0;
+    --palette-gray-strong: #444444;
+    --palette-gray-mid: #777777;
+    --palette-cobalt: #1E40AF;
+    --palette-cobalt-rgb: 30, 64, 175;
+    --palette-cobalt-deep: #172F8F;
+    --palette-cobalt-wash: #FFFFFF;
+    --color-surface-raised: #FFFFFF;
+    --color-line: #999999;
+    --color-line-subtle: #DDDDDD;
+  }
+
+  html {
+    background: #fff;
+  }
+
+  // Chrome (screen chrome, not the browser): navigation, footer, controls
+  // and anything interactive-only has no place on paper.
+  .main-header,
+  .main-footer,
+  .project-toc,
+  .project-website,
+  .youtube-wrapper,
+  video,
+  .theme-toast,
+  .accessibility-skip,
+  // The title block owns the title on paper; the screen h1 would repeat it.
+  // (:has is fine here — every print-capable engine this decade supports it,
+  // and the fallback is a harmless repeated title.)
+  .main-content:has(.print-title-block) .page-title-wrapper {
+    display: none !important;
+  }
+
+  // Scroll-reveal safety: nothing may print at opacity 0.
+  .project-card,
+  .writing-item,
+  .project-summary,
+  .project-meta,
+  .project-outcomes,
+  .pullquote,
+  .section-label-row {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  // Flatten tinted surfaces; keep their structural borders.
+  .pullquote,
+  code, kbd, samp {
+    background: none !important;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  // Sensible page-break behaviour for long case studies.
+  h1, h2, h3, h4 {
+    break-after: avoid;
+  }
+
+  .image-wrapper,
+  figure,
+  .project-outcomes,
+  .pullquote,
+  .print-title-block {
+    break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  // -------------------------------------------------------------------
+  // Drawing title block — first thing on the printed page
+  // -------------------------------------------------------------------
+
+  .print-title-block {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1.5pt solid #000;
+    margin-bottom: 8mm;
+    break-after: avoid;
+
+    .ptb-cell {
+      display: flex;
+      flex-direction: column;
+      gap: 2pt;
+      padding: 5pt 7pt;
+      border-right: 0.75pt solid #000;
+      border-bottom: 0.75pt solid #000;
+
+      &:nth-child(4n),
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    .ptb-title {
+      grid-column: 1 / -1;
+      border-right: none;
+    }
+
+    // Last row: REV · SOURCE (source takes the remaining columns)
+    .ptb-source {
+      grid-column: 2 / -1;
+    }
+
+    .ptb-cell:nth-last-child(-n+2) {
+      border-bottom: none;
+    }
+
+    .ptb-label {
+      font-family: var(--font-mono);
+      font-size: 6.5pt;
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #555;
+    }
+
+    .ptb-value {
+      font-family: var(--font-mono);
+      font-size: 9pt;
+      line-height: 1.3;
+    }
+
+    .ptb-title .ptb-value {
+      font-family: var(--font-display);
+      font-size: 14pt;
+      font-weight: 600;
+    }
+  }
+}

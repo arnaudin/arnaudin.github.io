@@ -1,0 +1,41 @@
+{% comment %}
+CAD-style drawing title block, rendered only in print (see _sass/site/base/
+_print.scss — display: none on screen). Gives a printed case study the
+provenance a hiring panel needs when the page gets forwarded around.
+{% endcomment %}
+<aside class="print-title-block" aria-hidden="true">
+    <div class="ptb-cell ptb-title">
+        <span class="ptb-label">Title</span>
+        <span class="ptb-value">{{ page.title }}</span>
+    </div>
+    <div class="ptb-cell">
+        <span class="ptb-label">Drawn by</span>
+        <span class="ptb-value">{{ site.myname }}</span>
+    </div>
+    {% if page.role %}
+    <div class="ptb-cell">
+        <span class="ptb-label">Role</span>
+        <span class="ptb-value">{{ page.role }}</span>
+    </div>
+    {% endif %}
+    {% if page.client %}
+    <div class="ptb-cell">
+        <span class="ptb-label">Client</span>
+        <span class="ptb-value">{{ page.client }}</span>
+    </div>
+    {% endif %}
+    {% if page.time_period %}
+    <div class="ptb-cell">
+        <span class="ptb-label">Date</span>
+        <span class="ptb-value">{{ page.time_period }}</span>
+    </div>
+    {% endif %}
+    <div class="ptb-cell">
+        <span class="ptb-label">Rev</span>
+        <span class="ptb-value">{{ site.time | date: '%Y-%m-%d' }}</span>
+    </div>
+    <div class="ptb-cell ptb-source">
+        <span class="ptb-label">Source</span>
+        <span class="ptb-value">ryanarnaudin.com{{ page.url }}</span>
+    </div>
+</aside>
