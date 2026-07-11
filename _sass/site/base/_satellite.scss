@@ -1,0 +1,48 @@
+// ---------------------------------------------------------------------------
+// Satellite mode — keyboard easter egg (type "satellite" to toggle).
+//
+// Night-side earth: a black-to-deep-blue gradient ground with a single neon
+// yellow accent, a nod to the earth intelligence / GIS domain. Like blueprint
+// mode, it swaps the RAW palette layer only, so every semantic role and
+// legacy alias inherits automatically — the home-hero grid keyed off
+// --palette-cobalt-rgb becomes a faint yellow graticule for free.
+//
+// Contrast on the darkest ground (#000) through the deepest blue (#0A1C4A):
+// ink 15.3:1+ · gray-strong 7.9:1+ · accent 14.7:1+ — all WCAG AA.
+// ---------------------------------------------------------------------------
+
+:root.satellite {
+  --palette-paper: #050B1E;          // solid surface fallback (fixed nav scrim)
+  --palette-paper-rgb: 5, 11, 30;
+  --palette-ink: #F2F6FF;            // near-white text
+  --palette-ink-rgb: 242, 246, 255;
+  --palette-gray-strong: #A7B4D4;    // secondary text — AA on the ground
+  --palette-gray-mid: #46598A;       // borders / decorative linework
+  --palette-cobalt: #E6FF44;         // accent = neon yellow
+  --palette-cobalt-rgb: 230, 255, 68;
+  --palette-cobalt-deep: #CDE92B;    // hover / active
+  --palette-cobalt-wash: #0C1834;    // tint surfaces (pull quotes, code)
+
+  // Semantic roles that are hardcoded rather than palette-derived:
+  --color-surface-raised: #10204A;   // raised cards, deep blue step-up
+  --color-line: rgba(167, 180, 212, .32);
+  --color-line-subtle: rgba(167, 180, 212, .16);
+  --color-redline: #FF9B8F;          // review red, lifted for the dark ground
+}
+
+// The ground itself: orbital black at the top of the viewport falling into
+// deep blue at the bottom. Painted on a fixed, viewport-sized layer so the
+// sweep reads identically on every screen regardless of document height — a
+// plain body/html gradient would stretch across the whole document (case
+// studies run ~50,000px tall), flattening the sweep to near-black everywhere.
+// A fixed pseudo-element is GPU-composited, so unlike background-attachment:
+// fixed it doesn't repaint on scroll and isn't ignored by iOS Safari.
+// html keeps the solid --palette-paper surface as the underlying fallback.
+:root.satellite body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, #000000 0%, #030B22 45%, #0A1C4A 100%);
+  pointer-events: none;
+}

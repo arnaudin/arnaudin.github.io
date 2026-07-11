@@ -12,9 +12,12 @@
     margin: 16mm 14mm;
   }
 
-  // Force the paper palette even if the visitor printed from blueprint mode.
+  // Force the paper palette even if the visitor printed from an alternate
+  // mode (blueprint or satellite).
   :root,
-  :root.blueprint {
+  :root.blueprint,
+  :root.satellite {
+    background: #FFFFFF;
     --palette-paper: #FFFFFF;
     --palette-paper-rgb: 255, 255, 255;
     --palette-ink: #000000;
@@ -30,8 +33,14 @@
     --color-line-subtle: #DDDDDD;
   }
 
-  html {
+  html,
+  body {
     background: #fff;
+  }
+
+  // Kill the satellite ground layer so it never prints over the paper reset.
+  :root.satellite body::before {
+    display: none;
   }
 
   // Chrome (screen chrome, not the browser): navigation, footer, controls

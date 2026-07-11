@@ -1,6 +1,6 @@
 {% include /javascript/headspace.js %}
 {% include /javascript/menu.js %}
-{% include /javascript/blueprint.js %}
+{% include /javascript/theme.js %}
 
 Headspace(document.querySelector('[data-header]'), {
   startOffset: 90,
