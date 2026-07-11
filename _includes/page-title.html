@@ -1,16 +1,35 @@
 {% if page.layout == "post" or page.layout == "project" %}
-    <div class="page-title-wrapper">
-        {% if page.layout == "project" %}
-            {% comment %} Kicker row: label on the left, "On this page" section
-                links on the right — wayfinding as document chrome, kept out of
-                the content stack below. {% endcomment %}
-            <div class="page-title-kicker-row">
-                {% if page.ownership %}
-                    <p class="page-title-kicker meta-label">{% if page.ownership contains "Professional" %}Case study{% else %}Personal project{% endif %}</p>
+    {% if page.layout == "project" and page.hero_kicker %}
+        {% comment %} Hero variant: top-level pages built on the project
+            template (e.g. /process/) share the home-hero header — and its
+            graticule wash — with the other main pages. The "On this page"
+            links keep their seat in the kicker row. {% endcomment %}
+        <section class="home-hero home-hero-compact">
+            <div class="home-hero-inner">
+                <div class="home-hero-kicker-row">
+                    <p class="home-hero-kicker meta-label">{{ page.hero_kicker }}</p>
+                    {% include project-toc.html %}
+                </div>
+                <h1 class="home-hero-title">{{ page.title }}</h1>
+                {% if page.hero_lede %}
+                    <p class="home-hero-lede">{{ page.hero_lede }}</p>
                 {% endif %}
-                {% include project-toc.html %}
             </div>
-        {% endif %}
-        <h1 class="page-title type-level-1">{{ page.title }}</h1>
-    </div>
+        </section>
+    {% else %}
+        <div class="page-title-wrapper">
+            {% if page.layout == "project" %}
+                {% comment %} Kicker row: label on the left, "On this page" section
+                    links on the right — wayfinding as document chrome, kept out of
+                    the content stack below. {% endcomment %}
+                <div class="page-title-kicker-row">
+                    {% if page.ownership %}
+                        <p class="page-title-kicker meta-label">{% if page.ownership contains "Professional" %}Case study{% else %}Personal project{% endif %}</p>
+                    {% endif %}
+                    {% include project-toc.html %}
+                </div>
+            {% endif %}
+            <h1 class="page-title type-level-1">{{ page.title }}</h1>
+        </div>
+    {% endif %}
 {% endif %}

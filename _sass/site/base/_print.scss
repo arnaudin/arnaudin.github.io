@@ -55,8 +55,10 @@
   .accessibility-skip,
   // The title block owns the title on paper; the screen h1 would repeat it.
   // (:has is fine here — every print-capable engine this decade supports it,
-  // and the fallback is a harmless repeated title.)
-  .main-content:has(.print-title-block) .page-title-wrapper {
+  // and the fallback is a harmless repeated title.) .home-hero covers the
+  // hero variant of the project template (e.g. /process/).
+  .main-content:has(.print-title-block) .page-title-wrapper,
+  .main-content:has(.print-title-block) .home-hero {
     display: none !important;
   }
 

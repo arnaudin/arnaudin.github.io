@@ -68,6 +68,21 @@ $thumb-animation-ease-out: ease-in-out;
     margin-bottom: var(--space-6);
   }
 
+  // Kicker + "On this page" links on one line (hero variant of the project
+  // template, e.g. /process/) — same arrangement as .page-title-kicker-row.
+  .home-hero-kicker-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--space-2) var(--space-6);
+    margin-bottom: var(--space-6);
+
+    .home-hero-kicker {
+      margin-bottom: 0;
+    }
+  }
+
   .home-hero-title {
     font-size: var(--font-size-hero);
     max-width: 16ch;
