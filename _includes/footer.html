@@ -10,14 +10,19 @@
             <li><a href="https://linkedin.com/in/{{ site.social-username.linkedin }}">LinkedIn</a></li>
             <li><a href="https://github.com/{{ site.social-username.github }}">GitHub</a></li>
         </ul>
-        <p class="footer-colophon">Set in Space Grotesk, Inter &amp; IBM Plex Mono · Built with Jekyll</p>
         <p class="footer-license">
             <a href="https://github.com/arnaudin/arnaudin.github.io/blob/main/LICENSE" title="View the license for this site and its content">© {{ site.start-year }}–{{ site.time | date: '%Y' }} Ryan Arnaudin</a>
         </p>
-        <button class="theme-toggle" type="button" role="switch" aria-checked="false"
-                data-theme-toggle aria-label="Blueprint mode" title="Toggle blueprint mode">
-            <span class="theme-toggle-label" aria-hidden="true">Blueprint</span>
-            <span class="theme-toggle-track"><span class="theme-toggle-thumb"></span></span>
-        </button>
+        <div class="theme-select">
+            <span class="theme-select-label" id="footer-theme-label">Mode</span>
+            <div class="theme-select-options" role="radiogroup" aria-labelledby="footer-theme-label">
+                <button class="theme-option" type="button" role="radio" aria-checked="true" data-theme-set="paper">
+                    <span class="theme-swatch theme-swatch-paper" aria-hidden="true"></span>Paper</button>
+                <button class="theme-option" type="button" role="radio" aria-checked="false" data-theme-set="blueprint">
+                    <span class="theme-swatch theme-swatch-blueprint" aria-hidden="true"></span>Blueprint</button>
+                <button class="theme-option" type="button" role="radio" aria-checked="false" data-theme-set="satellite">
+                    <span class="theme-swatch theme-swatch-satellite" aria-hidden="true"></span>Satellite</button>
+            </div>
+        </div>
     </div>
 </footer>

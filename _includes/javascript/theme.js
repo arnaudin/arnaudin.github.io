@@ -1,9 +1,10 @@
-// Theme modes. Paper is the default; alternates are toggled by typing their
-// codeword anywhere outside a form field ("blueprint", "satellite"), and
-// blueprint also has the footer "Paper / Blueprint" switch. Modes are mutually
-// exclusive. The chosen mode persists in localStorage and is restored (before
-// first paint) by the inline script in <head>; this file keeps the footer
-// switch in sync and animates the cross-fade.
+// Theme modes. Paper is the default; alternates are blueprint and satellite.
+// Two ways to switch: any [data-theme-set] radio control (nav chips, footer
+// segmented control), or typing a mode's codeword anywhere outside a form
+// field ("blueprint", "satellite" — the original easter-egg path). Modes are
+// mutually exclusive. The chosen mode persists in localStorage and is
+// restored (before first paint) by the inline script in <head>; this file
+// keeps the controls in sync and animates the cross-fade.
 (function () {
   var KEY = 'ra-theme';
   var LEGACY_KEY = 'ra-blueprint'; // pre-satellite storage; cleared on write
@@ -22,11 +23,15 @@
     return 'paper';
   }
 
+  // Radio semantics with a roving tabindex: within each radiogroup exactly
+  // one option (the checked one) is in the tab order; arrows move within.
   function syncControls() {
-    var on = mode() === 'blueprint';
-    var switches = document.querySelectorAll('[data-theme-toggle]');
-    for (var i = 0; i < switches.length; i++) {
-      switches[i].setAttribute('aria-checked', on ? 'true' : 'false');
+    var current = mode();
+    var controls = document.querySelectorAll('[data-theme-set]');
+    for (var i = 0; i < controls.length; i++) {
+      var on = controls[i].getAttribute('data-theme-set') === current;
+      controls[i].setAttribute('aria-checked', on ? 'true' : 'false');
+      controls[i].setAttribute('tabindex', on ? '0' : '-1');
     }
   }
 
@@ -64,7 +69,7 @@
   }
 
   // next: desired mode. opts.toast surfaces the little confirmation (used for
-  // the hidden keyboard shortcuts; the footer switch shows its own state).
+  // the hidden keyboard shortcuts; the visible controls show their own state).
   function setMode(next, opts) {
     opts = opts || {};
     if (next === mode()) { syncControls(); return; }
@@ -72,14 +77,31 @@
     if (opts.toast) toast(next);
   }
 
-  // Keep the switch in sync with whatever the head script already applied.
+  // Keep controls in sync with whatever the head script already applied.
   syncControls();
 
-  // Footer switch: paper <-> blueprint (from satellite it lands on blueprint).
+  // Selector controls (nav chips + footer segmented control).
   document.addEventListener('click', function (e) {
-    var sw = e.target.closest ? e.target.closest('[data-theme-toggle]') : null;
-    if (!sw) return;
-    setMode(mode() === 'blueprint' ? 'paper' : 'blueprint', { animate: true });
+    var opt = e.target.closest ? e.target.closest('[data-theme-set]') : null;
+    if (!opt) return;
+    setMode(opt.getAttribute('data-theme-set'), { animate: true });
+  });
+
+  // Arrow keys move and select within a radiogroup (standard radio behavior).
+  document.addEventListener('keydown', function (e) {
+    var el = e.target;
+    if (!el || !el.getAttribute || el.getAttribute('data-theme-set') == null) return;
+    var delta = (e.key === 'ArrowRight' || e.key === 'ArrowDown') ? 1 :
+                (e.key === 'ArrowLeft' || e.key === 'ArrowUp') ? -1 : 0;
+    if (!delta) return;
+    var group = el.closest('[role="radiogroup"]');
+    if (!group) return;
+    var opts = group.querySelectorAll('[data-theme-set]');
+    var idx = Array.prototype.indexOf.call(opts, el);
+    var next = opts[(idx + delta + opts.length) % opts.length];
+    e.preventDefault();
+    next.focus();
+    setMode(next.getAttribute('data-theme-set'), { animate: true });
   });
 
   // Keyboard easter eggs: typing a codeword toggles its mode.

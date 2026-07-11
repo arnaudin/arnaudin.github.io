@@ -1,0 +1,174 @@
+@use "../base/media-queries";
+
+// ---------------------------------------------------------------------------
+// Three-way theme selector — Paper / Blueprint / Satellite.
+//
+// One control at two densities, both driven by [data-theme-set] in theme.js:
+//  - .theme-chips  compact basemap-style dots in the nav (placement in _nav)
+//  - .theme-select labeled segmented control in the footer (position in _footer)
+//
+// Swatch colors are hardcoded on purpose: each option is a paint chip of its
+// TARGET theme — ground plus accent dot — regardless of the active theme, so
+// the control doubles as a legend for what you're about to pick.
+// ---------------------------------------------------------------------------
+
+// Nav chips — 24px touch-friendly in the mobile menu, 18px inline on desktop.
+.theme-chip {
+  position: relative;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid var(--color-line);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border-color 150ms ease-out, box-shadow 150ms ease-out;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    margin: -3px 0 0 -3px;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    border-color: var(--color-text-secondary);
+  }
+
+  &[aria-checked="true"] {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 1px var(--color-accent);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-focus-ring);
+    outline-offset: 2px;
+  }
+
+  @include media-queries.grid-media(tablet) {
+    width: 18px;
+    height: 18px;
+
+    &::after {
+      width: 5px;
+      height: 5px;
+      margin: -2.5px 0 0 -2.5px;
+    }
+  }
+}
+
+.theme-chip-paper {
+  background: #FAF9F7;
+  &::after { background: #1E40AF; }
+}
+
+.theme-chip-blueprint {
+  background: #0A2463;
+  &::after { background: #FFFFFF; }
+}
+
+.theme-chip-satellite {
+  background: linear-gradient(160deg, #000000, #0A1C4A);
+  &::after { background: #E6FF44; }
+}
+
+// Footer segmented control.
+.theme-select {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.theme-select-label {
+  color: var(--color-text-secondary);
+}
+
+.theme-select-options {
+  display: inline-flex;
+  border: 1px solid var(--color-line-subtle);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.theme-option {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  border: 0;
+  border-right: 1px solid var(--color-line-subtle);
+  background: none;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-meta);
+  letter-spacing: var(--letter-spacing-mono-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: color 150ms ease-out, background-color 150ms ease-out,
+              box-shadow 150ms ease-out;
+
+  &:last-child {
+    border-right: 0;
+  }
+
+  &:hover {
+    color: var(--color-text);
+  }
+
+  &[aria-checked="true"] {
+    color: var(--color-text);
+    background: var(--color-accent-wash);
+    box-shadow: inset 0 -2px 0 var(--color-accent);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-focus-ring);
+    outline-offset: -2px;
+  }
+}
+
+.theme-swatch {
+  position: relative;
+  box-sizing: border-box;
+  flex: none;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--color-line-subtle);
+  border-radius: 2px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+  }
+}
+
+.theme-swatch-paper {
+  background: #FAF9F7;
+  &::after { background: #1E40AF; }
+}
+
+.theme-swatch-blueprint {
+  background: #0A2463;
+  &::after { background: #FFFFFF; }
+}
+
+.theme-swatch-satellite {
+  background: linear-gradient(160deg, #000000, #0A1C4A);
+  &::after { background: #E6FF44; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-chip,
+  .theme-option {
+    transition: none;
+  }
+}
