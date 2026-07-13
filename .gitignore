@@ -11,3 +11,4 @@ _site/
 # bundler
 vendor/
 .bundle/
+.claude/
