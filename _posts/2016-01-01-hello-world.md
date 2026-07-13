@@ -7,6 +7,7 @@ author: Ryan Arnaudin
 blurb: Welcome to my new website. Expect updates in the coming weeks.
 image: images/black-thumbnail.png
 priority: 0.6
+published: false
 ---
 ## > Hello World 
 
