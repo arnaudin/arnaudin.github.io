@@ -7,6 +7,7 @@ author: Ryan Arnaudin
 blurb: Getting PhotoSwipe lightbox gallery setup on my Jekyll blog
 image: images/black-thumbnail.jpg
 priority: 0.6
+published: false
 ---
 These are notes on setting up the lightbox gallery on my site, which may help others, or me in the future.
 

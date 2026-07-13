@@ -7,6 +7,7 @@ author: Ryan Arnaudin
 blurb: Planning to refresh my personal site and portfolio
 image: images/black-thumbnail.jpg
 priority: 0.6
+published: false
 ---
 I’ll be refreshing and overhauling my personal site at [https://ryanarnaudin.com/](https://ryanarnaudin.com/) in the coming weeks.
 
