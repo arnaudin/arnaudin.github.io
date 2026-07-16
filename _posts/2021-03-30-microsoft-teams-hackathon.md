@@ -8,11 +8,11 @@ blurb: Participating in the Microsoft Teams App Development Challenge 2021
 image: images/black-thumbnail.jpg
 priority: 0.6
 ---
-Earlier this month along with the Engineering Lead I have been working with, I submitted an app to Microsoft's [Teams App Development Challenge 2021](https://microsoftteams2021.devpost.com/) on behalf of Brightidea.
+I designed and shipped a Brightidea integration for Microsoft Teams that lets people capture ideas without leaving the conversation, turning any Teams message into a tracked idea so good thinking doesn't get lost in the scroll. To pressure-test it right before launch, the Engineering Lead and I entered it in Microsoft's [Teams App Development Challenge 2021](https://microsoftteams2021.devpost.com/) on behalf of Brightidea.
 
 ![Brightidea for Microsoft Teams on Devpost](/images/posts/brightidea-for-teams/teams-devpost-submission.png){:.img-full-width}
 
-We were just about done with our first cut of the integration when the review team from MS let us know this hackathon was currently accepting submissions on Devpost. Creating the submission didn't take much additional work, and we thought this might help get us some exposure (especially if we placed) since the integration launch would also coincide with a new [Idea Box free trial](https://www.brightidea.com/start-ideabox-trial/).
+We were just wrapping up our first complete build of the integration when the review team from MS let us know this hackathon was accepting submissions on Devpost. Creating the submission didn't take much additional work, and we thought this might help get us some exposure (especially if we placed) since the integration launch would also coincide with a new [Idea Box free trial](https://www.brightidea.com/start-ideabox-trial/).
 
 You can check out [our submission on Devpost](https://devpost.com/software/brightidea).
 
@@ -40,6 +40,6 @@ You can check out [our submission on Devpost](https://devpost.com/software/brigh
            </figure>
 </div>
 
-Alas, we didn't end up winning, but it was a good experience that made our app that much better by helping us polish our thinking, materials, and messaging before our internal & external product releases. 
+We didn't place, but that was never really the point. Forcing the app through a public submission sharpened our thinking, materials, and messaging right before the internal and external launches, which is exactly what I wanted out of it. The integration shipped alongside a new [Idea Box free trial](https://www.brightidea.com/start-ideabox-trial/). 
 
-As a side note, it was also an interesting exercise to use the Devpost platform as a hackathon participant, considering we offer similar tools in our [Hack](https://www.brightidea.com/product/hack/) app. The main difference is that our platform is built primarily for running challenges within a company, whereas Devpost is public. 
+Using the Devpost platform as a hackathon participant was also an interesting exercise, considering we offer similar tools in our [Hack](https://www.brightidea.com/product/hack/) app. The main difference is that our platform is built primarily for running challenges within a company, whereas Devpost is public. 
