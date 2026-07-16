@@ -7,6 +7,7 @@ author: Ryan Arnaudin
 blurb: Successfully completed LUMA Institute’s “90 Days to Impact” Practitioner Development Program
 image: images/black-thumbnail.jpg
 priority: 0.6
+published: false
 ---
 I've attended three LUMA trainings in Human-Centered Design (Fundamentals, Advancing, and Facilitation), and have been practicing the methods whenever possible in my UX Design work at Autodesk, including Autodesk University 2016.
 
