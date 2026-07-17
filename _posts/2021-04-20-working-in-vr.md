@@ -12,18 +12,14 @@ I picked up an Oculus Quest 2 toward the end of last year at the recommendation 
 
 This post will focus on the potential of working in VR with today's consumer hardware and software.
 
-![Meeting in VR](/images/posts/vr-working/vr-cover.png){:.img-full-width}
+{% include figure.html url="/posts/vr-working/vr-cover.png" alt="Meeting in VR" class="img-full-width" eager=true %}
 
 ## Meetings in VR
 With the ongoing pandemic, technology companies like ours continue working completely from home, so we are all used to having our days speckled with video conferences. Can meeting in virtual reality spice things up?
 
 <div class="layout layout-2col">
-    <figure class="image-wrapper ">
-        <img class="" src="/images/posts/vr-working/vr-table.png" alt="Meeting in a VR boardroom">
-    </figure>
-    <figure class="image-wrapper ">
-        <img class="" src="/images/posts/vr-working/vr-boardroom.png" alt="Meeting in a VR boardroom">
-    </figure>
+{% include figure.html url="/posts/vr-working/vr-table.png" alt="Meeting around a table in VR" sizes="(min-width: 700px) 50vw, 100vw" %}
+{% include figure.html url="/posts/vr-working/vr-boardroom.png" alt="Meeting in a VR boardroom" sizes="(min-width: 700px) 50vw, 100vw" %}
 </div>
 
 Current software conveniently lets you meet with other people in VR as well as others from Windows or Mac. I met 1:1 with both in VR and with a larger group mixed between PC & VR.
@@ -35,12 +31,8 @@ Attendees in VR will enjoy an increased sense of presence with others, as oppose
 I found the variety of virtual environments helped set the tone of a conversation. You can choose to gather around a boardroom table, in an outdoor space, or in a recreational environment. As a spatial thinker, I also found the 3D space and environmental cues to make virtual meetings more memorable and discernible from each other. A day (or weeks, or months!) of video conferences can quickly blur together. Less so in VR.
 
 <div class="layout layout-2col">
-    <figure class="image-wrapper ">
-        <img class="" src="/images/posts/vr-working/vr-convo.png" alt="Having a conversation in VR">
-    </figure>
-    <figure class="image-wrapper ">
-        <img class="" src="/images/posts/vr-working/vr-watching-video.png" alt="Watching a video in VR">
-    </figure>
+{% include figure.html url="/posts/vr-working/vr-convo.png" alt="Having a conversation in VR" sizes="(min-width: 700px) 50vw, 100vw" %}
+{% include figure.html url="/posts/vr-working/vr-watching-video.png" alt="Watching a video in VR" sizes="(min-width: 700px) 50vw, 100vw" %}
 </div>
 
 **Cons**
@@ -54,9 +46,7 @@ Along those lines, we are all losing resolution over video, which in my opinion 
 How about working independently in VR? I was pleasantly surprised by how far this experience has progressed, but it still has a long way to go.
 
 <div class="layout layout-1col-narrow">
-    <figure class="image-wrapper ">
-        <img class="" src="/images/posts/vr-working/vr-desktop.png" alt="Working on three monitors in VR">
-    </figure>
+{% include figure.html url="/posts/vr-working/vr-desktop.png" alt="Working on three monitors in VR" %}
 </div>
 
 **Pros**
@@ -75,4 +65,4 @@ Finally, it is obvious an hour in VR is more physically and mentally fatiguing t
 
 The Quest 2 technology is worth trying out if you have a personal or professional interest in virtual reality and the evolution of work. That said, the current hardware and software have not yet evolved to a place where I can see myself using it regularly. Outside of meetings, I'd question whether I could be productive at all in VR. I am most interested in seeing where the next generation of devices can take us, especially in terms of presence and human-computer interaction. 
 
-![Meeting in VR](/images/posts/vr-working/vr-gathered-round.png){:.img-full-width}
+{% include figure.html url="/posts/vr-working/vr-gathered-round.png" alt="Gathered around in VR" class="img-full-width" %}

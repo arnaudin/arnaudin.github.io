@@ -14,28 +14,28 @@ Being my first time in a shaping room, and with the goal of having a kick-ass bo
 
 Working with such an experienced craftsman was a privilege, and Gordon was super patient to answer all my questions and explain everything in detail as we went along.
 
-![Hand shaped by Gordon Guptill and Ryan Arnaudin](/images/posts/surfboard-shaping/surfboard-names.jpg)
+{% include figure.html url="/posts/surfboard-shaping/surfboard-names.jpg" caption="Hand shaped by Gordon Guptill and Ryan Arnaudin" %}
 
 After carefully considering everything from my experience level to the waves I would be riding to my style & preferences, we picked a foam blank and began to define the outline of the board.
 
-![Starting off with a foam blank](/images/posts/surfboard-shaping/shaping-blank-vertical-combo.jpg){:.img-75vh .img-center}
+{% include figure.html url="/posts/surfboard-shaping/shaping-blank-vertical-combo.jpg" caption="Starting off with a foam blank" class="img-75vh img-center" %}
 
-![Planing the blank](/images/posts/surfboard-shaping/shaping-planing.jpg)
+{% include figure.html url="/posts/surfboard-shaping/shaping-planing.jpg" caption="Planing the blank" %}
 
-![Tracing the profile](/images/posts/surfboard-shaping/shaping-profile-combo.jpg){:.img-75vh .img-center}
+{% include figure.html url="/posts/surfboard-shaping/shaping-profile-combo.jpg" caption="Tracing the profile" class="img-75vh img-center" %}
 
 Refinements are made to the form from different angles with a variety of tools
 
-![Using the sureform](/images/posts/surfboard-shaping/shaping-sureform-rail.jpg)
+{% include figure.html url="/posts/surfboard-shaping/shaping-sureform-rail.jpg" caption="Using the Surform on the rail" %}
 
-![Sanding](/images/posts/surfboard-shaping/shaping-sanding-rail.jpg)
+{% include figure.html url="/posts/surfboard-shaping/shaping-sanding-rail.jpg" caption="Sanding the rail" %}
 
-![Using the sureform](/images/posts/surfboard-shaping/shaping-sureform-bottom.jpg)
+{% include figure.html url="/posts/surfboard-shaping/shaping-sureform-bottom.jpg" caption="Using the Surform on the bottom" %}
 
-![Using the sureform](/images/posts/surfboard-shaping/shaping-sureform-deck.jpg)
+{% include figure.html url="/posts/surfboard-shaping/shaping-sureform-deck.jpg" caption="Using the Surform on the deck" %}
 
 I liked the idea of the board being highly visible in the dark Northern California waters and frequent fog, so went with a bright orange color. Here is the finished board after being glassed at Sunset Shapers:
 
-![Bottom](/images/posts/surfboard-shaping/finished-bottom-combo.jpg){:.img-75vh .img-center}
+{% include figure.html url="/posts/surfboard-shaping/finished-bottom-combo.jpg" caption="The finished board, bottom" class="img-75vh img-center" %}
 
-![Finished composite](/images/posts/surfboard-shaping/finished-side-combo.jpg)
+{% include figure.html url="/posts/surfboard-shaping/finished-side-combo.jpg" caption="The finished board, side profile" %}

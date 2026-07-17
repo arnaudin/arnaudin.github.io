@@ -14,7 +14,7 @@ The way this came about is that I was working on a customer CFD application that
 
 Fusion 360 apps were relatively new, so I thought it would be a fun exercise to wrap dgorissen's script in a Fusion app. I built a simple UI, drew up some graphics, and packaged an app for anyone to use! 
 
-![Fusion Airfoil App Screenshot](/images/posts/airfoil-app/airfoil-app-screenshot.jpg)
+{% include figure.html url="/posts/airfoil-app/airfoil-app-screenshot.jpg" caption="The airfoil app running in Fusion 360" alt="Fusion Airfoil App Screenshot" %}
 
 [Fork on Github](https://github.com/arnaudin/fusion360-airfoil-generator)
 
@@ -22,5 +22,4 @@ Fusion 360 apps were relatively new, so I thought it would be a fun exercise to 
 
 This airfoil app has been a *featured app* and a *most popular app* in the Fusion app store with over 1100 downloads as of December 2016.
 
-A 3D extrusion of the airfoil sketch gets us a wing:
-![Fusion Airfoil App Rendering](/images/posts/airfoil-app/airfoil-app-rendering.png)
+{% include figure.html url="/posts/airfoil-app/airfoil-app-rendering.png" caption="A 3D extrusion of the airfoil sketch gets us a wing" alt="Fusion Airfoil App Rendering" %}

@@ -184,18 +184,9 @@
     margin-bottom: var(--space-8);
 
     figcaption {
+      @extend %figcaption-numbered;
       margin-top: var(--space-3);
       max-width: var(--measure-prose);
-
-      &::before {
-        counter-increment: fig;
-        content: "Fig. " counter(fig, decimal-leading-zero);
-        color: var(--color-accent);
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: var(--letter-spacing-mono-label);
-        margin-right: var(--space-2);
-      }
     }
   }
 

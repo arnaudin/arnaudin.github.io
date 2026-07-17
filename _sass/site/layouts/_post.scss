@@ -1,8 +1,10 @@
+@use "../base/extends";
 @use "../base/grid";
 @use "../base/media-queries";
 @use "../base/mixins-functions";
 
 .post-wrapper {
+  counter-reset: fig;
 
   // Date line under the title
   .post-info {
@@ -71,8 +73,10 @@
     margin-bottom: var(--paragraph-spacing);
 
     figcaption {
+      @extend %figcaption-numbered;
       margin-top: mixins-functions.rem(12px);
       margin-bottom: mixins-functions.rem(16px);
+      max-width: var(--measure-prose);
     }
   }
 }
