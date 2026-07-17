@@ -39,7 +39,7 @@ Honesty requires the other half. Wearing both hats, my design work got thinner. 
 
 I caught myself designing the version I already knew we'd build — skipping the exploration that sometimes finds the version nobody asked for. That's the quiet tax of the hybrid role, and it's why, given the choice, I returned to design and partnered with PMs instead: the *tension* between the roles is a feature. The healthiest products I've worked on came from a designer and a PM who each did their own job well and debated in the open.
 
-## Why this matters if you're hiring
+## Hiring your first designer?
 
 Early-stage founders often need one person to cover both roles for a while. I've done it, it's doable, and knowing the PM job makes me a far better partner to whoever eventually owns it. But if you're hiring a designer who's never owned a roadmap, know what you're getting; and if you're hiring one who refuses to ever think in trade-offs and dates, know that too.
 
