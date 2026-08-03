@@ -45,9 +45,9 @@ The source is a spreadsheet that I've added to for years, ever since I first cam
 
 Underneath, on initial build it's nearly 300 bands across 200-ish nights, about 60 venues, back to 2001. Most of the bands (~80%) I've seen exactly once. That's the real shape of going to shows (unless you're a Phish fan), and it's why the layout reshuffles on every load. The bands I've seen repeatedly stay large, because that count is the only information on the page, and everyone else trades places and gets their turn at being featured.
 
-That's the whole point, really. Supporting bands who are sharing their art and expression is something I'd recommend to anyone. This artifact in turn is a functional art piece that serves as one way for the memories to live on. Clicking the right name can transport me back to a Tuesday night in 2009.
+That's the whole point, really. Supporting bands who are sharing their art and expression is worth doing, and this is what I have to show for it...a functional art piece where those nights keep going. Clicking the right name can transport me back to a Tuesday night in 2009.
 
-On that note, I'd like to continue pushing this project further and livening up those memories, by eventually integrating my photos and videos, currently deep in the archives. 
+Next I want to pull in the photos and videos still buried in my archives, so the nights come back with sights and sound.
 
 Despite all the time I spent figuring out how to get this right, the implementation stays simple. No framework, no dependencies, no runtime requests. Static HTML, CSS, and ES modules, plus self-hosted open-license type.
 
