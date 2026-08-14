@@ -13,11 +13,13 @@
   }
 
   // Force the paper palette even if the visitor printed from an alternate
-  // mode (blueprint or satellite).
+  // mode (blueprint, satellite, or map).
   :root,
   :root.blueprint,
-  :root.satellite {
+  :root.satellite,
+  :root.map {
     background: #FFFFFF;
+    background-image: none;
     --palette-paper: #FFFFFF;
     --palette-paper-rgb: 255, 255, 255;
     --palette-ink: #000000;
@@ -41,6 +43,17 @@
   // Kill the satellite ground layer so it never prints over the paper reset.
   :root.satellite body::before {
     display: none;
+  }
+
+  // Map mode paints headings white for the dark ground; on paper that would
+  // print invisible.
+  :root.map h1,
+  :root.map h2,
+  :root.map h3,
+  :root.map h4,
+  :root.map h5,
+  :root.map h6 {
+    color: #000000;
   }
 
   // Chrome (screen chrome, not the browser): navigation, footer, controls

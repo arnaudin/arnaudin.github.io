@@ -8,7 +8,10 @@
 (function () {
   var KEY = 'ra-theme';
   var LEGACY_KEY = 'ra-blueprint'; // pre-satellite storage; cleared on write
-  var MODES = ['blueprint', 'satellite']; // codeword doubles as the root class
+  // Codeword doubles as the root class. 'map' is experimental — reachable by
+  // codeword only, with no control in the selector UI yet; syncControls()
+  // simply leaves every radio unchecked while it's active.
+  var MODES = ['blueprint', 'satellite', 'map'];
   var root = document.documentElement;
   var buf = '';
   var bufMax = 0;

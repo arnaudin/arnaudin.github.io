@@ -1,0 +1,61 @@
+// ---------------------------------------------------------------------------
+// Map mode — keyboard easter egg (type "map" to toggle). EXPERIMENTAL: no
+// visible control yet, deliberately keyword-only.
+//
+// A cool-blue variation on satellite, drawn from the Mapbox blog's dark mode:
+// a near-black neutral ground with a deep-navy band at the top of the page,
+// white headings over cool blue-gray body copy, and a saturated blue carrying
+// every accent (where satellite uses neon yellow). Values sampled from
+// mapbox.com/blog in dark mode.
+//
+// Like the other modes this swaps the RAW palette layer, so every semantic
+// role and legacy alias inherits — the hero graticule keyed off
+// --palette-cobalt-rgb becomes a faint blue grid, which is on the nose here.
+//
+// Contrast on the ground (#0E1012) / navy band (#001832):
+// ink 14.8:1 / 13.8:1 · headings 19.1:1 / 17.9:1 · secondary 7.5:1 / 7.0:1 ·
+// accent 5.9:1 / 5.5:1 — all WCAG AA. Mapbox's own #007AFC measures 4.4:1 on
+// their navy, just under AA, so the accent here is lifted a step and #007AFC
+// is kept for hover/active where it sits against brighter neighbors.
+// ---------------------------------------------------------------------------
+
+:root.map {
+  --palette-paper: #0E1012;          // Mapbox ground (neutral near-black)
+  --palette-paper-rgb: 14, 16, 18;
+  --palette-ink: #DCE3ED;            // body copy — cool, not pure white
+  --palette-ink-rgb: 220, 227, 237;
+  --palette-gray-strong: #98A3B4;    // secondary text — AA on both grounds
+  --palette-gray-mid: #444D5A;       // borders / decorative linework
+  --palette-cobalt: #2E8FFF;         // accent = Mapbox blue, lifted for AA
+  --palette-cobalt-rgb: 46, 143, 255;
+  --palette-cobalt-deep: #66B0FF;    // hover / active — brighter on dark
+  --palette-cobalt-wash: #0E2036;    // tint surfaces (pull quotes, code)
+
+  // Semantic roles that are hardcoded rather than palette-derived:
+  --color-surface-raised: #171A20;   // raised cards, a step off the ground
+  --color-line: rgba(152, 163, 180, .30);
+  --color-line-subtle: rgba(152, 163, 180, .15);
+  --color-redline: #FF9B8F;          // review red, lifted for the dark ground
+
+  // The ground: a deep-navy band resolving into the neutral near-black by the
+  // end of the hero, as on the Mapbox blog. Sized in px rather than % so it
+  // stays a masthead band instead of stretching over the whole document (case
+  // studies run ~50,000px tall); no-repeat stops it tiling down the page.
+  // Not fixed-attachment — it scrolls away like the reference.
+  background-color: #0E1012;
+  background-image: linear-gradient(180deg, #001832 0%, #0E1012 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 680px;
+}
+
+// Mapbox's most recognizable typographic move after the blue: pure-white
+// headings over cool blue-gray body copy. The palette layer alone can't
+// express it, since --color-text drives both.
+:root.map h1,
+:root.map h2,
+:root.map h3,
+:root.map h4,
+:root.map h5,
+:root.map h6 {
+  color: #FFFFFF;
+}
