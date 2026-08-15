@@ -53,6 +53,7 @@ jobs:
           protocol: ftps            # encrypted FTP over TLS; Namecheap supports this
           local-dir: ./_site/       # trailing slash required
           server-dir: ./            # FTP login already lands in /home/ryanvc/public_html
+          timeout: 600000           # 10 min; default 30s is too short for the big first sync
           dry-run: false
           # The action only manages files it has uploaded (tracked in
           # .ftp-deploy-sync-state.json on the server), so pre-existing directories it
