@@ -1,0 +1,92 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+}
+p, div, button {
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body{
+	font-family: 'Roboto', sans-serif;
+	height:100%;
+}
+
+
+#wrap {
+    min-height:100%;
+    width: 100%;
+	overflow: hidden;
+    }
+	
+body{
+	
+	padding:0px;
+	background: url("../images/coyote_sunrise.jpg") no-repeat;
+	background-color:black !important;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	overflow-x: hidden;
+}
+
+h1{
+	color:white;
+}
+
+
+a.bail-link {
+	color: #fff;
+	position: static;
+
+}
+
+.row {
+	background-color: rgba(0,0,0,.5);
+}
+
+.col-lg-12 {
+	margin: 2em;
+}
+
+.content {
+	max-height:1000px;
+    overflow: hidden;
+	min-height: 200px;
+
+}
+
+.footer {
+	position: relative;
+    bottom: 0px;
+    background-color:Black;
+}
+
+.pushfoot, .push {
+    height: 123px; 
+}
+
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -123px;
+    }
+
+@media(max-width: 991px) {
+	h1{
+		font-size:30px;
+	}
+}
+
+@media (max-width: 320px) {
+	h1{
+		font-size: 30px !important;
+	
+	}
+	.container {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+	
+}
+
