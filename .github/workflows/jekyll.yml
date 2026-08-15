@@ -1,6 +1,17 @@
 # Build the site with the repo's own Gemfile (Jekyll 4.4 + Dart Sass)
-# and deploy to GitHub Pages. Requires Pages source set to "GitHub Actions".
-name: Deploy Jekyll site to Pages
+# and deploy the generated _site/ to Namecheap over FTPS.
+#
+# SETUP (one time):
+#   1. In GitHub: repo Settings -> Secrets and variables -> Actions -> New repository secret.
+#      Add these three secrets (values come from your Namecheap cPanel FTP account):
+#        FTP_SERVER    e.g. ftp.ryanarnaudin.com   (or the server hostname cPanel shows)
+#        FTP_USERNAME  your FTP username
+#        FTP_PASSWORD  your FTP password
+#   2. Confirm SERVER_DIR below points at the exact folder your site is served from.
+#   3. First run: leave `dry-run: true` (already set). Push, open the Actions log, and
+#      verify it only lists YOUR site files under server-dir and does NOT touch email /
+#      file-sharing / demo directories. Then flip `dry-run` to false and push again.
+name: Build and deploy to Namecheap
 
 on:
   push:
@@ -9,41 +20,49 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
+# Never let two deploys FTP at the same time.
 concurrency:
-  group: "pages"
+  group: "namecheap-deploy"
   cancel-in-progress: false
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          # Ruby version comes from .ruby-version
+          # Ruby version comes from .ruby-version; bundler-cache installs & caches gems.
           bundler-cache: true
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
+
       - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Deploy to Namecheap via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps            # encrypted FTP over TLS; Namecheap supports this
+          local-dir: ./_site/       # trailing slash required
+          server-dir: ./            # FTP login already lands in /home/ryanvc/public_html
+          dry-run: true             # <-- first run only; set to false once verified
+          # The action only manages files it has uploaded (tracked in
+          # .ftp-deploy-sync-state.json on the server), so pre-existing directories it
+          # never touched are left alone. The excludes below are belt-and-suspenders:
+          # add any sibling folders that live in the same web root and must never be
+          # touched (your file-sharing dirs, demo apps, etc.).
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.DS_Store
+            # files/**
+            # demos/**
+            # webmail/**
