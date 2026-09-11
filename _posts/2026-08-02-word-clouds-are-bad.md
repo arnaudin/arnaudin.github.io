@@ -51,6 +51,6 @@ Next I want to pull in the photos and videos still buried in my archives, so the
 
 Despite all the time I spent figuring out how to get this right, the implementation stays simple. No framework, no dependencies, no runtime requests. Static HTML, CSS, and ES modules, plus self-hosted open-license type.
 
-**👉 [See the wall](/shows/)**.
+**👉 [See the wall](/sites/band-cloud/)**.
 
 Click any name, or hit `/` to search for a band or venue. The code is MIT on [GitHub as band-cloud](https://github.com/arnaudin/band-cloud); the show history is obviously unique to me, so the repo builds against invented sample data.
