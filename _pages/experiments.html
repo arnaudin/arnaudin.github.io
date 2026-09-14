@@ -1,0 +1,32 @@
+---
+layout: page
+title: Experiments
+title_override: Ryan Arnaudin - Experiments
+description: "Small standalone sites and interactive toys. Built fast, mostly for fun, occasionally useful."
+permalink: /experiments/
+sitemap: false
+---
+
+{% comment %} Staged page: not in the nav or footer yet, and `sitemap: false`
+    keeps it out of sitemap.xml and adds the noindex meta (see head.html).
+    Entries come from _data/experiments.yml. {% endcomment %}
+
+<section class="home-hero home-hero-compact">
+    <div class="home-hero-inner">
+        <p class="home-hero-kicker meta-label">Off the clock</p>
+        <h1 class="home-hero-title">Experiments</h1>
+        <p class="home-hero-lede">Small standalone sites and interactive toys. Built fast, mostly for fun, occasionally useful.</p>
+    </div>
+</section>
+
+<section class="projects-section" aria-labelledby="live-experiments">
+    <div class="section-label-row">
+        <h2 class="section-label" id="live-experiments">Live experiments</h2>
+    </div>
+
+    <div class="projects">
+        {% for experiment in site.data.experiments %}
+            {% include project-card.html project=experiment eager=forloop.first %}
+        {% endfor %}
+    </div>
+</section>

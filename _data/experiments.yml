@@ -1,0 +1,23 @@
+# Experiments listed on /experiments/ — small standalone sites under /sites/
+# (copied through by Jekyll as-is) plus other one-off interactive builds.
+# Newest first. Each entry is rendered with _includes/project-card.html, so the
+# keys mirror project front matter: url, title, description, thumbnail
+# (relative to /images), time_period. Thumbnails are 4:3 and go through
+# tools/optimize-images.sh like everything else.
+- title: Virtual Wind Tunnel
+  description: A real 3D lattice-Boltzmann solver on the GPU, your own model dropped in, and a drag coefficient you can check against the textbook.
+  url: /wind-tunnel/
+  thumbnail: /projects/virtual-wind-tunnel/wt-hero-smoke.jpg
+  time_period: July 2026
+
+- title: Band Cloud
+  description: Every band I've seen live, as a word cloud. Click any name for when, where, and who else was on the bill that night.
+  url: /sites/band-cloud/
+  thumbnail: /experiments/band-cloud.jpg
+  time_period: August 2026
+
+- title: Coyote Bail Squad
+  description: A random excuse generator for skipping tomorrow's group ride. Submit your own.
+  url: /sites/coyotebailsquad/
+  thumbnail: /experiments/coyotebailsquad.jpg
+  time_period: 2015
