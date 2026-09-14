@@ -39,6 +39,16 @@
   h: 450
   webp: true
   w900: false
+"/experiments/band-cloud.jpg":
+  w: 1200
+  h: 900
+  webp: true
+  w900: false
+"/experiments/coyotebailsquad.jpg":
+  w: 1200
+  h: 900
+  webp: true
+  w900: false
 "/posts/airfoil-app/airfoil-app-rendering.png":
   w: 1000
   h: 600
@@ -47,6 +57,21 @@
 "/posts/airfoil-app/airfoil-app-screenshot.jpg":
   w: 1000
   h: 600
+  webp: true
+  w900: false
+"/posts/band-cloud/detail.jpg":
+  w: 1440
+  h: 900
+  webp: true
+  w900: true
+"/posts/band-cloud/wall-ink.jpg":
+  w: 1440
+  h: 900
+  webp: true
+  w900: true
+"/posts/band-cloud/wall-marker.jpg":
+  w: 900
+  h: 562
   webp: true
   w900: false
 "/posts/books/shape-of-design/the-shape-of-design-cover.jpg":
@@ -1247,6 +1272,41 @@
 "/projects/thangs/thangs-squint-test.png":
   w: 1552
   h: 1022
+  webp: true
+  w900: true
+"/projects/virtual-wind-tunnel/wt-centerline.jpg":
+  w: 1600
+  h: 900
+  webp: true
+  w900: true
+"/projects/virtual-wind-tunnel/wt-hero-smoke.jpg":
+  w: 1600
+  h: 900
+  webp: true
+  w900: true
+"/projects/virtual-wind-tunnel/wt-oil.jpg":
+  w: 1600
+  h: 900
+  webp: true
+  w900: true
+"/projects/virtual-wind-tunnel/wt-pressure.jpg":
+  w: 1600
+  h: 900
+  webp: true
+  w900: true
+"/projects/virtual-wind-tunnel/wt-ribbons.jpg":
+  w: 1600
+  h: 900
+  webp: true
+  w900: true
+"/projects/virtual-wind-tunnel/wt-vortices.jpg":
+  w: 1600
+  h: 900
+  webp: true
+  w900: true
+"/projects/virtual-wind-tunnel/wt-wake.jpg":
+  w: 1600
+  h: 900
   webp: true
   w900: true
 "/ra-logo.png":
