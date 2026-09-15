@@ -31,6 +31,18 @@ timezone: America/Chicago
 start-year: 2008
 sitemap: true
 
+# Identity — feeds the JSON-LD Person/WebSite markup in _includes/header.html.
+# Keep this current when the role or employer changes; it is the machine-readable
+# copy of the same facts the About page states in prose.
+person:
+  description: "Ryan Arnaudin is a product designer and former aerospace engineer in Austin, Texas. For 15+ years he has led 0-to-1 product design in technical domains — CAD, simulation, additive manufacturing, innovation management, and earth observation — as a founding designer and design team of one."
+  job-title: "Product Design Lead"
+  employer: "SkyFi"
+  employer-url: "https://skyfi.com/"
+  locality: "Austin"
+  region: "TX"
+  country: "US"
+
 # Social
 social-username:
   twitter: "@arnaudin"
