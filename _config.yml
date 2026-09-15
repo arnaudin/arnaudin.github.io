@@ -18,6 +18,7 @@ exclude:
 
 include:
   - _pages
+  - .htaccess # dotfiles are skipped unless listed here; see the block at its end
 
 # Site settings
 title: Ryan Arnaudin
