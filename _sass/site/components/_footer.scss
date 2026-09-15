@@ -134,13 +134,19 @@ footer.main-footer {
     gap: var(--space-6);
   }
 
+  // On a narrow row the license simply follows the social links and the theme
+  // swatches drop to a line of their own; from tablet, with room to spare, it
+  // stretches to center itself between the two.
   .footer-license {
-    flex: 1;
-    text-align: center;
+    @include media-queries.grid-media(tablet) {
+      flex: 1;
+      text-align: center;
+    }
   }
 
-  // Theme selector — the labeled segmented control (see _theme-select.scss).
-  // Sits at the far right of the meta row to balance the social links.
+  // Theme selector — the segmented control (see _theme-select.scss). Sits at
+  // the far right of the meta row to balance the social links, and takes the
+  // trailing line to itself once the row wraps.
   .theme-select {
     margin-left: auto;
   }

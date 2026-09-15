@@ -1,11 +1,13 @@
 @use "../base/media-queries";
+@use "../base/mixins-functions";
 
 // ---------------------------------------------------------------------------
 // Three-way theme selector — Paper / Blueprint / Satellite.
 //
 // One control at two densities, both driven by [data-theme-set] in theme.js:
 //  - .theme-chips  compact basemap-style dots in the nav (placement in _nav)
-//  - .theme-select labeled segmented control in the footer (position in _footer)
+//  - .theme-select segmented control in the footer (position in _footer) —
+//    swatches only until desktop, labeled from desktop up
 //
 // Swatch colors are hardcoded on purpose: each option is a paint chip of its
 // TARGET theme — ground plus accent dot — regardless of the active theme, so
@@ -77,6 +79,12 @@
 }
 
 // Footer segmented control.
+//
+// Labeled, this control runs ~380px — wider than the footer meta row can spare
+// until the desktop breakpoint, where it would otherwise wrap the copyright to
+// three lines. So below desktop it collapses to its swatches: the "Mode" label
+// and each option's text go visually-hidden — still naming the radiogroup and
+// its radios — and the swatches grow into touch-sized targets.
 .theme-select {
   display: inline-flex;
   align-items: center;
@@ -84,7 +92,12 @@
 }
 
 .theme-select-label {
+  @include mixins-functions.visually-hidden;
   color: var(--color-text-secondary);
+
+  @include media-queries.grid-media(desktop) {
+    @include mixins-functions.visually-shown;
+  }
 }
 
 .theme-select-options {
@@ -98,7 +111,7 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  padding: var(--space-1) var(--space-3);
+  padding: var(--space-2);
   border: 0;
   border-right: 1px solid var(--color-line-subtle);
   background: none;
@@ -129,16 +142,33 @@
     outline: 2px solid var(--color-focus-ring);
     outline-offset: -2px;
   }
+
+  @include media-queries.grid-media(desktop) {
+    padding: var(--space-1) var(--space-3);
+  }
+}
+
+.theme-option-text {
+  @include mixins-functions.visually-hidden;
+
+  @include media-queries.grid-media(desktop) {
+    @include mixins-functions.visually-shown;
+  }
 }
 
 .theme-swatch {
   position: relative;
   box-sizing: border-box;
   flex: none;
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   border: 1px solid var(--color-line-subtle);
   border-radius: 2px;
+
+  @include media-queries.grid-media(desktop) {
+    width: 12px;
+    height: 12px;
+  }
 
   &::after {
     content: '';
