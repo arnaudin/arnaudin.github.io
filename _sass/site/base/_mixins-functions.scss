@@ -11,6 +11,18 @@
   width: 1px;
 }
 
+// Undoes visually-hidden. The breakpoint mixins are min-width only, so
+// anything hidden at the narrow end has to be restored explicitly further up.
+// Components re-declare their own padding and border; this restores flow.
+@mixin visually-shown {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
 @function rem($size) {
   @return math.div($size, 16px) * 1rem;
 }
