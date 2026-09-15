@@ -1,21 +1,49 @@
+{% comment %} Two sibling blocks rather than one @graph: scanners and agent
+    crawlers commonly read only the top-level "@type" of each script, so a Person
+    nested inside @graph reads as "no identity markup". Keep them flat. {% endcomment %}
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "name": "{{ site.title }}",
-        "alternateName": "{{ site.long-title }}",
-        "url": "{{ site.url }}"
-      },
-      {
-        "@type": "Person",
-        "name": "{{ site.myname }}",
-        "url": "{{ site.url }}",
-        "image": "{{ site.url }}/images/ra-logo.png",
-        "jobTitle": "Product Designer"
-      }
+    "@type": "Person",
+    "name": "{{ site.myname }}",
+    "description": "{{ site.person.description }}",
+    "url": "{{ site.url }}",
+    "image": "{{ site.url }}/images/ra-logo.png",
+    "jobTitle": "{{ site.person.job-title }}",
+    "email": "mailto:{{ site.email }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{{ site.person.locality }}",
+      "addressRegion": "{{ site.person.region }}",
+      "addressCountry": "{{ site.person.country }}"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "{{ site.person.employer }}",
+      "url": "{{ site.person.employer-url }}"
+    },
+    "sameAs": [
+      "https://linkedin.com/in/{{ site.social-username.linkedin }}",
+      "https://github.com/{{ site.social-username.github }}",
+      "https://twitter.com/{{ site.social-username.twitter | remove: '@' }}",
+      "https://dribbble.com/{{ site.social-username.dribbble }}",
+      "https://codepen.io/{{ site.social-username.codepen }}"
     ]
+  }
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.title }}",
+    "alternateName": "{{ site.long-title }}",
+    "description": "{{ site.description }}",
+    "url": "{{ site.url }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.myname }}",
+      "url": "{{ site.url }}"
+    }
   }
 </script>
 
