@@ -4,6 +4,12 @@
 # keys mirror project front matter: url, title, description, thumbnail
 # (relative to /images), time_period. Thumbnails are 4:3 and go through
 # tools/optimize-images.sh like everything else.
+- title: Breathe
+  description: A guided breathing pacer for coherence, box, and Wim Hof breathing. Set a total time and it rounds up to whole breaths, then paces them with an orb that swells and settles.
+  url: /sites/breathe/
+  thumbnail: /experiments/breathe.jpg
+  time_period: September 2026
+
 - title: Steep
   description: A tea and coffee timer with brew presets, a ring that warms as it fills, and a full-screen flash when time is up. Sized to sit in the corner of a screen while you keep working.
   url: /sites/steep/
