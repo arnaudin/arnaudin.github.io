@@ -49,6 +49,11 @@
   h: 900
   webp: true
   w900: false
+"/experiments/steep.jpg":
+  w: 1200
+  h: 900
+  webp: true
+  w900: false
 "/posts/airfoil-app/airfoil-app-rendering.png":
   w: 1000
   h: 600
