@@ -20,7 +20,7 @@ content_layout:
       
       We are a tight group of friends who are never short on excuses for why we won't be able to make the group ride the next morning. It's great having a crew to hold you accountable but a bummer when your buddies bail. I built the site as a fun place to save our best excuses (all excuses have actually been said at least once).
       
-      [Fork it](https://github.com/arnaudin/coyotebailsquad/) on Github, or [see it live]({{ site.url }}/sites/coyotebailsquad/).
+      [Browse the source](https://github.com/arnaudin/arnaudin.github.io/tree/main/sites/coyotebailsquad) on Github, or [see it live]({{ site.url }}/sites/coyotebailsquad/).
   
   - section_layout: 1col
     images:
