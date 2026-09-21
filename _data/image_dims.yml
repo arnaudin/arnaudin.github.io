@@ -49,6 +49,11 @@
   h: 900
   webp: true
   w900: false
+"/experiments/countdown.jpg":
+  w: 1200
+  h: 900
+  webp: true
+  w900: false
 "/experiments/coyotebailsquad.jpg":
   w: 1200
   h: 900

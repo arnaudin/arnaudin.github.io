@@ -4,6 +4,14 @@
 # keys mirror project front matter: url, title, description, thumbnail
 # (relative to /images), time_period. Thumbnails are 4:3 and go through
 # tools/optimize-images.sh like everything else.
+
+# Not listed yet — uncomment to publish the card.
+# - title: Weekly Countdown
+#   description: A countdown to a recurring weekly moment — Thursday 3:00 AM by default, or any day and time you set. An instrument dial leads with percent elapsed and remaining; the time left is secondary.
+#   url: /sites/countdown/
+#   thumbnail: /experiments/countdown.jpg
+#   time_period: September 2026
+
 - title: Breathe
   description: A guided breathing pacer for coherence, box, and Wim Hof breathing. Set a total time and it rounds up to whole breaths, then paces them with an orb that swells and settles.
   url: /sites/breathe/
