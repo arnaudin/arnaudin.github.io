@@ -12,6 +12,12 @@
 #   thumbnail: /experiments/countdown.jpg
 #   time_period: September 2026
 
+- title: Slipstream
+  description: A wind tunnel for everyday things. Put a cyclist, an umbrella, a van, a tower, or a house in the wind, two ways each, and see which one the air pushes harder. The airflow is solved live on your GPU.
+  url: /sites/slipstream/
+  thumbnail: /experiments/slipstream.jpg
+  time_period: September 2026
+
 - title: Breathe
   description: A guided breathing pacer for coherence, box, and Wim Hof breathing. Set a total time and it rounds up to whole breaths, then paces them with an orb that swells and settles.
   url: /sites/breathe/
@@ -23,12 +29,6 @@
   url: /sites/steep/
   thumbnail: /experiments/steep.jpg
   time_period: September 2026
-
-- title: Virtual Wind Tunnel
-  description: A real 3D lattice-Boltzmann solver on the GPU, your own model dropped in, and a drag coefficient you can check against the textbook.
-  url: /wind-tunnel/
-  thumbnail: /projects/virtual-wind-tunnel/wt-hero-smoke.jpg
-  time_period: July 2026
 
 - title: Band Cloud
   description: Every band I've seen live, as a word cloud. Click any name for when, where, and who else was on the bill that night.

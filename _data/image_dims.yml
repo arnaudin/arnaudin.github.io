@@ -59,6 +59,11 @@
   h: 900
   webp: true
   w900: false
+"/experiments/slipstream.jpg":
+  w: 1200
+  h: 900
+  webp: true
+  w900: false
 "/experiments/steep.jpg":
   w: 1200
   h: 900
@@ -1289,32 +1294,37 @@
   h: 1022
   webp: true
   w900: true
-"/projects/virtual-wind-tunnel/wt-centerline.jpg":
+"/projects/virtual-wind-tunnel/slip-advanced.jpg":
   w: 1600
-  h: 900
+  h: 1000
+  webp: true
+  w900: true
+"/projects/virtual-wind-tunnel/slip-first-visit.jpg":
+  w: 1600
+  h: 1000
+  webp: true
+  w900: true
+"/projects/virtual-wind-tunnel/slip-hero.jpg":
+  w: 1600
+  h: 1000
+  webp: true
+  w900: true
+"/projects/virtual-wind-tunnel/slip-house-push.jpg":
+  w: 1600
+  h: 1000
+  webp: true
+  w900: true
+"/projects/virtual-wind-tunnel/slip-phone.jpg":
+  w: 780
+  h: 1688
+  webp: true
+  w900: false
+"/projects/virtual-wind-tunnel/slip-van-speed.jpg":
+  w: 1600
+  h: 1000
   webp: true
   w900: true
 "/projects/virtual-wind-tunnel/wt-hero-smoke.jpg":
-  w: 1600
-  h: 900
-  webp: true
-  w900: true
-"/projects/virtual-wind-tunnel/wt-oil.jpg":
-  w: 1600
-  h: 900
-  webp: true
-  w900: true
-"/projects/virtual-wind-tunnel/wt-pressure.jpg":
-  w: 1600
-  h: 900
-  webp: true
-  w900: true
-"/projects/virtual-wind-tunnel/wt-ribbons.jpg":
-  w: 1600
-  h: 900
-  webp: true
-  w900: true
-"/projects/virtual-wind-tunnel/wt-vortices.jpg":
   w: 1600
   h: 900
   webp: true
