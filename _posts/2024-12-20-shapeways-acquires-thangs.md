@@ -4,7 +4,7 @@ title:  "Shapeways Acquires 3D Model Platform Thangs"
 date: 2024-12-20 10:00:00
 categories: blog
 author: Ryan Arnaudin
-blurb: Shapeways Acquires Thangs
+blurb: After nearly two years designing Thangs at Physna, the platform has a new home at Shapeways.
 image: images/black-thumbnail.jpg
 priority: 0.6
 published: true

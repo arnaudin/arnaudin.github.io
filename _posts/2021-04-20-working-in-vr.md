@@ -39,7 +39,7 @@ I found the variety of virtual environments helped set the tone of a conversatio
 
 On the flip side, for PC attendees presence can be degraded. To them, joining a meeting is more akin to entering a PC video game, even with similar WASD controls. They are looking at a 2D window, attempting to control an avatar with a mouse & keyboard, and losing resolution [compared to video] despite being on the same platform.
 
-Along those lines, we are all losing resolution over video, which in my opinion isn't that great to begin with (e.g. eye contact). Currently, VR meetings are cartoonish--avatars are displayed with floating heads, detached hands, and a severe lack of facial expressions. 
+Along those lines, we are all losing resolution over video, which in my opinion isn't that great to begin with (e.g., eye contact). Currently, VR meetings are cartoonish. Avatars are displayed with floating heads, detached hands, and a severe lack of facial expressions. 
 
 ## Working in VR
 

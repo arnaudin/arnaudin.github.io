@@ -24,7 +24,7 @@ After carefully considering everything from my experience level to the waves I w
 
 {% include figure.html url="/posts/surfboard-shaping/shaping-profile-combo.jpg" caption="Tracing the profile" class="img-75vh img-center" %}
 
-Refinements are made to the form from different angles with a variety of tools
+From there, we refined the form from different angles with a variety of tools.
 
 {% include figure.html url="/posts/surfboard-shaping/shaping-sureform-rail.jpg" caption="Using the Surform on the rail" %}
 
