@@ -11,8 +11,8 @@ priority: 1.0
 <section class="home-hero">
     <div class="home-hero-inner">
         <p class="home-hero-kicker meta-label">Ryan Arnaudin · Product Designer · Austin,&nbsp;TX</p>
-        <h1 class="home-hero-title">Design with an engineer's&nbsp;edge.</h1>
-        <p class="home-hero-lede">Aerospace engineer turned product designer. For 15+ years I've shaped CAD, simulation, 3D&#8209;printing, and collaboration tools — from enterprise platforms to consumer apps used by millions.</p>
+        <h1 class="home-hero-title">An engineer's mind, a designer's&nbsp;craft.</h1>
+        <p class="home-hero-lede">Aerospace engineer turned product designer, specializing in 0&#8209;to&#8209;1. I've shipped CAD, simulation, 3D&#8209;printing, collaboration, and GIS tools — from experimental labs inside Autodesk to venture&#8209;backed startups, with two acquisitions.</p>
         <p class="home-hero-domains">CAD · CAM · Simulation · 3D Printing · GIS + Earth Observation · Realtime Collaboration</p>
     </div>
 </section>
@@ -46,3 +46,23 @@ priority: 1.0
         {% endfor %}
     </div>
 </section>
+
+{% comment %} Recent side project surfaced on the home page on purpose: the
+    personal collection renders at /personal/, but this one is current work and
+    is the clearest demonstration of how I work with AI tooling. Any project
+    with `home_feature: true` and ownership Personal shows up here. Delete this
+    whole section to go back to a professional-only home page. {% endcomment %}
+{% assign home_personal = site.projects | where: "ownership", "Personal" | where: "home_feature", true | sort: "date" | reverse %}
+{% if home_personal.size > 0 %}
+<section class="projects-section" aria-labelledby="recent-experiment">
+    <div class="section-label-row">
+        <h2 class="section-label" id="recent-experiment">Off the clock</h2>
+    </div>
+
+    <div class="projects">
+        {% for project in home_personal %}
+            {% include project-card.html project=project variant='featured' %}
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
