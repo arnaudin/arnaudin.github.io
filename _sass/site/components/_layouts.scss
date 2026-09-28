@@ -37,6 +37,50 @@
   }
 }
 
+// Text with one tall image beside it, e.g. a phone screenshot. Side by side from tablet up, so a
+// portrait image doesn't cost a full scroll; stacked and capped in height on a phone.
+.layout-text-aside {
+  @extend .grid-container;
+  align-items: center;
+
+  .text-aside-text {
+    @include grid.grid-column(6);
+
+    @include media-queries.grid-media(tablet) {
+      @include grid.grid-column-from-to(1, 7);
+    }
+
+    @include media-queries.grid-media(desktop) {
+      @include grid.grid-column-from-to(1, 7);
+    }
+
+    > :last-child { margin-bottom: 0; }
+  }
+
+  .image-wrapper {
+    @include grid.grid-column(6);
+    justify-self: center;
+    width: min(100%, 18rem);
+
+    @include media-queries.grid-media(tablet) {
+      @include grid.grid-column-from-to(9, 12);
+      width: 100%;
+    }
+
+    @include media-queries.grid-media(desktop) {
+      @include grid.grid-column-from-to(9, 11);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 75vh;
+      object-fit: contain;
+    }
+  }
+}
+
 .layout-2col {
   @extend .grid-container;
 

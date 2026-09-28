@@ -854,36 +854,11 @@
   h: 900
   webp: true
   w900: true
-"/projects/flow-design/flow-design-embedded-inventor.png":
-  w: 1600
-  h: 1048
-  webp: true
-  w900: true
-"/projects/flow-design/flow-design-embedded-revit.jpg":
-  w: 1200
-  h: 650
-  webp: true
-  w900: false
 "/projects/flow-design/flow-design-kids.jpg":
   w: 1600
   h: 902
   webp: true
   w900: true
-"/projects/flow-design/flow-design-limar-web.png":
-  w: 971
-  h: 530
-  webp: true
-  w900: false
-"/projects/flow-design/flow-design-mobile-nav.png":
-  w: 1043
-  h: 813
-  webp: true
-  w900: false
-"/projects/flow-design/flow-design-super-bowl-credits.jpg":
-  w: 640
-  h: 480
-  webp: true
-  w900: false
 "/projects/flow-design/flow-design-super-bowl-pic.jpg":
   w: 1600
   h: 1200
@@ -894,21 +869,11 @@
   h: 450
   webp: true
   w900: false
-"/projects/flow-design/flow-design-thumbnail.jpg":
-  w: 600
-  h: 450
-  webp: true
-  w900: false
 "/projects/flow-design/flow-design-trax-super-bowl.png":
   w: 1157
   h: 755
   webp: true
   w900: false
-"/projects/flow-design/flow-design-windows-release.png":
-  w: 1600
-  h: 1044
-  webp: true
-  w900: true
 "/projects/flow-design/flow-design-wireframe-UI-components.png":
   w: 1000
   h: 750
@@ -1304,6 +1269,11 @@
   h: 1000
   webp: true
   w900: true
+"/projects/virtual-wind-tunnel/slip-hero-centerline.jpg":
+  w: 1600
+  h: 760
+  webp: true
+  w900: true
 "/projects/virtual-wind-tunnel/slip-hero.jpg":
   w: 1600
   h: 1000
@@ -1325,11 +1295,6 @@
   webp: true
   w900: true
 "/projects/virtual-wind-tunnel/wt-hero-smoke.jpg":
-  w: 1600
-  h: 900
-  webp: true
-  w900: true
-"/projects/virtual-wind-tunnel/wt-wake.jpg":
   w: 1600
   h: 900
   webp: true

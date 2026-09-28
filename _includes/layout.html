@@ -33,9 +33,20 @@
         </div>
     {% else %}
 
+        {% comment %} text-aside: a short run of text with one tall image beside it (a phone
+            screenshot, a portrait). The text renders first; the images below take the right-hand
+            columns on tablet and up, and stack under the text on a phone. {% endcomment %}
+        {% if entry.section_layout == 'text-aside' and entry.content %}
+            <div class="text-aside-text paragraph-normal">
+                {{ entry.content | markdownify }}
+            </div>
+        {% endif %}
+
         {% comment %} Approximate rendered width per layout, for srcset selection {% endcomment %}
         {% if entry.section_layout == '2col' or entry.section_layout == '5col-7col' %}
             {% assign img_sizes = "(min-width: 700px) 50vw, 100vw" %}
+        {% elsif entry.section_layout == 'text-aside' %}
+            {% assign img_sizes = "(min-width: 768px) 33vw, 80vw" %}
         {% else %}
             {% assign img_sizes = "(min-width: 1300px) 1200px, 100vw" %}
         {% endif %}

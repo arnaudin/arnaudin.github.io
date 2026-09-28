@@ -79,12 +79,23 @@ title-class: project
         {% endif %}
     </header>
 
+    {% comment %} Optional full-width hero between the header (and its Key outcomes) and the intro,
+        to break up the text before the story starts. `hero:` takes the same shape as one
+        content_layout entry (section_layout + images), and renders through the same include. {% endcomment %}
+    {% if page.hero %}
+        {% assign entry = page.hero %}
+        {% include layout.html eager=true %}
+    {% endif %}
+
     {% if page.intro %}
     <section class="project-intro paragraph-normal">{{ page.intro | markdownify }}</section>
     {% endif %}
 
     {% for entry in page.content_layout %}
-        {% include layout.html eager=forloop.first %}
+        {% comment %} Only one image on the page loads eagerly: the hero if there is one. {% endcomment %}
+        {% assign first_eager = false %}
+        {% if forloop.first and page.hero == nil %}{% assign first_eager = true %}{% endif %}
+        {% include layout.html eager=first_eager %}
     {% endfor %}
 
     {% assign additional = content | strip %}

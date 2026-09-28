@@ -185,6 +185,60 @@ blockquote {
   max-width: var(--measure-prose);
 }
 
+// Tables read as a spec sheet, not a spreadsheet: mono labels in the accent (the same voice as the
+// "Fig." captions), one strong rule on top, hairlines between rows, no vertical lines. Wide tables
+// scroll sideways on a phone instead of crushing their columns.
+table {
+  width: 100%;
+  margin: var(--space-8) 0;
+  border-collapse: collapse;
+  border-top: 2px solid var(--color-text);
+  border-bottom: 1px solid var(--color-line);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-slight);
+  font-variant-numeric: tabular-nums;
+
+  @media (max-width: 767px) {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+th,
+td {
+  padding: var(--space-3) var(--space-5) var(--space-3) 0;
+  text-align: left;
+  vertical-align: top;
+
+  &:last-child { padding-right: 0; }
+}
+
+th {
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-line);
+  font-family: $font-family-mono;
+  font-size: var(--font-size-body-tiny);
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing-mono-label);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  vertical-align: bottom;
+}
+
+td {
+  border-top: 1px solid var(--color-line-subtle);
+
+  // the first column names the row
+  &:first-child {
+    font-weight: 600;
+    min-width: 9em;
+  }
+}
+
+tbody tr:first-child td { border-top: 0; }
+
 small,
 figcaption {
   font-family: $font-family-mono;
