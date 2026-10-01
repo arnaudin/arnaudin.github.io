@@ -5,12 +5,11 @@
 # (relative to /images), time_period. Thumbnails are 4:3 and go through
 # tools/optimize-images.sh like everything else.
 
-# Not listed yet — uncomment to publish the card.
-# - title: Weekly Countdown
-#   description: A countdown to a recurring weekly moment — Thursday 3:00 AM by default, or any day and time you set. An instrument dial leads with percent elapsed and remaining; the time left is secondary.
-#   url: /sites/countdown/
-#   thumbnail: /experiments/countdown.jpg
-#   time_period: September 2026
+- title: Weekly Countdown
+  description: A countdown to a recurring weekly moment, e.g. a token reset. Thursday 3:00 AM by default, or any day and time you set. A skeuomorphic instrument dial leads with percent elapsed and remaining.
+  url: /sites/countdown/
+  thumbnail: /experiments/countdown.jpg
+  time_period: September 2026
 
 - title: Slipstream
   description: A wind tunnel for everyday things. Put a cyclist, an umbrella, a van, a tower, or a house in the wind, two ways each, and see which one the air pushes harder. The airflow is solved live on your GPU.
@@ -25,7 +24,7 @@
   time_period: September 2026
 
 - title: Steep
-  description: A tea and coffee timer with brew presets, a ring that warms as it fills, and a full-screen flash when time is up. Sized to sit in the corner of a screen while you keep working.
+  description: A tea and coffee timer with brew presets, a ring that warms as it fills, and a full-screen flash when time is up. Sized to sit in the corner of a screen while you work.
   url: /sites/steep/
   thumbnail: /experiments/steep.jpg
   time_period: September 2026
@@ -37,7 +36,7 @@
   time_period: August 2026
 
 - title: Coyote Bail Squad
-  description: A random excuse generator for skipping tomorrow's group ride. Submit your own.
+  description: A play on our "Coyote Bomb Squad" riding group. A random excuse generator for skipping tomorrow's group ride. Submit your own.
   url: /sites/coyotebailsquad/
   thumbnail: /experiments/coyotebailsquad.jpg
   time_period: 2015
