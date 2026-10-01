@@ -89,6 +89,8 @@ navigation:
     url: /process/
   - title: Writing
     url: /blog/
+  - title: Experiments
+    url: /experiments/
   - title: Contact
     url: /contact/
 

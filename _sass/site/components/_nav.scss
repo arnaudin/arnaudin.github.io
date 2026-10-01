@@ -150,7 +150,12 @@
     }
 
     @include media-queries.grid-media(tablet) {
-      display: block;
+      // Flex, not inline-block: the whitespace between inline items is a
+      // full mono space (~9px) each, enough to wrap six links at 768px.
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
       max-height: none;
       position: static;
       text-align: right;
@@ -162,11 +167,18 @@
       // ring and focus outline, which paint just past the last item's edge.
       overflow: visible;
 
+      // Six links plus the theme chips only fit on one line from desktop
+      // up, so between tablet and desktop the gaps tighten and the chips
+      // step aside (the footer keeps its theme picker at every width).
       li {
         display: inline-block;
         position: relative;
-        padding-left: var(--space-6);
+        padding-left: var(--space-3);
         border: 0;
+
+        @include media-queries.grid-media(desktop) {
+          padding-left: var(--space-6);
+        }
 
         a {
           padding: var(--space-1) 0;
@@ -196,13 +208,17 @@
       }
 
       li.nav-theme {
-        display: inline-flex;
+        display: none;
         align-items: center;
         vertical-align: middle;
         padding: 0 0 0 var(--space-6);
 
         .nav-theme-label {
           @include mixins-functions.visually-hidden;
+        }
+
+        @include media-queries.grid-media(desktop) {
+          display: inline-flex;
         }
 
         .theme-chips {
