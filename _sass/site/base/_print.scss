@@ -77,7 +77,6 @@
 
   // Scroll-reveal safety: nothing may print at opacity 0.
   .project-card,
-  .writing-item,
   .project-summary,
   .project-meta,
   .project-outcomes,
@@ -86,6 +85,17 @@
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+  }
+
+  // Memo posts print as plain pages: no graph paper, no sheet chrome.
+  .memo-stage::before {
+    display: none;
+  }
+
+  .memo-sheet {
+    border: 0 !important;
+    box-shadow: none !important;
+    padding-inline: 0 !important;
   }
 
   // Flatten tinted surfaces; keep their structural borders.

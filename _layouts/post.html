@@ -2,6 +2,12 @@
 layout: default
 title-class: post
 ---
+{% comment %}
+    Posts as memo sheets on graph paper. The title sits above the sheet;
+    the first sheet carries a letterhead. Full-width figures break the
+    sheet (see below). _includes/page-title.html skips posts, since the
+    title is rendered here.
+{% endcomment %}
 
 <script type="application/ld+json">
   {
@@ -21,40 +27,65 @@ title-class: post
   }
 </script>
 
-<article class="post-wrapper">
+{% assign words = content | strip_html | number_of_words %}
+{% assign read_min = words | divided_by: 230 | at_least: 1 %}
 
-    <div class="post-info">
-        <div class="post-detail-wrapper">
-            {% if page.date %}
-                <p class="post-date">
-                    {%- if page.originaldate -%}
-                        Originally published {{ page.originaldate | date: "%B %-d, %Y" }}
-                    {%- else -%}
-                        {{ page.date | date: "%B %-d, %Y" }}
-                    {%- endif -%}
-                </p>
-            {% endif %}
-
-            {% if page.website.url %}
-                <p class="post-website"><a href="{{ page.website.url }}" class="button-secondary">{{ page.website.button_text }}</a></p>
-            {% endif %}
-        </div>
-    </div>
-
+{% capture lead_in %}
     {% if page.intro %}
-        <section class="post-intro paragraph-normal">{{ page.intro | markdownify }}</section>
+        <section class="post-intro">{{ page.intro | markdownify }}</section>
     {% endif %}
-
     {% for entry in page.content_layout %}
         {% include layout.html eager=forloop.first %}
     {% endfor %}
+{% endcapture %}
 
-    {% assign body = content | strip %}
-    {% if body != "" %}
-        <section class="additional-content-wrapper">
-            <div class="additional-content paragraph-normal">
-                {{ content }}
-            </div>
-        </section>
-    {% endif %}
+{% comment %} Full-width figures (see _includes/figure.html) are fenced by
+    <!--memo-break--> markers. Even segments are prose and get a sheet; odd
+    segments are the breaks, set full-bleed on the graph paper between sheets.
+    The letterhead rides on whichever sheet comes first. {% endcomment %}
+{% assign segments = content | split: "<!--memo-break-->" %}
+{% assign sheet_open = false %}
+{% assign last_index = segments.size | minus: 1 %}
+
+<article class="memo">
+    <header class="memo-title-block">
+        <h1 class="memo-title">{{ page.title }}</h1>
+        <p class="memo-kicker">
+            {%- if page.originaldate -%}
+                Originally published {{ page.originaldate | date: "%B %-d, %Y" }}
+            {%- else -%}
+                {{ page.date | date: "%B %-d, %Y" }}
+            {%- endif %} · {{ read_min }} min read
+        </p>
+    </header>
+
+    <div class="memo-stage">
+        {% for segment in segments %}
+            {% assign is_break = forloop.index0 | modulo: 2 %}
+            {% if is_break == 1 %}
+                <div class="memo-break-wrap">{{ segment }}</div>
+            {% else %}
+                {% assign body = segment | strip %}
+                {% if forloop.first %}{% assign body = lead_in | strip | append: body %}{% endif %}
+                {% if body != "" or forloop.first %}
+                    <div class="memo-sheet{% unless sheet_open %} memo-sheet-first{% endunless %}{% if forloop.index0 == last_index %} memo-sheet-last{% endif %}">
+                        {% unless sheet_open %}
+                            <header class="memo-letterhead">
+                                <div class="memo-letterhead-who">
+                                    <p class="memo-letterhead-name">{{ site.myname }}</p>
+                                    <p>{{ site.person.job-title }}<br>{{ site.person.locality }} // {{ site.person.region }}</p>
+                                </div>
+                                <a class="memo-letterhead-mark" href="/" aria-label="Home">{% include logo.svg %}</a>
+                            </header>
+                            {% if page.website.url %}
+                                <p class="memo-website"><a href="{{ page.website.url }}" class="button-secondary">{{ page.website.button_text }}</a></p>
+                            {% endif %}
+                            {% assign sheet_open = true %}
+                        {% endunless %}
+                        <div class="memo-body">{{ body }}</div>
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </div>
 </article>

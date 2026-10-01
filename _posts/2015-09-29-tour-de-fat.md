@@ -16,7 +16,7 @@ I had been considering getting rid of my car since moving to San Francisco a few
 
 The trade ended up involving a skit, culminating in me rising through a trap door on a bike, surrounded by aliens who threatened to destroy the world. I didn't catch it all since I was crouched under the stage, but my donation got them to change their minds. It was as ridiculous as it looks:
 
-{% include figure.html url="/posts/tour-de-fat/tour-de-fat-et-phone-home.jpg" caption="The trade skit, aliens included" alt="Tour de Fat bike trade skit" class="img-full-width" %}
+{% include figure.html url="/posts/tour-de-fat/tour-de-fat-et-phone-home.jpg" caption="The trade skit, aliens included" alt="Tour de Fat bike trade skit" %}
 
 Follow my Tumblr to stay up to date: [@Ciclopata](http://ciclopata.tumblr.com/).
 

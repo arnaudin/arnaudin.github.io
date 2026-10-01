@@ -1,0 +1,376 @@
+@use "../base/extends";
+@use "../base/media-queries";
+@use "../base/mixins-functions";
+
+// Posts as memo sheets on graph paper.
+// Inter body on a raised white sheet; display-face title and section heads;
+// a 32px blueprint grid behind it all. Full-width figures break the sheet
+// and run edge to edge on the paper; the prose resumes on a new sheet.
+
+.memo {
+  --memo-grid: 32px;
+  --memo-grid-line: rgba(var(--palette-ink-rgb), .06);
+  --memo-sheet-width: 46rem;
+  --memo-body-size: 1.0625rem;
+  counter-reset: fig;
+}
+
+// Title block: sits on the page, left edge aligned with the sheet
+.memo-title-block {
+  max-width: var(--memo-sheet-width);
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-4) var(--space-12);
+
+  @include media-queries.grid-media(tablet) {
+    padding-inline: 0;
+  }
+}
+
+.memo-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.25rem, 1.6rem + 2.8vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -.025em;
+  margin: 0 0 var(--space-4);
+  text-wrap: balance;
+}
+
+.memo-kicker {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-meta);
+  letter-spacing: var(--letter-spacing-mono-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+// Graph-paper band, full bleed, fading in at the top
+.memo-stage {
+  position: relative;
+  isolation: isolate;
+  padding-bottom: var(--space-24) !important;
+  padding: 0 var(--space-4);
+  overflow-x: clip;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: calc(var(--memo-grid) * -1) 0 0;
+    z-index: -1;
+    background-image:
+      linear-gradient(var(--memo-grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--memo-grid-line) 1px, transparent 1px);
+    background-size: var(--memo-grid) var(--memo-grid);
+    background-position: center top;
+    mask-image: linear-gradient(to bottom, transparent, #000 var(--space-24), #000 calc(100% - var(--space-24)), transparent);
+  }
+
+  @include media-queries.grid-media(tablet) {
+    padding: 0 var(--memo-grid);
+  }
+}
+
+.memo-sheet {
+  max-width: var(--memo-sheet-width);
+  margin: 0 auto;
+  --memo-pad: var(--space-6);
+  padding: var(--memo-pad) var(--memo-pad) var(--space-12);
+  background: var(--color-surface-raised);
+  color: var(--color-text);
+  border: 1px solid var(--color-line-subtle);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .08), 0 4px 6px -4px rgba(0, 0, 0, .08);
+  font-family: var(--font-body);
+  font-size: var(--memo-body-size);
+  line-height: 1.7;
+
+  @include media-queries.grid-media(tablet) {
+    --memo-pad: var(--space-12);
+    padding: var(--memo-pad);
+  }
+
+  // A sheet that continues after a break: no letterhead, so top padding
+  // matches the side margins; the final sheet gets the deep bottom margin.
+  &.memo-sheet-last {
+    padding-bottom: var(--space-16);
+
+    @include media-queries.grid-media(tablet) {
+      padding-bottom: var(--space-24);
+    }
+  }
+
+  // Trim outer margins so sheets start and end on the prose
+  .memo-body > :first-child { margin-top: 0; }
+  .memo-body > :last-child { margin-bottom: 0; }
+}
+
+// Full-bleed break between sheets
+.memo-break-wrap {
+  margin: var(--space-16) calc(50% - 50vw);
+
+  @include media-queries.grid-media(tablet) {
+    margin-top: var(--space-24);
+    margin-bottom: var(--space-24);
+  }
+
+  .memo-break { margin: 0; }
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    height: auto;
+    max-height: 90vh;
+    object-fit: cover;
+  }
+
+  figcaption {
+    @extend %figcaption-numbered;
+    max-width: var(--memo-sheet-width);
+    margin: var(--space-3) auto 0;
+    padding: 0 var(--space-4);
+  }
+}
+
+// Letterhead
+.memo-letterhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-4);
+  font-family: var(--font-body);
+  font-size: .875rem;
+  line-height: 1.5;
+
+  margin-bottom: var(--space-10);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-line-subtle);
+
+  p { margin: 0; }
+}
+
+.memo-letterhead-name {
+  font-weight: 600;
+  margin-bottom: var(--space-2) !important;
+}
+
+.memo-letterhead-mark svg {
+  width: 40px;
+  height: 40px;
+
+  path { fill: currentColor; }
+}
+
+.memo-website { margin-bottom: var(--space-8); }
+
+// Body copy
+.memo-body {
+  > *, .post-intro > *, .project-text-wrapper > * { max-width: 100%; }
+
+  p, li {
+    font-family: var(--font-body);
+    font-size: var(--memo-body-size);
+    line-height: 1.7;
+  }
+
+  p { margin: 0 0 1.25em; }
+
+  ul, ol {
+    margin: 0 0 1.25em;
+    padding-left: 1.25em;
+  }
+
+  li { margin-bottom: .5em; }
+
+  a {
+    color: inherit;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: .2em;
+    text-decoration-thickness: 1px;
+
+    &:hover { color: var(--color-accent); }
+  }
+
+  strong { font-weight: 600; }
+
+  h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -.02em;
+    line-height: 1.2;
+    margin: 2.5em 0 .75em;
+  }
+
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.125rem; }
+
+  blockquote {
+    margin: 1.75em 0;
+    padding: var(--space-1) 0 var(--space-1) var(--space-5);
+    border-left: 2px solid var(--color-accent);
+
+    p {
+      font-family: var(--font-body);
+      font-size: var(--memo-body-size);
+      color: var(--color-text-secondary);
+    }
+  }
+
+  code {
+    font-family: var(--font-mono);
+    font-size: .92em;
+    background: var(--color-accent-wash);
+    padding: .05em .3em;
+    border-radius: 2px;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed var(--color-line);
+    margin: 2.5em 0;
+  }
+
+  // Figures get a drafting-frame border, like the reference's diagrams
+  figure, .image-wrapper {
+    margin: 2em 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--color-line-subtle);
+    padding: var(--space-2);
+    background: var(--color-surface-raised);
+    border-radius: 0;
+  }
+
+  // Full-width images bleed to the sheet edges rather than the viewport
+  img.img-full-width {
+    width: calc(100% + 2 * var(--memo-pad));
+    max-width: none;
+    margin-left: calc(-1 * var(--memo-pad));
+    margin-right: calc(-1 * var(--memo-pad));
+    padding: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  figcaption {
+    @extend %figcaption-numbered;
+    margin-top: var(--space-3);
+  }
+
+  // content_layout sections shouldn't impose the site grid inside the sheet
+  .layout, .project-text, .project-text-wrapper {
+    display: block;
+    width: auto;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Index: a stack of memo sheets, one per post, grouped by year
+// ---------------------------------------------------------------------------
+
+.memo-index .visually-hidden { @include mixins-functions.visually-hidden; }
+
+.memo-index .memo-stage { padding-top: var(--space-16); }
+
+.memo-index-year {
+  max-width: var(--memo-sheet-width);
+  margin: 0 auto;
+
+  & + & { margin-top: var(--space-16); }
+}
+
+// Year sits on the paper, above its stack
+.memo-index-year-label {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-meta);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-mono-label);
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-4);
+}
+
+.memo-index-stack {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-4);
+
+  > li {
+    margin: 0;
+    padding: 0;
+
+    &::before { content: none; }
+  }
+}
+
+.memo-index-lede {
+  font-size: var(--font-size-body-large);
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+  max-width: 40ch;
+  margin: 0;
+}
+
+a.memo-index-sheet {
+  display: block;
+  padding: var(--space-6);
+  text-decoration: none;
+  color: var(--color-text);
+  transition: transform 150ms ease-out, box-shadow 150ms ease-out;
+
+  @include media-queries.grid-media(tablet) {
+    padding: var(--space-8) var(--space-12);
+  }
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 24px -6px rgba(0, 0, 0, .12), 0 6px 10px -6px rgba(0, 0, 0, .1);
+
+    .memo-index-title { color: var(--color-accent); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+    &:hover, &:focus-visible { transform: none; }
+  }
+}
+
+.memo-index-date {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-meta);
+  letter-spacing: var(--letter-spacing-mono-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-3);
+}
+
+.memo-index-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.375rem, 1.2rem + .6vw, 1.75rem);
+  font-weight: 500;
+  letter-spacing: -.02em;
+  line-height: 1.15;
+  margin: 0;
+  transition: color 150ms ease-out;
+}
+
+.memo-index-blurb {
+  font-size: var(--font-size-body-small);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: var(--space-3) 0 0;
+  max-width: 60ch;
+}

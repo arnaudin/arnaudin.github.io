@@ -6,33 +6,37 @@ redirect_from: /projects/writing/
 priority: 0.9
 sitemap: true
 ---
-<section class="home-hero home-hero-compact">
-    <div class="home-hero-inner">
-        <p class="home-hero-kicker meta-label">Notes &amp; essays</p>
-        <h1 class="home-hero-title">Writing</h1>
-        <p class="home-hero-lede">Thoughts on design, creativity, technology, teamwork, and productivity.</p>
-    </div>
-</section>
+<header class="memo memo-title-block">
+    <h1 class="memo-title">Writing</h1>
+    <p class="memo-index-lede">Thoughts on design, creativity, technology, teamwork, and productivity.</p>
+</header>
 
-<section class="writing-list-section" aria-labelledby="all-posts">
-    <div class="section-label-row">
-        <h2 class="section-label" id="all-posts">All posts</h2>
-    </div>
-
-    <div class="writing-list">
+{% comment %} The index as a stack of memo sheets on graph paper, grouped by
+    year. Each sheet is one post; styles live in _sass/site/layouts/_memo.scss. {% endcomment %}
+<section class="memo memo-index" aria-labelledby="all-posts">
+    <h2 class="visually-hidden" id="all-posts">All posts</h2>
+    <div class="memo-stage">
         {% assign postslist = site.posts | sort: 'date' | reverse %}
-        {% for post in postslist %}
-            <article class="writing-item">
-                <a class="writing-item-link" href="{{ post.url }}">
-                    <time class="writing-item-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
-                    <div class="writing-item-body">
-                        <h3 class="writing-item-title">{{ post.title }}</h3>
-                        {% if post.blurb %}
-                            <p class="writing-item-blurb">{{ post.blurb }}</p>
-                        {% endif %}
-                    </div>
-                </a>
-            </article>
+        {% assign postsbyyear = postslist | group_by_exp: "post", "post.date | date: '%Y'" %}
+        {% for year in postsbyyear %}
+            <div class="memo-index-year">
+                <h3 class="memo-index-year-label">{{ year.name }}</h3>
+                <ol class="memo-index-stack">
+                    {% for post in year.items %}
+                        <li>
+                            <a class="memo-sheet memo-index-sheet" href="{{ post.url }}">
+                                <div class="memo-index-text">
+                                    <time class="memo-index-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d" }}</time>
+                                    <h4 class="memo-index-title">{{ post.title }}</h4>
+                                    {% if post.blurb %}
+                                        <p class="memo-index-blurb">{{ post.blurb }}</p>
+                                    {% endif %}
+                                </div>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ol>
+            </div>
         {% endfor %}
     </div>
 </section>

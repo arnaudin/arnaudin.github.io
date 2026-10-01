@@ -8,13 +8,13 @@ blurb: Shaping a surfboard at Sunset Shapers in San Francisco.
 image: images/black-thumbnail.jpg
 priority: 0.6
 ---
-I had the distinct pleasure of shaping a surfboard with local San Francisco shaping master [Gordon Guptill](http://www.sunsetshapers.com/gordon-guptill/). We settled on a design direction that would suit my experience and style, then got to work over two shaping sessions. 
+I had the distinct pleasure of shaping a surfboard with local San Francisco shaping master Gordon Guptill. We settled on a design direction that would suit my experience and style, then got to work over two shaping sessions. 
 
 Being my first time in a shaping room, and with the goal of having a kick-ass board at the end, Gordon took on the more critical operations while coaching me through some of the rough initial shaping and low-risk refinement work. 
 
 Working with such an experienced craftsman was a privilege, and Gordon was super patient to answer all my questions and explain everything in detail as we went along.
 
-{% include figure.html url="/posts/surfboard-shaping/surfboard-names.jpg" caption="Hand shaped by Gordon Guptill and Ryan Arnaudin" %}
+{% include figure.html url="/posts/surfboard-shaping/surfboard-names.jpg" caption="Hand shaped by Gordon Guptill and Ryan Arnaudin" class="img-full-width" eager=true %}
 
 After carefully considering everything from my experience level to the waves I would be riding to my style & preferences, we picked a foam blank and began to define the outline of the board.
 
@@ -38,4 +38,4 @@ I liked the idea of the board being highly visible in the dark Northern Californ
 
 {% include figure.html url="/posts/surfboard-shaping/finished-bottom-combo.jpg" caption="The finished board, bottom" class="img-75vh img-center" %}
 
-{% include figure.html url="/posts/surfboard-shaping/finished-side-combo.jpg" caption="The finished board, side profile" %}
+{% include figure.html url="/posts/surfboard-shaping/finished-side-combo.jpg" caption="The finished board, side profile" class="img-full-width" %}

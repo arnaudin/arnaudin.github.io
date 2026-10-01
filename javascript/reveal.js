@@ -7,7 +7,6 @@
   // reveal transform on top of native lazy-loading is fragile).
   var SELECTOR = [
     '.project-card',
-    '.writing-item',
     '.project-summary',
     '.project-meta',
     '.project-outcomes',

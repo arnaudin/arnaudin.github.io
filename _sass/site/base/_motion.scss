@@ -17,7 +17,6 @@
     // Case-study/post images are intentionally NOT revealed here — they are
     // the star content and must never be hidden behind a JS reveal.
     .project-card,
-    .writing-item,
     .project-summary,
     .project-meta,
     .project-outcomes,
@@ -31,8 +30,6 @@
 
     // Gentle stagger for grid/list siblings
     .projects .project-card:nth-child(2) { transition-delay: 80ms; }
-    .writing-list .writing-item:nth-child(2) { transition-delay: 60ms; }
-    .writing-list .writing-item:nth-child(3) { transition-delay: 120ms; }
 
     .is-visible {
       opacity: 1;

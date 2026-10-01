@@ -46,4 +46,13 @@
         <img class="{{ include.class }}" src="{{ full_src }}" alt="{{ fig_alt | normalize_whitespace | escape }}" {{ img_loading }} decoding="async">
     {%- endif -%}
 {%- endcapture -%}
-<figure class="image-wrapper {{ include.positioning }}">{% if include.gallery == 'none' %}{{ image_tag }}{% else %}<a class="gallery-link" href="{% if dims.webp %}{{ webp_url | prepend: site.image_serve_path }}{% else %}{{ full_src }}{% endif %}" {% if dims %}data-pswp-width="{{ dims.w }}" data-pswp-height="{{ dims.h }}"{% endif %} target="_blank" rel="noopener">{{ image_tag }}</a>{% endif %}{% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}</figure>
+{%- comment -%} On posts, a full-width figure breaks the memo sheet.
+    _layouts/post.html splits content on these markers. {%- endcomment -%}
+{%- if page.layout == "post" and include.class contains "img-full-width" -%}{%- assign memo_break = true -%}{%- else -%}{%- assign memo_break = false -%}{%- endif -%}
+{% if memo_break %}
+<!--memo-break-->
+{% endif -%}
+<figure class="image-wrapper {{ include.positioning }}{% if memo_break %} memo-break{% endif %}">{% if include.gallery == 'none' %}{{ image_tag }}{% else %}<a class="gallery-link" href="{% if dims.webp %}{{ webp_url | prepend: site.image_serve_path }}{% else %}{{ full_src }}{% endif %}" {% if dims %}data-pswp-width="{{ dims.w }}" data-pswp-height="{{ dims.h }}"{% endif %} target="_blank" rel="noopener">{{ image_tag }}</a>{% endif %}{% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}</figure>
+{%- if memo_break %}
+<!--memo-break-->
+{% endif -%}

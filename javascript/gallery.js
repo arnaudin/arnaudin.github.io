@@ -7,7 +7,7 @@ import PhotoSwipeLightbox from './photoswipe-lightbox.esm.min.js';
 // images and raw figures) aren't wrapped in gallery anchors at build time,
 // so wrap them here. All images in a post become one gallery, giving
 // click-to-zoom plus prev/next slideshow navigation.
-document.querySelectorAll('.post-wrapper img').forEach((img) => {
+document.querySelectorAll('.memo-body img').forEach((img) => {
   if (img.closest('a')) return; // already linked (don't hijack real links)
 
   const link = document.createElement('a');

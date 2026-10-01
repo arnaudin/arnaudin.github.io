@@ -37,7 +37,7 @@ Every load composes a new arrangement, which means one good render proves nothin
 
 It actually caught two bugs that I didn't notice on visual review. Tilted words were clipping the row above them. And the leftover final row, short by construction, was landing mid-wall, where it looks like a hole. Pinned to the bottom it reads as the ragged last line of a justified column, which is just ordinary typesetting. Both looked fine on my screen.
 
-{% include figure.html url="/posts/band-cloud/detail.jpg" caption="Click a name and the nights come back: dates, venues, festivals, and who else was on the bill." class="img-full-width" %}
+{% include figure.html url="/posts/band-cloud/detail.jpg" caption="Click a name and the nights come back: dates, venues, festivals, and who else was on the bill." %}
 
 ## The data is a memory, so it's labeled like one
 
