@@ -22,7 +22,7 @@ layout: sitemap
     <priority>{{ page.priority }}</priority>{% endif %}
   </url>
   {% endunless %}{% endunless %}{% endfor %}
-  {% for page in site.projects %}<url>
+  {% for page in site.projects %}{% unless page.sitemap == false %}<url>
     <loc>{{ site.url }}{{ page.url }}</loc>
     {% if page.date %}
       <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
@@ -33,7 +33,7 @@ layout: sitemap
       <priority>0.69</priority>
     {% endif %}
     <changefreq>monthly</changefreq>
-  </url>
+  </url>{% endunless %}
   {% endfor %}
   {% for page in site.posts %}<url>
     <loc>{{ site.url }}{{ page.url }}</loc>

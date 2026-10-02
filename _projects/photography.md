@@ -7,6 +7,7 @@ categories: photography
 disciplines: Photography, Photo editing
 media: Digital
 ownership: Personal
+sitemap: false
 client: 
 time_period: 2000-2022
 thumbnail: "/projects/photography/photography-thumbnail.jpg"

@@ -5,7 +5,8 @@ title: "Thangs Redesign Case Study"
 description: "A visual redesign exercise for the Thangs landing and model pages"
 categories: web, side project
 media: Web
-ownership: Personal 
+ownership: Personal
+sitemap: false
 client:
 thumbnail: "/projects/thangs/thangs-final-logged-out.png"
 

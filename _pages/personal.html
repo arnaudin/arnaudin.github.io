@@ -1,23 +1,31 @@
 ---
 layout: page
-title_override: Ryan Arnaudin - Personal Projects
+title_override: Ryan Arnaudin - Archive
+description: Old, retired, and unfinished side projects. Kept around, not maintained.
 redirect_from:
   - /side-projects/
 permalink: /personal/
-priority: 0.8
+# Unlisted on purpose: reachable by direct link only. sitemap: false keeps it
+# out of sitemap.xml and adds a noindex meta (see head.html). Don't link to it
+# from nav, pages, or posts.
+sitemap: false
 ---
 
 <section class="home-hero home-hero-compact">
     <div class="home-hero-inner">
-        <p class="home-hero-kicker meta-label">Off the clock</p>
-        <h1 class="home-hero-title">Side projects</h1>
-        <p class="home-hero-lede">A mix of things that aren't quite professional, but involve product or design.</p>
+        <aside class="archive-warning" role="note" aria-labelledby="archive-warning-title">
+            <p class="archive-warning-title meta-label" id="archive-warning-title">Hey, how'd you get here?</p>
+            <p>This is the back room. Everything here is old, retired, half-built, or otherwise not how I'd do it today. Links may be dead and opinions may have expired. Proceed at your own risk.</p>
+        </aside>
+        <p class="home-hero-kicker meta-label">Unlisted</p>
+        <h1 class="home-hero-title">Archive</h1>
+        <p class="home-hero-lede">Side projects and experiments that aren't part of the portfolio anymore. Kept around, not maintained.</p>
     </div>
 </section>
 
-<section class="projects-section" aria-labelledby="personal-work">
+<section class="projects-section" aria-labelledby="archived-work">
     <div class="section-label-row">
-        <h2 class="section-label" id="personal-work">Personal projects</h2>
+        <h2 class="section-label" id="archived-work">Archived projects</h2>
     </div>
 
     <div class="projects">

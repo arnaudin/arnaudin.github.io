@@ -6,7 +6,8 @@ description: "A fun, simple site that generates excuses for not cycling"
 categories: web, side project
 disciplines: Web Development, HTML, CSS, JS
 media: Web
-ownership: Personal 
+ownership: Personal
+sitemap: false
 client:
 time_period: 2015
 thumbnail: "/projects/coyote-bomb-squad/cbs-thumbnail.jpg"

@@ -6,7 +6,8 @@ description: "3D printing, CNC, CAD, CAM and physical things"
 categories: making, side project, 3d printing
 disciplines: 3D modelling, CAD, CAM, CNC, Design, Engineering
 media: Physical Goods
-ownership: Personal 
+ownership: Personal
+sitemap: false
 client:
 time_period: 2013-2018
 thumbnail: "/projects/making-things/making-things-thumbnail.jpg"

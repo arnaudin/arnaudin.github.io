@@ -36,8 +36,8 @@ source for Ryan Arnaudin's work history, case studies, and design writing.
 - [Privacy]({{ site.url }}/privacy/): what this site collects and does not collect.
 
 ## Case studies
-{% for project in site.projects %}
-- [{{ project.title | strip_html }}]({{ site.url }}{{ project.url }}){% if project.description %}: {{ project.description | strip_html }}{% endif %}{% endfor %}
+{% for project in site.projects %}{% unless project.sitemap == false %}
+- [{{ project.title | strip_html }}]({{ site.url }}{{ project.url }}){% if project.description %}: {{ project.description | strip_html }}{% endif %}{% endunless %}{% endfor %}
 
 ## Recent writing
 {% for post in site.posts limit: 10 %}

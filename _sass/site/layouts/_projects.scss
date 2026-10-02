@@ -316,3 +316,21 @@ $thumb-animation-ease-out: ease-in-out;
     margin-top: var(--space-2);
   }
 }
+
+// "How'd you get here?" banner on the unlisted /personal/ archive.
+.archive-warning {
+  border: 2px solid var(--color-redline);
+  border-left-width: 6px;
+  padding: var(--space-4) var(--space-6);
+  margin-bottom: var(--space-12);
+  max-width: 60ch;
+
+  .archive-warning-title {
+    color: var(--color-redline);
+    margin-bottom: var(--space-2);
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
