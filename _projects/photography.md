@@ -12,12 +12,12 @@ client:
 time_period: 2000-2022
 thumbnail: "/projects/photography/photography-thumbnail.jpg"
 
-summary: "A small sampling of landscape, nature, and travel photography while the full archive finds a new home."
+summary: "A small sampling of landscape, portrait, and sports photography from 2000 to 2022."
 
 content_layout:
   - section_layout: text
     content: |
-      I'm in the process of reorganizing my photos and finding them a new home. In the meantime, enjoy a small sampling below.
+      A small sampling of photos from over the years.
       
       ### Landscapes and Nature
 
@@ -112,7 +112,7 @@ content_layout:
         width:
         height:
       - caption:
-        description: 'Stiffarm'
+        description: 'Stiff-arm'
         url: '/projects/photography/sports-stiffarm.jpg'
         width:
         height:
@@ -123,7 +123,3 @@ content_layout:
         height:
       
 ---
-<br/>
-<p class="text-center">
-    {% include button.html link="https://www.flickr.com/photos/arnaudin" text="Flickr @arnaudin" %}
-</p>

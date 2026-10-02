@@ -4,7 +4,7 @@ published: true
 title: "Making Things"
 description: "3D printing, CNC, CAD, CAM and physical things"
 categories: making, side project, 3d printing
-disciplines: 3D modelling, CAD, CAM, CNC, Design, Engineering
+disciplines: 3D modeling, CAD, CAM, CNC, Design, Engineering
 media: Physical Goods
 ownership: Personal
 sitemap: false
@@ -12,12 +12,14 @@ client:
 time_period: 2013-2018
 thumbnail: "/projects/making-things/making-things-thumbnail.jpg"
 
-summary: "3D-printing and CNC side projects — designed in Fusion 360 and fabricated at Autodesk's Pier 9 workshop, from composite bike mounts to CNC-cut surf handplanes."
+summary: "Designing in the CAD/CAM tools I was helping build: Fusion 360 models, generative design, and parts fabricated at Autodesk's Pier 9, from composite prints to CNC-cut handplanes."
 
 content_layout:
   - section_layout: text
     content: |
-      I enjoy making things, and making things better. These are a handful of small 3D printing and CNC projects from my time at Autodesk (where I had access to amazing workshops at [Pier 9](https://www.instructables.com/Overview-Access-to-Autodesk-Pier-9-Workshop/)). Almost everything digital was done with Fusion 360. 
+      I enjoy making things, and making things better. At Autodesk I designed software for engineers and manufacturers, and these side projects were how I used that software the way our customers did: modeled in Fusion 360, then printed, milled, or cut in the workshops at [Pier 9](https://www.instructables.com/Overview-Access-to-Autodesk-Pier-9-Workshop/).
+
+      Using the tools end to end, from CAD model to toolpath to finished part, taught me more about where they broke down than any spec did.
       
       ## Hardware Experience
       - MakerBot
@@ -36,7 +38,7 @@ content_layout:
 
       ### Bike Light Mount
 
-      When carrying loads on a front rack, a handlebar light mount is virtually useless. After several prototypes, I settled on a design that could be easily mounted at the front of my rack with an M5 bolt. Eventually it would be cool to CNC this from metal.
+      When carrying loads on a front rack, a handlebar light mount is virtually useless. After several prototypes, I settled on a design that could be easily mounted at the front of my rack with an M5 bolt. Eventually it would be cool to machine this from metal.
 
   - section_layout: 2col
     images:
@@ -56,7 +58,7 @@ content_layout:
     content: |
       ### Bike Bell Mount
 
-      A desired bell could not be mounted on a particular handlebar setup, so I designed and printed this extender to work with an existing mount. 
+      A desired bell could not be mounted on a particular handlebar setup, so I designed and printed this extender to work with an existing mount.
 
   - section_layout: 2col
     images:
@@ -76,11 +78,11 @@ content_layout:
     content: |
       ### Coffee Grinder Hack
 
-      The Hario Skerton is a good hand grinder for the price, but develops a wobble over time due to the wear of the metal shaft against a plastic part at a single point of contact. Ultimately this leads to uneven coffee grind sizes. 
+      The Hario Skerton is a good hand grinder for the price, but develops a wobble over time as the metal shaft wears against a plastic part at a single point of contact. Ultimately this leads to an uneven grind.
 
-      I designed this simple pair of parts to hug the shaft at a second, lower point of contact. This prevents the assembly from wobbling, thus reducing wear and keeping the grind size consistent. 
+      I designed this simple pair of parts to hug the shaft at a second, lower point of contact. This prevents the assembly from wobbling, reducing wear and keeping the grind size consistent.
 
-      Download at [Thingiverse](https://www.thingiverse.com/thing:984399) or [Github](https://github.com/arnaudin/Printable-STL/tree/master/Hario%20Skerton%20Grinder%20Spacer%20Bearing). Also check out suneboe's remix [Thingiverse](https://www.thingiverse.com/thing:1640345)
+      Download it on [Thingiverse](https://www.thingiverse.com/thing:984399), and check out suneboe's [remix](https://www.thingiverse.com/thing:1640345).
 
   - section_layout: 2col
     images:
@@ -111,7 +113,7 @@ content_layout:
 
       How might we attach a safe, comfortable strap to a bodysurfing handplane so it doesn't get lost in the surf? It should be adjustable, strong, buoyant, and resistant to salt water.
 
-      I am experimenting with custom kevlar/nylon composite prints. These are super strong and light. I also have designs I may machine from wood or metal in the future. 
+      I experimented with custom Kevlar/nylon composite prints, which are very strong and light. I also had designs to machine from wood or metal.
 
   - section_layout: 2col
     images:
@@ -129,8 +131,8 @@ content_layout:
 
   - section_layout: 2col
     images:
-      - caption: 'Raw, unfinished protoype right off the printer'
-        description: 'Raw, unfinished protoype right off the printer'
+      - caption: 'Raw, unfinished prototype right off the printer'
+        description: 'Raw, unfinished prototype right off the printer'
         url: '/projects/making-things/3dp-composite-strap-mount-prototype-1.jpg'
         positioning: 
         width:
@@ -154,13 +156,13 @@ content_layout:
     content: |
       ## CNC Projects
 
-      Having completed the [beginners course](http://www.instructables.com/id/Learn-CNC-The-Hard-Way/) on CNC at Autodesk's Pier 9, here are some starter projects I have been working on. 
+      After completing the beginner's CNC course at Autodesk's Pier 9, these were some of my starter projects.
 
       ### Handplanes
 
-      A bodysurfing handplane is a small supportive device worn on your hand. Depending on size and shape it can be used to more easily get barreled, help with optimal position on the wave face, and/or get more speed in the water. 
+      A bodysurfing handplane is a small supportive device worn on your hand. Depending on its size and shape, it can make it easier to get barreled, help you hold position on the wave face, and add speed in the water.
 
-      This handplane was cut out on a ShopBot. From there, I used a orbital and belt sanders to refine the shape. More iterations are needed.
+      This handplane was cut out on a ShopBot. From there, I used orbital and belt sanders to refine the shape. It needed more iterations.
 
   - section_layout: 1col
     images:
@@ -199,7 +201,7 @@ content_layout:
     content: |
       ### Custom Chocolates
 
-      For a unique gift, I machined a positive of my design from wax on the Othermill, and then created a foodsafe silicone mold negative from that to make custom chocolates.
+      For a unique gift, I machined a positive of my design from wax on the Othermill, and then made a food-safe silicone mold negative from that to make custom chocolates.
 
       This gift was a hit on all levels!
 
@@ -221,14 +223,14 @@ content_layout:
     content: |
       ### Generative Design for Additive Manufacturing
 
-      I am fascinated by the potential of generative design to enable a new era of design and manufacturing. It's still early, but this is a great example of humans working with computers to create efficient, novel designs. 
+      I am fascinated by the potential of generative design to enable a new era of design and manufacturing. It was still early, but this is a great example of people working with computers to create efficient, novel designs.
 
-      To get familiar with the tools, I have been exploring [generative designs](https://gallery.autodesk.com/fusion360/projects/generative-design-aeropress-plunger) for an [Aeropress](https://gallery.autodesk.com/fusion360/projects/aeropress-coffee-maker) plunger (silver part). In this case, the algorithm was prevented from adding material in a sphere-shaped region right at the center of the standard plunger. You can see how it branched around while maintaining sufficient support for the material and loads.
+      To get familiar with the tools, I explored generative designs for an AeroPress plunger (silver part). In this case, the algorithm was prevented from adding material in a sphere-shaped region right at the center of the standard plunger. You can see how it branched around while maintaining sufficient support for the material and loads.
 
   - section_layout: 1col
     images:
-      - caption: 'Conceptual design for a generative aeropress plunger'
-        description: 'Conceptual design for a generative aeropress plunger'
+      - caption: 'Conceptual design for a generative AeroPress plunger'
+        description: 'Conceptual design for a generative AeroPress plunger'
         url: '/projects/making-things/generative-aeropress.png'
         positioning: 
         width:
