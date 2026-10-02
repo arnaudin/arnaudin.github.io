@@ -144,17 +144,26 @@ $thumb-animation-ease-out: ease-in-out;
 .project-card {
   @include grid.grid-column(6);
   margin-bottom: var(--space-12);
+  position: relative;
 
   @include media-queries.grid-media(tablet) {
     @include grid.grid-column(6);
     margin-bottom: var(--space-16);
   }
 
+  // The title carries the card's link; ::after stretches it over the whole
+  // card so the card stays clickable, while the meta row's own links lift
+  // above it on z-index rather than being nested inside it.
   .project-card-link {
-    display: block;
     text-decoration: none;
-    color: var(--color-text);
+    color: inherit;
     outline-offset: 4px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
   }
 
   .project-card-media {
@@ -215,6 +224,22 @@ $thumb-animation-ease-out: ease-in-out;
       margin: 0 var(--space-2);
     }
   }
+
+  .project-card-meta-link {
+    position: relative;
+    z-index: 1;
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--color-line);
+    transition: color 150ms ease-out, text-decoration-color 150ms ease-out;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--color-accent);
+      text-decoration-color: currentColor;
+    }
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -230,7 +255,7 @@ $thumb-animation-ease-out: ease-in-out;
     margin-bottom: var(--space-16);
   }
 
-  .project-card-link {
+  .project-card-inner {
     @include media-queries.grid-media(tablet) {
       display: grid;
       grid-template-columns: 7fr 5fr;
