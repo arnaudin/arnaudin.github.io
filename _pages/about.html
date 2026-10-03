@@ -8,20 +8,26 @@ redirect_from:
 
 intro: |
 
-  I'm an aerospace engineer turned UX Designer who operates at the intersection of people, technology, and innovation. I design software that is useful, usable, and inspires people to make the world a better place.
+  I'm an aerospace engineer turned product designer, working at the intersection of people, deep technology, and early-stage innovation. For 15+ years I've been the designer who shows up early, defining what to build, shipping it, and making it useful, usable, and worth caring about.
 
-  I thrive on crafting intuitive, impactful experiences forged through collaboration, experimentation, and carefully researched insights. I bring a human-centered perspective to technical teams, with over 15 years of experience delivering profitable products with elegant UX in complex industries like computer-aided design & engineering (CAD/CAE), additive manufacturing & 3D printing, and innovation management.
-  
-  Beyond UI and visuals, I believe that design provides a path to team alignment, derisks business decisions, and allows us to reliably deliver value by solving real problems for people. 
+  I'm a generalist and a design team of one by default, moving between research and strategy to interaction design, systems, and the final pixels. I'm drawn to the hard, technical domains many designers avoid such as CAD, computer-aided engineering & simulation, additive manufacturing & 3D printing, innovation management, realtime collaboration, and now earth observation & GIS. My engineering background lets me speak the language of the scientists and engineers I design for, and turn genuinely complex problems into products people understand.
 
-  I'm currently open to opportunities, so if you have an exciting challenge please [reach out](/contact/) or message me on Gmail using simply my last name. I'm interested in the areas mentioned above, as well as technology frontiers such as AI, XR, space, and robotics. 
+  Most of my career has been 0-to-1. I've helped build four startups (two acquired). I led product & design for a spinout innovation lab at Brightidea. And, even inside a company the size of Autodesk, I worked with the Office of the CTO, Autodesk Labs, and the Emerging Products & Technologies teams to ship experimental simulation apps and cross-divisional innovation projects. In my two most recent roles I joined as the sole designer, stood up the design system & process, and hired the designers who came after me.
+
+  Beyond UI and visuals, I believe design is how teams get aligned, how business risk gets reduced, and how we reliably deliver value by solving real problems for real people.
+
+  Right now I'm leading product design at SkyFi, opening up satellite imagery and earth observation to everyone. I always enjoy talking shop with people building at the frontier: AI, XR, space, robotics, digital manufacturing, and innovative tools. [Reach out](/contact/) if you want to collaborate.
 
   For additional professional information, see [below](#details_section) or visit my [LinkedIn profile](https://linkedin.com/in/arnaudin).
 
 profile_picture: /images/black-thumbnail.png
 
 experience:
-  - company: <a href="http://physna.com/" target="_blank">Physna</a> (<a href="http://thangs.com/" target="_blank">Thangs</a>)
+  - company: <a href="http://skyfi.com/" target="_blank">SkyFi</a>
+    position: Product Design Lead
+    period: March 2025 - Present
+
+  - company: <a href="http://physna.com/" target="_blank">Physna</a> (<a href="http://thangs.com/" target="_blank">Thangs</a> acq Shapeways)
     position: Lead Product Designer
     period: January 2023 - October 2024
 
@@ -33,9 +39,9 @@ experience:
     position: Senior User Experience Designer · Senior Product Designer
     period: March 2011 - October 2017
 
-  - company: Blue Ridge Numerics
+  - company: <a href="https://investors.autodesk.com/news-releases/news-release-details/autodesk-completes-acquisition-blue-ridge-numerics-inc" target="_blank">Blue Ridge Numerics</a> (Acq Autodesk)
     position: Product Design Engineer · Quality Assurance Engineer · Technical Support Engineer
-    period: January 2008 - March 2011, Acquired by Autodesk
+    period: January 2008 - March 2011
 
   # - company: Honeywell
   #   position: Co-op
@@ -96,7 +102,7 @@ skills:
   - Innovation Management
   - Idea Management
   - Facilitation
-  - CAD, CAM, CAE
+  - 3D Design
 
 tools:
   - Figma
@@ -120,23 +126,6 @@ about_site: |
   - The code for generating this site is open source on [GitHub](https://github.com/arnaudin/arnaudin.github.io).
   - Although the code is open source under the GNU General Public License v3, all content (text & images, for example) is copyrighted by [Ryan Arnaudin](https://ryanarnaudin.com/) unless otherwise specified. [Read more in the license file](https://github.com/arnaudin/arnaudin.github.io/blob/main/LICENSE).
 ---
-
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "Person",
-    "name": "Ryan Arnaudin",
-    "jobTitle": "Product Designer",
-    "url": "{{ site.url }}/",
-    "sameAs": ["https://linkedin.com/in/{{ site.social-username.linkedin }}", "https://github.com/{{ site.social-username.github }}"],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Austin",
-      "addressRegion": "Texas",
-      "addressCountry": "United States"
-    }
-  }
-</script>
 
 <section class="home-hero home-hero-compact">
   <div class="home-hero-inner">
@@ -175,17 +164,6 @@ about_site: |
             {% endfor %}
           </dl>
         </div>
-
-        <!--<div class="about-section about-section--nested">
-          <h2 class="about-section-title">Hackathons</h2>
-          <dl class="relational-list">
-            {% for competition-item in page.competitions %}
-              <dt class="relational-list__title">{{ competition-item.event | markdownify}}</dt>
-              <dd class="relational-list__description relational-list__description--period">{{ competition-item.period | markdownify}}</dd>
-              <dd class="relational-list__description"><a href="{{ competition-item.link }}">{{ competition-item.result | markdownify}}</a></dd>
-            {% endfor %}
-          </dl>
-        </div>-->
       </div>
       <div class="about-skills">
         <div class="about-section">
@@ -203,10 +181,10 @@ about_site: |
           <ul>
               <li><a href="https://linkedin.com/in/{{ site.social-username.linkedin }}">LinkedIn</a></li>
               <li><a href="https://github.com/{{ site.social-username.github }}">GitHub</a></li>
-              <li><a href="https://twitter.com/{{ site.social-username.twitter | remove: '@' }}">Twitter</a></li>
+              <li><a href="https://x.com/{{ site.social-username.twitter | remove: '@' }}">X</a></li>
               <li><a href="https://flickr.com/{{ site.social-username.flickr }}">Flickr</a></li>
-              <li><a href="https://strava.com/athletes/{{ site.social-username.strava }}">Strava</a></li>
               <!--
+              <li><a href="https://strava.com/athletes/{{ site.social-username.strava }}">Strava</a></li>
               <li><a href="//dribbble.com/{{ site.social-username.dribbble }}">Dribbble</a></li>
               <li><a href="//codepen.com/{{ site.social-username.codepen }}">Codepen</a></li>
           -->
@@ -232,6 +210,5 @@ about_site: |
         <div class="paragraph-small">{{ page.about_site | markdownify }}</div>
       </div>
     </div>
-
   </div>
 </div>

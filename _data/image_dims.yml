@@ -229,6 +229,16 @@
   h: 200
   webp: true
   w900: false
+"/posts/solver-easy-part/sheet-after.jpg":
+  w: 1200
+  h: 900
+  webp: true
+  w900: false
+"/posts/solver-easy-part/sheet-before.jpg":
+  w: 1200
+  h: 900
+  webp: true
+  w900: false
 "/posts/surfboard-shaping/finished-bottom-combo.jpg":
   w: 800
   h: 711
@@ -1227,6 +1237,11 @@
 "/projects/thangs/thangs-final-logged-out.png":
   w: 1600
   h: 685
+  webp: true
+  w900: true
+"/projects/thangs/thangs-model-page-2026.png":
+  w: 1512
+  h: 982
   webp: true
   w900: true
 "/projects/thangs/thangs-original-landing.png":
