@@ -32,11 +32,11 @@ content_layout:
     content: |
       ## More examples coming soon...
 
-      In the meantime, check out <a href="http://thangs.com/" target="_blank">Thangs.com</a>.
+      In the meantime, check out <a href="https://thangs.com/" target="_blank">Thangs.com</a>.
 
       Read the [announcement of the acquisition by Shapeways](https://www.shapeways.com/blog/welcome-thangs-to-the-shapeways-family).
       
-      Or learn more about <a href="http://physna.com/" target="_blank">Physna</a>.
+      Or learn more about <a href="https://physna.com/" target="_blank">Physna</a>.
 
   # - section_layout: 1col-narrow
   #   images:

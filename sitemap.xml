@@ -35,6 +35,15 @@ layout: sitemap
     <changefreq>monthly</changefreq>
   </url>{% endunless %}
   {% endfor %}
+  {% comment %} The /sites/ apps have no front matter, so Jekyll copies them as
+      static files and the html_pages loop above never sees them. List the
+      on-site ones from the /experiments/ data instead. {% endcomment %}
+  {% for experiment in site.data.experiments %}{% assign first_char = experiment.url | slice: 0 %}{% if first_char == '/' %}<url>
+    <loc>{{ site.url }}{{ experiment.url }}</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>{% endif %}
+  {% endfor %}
   {% for page in site.posts %}<url>
     <loc>{{ site.url }}{{ page.url }}</loc>
     {% if page.date %}
