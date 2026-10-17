@@ -3,6 +3,8 @@ layout: default
 title-class: project
 ---
 
+{% comment %} Case studies only: /process/ shares this layout but isn't a child of Work. {% endcomment %}
+{% if page.collection == "projects" %}
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -11,20 +13,21 @@ title-class: project
       "@type": "ListItem",
       "position": 1,
       "item": {
-        "@id": "{{ site.url | append: '/projects/' }}",
-        "name": "Projects"
+        "@id": "{{ site.url | append: '/' }}",
+        "name": "Work"
       }
     },{
       "@type": "ListItem",
       "position": 2,
       "item": {
         "@id": "{{ site.url | append: page.url }}",
-        "name": "{{ page.title }}",
-        "image": "{{ site.url | append: '/images' | append: page.thumbnail }}"
+        "name": {{ page.title | jsonify }}{% if page.thumbnail %},
+        "image": "{{ site.url | append: site.image_serve_path | append: page.thumbnail }}"{% endif %}
       }
     }]
   }
 </script>
+{% endif %}
 
 <div class="project-wrapper">
 
