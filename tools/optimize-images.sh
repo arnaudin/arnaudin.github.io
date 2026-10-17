@@ -85,3 +85,22 @@ find images -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -i
 done
 
 echo "Done. $(grep -c '^"' "$DIMS_FILE") images indexed in $DIMS_FILE"
+
+# Warn about images the loop above can't index: a .webp with no .png/.jpg/.jpeg
+# source next to it. Templates find no dims for these, so they render without
+# width/height (layout shift) and without a 900w variant. Export the source
+# image instead and re-run.
+unindexed=$(find images -type f -iname "*.webp" -not -iname "*.900w.webp" \
+  -not -path "images/favicons/*" -not -name ".*" | sort | while read -r f; do
+  base="${f%.*}"
+  for ext in png jpg jpeg PNG JPG JPEG; do
+    [ -f "$base.$ext" ] && continue 2
+  done
+  echo "  $f"
+done)
+if [ -n "$unindexed" ]; then
+  echo ""
+  echo "Warning: these .webp files have no .png/.jpg source, so they aren't in $DIMS_FILE:"
+  echo "$unindexed"
+  echo "Replace them with a .png or .jpg export and re-run this script."
+fi
