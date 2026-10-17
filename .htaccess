@@ -41,9 +41,25 @@
     RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 </IfModule>
 
+# The case studies live under /projects/<name>/, but the Work index is the
+# homepage, so /projects/ itself has no page. Send it home instead of letting
+# the server answer it.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^projects/?$ / [R=301,L]
+</IfModule>
+
+# No directory listings. Without this, any folder with no index.html
+# (/images/, /fonts/, and /projects/ before the rule above) answers with an
+# "Index of" page that lists every file in it, including leftovers from old
+# deploys, and search engines can crawl it.
+Options -Indexes
+
 # Serve the site's own 404 page. Without this LiteSpeed returns its stock
-# "Proudly powered by" page, so /404.html was never actually reached.
+# "Proudly powered by" page, so /404.html was never actually reached. Folders
+# refused by -Indexes answer 403; show the same page rather than the stock one.
 ErrorDocument 404 /404.html
+ErrorDocument 403 /404.html
 
 # A .txt has no in-band way to declare its encoding the way HTML and XML do.
 # Without a charset on the response, browsers fall back to windows-1252 and
