@@ -5,7 +5,7 @@ date:   2015-09-29 19:00:00
 categories: blog
 author: Ryan Arnaudin
 blurb: Last weekend I gave up my car and committed to a year of biking. 
-image: img/post-tdf-hero.jpg
+image: images/posts/tour-de-fat/post-tdf-hero.jpg
 priority: 0.6
 ---
 ### Last weekend at [Tour de Fat](https://www.sfbike.org/event/fat_2015/) I became the 100th person to give up my car and commit to a year of biking. 

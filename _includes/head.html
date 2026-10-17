@@ -3,8 +3,10 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <script>document.documentElement.className += ' js';try{var t=localStorage.getItem('ra-theme');if(!t&&localStorage.getItem('ra-blueprint')==='1'){t='blueprint';}if(t==='blueprint'||t==='satellite'||t==='map'){document.documentElement.classList.add(t);document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
 
-    <title>{% if page.title_override %}{{ page.title_override | escape }}{% elsif page.title %}{{ page.title | escape }} | {{site.title | escape}}{% else %}{{ site.title | escape }}{% endif %}</title>
-    <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <title>{% if page.title_override %}{{ page.title_override | escape_once }}{% elsif page.title %}{{ page.title | escape_once }} | {{site.title | escape}}{% else %}{{ site.title | escape_once }}{% endif %}</title>
+    {% comment %} Posts write their summary as `blurb`; pages and projects use `description`. {% endcomment %}
+    {% assign summary = page.description | default: page.blurb | default: page.excerpt | strip_html | strip_newlines | strip %}
+    <meta name="description" content="{% if summary != '' %}{{ summary | truncate: 160 | escape_once }}{% else %}{{ site.description }}{% endif %}">
 
     <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
@@ -34,12 +36,25 @@
     <meta property="og:type" content="{{ type }}"/>
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"/>
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
-    <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 140 }}{% else %}{{ site.description }}{% endif %}"/>
-    
+    <meta property="og:description" content="{% if summary != '' %}{{ summary | truncate: 140 | escape_once }}{% else %}{{ site.description }}{% endif %}"/>
+
     {% comment %} Fall back to the site-wide share image (1200x630) so pages
         without a thumbnail — most importantly the homepage — still get a
-        preview card on LinkedIn/Slack/iMessage. {% endcomment %}
-    {% capture share_image %}{{ page.thumbnail | default: '/site/og-default.png' | prepend: site.image_serve_path | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
+        preview card on LinkedIn/Slack/iMessage. Project thumbnails are relative
+        to image_serve_path; post images are relative to the site root, and the
+        black-thumbnail placeholder most posts carry is skipped. {% endcomment %}
+    {% if page.thumbnail %}
+        {% capture share_image %}{{ page.thumbnail | prepend: site.image_serve_path | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
+    {% elsif page.image and page.image contains 'black-thumbnail' %}
+        {% capture share_image %}{{ '/site/og-default.png' | prepend: site.image_serve_path | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
+    {% elsif page.image %}
+        {% assign image_path = page.image | strip %}
+        {% assign first_char = image_path | slice: 0 %}
+        {% unless first_char == '/' %}{% assign image_path = image_path | prepend: '/' %}{% endunless %}
+        {% capture share_image %}{{ image_path | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
+    {% else %}
+        {% capture share_image %}{{ '/site/og-default.png' | prepend: site.image_serve_path | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
+    {% endif %}
     <meta property="og:image" content="{{ share_image }}"/>
     <meta name="twitter:image" content="{{ share_image }}"/>
     
@@ -51,7 +66,7 @@
     <meta name="twitter:site" content="{{ site.social-username.twitter }}"/>
     <meta name="twitter:creator" content="{{ site.social-username.twitter }}"/>
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
-    <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 140 }}{% else %}{{ site.description }}{% endif %}"/>
+    <meta name="twitter:description" content="{% if summary != '' %}{{ summary | truncate: 140 | escape_once }}{% else %}{{ site.description }}{% endif %}"/>
 
     {% if page.captcha == true %}
     <script src="https://www.google.com/recaptcha/api.js?render=6LdLDpcqAAAAABgi_IBp1fqlOaT0TTwU29g_WwBB"></script>
