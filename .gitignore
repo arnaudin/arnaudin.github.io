@@ -12,3 +12,5 @@ _site/
 vendor/
 .bundle/
 .claude/
+# python
+__pycache__/
