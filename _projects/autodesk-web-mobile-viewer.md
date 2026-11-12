@@ -8,7 +8,7 @@ disciplines: App Design, UX, Interaction Design, Information Architecture, User 
 media: Mobile App
 ownership: Professional 
 client: Autodesk
-time_period: 2014 - 2015
+time_period: 2014–2015
 thumbnail: "/projects/autodesk-web-mobile-viewer/a360-web-and-mobile-thumbnail.jpg"
 
 summary: "Designed the simulation layer of Autodesk 360 — cloud viewing, sharing, and collaboration for simulation results on web and mobile — plus a concept app for monitoring cloud simulation jobs from anywhere."

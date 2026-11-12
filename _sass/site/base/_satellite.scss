@@ -12,6 +12,7 @@
 // ---------------------------------------------------------------------------
 
 :root.satellite {
+  color-scheme: dark;                // native scrollbars and controls follow
   --palette-paper: #050B1E;          // solid surface fallback (fixed nav scrim)
   --palette-paper-rgb: 5, 11, 30;
   --palette-ink: #F2F6FF;            // near-white text
@@ -27,7 +28,7 @@
   --color-surface-raised: #10204A;   // raised cards, deep blue step-up
   --color-line: rgba(167, 180, 212, .32);
   --color-line-subtle: rgba(167, 180, 212, .16);
-  --color-redline: #FF9B8F;          // review red, lifted for the dark ground
+  --color-redline: #FF9B8F;          // warning red, lifted for the dark ground
 }
 
 // The ground itself: orbital black at the top of the viewport falling into

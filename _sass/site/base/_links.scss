@@ -25,6 +25,18 @@ main dd a,
   }
 }
 
+// External text links open in a new tab (class added in javascript/site.js).
+// The arrow says so. The no-break space keeps it on the same line as the
+// last word, and it stays out of the underline.
+a.is-external::after {
+  content: '\00A0\2197';
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: .8em;
+  line-height: 1;
+  text-decoration: none;
+}
+
 // Visible keyboard focus everywhere. No border-radius here: it would
 // override the focused element's own radius (squaring circular controls
 // like the theme chips); outlines follow the element's radius on their own.

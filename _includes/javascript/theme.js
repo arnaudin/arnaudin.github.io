@@ -12,6 +12,14 @@
   // codeword only, with no control in the selector UI yet; syncControls()
   // simply leaves every radio unchecked while it's active.
   var MODES = ['blueprint', 'satellite', 'map'];
+  // Top-of-page ground per mode, for <meta name="theme-color">. The inline
+  // script in _includes/head.html carries the same values; keep them in step.
+  var GROUNDS = {
+    paper: '#FAF9F7',
+    blueprint: '#0A2463',
+    satellite: '#000000',
+    map: '#001832'
+  };
   var root = document.documentElement;
   var buf = '';
   var bufMax = 0;
@@ -49,6 +57,9 @@
       root.classList.toggle(MODES[i], MODES[i] === next);
     }
     root.setAttribute('data-theme', next);
+    // Browser chrome (mobile address bar) follows the ground of the mode.
+    var chromeMeta = document.querySelector('meta[name="theme-color"]');
+    if (chromeMeta) chromeMeta.setAttribute('content', GROUNDS[next] || GROUNDS.paper);
     try {
       localStorage.setItem(KEY, next);
       localStorage.removeItem(LEGACY_KEY);

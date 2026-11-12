@@ -49,7 +49,7 @@ It generates (requires `cwebp` — `brew install webp`):
 
 GIFs are indexed for dimensions only (no WebP conversion). Templates lazy-load everything except the first image of a page, which gets `fetchpriority="high"`.
 
-The site-wide social-share fallback image lives at `images/site/og-default.png` (1200×630); pages with a `thumbnail` in front matter use that instead. `robots.txt` blocks `/images` in general but allows share images (`/images/site/`, `*-thumbnail*`) so link previews work.
+The site-wide social-share fallback image lives at `images/site/og-default.png` (1200×630); pages with a `thumbnail` in front matter use that instead. `robots.txt` leaves `/images` crawlable, so link previews work and case-study visuals can show up in image search.
 
 ## Licenses
 

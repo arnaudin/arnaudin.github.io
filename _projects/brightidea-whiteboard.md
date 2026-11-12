@@ -9,7 +9,7 @@ media: Web
 ownership: Professional
 featured: true
 client: Brightidea
-time_period: 2021-2022
+time_period: 2021–2022
 thumbnail: "/projects/brightidea-whiteboard/brightidea-whiteboard-thumbnail.jpg"
 
 summary: "Led vision, strategy, and design for a zero-to-one realtime whiteboard that bridged brainstorming and Brightidea's innovation platform — from first sketch to launch in under a year."

@@ -10,6 +10,7 @@
 // ---------------------------------------------------------------------------
 
 :root.blueprint {
+  color-scheme: dark;                // native scrollbars and controls follow
   --palette-paper: #0A2463;          // blueprint ground
   --palette-paper-rgb: 10, 36, 99;
   --palette-ink: #F3F7FF;            // white linework / text (14.8:1)
@@ -25,7 +26,7 @@
   --color-surface-raised: #123A87;   // raised cards, not paper white
   --color-line: rgba(255, 255, 255, .28);
   --color-line-subtle: rgba(255, 255, 255, .16);
-  --color-redline: #FFA6A6;          // review red, lifted for the dark ground
+  --color-redline: #FFA6A6;          // warning red, lifted for the dark ground
 }
 
 // Brief cross-fade when toggling (class added by JS for ~500ms, then removed).

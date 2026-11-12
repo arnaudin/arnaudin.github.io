@@ -9,7 +9,7 @@ media: Physical Goods
 ownership: Personal
 sitemap: false
 client:
-time_period: 2013-2018
+time_period: 2013–2018
 thumbnail: "/projects/making-things/making-things-thumbnail.jpg"
 
 summary: "Designing in the CAD/CAM tools I was helping build: Fusion 360 models, generative design, and parts fabricated at Autodesk's Pier 9, from composite prints to CNC-cut handplanes."

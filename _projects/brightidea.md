@@ -8,7 +8,7 @@ disciplines: Product Design, User Experience, UX, Strategy, Product Management, 
 media: Web
 ownership: Professional
 client: Brightidea
-time_period: 2018-2019, 2020-2021
+time_period: 2018–2019, 2020–2021
 thumbnail: "/projects/brightidea/brightidea-thumbnail.jpg"
 
 summary: "Design and product management across Brightidea's core idea-management platform — from fundamental workflows like moving and merging ideas to integrations with Slack, Teams, Jira, and voice assistants."

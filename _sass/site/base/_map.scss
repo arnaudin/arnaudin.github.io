@@ -20,6 +20,7 @@
 // ---------------------------------------------------------------------------
 
 :root.map {
+  color-scheme: dark;                // native scrollbars and controls follow
   --palette-paper: #0E1012;          // Mapbox ground (neutral near-black)
   --palette-paper-rgb: 14, 16, 18;
   --palette-ink: #DCE3ED;            // body copy — cool, not pure white
@@ -35,7 +36,7 @@
   --color-surface-raised: #171A20;   // raised cards, a step off the ground
   --color-line: rgba(152, 163, 180, .30);
   --color-line-subtle: rgba(152, 163, 180, .15);
-  --color-redline: #FF9B8F;          // review red, lifted for the dark ground
+  --color-redline: #FF9B8F;          // warning red, lifted for the dark ground
 
   // The ground: a deep-navy band resolving into the neutral near-black by the
   // end of the hero, as on the Mapbox blog. Sized in px rather than % so it

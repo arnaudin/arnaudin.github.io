@@ -9,7 +9,7 @@ media: Digital
 ownership: Personal
 sitemap: false
 client: 
-time_period: 2000-2022
+time_period: 2000–2022
 thumbnail: "/projects/photography/photography-thumbnail.jpg"
 
 summary: "A small sampling of landscape, portrait, and sports photography from 2000 to 2022."

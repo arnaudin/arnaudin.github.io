@@ -5,7 +5,7 @@ title: "Physna · Thangs"
 description: "Fastest growing 3D search and UGC platform to date"
 categories: web, mobile, desktop, 3D, innovation
 disciplines: Product Design, UX Design, User Experience, Visual Design
-time_period: January 2023 - October 2024
+time_period: 2023–2024
 media: Web
 ownership: Professional
 client: Physna

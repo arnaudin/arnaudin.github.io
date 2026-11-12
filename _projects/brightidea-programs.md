@@ -8,7 +8,7 @@ disciplines: Product Design, Product Strategy, Product Management, UX, User Rese
 media: Web
 ownership: Professional
 client: Brightidea
-time_period: 2019-2020
+time_period: 2019–2020
 thumbnail: "/projects/brightidea-programs/brightidea-programs-thumbnail.jpg"
 
 summary: "Led product and design for Programs Pro, a down-market product incubated in Brightidea's innovation lab — it grew into the company's top-selling product and the blueprint for product-led growth."

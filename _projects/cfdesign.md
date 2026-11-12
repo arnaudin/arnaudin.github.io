@@ -8,7 +8,7 @@ disciplines: UX, Interaction Design, Visual Design, User Research, Testing, Supp
 media: Windows App
 ownership: Professional
 client: Blue Ridge Numerics
-time_period: 2008-2011
+time_period: 2008–2011
 thumbnail: "/projects/cfdesign/cfdesign-thumbnail.jpg"
 
 summary: "Early-career product design for CFdesign at Blue Ridge Numerics — then the fastest-growing CFD software company in the world — through its acquisition by Autodesk."

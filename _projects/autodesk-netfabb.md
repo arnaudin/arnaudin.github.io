@@ -8,7 +8,7 @@ disciplines: UX, Interaction Design, Visual Design, User Research, Market Resear
 media: Windows App
 ownership: Professional
 client: Autodesk
-time_period: 2016-2018
+time_period: 2016–2018
 thumbnail: "/projects/netfabb/netfabb-thumbnail.jpg"
 
 summary: "Lead designer for Netfabb Simulation Utility — professional metal-3D-printing simulation that lets engineers predict distortion and failures before burning expensive time, material, and machines."

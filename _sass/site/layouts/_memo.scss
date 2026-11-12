@@ -314,6 +314,11 @@
   }
 }
 
+// Kicker over the index title, matching the other top-level pages
+.memo-index-kicker {
+  margin: 0 0 var(--space-6);
+}
+
 .memo-index-lede {
   font-size: var(--font-size-body-large);
   line-height: 1.5;
