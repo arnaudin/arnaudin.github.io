@@ -1,0 +1,75 @@
+{% comment %}
+The 404 page: a map with one tile missing. A real satellite scene
+of Barcelona is cut into a 5 x 3 grid of simulated tiles. They start as a
+coarse overview, the way a map shows a lower zoom level while it waits, and
+resolve pixel by pixel as the full image arrives. One tile never loads: its
+coarse overview breaks up to leave a "content not found" message.
+
+After that the map stays live. javascript/404.js keeps a few tiles at a time
+dropping back to coarse and resolving again, and every so often the missing
+tile retries the same way and fails again. The timings are in that file.
+
+Which tile is missing is picked at random on each load by 404.js. The markup
+below puts it in the middle, which is what a visitor without JS gets.
+
+Imagery: SpaceEye-T VVHR EO Open Data, scene ST1_202507170959005, from
+https://registry.opendata.aws/st-open-data. The credit line in the caption is
+the wording that registry page asks for on derivative data; keep it with the
+image. The crop is the full-resolution product (0.25 m, 38516 x 41260, 16-bit
+RGBN GeoTIFF) at offset 4815,15308, size 29150 x 17490, the same area as
+offset 128,407 and size 775 x 465 in the 1024 px preview. Bands R, G and B were
+area-downsampled to 1100 x 660 (2x the largest display size), tone-matched per
+channel to the preview, graded with ffmpeg
+eq=gamma=1.14:saturation=0.88:contrast=1.03, pulled back per channel to the
+preview's broad contrast (about x0.84 around the mean), and encoded with
+cwebp -m 6 -size 195000 (about 190 KB). --nf-lqip below is the same graded
+crop at 80 x 48, cwebp -q 45.
+
+Inline images on .nf-map, all tiny:
+  --nf-lqip  the same crop at 80 x 48, so each tile shows 16 x 16 coarse pixels
+  --nf-m1 to --nf-m3  1-bit masks, 64 x 16: four 16 x 16 random patterns side
+             by side (a tile uses one, by --v), about 30%, 58% and 85% opaque.
+             One mask pixel covers one coarse pixel, so stepping through them
+             swaps coarse pixels for sharp ones a scatter at a time.
+
+The tile ID is a real zoom-14 address in central Barcelona; 404.js offsets it
+by the missing tile's column and row. The tiles drawn here are a little larger
+than real zoom-14 tiles.
+{% endcomment %}
+{% assign nf_image = "/images/404/barcelona-tiles.webp" %}
+<div class="message-wrapper">
+    <div class="message nf nf-tile">
+        <div class="meta-label nf-kicker">Error 404</div>
+        <h1 class="type-level-jumbo">Page not found</h1>
+
+        <div class="nf-requested" hidden>
+            <span class="nf-requested-label">Requested</span>
+            <span class="nf-requested-path" data-nf-path></span>
+        </div>
+
+        <p>The page was either moved, or it never existed.</p>
+
+        <figure class="nf-figure">
+            <div class="nf-map" role="img" aria-label="Satellite image of Barcelona shown as a grid of map tiles. One tile is missing and reads: content not found." data-nf-map data-src="{{ nf_image }}" style="--nf-img:url('{{ nf_image }}');--nf-lqip:url('data:image/webp;base64,UklGRoQDAABXRUJQVlA4IHgDAAAQDwCdASpQADAAPt1YokyopSMiMRn7aRAbiWUAygepfvIxNMt2/fYbKvB6MlyUbyizzXeS/ed96GDsN5ENNvPSOB+Oct/4in63vjy+PgqlE9VXaidW3xiucxnHI8Pbfzda7baMXEwhiPTm14FM4OKPov6inMs3Ta1izS6TDaen7YAA/pTqlC1qWgTh3K2WZzifyG64pC7R3NlmCgb53ve/SlJOs6kB8Ru8pzVR5CakJ4gg/k4UBCMNLQZSpeDptIX1E4AW3k/du/d02ZywWHe/1RfGovV2tZHb21KcBTptBITSRhISyH6/3D+pwS/WzVVbBzHJuXKT46XzcUMgVb0zp6I74+XYMECRV7zy6C2CDREwbFVbbTrlMdTuyDThBfDQXMOA5s3+n4qDKp2F2kwZ6KGEVp2TZO0emcOSw6MwQvPHfzDtS8qi4/ubGuvCKs1Ql9YLDgnI4Mm7MqmyiI5RFSuFHyGSar2JAf6gJB6FXj5WGvymxSOWHAMQdzNbkQMQOoYtOr6nOSkjTnpEW7tL/F6UuPokcIw1l/OEZp1EpDgc0JkyD16O9hgvHFH88TtIwMH0ISNiUhmbSZqD+ICIJFKI0gTglhbG4umf20X+eSiLSswsfYU+ajE6V9K/LeskyrsV2sEGSVZ0OmzpB0X5JVcBVDrkdmRtTrdHitjPToUvzPKnhIvJd4nbU5UxpLFNwa8b4gOfWdHoG69UxVt0vzIyveR5ihFY1LI9TIa6gpySf7FYfsyo8ZKukKPobqVt333uNqyrAZr7U2QUF3Ngr06Uca+aSSi8Hpz0z0/1tyZAIZsOdKUyblVxDMA0pEYYOC4cxtBkoStvTOokPRUhnpDWyw4gAFBZm5yu+semKp1B87G7Ai/rWD5QzVFIJCOioZaY9PP2Wf9AsLcMS2B2u2d+ua5h1sBurt95OzIlLCpmgJzuJHTQf8VJu3GdmJdmI1a13jcVULqkNZ9JHMJhjdJVJpMWrQWl4o7RAbOMQmn77KM68pr9q2bE4gI8YzdFPKbwzhIysXT5HPc//fARNDm9UkCGWkLs3oZ2GKf2Vk0w8pRfBIcxDLsxHGk3wc0e1naXgmflk5ZxsZeYcYGsBr2jx7J1eGU9YIPgZ1hiauuPFE0bHKUKCkI7hI4J3Mjh8u37RCFU8nxcC9Cz5Gy0HpX70AYEAAA=');--nf-m1:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAQAQMAAACcKetqAAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMA/1uRIrUAAACbSURBVHjaAZAAb/8AEsjMGiqRK0AAihFCBJQ4JcUABrBShSMCFKMAAIFIUFJEgAQAAUlVIqYsAAIA2BYGSQAGwwAAqgIEYgEgAlcAOA1BQCulQCgAAyEZMFQwdqEAEAJF2oQeUnAAKhBB8EKqKSAAIUQoMDEIJCQAhwwUJAFWHoAAAKYgCogiCaAAJaUkYAEAyYIAKRMAS8oEUIbkrSJiAzukHwAAAABJRU5ErkJggg==');--nf-m2:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAQAQMAAACcKetqAAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMA/1uRIrUAAACbSURBVHjaAZAAb/8ACsvr3a6zH2QAzBNFVJZ89+kAl7L2n6NGlOMAWfrq29ZOzkcAUenWrqbc7IMA2Y9OJdzNyxYAamJMaKt5ensAec//dSv3a60AoWXfMkfmdasA+F/P3k/+wfEA9hTB2Cu6v+gA70S5UCVwbGUAxuv9JlyWLK4Afuop+84zEPUAN/2csAvxy+4AfLcYe7vt1fqSyEz6a6g87wAAAABJRU5ErkJggg==');--nf-m3:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAQAQMAAACcKetqAAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMA/1uRIrUAAACGSURBVHjaDY0hDgIxFAXfRTgFHo7AATgEElHIPw6KIBB19ARkJQZ2JaKBZgX9SZv+R93MmMHS7iTlCVuz5S6Y5kQO/gSysoq9O6jloB6RJjpQUXhzfKmAI/OONWEvuuologqFfATYIhVn/KKVM3+lKppU20y8YOSRMTWDb+FwJT9g2Krr3z/EkmyfdekW+AAAAABJRU5ErkJggg==')">
+                {% for i in (0..14) %}
+                    {% assign col = i | modulo: 5 %}
+                    {% assign row = i | divided_by: 5 %}
+                    <div class="nf-map-tile{% if i == 7 %} is-void{% endif %}" style="grid-column:{{ col | plus: 1 }};grid-row:{{ row | plus: 1 }};--c:{{ col }};--r:{{ row }};--v:{{ i | modulo: 4 }}"><span class="nf-map-reveal"></span></div>
+                {% endfor %}
+                <div class="nf-map-missing" style="grid-column:3;grid-row:2;--c:2;--r:1;--v:0">
+                    <svg class="nf-map-icon" viewBox="0 0 16 16" width="16" height="16" focusable="false">
+                        <path d="M5 2.5h8a1.5 1.5 0 0 1 1.5 1.5v7.5M12.5 13.5H3A1.5 1.5 0 0 1 1.5 12V4.5"/>
+                        <path d="M1.5 11l3-2.5 2.5 2M9.5 8l1-1 4 4"/>
+                        <path d="M1.5 1.5l13 13"/>
+                    </svg>
+                    <span class="nf-map-status">Content<br>not found</span>
+                    <span class="nf-map-address" data-nf-tile-id>ID 14/8290/6119</span>
+                </div>
+            </div>
+            <figcaption class="nf-caption">Barcelona, 17 July 2025. SpaceEye-T-derived data © 2025 Satrec Initiative (Originally licensed under <span class="nf-nowrap"><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>).</span> Cropped and color adjusted.</figcaption>
+        </figure>
+
+        {% include 404/recovery.html label="Available coverage" %}
+    </div>
+</div>
+<script>{% include javascript/404.js %}</script>

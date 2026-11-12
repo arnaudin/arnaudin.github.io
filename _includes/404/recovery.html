@@ -1,0 +1,24 @@
+{% comment %}
+Recovery links for the 404 page: the way home, then the main nav as a numbered
+index. These are real anchors on purpose, so a visitor or crawler on a dead
+URL always has something to follow.
+
+Params:
+  label  required: mono heading for the index
+{% endcomment %}
+<p class="nf-home"><a href="/">Return to homepage</a></p>
+
+<nav class="nf-recovery" aria-label="Other pages">
+    <div class="meta-label nf-recovery-label">{{ include.label }}</div>
+    <ol class="nf-index">
+        {% for link in site.navigation %}
+            <li>
+                <a href="{{ link.url }}">
+                    <span class="nf-index-no" aria-hidden="true">{{ forloop.index | prepend: '0' }}</span>
+                    <span class="nf-index-title">{{ link.title }}</span>
+                </a>
+            </li>
+        {% endfor %}
+    </ol>
+    <div class="nf-machine">Full list in <a href="/sitemap.xml">sitemap.xml</a>. Notes for automated readers in <a href="/llms.txt">llms.txt</a>.</div>
+</nav>

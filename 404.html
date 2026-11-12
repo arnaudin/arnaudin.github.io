@@ -1,27 +1,10 @@
 ---
-layout: message
+layout: default
 title: "Page not found"
-kicker: "Error 404"
 sitemap: false
 permalink: /404
-class: page-404
 ---
-
-<p class="redline-note redline-note-pinned" aria-hidden="true">Spec says this page should exist</p>
-
-This page was either moved, or it never existed in the first place.
-
-<div class="redline-stamp" aria-hidden="true">
-    <span class="redline-stamp-main">Returned for revision</span>
-    <span class="redline-stamp-sub">REV 404 · Does not match spec</span>
-</div>
-
-<p class="message-cta"><a href="/">Return to homepage</a> <span class="redline-note" aria-hidden="true">← approved fix</span></p>
-
-{% comment %} Recovery links for humans and for agents. These are real anchors in
-    the body on purpose — the redline annotations around them are aria-hidden
-    decoration, so without this block a crawler that lands on a dead URL gets a
-    404 with nothing to follow. {% endcomment %}
-<p class="message-resubmit">Resubmit against an approved sheet:{% for link in site.navigation %} <a href="{{ link.url }}">{{ link.title }}</a>{% unless forloop.last %} ·{% endunless %}{% endfor %}</p>
-
-<p class="message-resubmit">Working from the index instead? The full drawing list is in <a href="/sitemap.xml">sitemap.xml</a>, and the notes for automated readers are in <a href="/llms.txt">llms.txt</a>.</p>
+{% comment %} The page itself is _includes/404/tile.html: a satellite map with
+    one tile missing. Styles are in _sass/site/layouts/_not-found.scss and the
+    map's script is _includes/javascript/404.js. {% endcomment %}
+{% include 404/tile.html %}
