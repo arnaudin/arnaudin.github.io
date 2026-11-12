@@ -9,7 +9,7 @@
 
 .memo {
   --memo-grid: 32px;
-  --memo-grid-line: rgba(var(--palette-ink-rgb), .06);
+  --memo-grid-alpha: .06;
   --memo-sheet-width: 46rem;
   --memo-body-size: 1.0625rem;
   counter-reset: fig;
@@ -58,12 +58,22 @@
     position: absolute;
     inset: calc(var(--memo-grid) * -1) 0 0;
     z-index: -1;
-    background-image:
-      linear-gradient(var(--memo-grid-line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--memo-grid-line) 1px, transparent 1px);
-    background-size: var(--memo-grid) var(--memo-grid);
-    background-position: center top;
-    mask-image: linear-gradient(to bottom, transparent, #000 var(--space-24), #000 calc(100% - var(--space-24)), transparent);
+    // Same pattern tiles as the hero wash (--grid-wash-pattern), in ink.
+    // The tile's mark sits at its center, so 50% keeps a line on the
+    // page's center axis.
+    background-color: rgba(var(--palette-ink-rgb), calc(var(--memo-grid-alpha) * var(--grid-wash-boost)));
+    $tile: center calc(var(--memo-grid) / -2);
+    $fade: linear-gradient(to bottom, transparent, black var(--space-24), black calc(100% - var(--space-24)), transparent);
+    -webkit-mask-image: var(--grid-wash-pattern), $fade;
+    -webkit-mask-size: var(--memo-grid) var(--memo-grid), 100% 100%;
+    -webkit-mask-repeat: repeat, no-repeat;
+    -webkit-mask-position: $tile, 0 0;
+    -webkit-mask-composite: source-in;
+    mask-image: var(--grid-wash-pattern), $fade;
+    mask-size: var(--memo-grid) var(--memo-grid), 100% 100%;
+    mask-repeat: repeat, no-repeat;
+    mask-position: $tile, 0 0;
+    mask-composite: intersect;
   }
 
   @include media-queries.grid-media(tablet) {

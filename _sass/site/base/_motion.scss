@@ -38,8 +38,12 @@
   }
 }
 
-// Blueprint graph-paper wash behind the home hero — a faint engineering
-// reference to the CAD/simulation domain. Very low contrast on purpose.
+// Graph-paper wash behind the home hero, a faint nod to CAD and simulation.
+// Full-bleed so it has no box edges. The pattern tile is a mask over a flat
+// accent fill, so a theme can swap lines, dots or plus marks with one token
+// (--grid-wash-pattern) and set its strength with --grid-wash-alpha. The tile
+// is shifted so a grid line sits on the content's left edge (--page-margin).
+// The second mask layer fades it in under the header and out toward the work.
 .home-hero {
   position: relative;
   isolation: isolate;
@@ -47,14 +51,22 @@
   &::before {
     content: '';
     position: absolute;
-    inset: 0;
+    inset: 0 calc(var(--page-margin) * -1);
     z-index: -1;
     pointer-events: none;
-    background-image:
-      linear-gradient(to right, rgba(var(--palette-cobalt-rgb), 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(var(--palette-cobalt-rgb), 0.05) 1px, transparent 1px);
-    background-size: 32px 32px;
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent 82%);
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent 82%);
+    background-color: rgba(var(--palette-cobalt-rgb), calc(var(--grid-wash-alpha) * var(--grid-wash-boost)));
+    $tile-x: calc(var(--page-margin) - var(--grid-wash-size) / 2);
+    $tile-y: calc(var(--grid-wash-size) / -2);
+    $fade: linear-gradient(to bottom, transparent, black var(--space-24), rgba(0, 0, 0, .7) 60%, transparent);
+    -webkit-mask-image: var(--grid-wash-pattern), $fade;
+    -webkit-mask-size: var(--grid-wash-size) var(--grid-wash-size), 100% 100%;
+    -webkit-mask-repeat: repeat, no-repeat;
+    -webkit-mask-position: $tile-x $tile-y, 0 0;
+    -webkit-mask-composite: source-in;
+    mask-image: var(--grid-wash-pattern), $fade;
+    mask-size: var(--grid-wash-size) var(--grid-wash-size), 100% 100%;
+    mask-repeat: repeat, no-repeat;
+    mask-position: $tile-x $tile-y, 0 0;
+    mask-composite: intersect;
   }
 }

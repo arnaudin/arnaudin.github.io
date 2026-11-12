@@ -37,6 +37,9 @@
   --color-line: rgba(152, 163, 180, .30);
   --color-line-subtle: rgba(152, 163, 180, .15);
   --color-redline: #FF9B8F;          // warning red, lifted for the dark ground
+  --grid-wash-pattern: var(--grid-pattern-plus);
+  --grid-wash-boost: 1.6;
+  --grid-wash-alpha: .07;
 
   // The ground: a deep-navy band resolving into the neutral near-black by the
   // end of the hero, as on the Mapbox blog. Sized in px rather than % so it

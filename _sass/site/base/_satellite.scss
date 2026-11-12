@@ -29,6 +29,9 @@
   --color-line: rgba(167, 180, 212, .32);
   --color-line-subtle: rgba(167, 180, 212, .16);
   --color-redline: #FF9B8F;          // warning red, lifted for the dark ground
+  --grid-wash-pattern: var(--grid-pattern-plus);
+  --grid-wash-boost: 1.6;
+  --grid-wash-alpha: .07;
 }
 
 // The ground itself: orbital black at the top of the viewport falling into

@@ -27,6 +27,9 @@
   --color-line: rgba(255, 255, 255, .28);
   --color-line-subtle: rgba(255, 255, 255, .16);
   --color-redline: #FFA6A6;          // warning red, lifted for the dark ground
+  --grid-wash-pattern: var(--grid-pattern-lines);
+  --grid-wash-boost: 1;
+  --grid-wash-alpha: .11;
 }
 
 // Brief cross-fade when toggling (class added by JS for ~500ms, then removed).
