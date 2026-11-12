@@ -167,8 +167,8 @@ $thumb-animation-ease-out: ease-in-out;
   }
 
   .project-card-media {
+    position: relative;
     aspect-ratio: 4 / 3;
-    overflow: hidden;
     border: 1px solid var(--color-line-subtle);
     border-radius: 4px;
     background: var(--color-surface-raised);
@@ -178,18 +178,51 @@ $thumb-animation-ease-out: ease-in-out;
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform 400ms ease-out;
+      border-radius: 3px;
+    }
+
+    // Hover and focus state: four accent corner ticks just outside the
+    // image, like a CAD selection box or an area-of-interest pick. Each
+    // corner is two short bars painted as background layers.
+    &::after {
+      --tick: .875rem;
+      --tick-w: 2px;
+      content: '';
+      position: absolute;
+      inset: calc(var(--space-2) * -1);
+      pointer-events: none;
+      background:
+        linear-gradient(var(--color-accent), var(--color-accent)) top left / var(--tick) var(--tick-w),
+        linear-gradient(var(--color-accent), var(--color-accent)) top left / var(--tick-w) var(--tick),
+        linear-gradient(var(--color-accent), var(--color-accent)) top right / var(--tick) var(--tick-w),
+        linear-gradient(var(--color-accent), var(--color-accent)) top right / var(--tick-w) var(--tick),
+        linear-gradient(var(--color-accent), var(--color-accent)) bottom left / var(--tick) var(--tick-w),
+        linear-gradient(var(--color-accent), var(--color-accent)) bottom left / var(--tick-w) var(--tick),
+        linear-gradient(var(--color-accent), var(--color-accent)) bottom right / var(--tick) var(--tick-w),
+        linear-gradient(var(--color-accent), var(--color-accent)) bottom right / var(--tick-w) var(--tick);
+      background-repeat: no-repeat;
+      opacity: 0;
+      transform: scale(1.02);
+      transition: opacity 150ms ease-out, transform 150ms ease-out;
     }
   }
 
   &:hover,
   &:focus-within {
-    .project-card-media img {
-      transform: scale(1.03);
+    .project-card-media::after {
+      opacity: 1;
+      transform: none;
     }
 
     .project-card-title {
       color: var(--color-accent);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .project-card-media::after {
+      transform: none;
+      transition: none;
     }
   }
 

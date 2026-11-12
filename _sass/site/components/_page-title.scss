@@ -56,9 +56,20 @@
       justify-content: flex-end;
     }
 
+    counter-reset: section;
+
     li {
       display: inline-flex;
       align-items: baseline;
+      counter-increment: section;
+    }
+
+    // Matches the number on each section heading (_project.scss)
+    li::before {
+      content: counter(section, decimal-leading-zero);
+      content: counter(section, decimal-leading-zero) / "";
+      color: var(--color-accent);
+      margin-right: var(--space-1);
     }
 
     // Trailing separator so a wrapped line never opens with an orphaned dot

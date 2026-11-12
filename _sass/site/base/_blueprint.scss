@@ -44,6 +44,29 @@
   }
 }
 
+// Theme switch sweep (theme.js, where View Transitions exist): the new
+// theme wipes down over the old one from the top in about 400 ms. The class
+// is set only for theme switches, and the script skips it under reduced
+// motion; the media query below is a second guard.
+:root.theme-sweep::view-transition-old(root) {
+  animation: none;
+}
+
+:root.theme-sweep::view-transition-new(root) {
+  animation: theme-sweep 400ms cubic-bezier(.3, .7, .2, 1) both;
+}
+
+@keyframes theme-sweep {
+  from { clip-path: inset(0 0 100% 0); }
+  to { clip-path: inset(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root.theme-sweep::view-transition-new(root) {
+    animation: none;
+  }
+}
+
 // Toggle confirmation — a small mono toast, bottom-center.
 .theme-toast {
   position: fixed;

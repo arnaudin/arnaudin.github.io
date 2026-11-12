@@ -95,6 +95,53 @@
   }
 }
 
+// Current section beside the logo (project layout only). Absolutely placed
+// so it never moves the logo or nav; header-section.js caps its width at the
+// room left before the nav and hides it when that room is too small. Shown
+// only while the header is in its fixed state and a section has been reached.
+.main-header .logo-title-wrapper {
+  position: relative;
+}
+
+.header-section {
+  position: absolute;
+  top: 50%;
+  left: calc(#{mixins-functions.rem(36px)} + var(--space-4));
+  max-width: var(--header-section-max, 0);
+  margin: 0;
+  transform: translateY(-50%);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-meta);
+  letter-spacing: var(--letter-spacing-mono-label);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 150ms ease-out, visibility 0s linear 150ms;
+  pointer-events: none;
+
+  .header-section-num {
+    color: var(--color-accent);
+    margin-right: var(--space-2);
+  }
+
+  .sticky-header--fixed &.is-set {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 150ms ease-out, visibility 0s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &,
+    .sticky-header--fixed &.is-set {
+      transition: none;
+    }
+  }
+}
+
 // Sticky header behaviour
 .main-header {
   transition: transform 200ms ease,

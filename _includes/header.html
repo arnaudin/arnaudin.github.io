@@ -59,6 +59,10 @@
                         {% include logo.svg %}
                     </a>
                 </div>
+                {% if page.layout == 'project' %}
+                    {% comment %} Current section while the header is fixed (case studies and /process/). Filled by _includes/javascript/header-section.js. Hidden from screen readers: it repeats the heading they just passed. {% endcomment %}
+                    <p class="header-section" data-header-section aria-hidden="true"></p>
+                {% endif %}
             </div>
 
             <nav aria-label="main navigation" class="navigation">

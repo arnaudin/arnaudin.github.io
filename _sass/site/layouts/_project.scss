@@ -4,7 +4,28 @@
 @use "../base/mixins-functions";
 
 .project-wrapper {
-  counter-reset: fig;
+  counter-reset: fig section;
+
+  // Section numbers. Every ## heading in a text section gets an #s-<slug> id
+  // (_includes/layout.html), and the "On this page" list counts the same
+  // headings in the same order (_page-title.scss), so 01 in the list is 01
+  // here. The second content line hides the number from screen readers
+  // where alt text for generated content is supported; older engines drop
+  // that line and keep the first.
+  h2[id^="s-"] {
+    counter-increment: section;
+
+    &::before {
+      content: counter(section, decimal-leading-zero);
+      content: counter(section, decimal-leading-zero) / "";
+      font-family: var(--font-mono);
+      font-size: var(--font-size-meta);
+      font-weight: 500;
+      letter-spacing: var(--letter-spacing-mono-label);
+      color: var(--color-accent);
+      margin-right: var(--space-3);
+    }
+  }
 
   // ---------------------------------------------------------------------
   // Header: summary lede, meta block, outcomes

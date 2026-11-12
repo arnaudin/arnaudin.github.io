@@ -3,9 +3,10 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     {% comment %} theme-color sits above the script so the script can repaint it
         for a dark theme before first paint. The same grounds are listed in
-        _includes/javascript/theme.js; keep the two in step. {% endcomment %}
+        _includes/javascript/theme.js; keep the two in step. With no stored
+        theme, an OS dark preference shows Satellite without storing it. {% endcomment %}
     <meta content="#FAF9F7" name="theme-color">
-    <script>document.documentElement.className += ' js';try{var t=localStorage.getItem('ra-theme');if(!t&&localStorage.getItem('ra-blueprint')==='1'){t='blueprint';}if(t==='blueprint'||t==='satellite'||t==='map'){document.documentElement.classList.add(t);document.documentElement.setAttribute('data-theme',t);document.querySelector('meta[name="theme-color"]').setAttribute('content',{blueprint:'#0A2463',satellite:'#000000',map:'#001832'}[t]);}}catch(e){}</script>
+    <script>document.documentElement.className += ' js';try{var t=localStorage.getItem('ra-theme');if(!t&&localStorage.getItem('ra-blueprint')==='1'){t='blueprint';}if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches){t='satellite';}if(t==='blueprint'||t==='satellite'||t==='map'){document.documentElement.classList.add(t);document.documentElement.setAttribute('data-theme',t);document.querySelector('meta[name="theme-color"]').setAttribute('content',{blueprint:'#0A2463',satellite:'#000000',map:'#001832'}[t]);}}catch(e){}</script>
 
     <title>{% if page.title_override %}{{ page.title_override | escape_once }}{% elsif page.title %}{{ page.title | escape_once }} | {{site.title | escape}}{% else %}{{ site.title | escape_once }}{% endif %}</title>
     {% comment %} Posts write their summary as `blurb`; pages and projects use `description`. {% endcomment %}

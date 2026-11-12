@@ -3,8 +3,13 @@
 // segmented control), or typing a mode's codeword anywhere outside a form
 // field ("blueprint", "satellite" — the original easter-egg path). Modes are
 // mutually exclusive. The chosen mode persists in localStorage and is
-// restored (before first paint) by the inline script in <head>; this file
-// keeps the controls in sync and animates the cross-fade.
+// restored (before first paint) by the inline script in <head>. With nothing
+// stored, the head script follows the OS: Satellite when it prefers dark,
+// Paper otherwise, without storing anything; this file keeps following OS
+// changes until the visitor picks a mode. It also keeps the controls in sync
+// and animates the switch: a quick top-to-bottom sweep where View
+// Transitions exist, the older cross-fade where they don't, and neither
+// under reduced motion.
 (function () {
   var KEY = 'ra-theme';
   var LEGACY_KEY = 'ra-blueprint'; // pre-satellite storage; cleared on write
@@ -46,13 +51,21 @@
     }
   }
 
-  function apply(next, animate) {
-    var reduce = window.matchMedia &&
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (animate && !reduce) {
-      root.classList.add('theme-anim');
-      window.setTimeout(function () { root.classList.remove('theme-anim'); }, 500);
-    }
+  function store(next) {
+    try {
+      localStorage.setItem(KEY, next);
+      localStorage.removeItem(LEGACY_KEY);
+    } catch (e) {}
+  }
+
+  function stored() {
+    try {
+      return localStorage.getItem(KEY) ||
+        (localStorage.getItem(LEGACY_KEY) === '1' ? 'blueprint' : null);
+    } catch (e) { return null; }
+  }
+
+  function swap(next) {
     for (var i = 0; i < MODES.length; i++) {
       root.classList.toggle(MODES[i], MODES[i] === next);
     }
@@ -60,12 +73,29 @@
     // Browser chrome (mobile address bar) follows the ground of the mode.
     var chromeMeta = document.querySelector('meta[name="theme-color"]');
     if (chromeMeta) chromeMeta.setAttribute('content', GROUNDS[next] || GROUNDS.paper);
-    try {
-      localStorage.setItem(KEY, next);
-      localStorage.removeItem(LEGACY_KEY);
-    } catch (e) {}
     syncControls();
   }
+
+  // persist: false for the OS-following default, which must not be stored.
+  function apply(next, animate, persist) {
+    if (persist !== false) store(next);
+    var reduce = window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (animate && !reduce && document.startViewTransition) {
+      // The sweep itself is CSS (:root.theme-sweep in _blueprint.scss).
+      root.classList.add('theme-sweep');
+      var vt = document.startViewTransition(function () { swap(next); });
+      vt.finished.then(done, done);
+      return;
+    }
+    if (animate && !reduce) {
+      root.classList.add('theme-anim');
+      window.setTimeout(function () { root.classList.remove('theme-anim'); }, 500);
+    }
+    swap(next);
+  }
+
+  function done() { root.classList.remove('theme-sweep'); }
 
   function toast(next) {
     if (!document.body) return;
@@ -86,13 +116,27 @@
   // the hidden keyboard shortcuts; the visible controls show their own state).
   function setMode(next, opts) {
     opts = opts || {};
-    if (next === mode()) { syncControls(); return; }
+    // Already showing it (say, Satellite from the OS default): still store
+    // the pick so it sticks when the OS setting changes.
+    if (next === mode()) { store(next); syncControls(); return; }
     apply(next, opts.animate !== false);
     if (opts.toast) toast(next);
   }
 
   // Keep controls in sync with whatever the head script already applied.
   syncControls();
+
+  // Follow the OS light/dark setting until the visitor picks a mode.
+  var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+  if (dark) {
+    var follow = function () {
+      if (stored()) return;
+      var next = dark.matches ? 'satellite' : 'paper';
+      if (next !== mode()) apply(next, true, false);
+    };
+    if (dark.addEventListener) dark.addEventListener('change', follow);
+    else if (dark.addListener) dark.addListener(follow);
+  }
 
   // Selector controls (nav chips + footer segmented control).
   document.addEventListener('click', function (e) {
