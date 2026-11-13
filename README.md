@@ -4,14 +4,14 @@ Personal homepage and portfolio of Ryan Arnaudin — product designer in Austin,
 
 ## About
 
-A static site built with [Jekyll](https://jekyllrb.com/) 4.4 and deployed to GitHub Pages via GitHub Actions (`.github/workflows/jekyll.yml`; Pages source must be set to "GitHub Actions").
+A static site built with [Jekyll](https://jekyllrb.com/) 4.4. GitHub Actions builds it and deploys it to Namecheap over FTPS on every push to `main` (`.github/workflows/jekyll.yml`).
 
 The design is fully custom (2026 redesign) — a text-first, editorial layout with a technical/blueprint voice. The site was originally bootstrapped in 2022 from [himatt.com](https://github.com/MattGreyDesign/himatt.com) (GPL v3), though essentially none of it remains.
 
 - **Typefaces** (self-hosted variable fonts in `fonts/`): [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) for display, [Inter](https://rsms.me/inter/) for body, [IBM Plex Mono](https://www.ibm.com/plex/) for metadata/labels.
 - **Libraries**: [Sass](https://sass-lang.com/) (Dart Sass via jekyll-sass-converter 3), [PhotoSwipe](https://photoswipe.com/) for image lightboxes, [Headspace](https://github.com/gdub22/headspace) for the hide-on-scroll header, [Normalize.css](https://github.com/necolas/normalize.css). No client-side frameworks.
 - **Forms**: the contact form posts to [FormKeep](https://formkeep.com/), protected by reCAPTCHA v3 (token fetched at submit time).
-- **Easter egg**: type `blueprint` anywhere (or use the footer switch) to flip the site into blueprint mode — white linework on cobalt paper. The theme is a single palette-layer swap in `_sass/site/base/_variables.scss` / `_blueprint.scss`.
+- **Themes**: Paper is the default, with Blueprint (white linework on cobalt paper) and Satellite (dark) as alternates. Switch with the Mode control in the footer, or type `blueprint` or `satellite` anywhere. With no choice stored, the site follows the OS: Satellite in dark mode, Paper otherwise. Each theme is a palette-layer swap in `_sass/site/base/_variables.scss` plus `_blueprint.scss` and `_satellite.scss`.
 
 ## Local development
 
@@ -50,6 +50,18 @@ It generates (requires `cwebp` — `brew install webp`):
 GIFs are indexed for dimensions only (no WebP conversion). Templates lazy-load everything except the first image of a page, which gets `fetchpriority="high"`.
 
 The site-wide social-share fallback image lives at `images/site/og-default.png` (1200×630); pages with a `thumbnail` in front matter use that instead. `robots.txt` leaves `/images` crawlable, so link previews work and case-study visuals can show up in image search.
+
+## Hero figure
+
+The faint line drawing beside the home hero text is generated, not drawn by hand. Paper and Blueprint show an airfoil in potential flow. Satellite (and the experimental Map mode) show a globe with one orbit pass. It appears only on wide screens, from about 1390px.
+
+To change it, edit `tools/hero-figure.py` and run it from the repo root:
+
+```sh
+python3 tools/hero-figure.py
+```
+
+It needs Python 3 and no packages. It rewrites `_includes/hero-figure.html`, so do not edit that file by hand. Commit both the script and the include: the deploy build runs Jekyll only, so the site uses the include as committed. Styles are in `_sass/site/components/_hero-figure.scss`.
 
 ## Licenses
 

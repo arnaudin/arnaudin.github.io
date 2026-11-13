@@ -23,6 +23,8 @@ home hero as a quiet watermark: linework only, no labels, no motion.
    one pass of a sun-synchronous ground track (inclination 97.8 deg, period
    about 99 min, earth turning under it), the swath edges either side, and one
    scene footprint on the track.
+   A radial mask fades the graticule, track and swath out away from the
+   footprint, and a linear mask fades the limb toward the lower right.
 
 Pure Python, no numpy. Output paths are simplified to about 0.3 px.
 """
