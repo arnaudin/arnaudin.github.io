@@ -31,7 +31,7 @@ outcomes:
 
 website:
   button_text: Try Slipstream →
-  url: /sites/slipstream/
+  url: "/sites/slipstream/#p=ribbons&m=cyclist_tuck&w=11.111&c=cyclist,11.11,0,59.37,1.89,0.422~cyclist_tuck,11.11,0,44.98,2.02,0.299"
 
 hero:
   section_layout: 1col
