@@ -28,7 +28,11 @@ concurrency:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    # Pinned, not ubuntu-latest. `latest` moved to ubuntu-26.04 in November 2026, and
+    # setup-ruby has no prebuilt Ruby 3.2.2 (the version in .ruby-version) for that
+    # image, so every deploy failed at "Setup Ruby". To move to a newer image, raise
+    # .ruby-version to a 3.2.x release that image has first.
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
