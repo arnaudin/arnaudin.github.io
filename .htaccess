@@ -49,6 +49,18 @@
     RewriteRule ^projects/?$ / [R=301,L]
 </IfModule>
 
+# Short links. One line each: the path (no leading slash; /? allows a trailing
+# slash, NC ignores case) and where it goes. 302, not 301, because browsers
+# cache a 301 indefinitely, so a short link could never be repointed.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^bands/?$ /sites/band-cloud/ [R=302,NC,L]
+    RewriteRule ^tea/?$ /sites/steep/ [R=302,NC,L]
+    RewriteRule ^(countdown|claude)/?$ /sites/countdown/ [R=302,NC,L]
+    RewriteRule ^breathe?/?$ /sites/breathe/ [R=302,NC,L]
+    RewriteRule ^cbs/?$ /sites/coyotebailsquad/ [R=302,NC,L]
+</IfModule>
+
 # No directory listings. Without this, any folder with no index.html
 # (/images/, /fonts/, and /projects/ before the rule above) answers with an
 # "Index of" page that lists every file in it, including leftovers from old
