@@ -1,12 +1,12 @@
 # arnaudin.github.io / ryanarnaudin.com
 
-Personal homepage and portfolio of Ryan Arnaudin — product designer in Austin, TX.
+Personal homepage and portfolio of Ryan Arnaudin, product designer in Austin, TX.
 
 ## About
 
 A static site built with [Jekyll](https://jekyllrb.com/) 4.4. GitHub Actions builds it and deploys it to Namecheap over FTPS on every push to `main` (`.github/workflows/jekyll.yml`).
 
-The design is fully custom (2026 redesign) — a text-first, editorial layout with a technical/blueprint voice. The site was originally bootstrapped in 2022 from [himatt.com](https://github.com/MattGreyDesign/himatt.com) (GPL v3), though essentially none of it remains.
+The design is fully custom (2026 redesign): a text-first, editorial layout with a technical/blueprint voice. The site was originally bootstrapped in 2022 from [himatt.com](https://github.com/MattGreyDesign/himatt.com) (GPL v3), though essentially none of it remains.
 
 - **Typefaces** (self-hosted variable fonts in `fonts/`): [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) for display, [Inter](https://rsms.me/inter/) for body, [IBM Plex Mono](https://www.ibm.com/plex/) for metadata/labels.
 - **Libraries**: [Sass](https://sass-lang.com/) (Dart Sass via jekyll-sass-converter 3), [PhotoSwipe](https://photoswipe.com/) for image lightboxes, [Headspace](https://github.com/gdub22/headspace) for the hide-on-scroll header, [Normalize.css](https://github.com/necolas/normalize.css). No client-side frameworks.
@@ -23,15 +23,15 @@ bundle exec jekyll serve --port 4001
 Notes:
 
 - `_config.yml` changes require a server restart; everything else hot-rebuilds.
-- Locally, `/projects/` shows a WEBrick directory listing of built case studies — handy for browsing. In production GitHub Pages returns a 404 there (no index page exists by design).
+- Locally, `/projects/` shows a WEBrick directory listing of built case studies, handy for browsing. In production GitHub Pages returns a 404 there (no index page exists by design).
 - A hidden style guide lives at `/styleguide/` (not indexed, not linked).
 
 ## Content architecture
 
-- `_projects/` — case studies (a Jekyll collection, output at `/projects/:path/`). Front matter drives everything: `summary`, `role`, `outcomes` (stat row), and a `content_layout` list of sections (`text`, `1col`, `2col`, `video`, …) rendered by `_includes/layout.html`. Start new case studies from `_projects/z-empty-template.md`.
-- `_posts/` — blog posts, published at `/blog/:title/`.
-- `_pages/` — top-level pages (home/work, about, process, writing index, contact).
-- `_drafts/` — unpublished drafts and archived content; never built (the local server doesn't run with `--drafts`).
+- `_projects/`: case studies (a Jekyll collection, output at `/projects/:path/`). Front matter drives everything: `summary`, `role`, `outcomes` (stat row), and a `content_layout` list of sections (`text`, `1col`, `2col`, `video`, …) rendered by `_includes/layout.html`. Start new case studies from `_projects/z-empty-template.md`.
+- `_posts/`: blog posts, published at `/blog/:title/`.
+- `_pages/`: top-level pages (home/work, about, process, writing index, contact).
+- `_drafts/`: unpublished drafts and archived content; never built (the local server doesn't run with `--drafts`).
 
 ## Images
 
@@ -41,11 +41,11 @@ After adding or changing images, run:
 ./tools/optimize-images.sh
 ```
 
-It generates (requires `cwebp` — `brew install webp`):
+It generates (requires `cwebp`; install it with `brew install webp`):
 
 - a `.webp` next to every `.png`/`.jpg`/`.jpeg` under `images/` (capped at 1600px wide; favicons skipped),
 - a `.900w.webp` variant for images wider than 1400px (mobile srcset),
-- `_data/image_dims.yml` — the width/height index the templates use for `srcset`, layout-shift-free `<img>` tags, and PhotoSwipe zoom targets.
+- `_data/image_dims.yml`: the width/height index the templates use for `srcset`, layout-shift-free `<img>` tags, and PhotoSwipe zoom targets.
 
 GIFs are indexed for dimensions only (no WebP conversion). Templates lazy-load everything except the first image of a page, which gets `fetchpriority="high"`.
 
